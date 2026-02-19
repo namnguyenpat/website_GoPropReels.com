@@ -2,7 +2,7 @@
 title: "Prop Firm Drawdown Explained: Trailing vs. End of Day"
 description: "The most important rule in any prop firm is the drawdown. But did you know there are different types? We break down the differences between Trailing and EOD drawdown."
 pubDate: 2026-02-19
-heroImage: "/images/blog/decoding-drawdown-infrastructure-for-futures-risk-control-diq86.jpg"
+category: "Knowledge"
 tags: ["Knowledge", "Concepts"]
 tier: "Tier 2: Core Concept"
 ---

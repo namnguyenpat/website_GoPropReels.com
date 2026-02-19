@@ -2,7 +2,7 @@
 title: "Prop Firm News: February 2026 Industry Update"
 description: "Big changes are coming to the prop trading landscape. From new regulatory shifts to massive payout records, here is what you need to know this month."
 pubDate: 2026-02-18
-heroImage: "/images/blog/news-feb-2026.jpg"
+category: "News"
 tags: ["News", "Industry"]
 tier: "Tier 3: Latest Insights"
 ---

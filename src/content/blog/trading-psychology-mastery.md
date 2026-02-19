@@ -2,7 +2,7 @@
 title: "Trading Psychology: The Mastery of Emotional Control"
 description: "Why most traders fail not because of their strategy, but because of their mind. Learn the core principles of psychological resilience in prop trading."
 pubDate: 2026-02-18
-heroImage: "/images/blog/psychology-mastery.jpg"
+category: "Knowledge"
 tags: ["Psychology", "Knowledge"]
 tier: "Tier 2: Core Concept"
 ---
