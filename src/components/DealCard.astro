@@ -1,0 +1,87 @@
+---
+import { generateImageAltText } from '../utils/seo';
+
+interface VideoSource {
+	type: 'image' | 'youtube';
+	src?: string;
+	id?: string;
+}
+
+interface Deal {
+	id: string;
+	firm_name: string;
+	category: string;
+	discount_highlight: string;
+	coupon_code: string;
+	theme_color: string;
+	video_source: VideoSource;
+	features: string[];
+	affiliate_link: string;
+}
+
+const { deal } = Astro.props as { deal: Deal };
+const accentColor = deal.theme_color || '#FF2D55';
+const imageAlt = generateImageAltText(deal, 'card');
+const firmInitial = deal.firm_name.charAt(0);
+---
+
+<a
+	href={`/deals/${deal.id}`}
+	class="group block rounded-2xl border border-white/10 bg-white/5 overflow-hidden transition hover:border-white/20 hover:bg-white/10"
+	aria-label={`View ${deal.firm_name} ${deal.discount_highlight} deal`}
+>
+	<div class="relative aspect-video overflow-hidden">
+		{deal.video_source?.type === 'youtube' && deal.video_source.id ? (
+			<iframe
+				class="h-full w-full pointer-events-none"
+				src={`https://www.youtube.com/embed/${deal.video_source.id}?playlist=${deal.video_source.id}&autoplay=1&mute=1&loop=1&controls=0&modestbranding=1`}
+				title={deal.firm_name}
+				frameborder="0"
+				allow="autoplay; encrypted-media; picture-in-picture"
+				loading="lazy"
+			/>
+		) : (
+			<img
+				src={`/images/deals/${deal.id}.png`}
+				alt={imageAlt}
+				class="h-full w-full object-cover transition-transform group-hover:scale-105"
+				loading="lazy"
+				data-deal-id={deal.id}
+				onerror="this.onerror=null;this.src=this.src.replace('.png','.jpg')"
+			/>
+		)}
+		<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+		<div class="absolute left-3 top-3">
+			<span 
+				class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold text-white backdrop-blur"
+				style={`background:${accentColor}80;`}
+			>
+				{deal.discount_highlight}
+			</span>
+		</div>
+	</div>
+	<div class="p-4">
+		<div class="flex items-center gap-2 mb-2">
+			<div 
+				class="flex h-8 w-8 items-center justify-center rounded-lg text-xs font-black text-black"
+				style={`background:${accentColor}`}
+			>
+				{firmInitial}
+			</div>
+			<div class="flex-1 min-w-0">
+				<p class="text-sm font-bold text-white truncate">{deal.firm_name}</p>
+				<p class="text-xs text-white/60 uppercase">{deal.category}</p>
+			</div>
+		</div>
+		{deal.features?.[0] && (
+			<p class="text-xs text-white/70 mb-2 line-clamp-1">{deal.features[0]}</p>
+		)}
+		<div class="flex items-center justify-between">
+			<span class="text-sm font-semibold" style={`color:${accentColor}`}>
+				Get Code
+			</span>
+			<span class="text-xs text-white/60">View →</span>
+		</div>
+	</div>
+</a>
+

@@ -1,0 +1,185 @@
+---
+// Modal component for reporting expired codes
+interface Props {
+	deals: Array<{
+		id: string;
+		firm_name: string;
+		coupon_code: string;
+	}>;
+}
+
+const { deals } = Astro.props;
+---
+
+<div
+	id="report-expired-modal"
+	class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm"
+	aria-hidden="true"
+	aria-labelledby="report-modal-title"
+>
+	<div class="relative mx-4 w-full max-w-md rounded-3xl border border-white/10 bg-brand-surface p-6 text-white">
+		<button
+			id="close-report-modal"
+			class="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white/60 transition hover:bg-white/20 hover:text-white"
+			aria-label="Close modal"
+		>
+			<i class="fa-solid fa-xmark text-sm"></i>
+		</button>
+
+		<h2 id="report-modal-title" class="mb-4 text-2xl font-bold">Report Expired Code</h2>
+		<p class="mb-6 text-sm text-white/70">
+			Help us keep our deals fresh! If you found a code that doesn't work, let us know and we'll check it immediately.
+		</p>
+
+		<form id="report-form" class="space-y-4">
+			<div>
+				<label for="deal-select" class="mb-2 block text-sm font-medium text-white/80">
+					Which deal?
+				</label>
+				<select
+					id="deal-select"
+					name="deal"
+					required
+					class="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white focus:border-brand-accent focus:outline-none"
+				>
+					<option value="">Select a deal...</option>
+					{deals.map((deal) => (
+						<option value={deal.id}>
+							{deal.firm_name} ({deal.coupon_code})
+						</option>
+					))}
+				</select>
+			</div>
+
+			<div>
+				<label for="code-input" class="mb-2 block text-sm font-medium text-white/80">
+					Coupon Code
+				</label>
+				<input
+					type="text"
+					id="code-input"
+					name="code"
+					required
+					placeholder="e.g. SAVE80"
+					class="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-accent focus:outline-none"
+				/>
+			</div>
+
+			<div>
+				<label for="message-input" class="mb-2 block text-sm font-medium text-white/80">
+					What happened? (Optional)
+				</label>
+				<textarea
+					id="message-input"
+					name="message"
+					rows="3"
+					placeholder="e.g. Code says 'invalid' at checkout"
+					class="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-accent focus:outline-none resize-none"
+				></textarea>
+			</div>
+
+			<div class="flex gap-3 pt-2">
+				<button
+					type="button"
+					id="cancel-report"
+					class="flex-1 rounded-2xl border border-white/20 bg-transparent px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+				>
+					Cancel
+				</button>
+				<button
+					type="submit"
+					class="flex-1 rounded-2xl bg-brand-accent px-4 py-3 text-sm font-semibold text-black transition hover:opacity-90"
+				>
+					Send Report
+				</button>
+			</div>
+		</form>
+
+		<div id="report-success" class="hidden mt-4 rounded-2xl border border-green-500/50 bg-green-500/10 p-4 text-center">
+			<i class="fa-solid fa-check-circle text-green-400 mb-2 text-2xl"></i>
+			<p class="text-sm text-green-400">Thanks! We'll check this code right away.</p>
+		</div>
+	</div>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const modal = document.getElementById('report-expired-modal');
+		const openBtn = document.getElementById('open-report-modal');
+		const closeBtn = document.getElementById('close-report-modal');
+		const cancelBtn = document.getElementById('cancel-report');
+		const form = document.getElementById('report-form');
+		const successMsg = document.getElementById('report-success');
+		const dealSelect = document.getElementById('deal-select');
+
+		// Load deals into select - use window.dealsData if available
+		const loadDeals = () => {
+			const deals = window.dealsData || [];
+			if (dealSelect) {
+				dealSelect.innerHTML = '<option value="">Select a deal...</option>';
+				deals.forEach(deal => {
+					const option = document.createElement('option');
+					option.value = deal.id;
+					option.textContent = `${deal.firm_name} (${deal.coupon_code})`;
+					dealSelect.appendChild(option);
+				});
+			}
+		};
+		
+		// Try to load deals immediately or wait for window.dealsData
+		if (window.dealsData) {
+			loadDeals();
+		} else {
+			// Wait a bit for data to be available
+			setTimeout(loadDeals, 100);
+		}
+
+		const openModal = () => {
+			modal?.classList.remove('hidden');
+			modal?.classList.add('flex');
+			document.body.style.overflow = 'hidden';
+		};
+
+		const closeModal = () => {
+			modal?.classList.add('hidden');
+			modal?.classList.remove('flex');
+			document.body.style.overflow = '';
+			form?.reset();
+			successMsg?.classList.add('hidden');
+		};
+
+		openBtn?.addEventListener('click', openModal);
+		closeBtn?.addEventListener('click', closeModal);
+		cancelBtn?.addEventListener('click', closeModal);
+		modal?.addEventListener('click', (e) => {
+			if (e.target === modal) closeModal();
+		});
+
+		form?.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const formData = new FormData(form);
+			const data = {
+				deal: formData.get('deal'),
+				code: formData.get('code'),
+				message: formData.get('message'),
+				timestamp: new Date().toISOString(),
+			};
+
+			// Option 1: Send to email via mailto (simple, no backend needed)
+			const emailBody = `Expired Code Report%0D%0A%0D%0ADeal: ${data.deal}%0D%0ACode: ${data.code}%0D%0AMessage: ${data.message || 'N/A'}%0D%0ATimestamp: ${data.timestamp}`;
+			window.location.href = `mailto:hello@gopropreels.com?subject=Expired Code Report - ${data.code}&body=${emailBody}`;
+
+			// Option 2: Could send to API/webhook here if you have backend
+			// await fetch('/api/report-expired', { method: 'POST', body: JSON.stringify(data) });
+
+			// Show success message
+			form.style.display = 'none';
+			successMsg?.classList.remove('hidden');
+			
+			setTimeout(() => {
+				closeModal();
+			}, 2000);
+		});
+	});
+</script>
+

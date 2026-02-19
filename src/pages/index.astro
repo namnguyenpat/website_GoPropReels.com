@@ -1,0 +1,713 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ReelCard from '../components/ReelCard.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ReportExpiredModal from '../components/ReportExpiredModal.astro';
+import { getDealsByCategory } from '../utils/seo';
+import { getCollection } from 'astro:content';
+
+// Fetch all coupons from the collection
+const allCoupons = await getCollection('coupons');
+const dealsData = allCoupons.map(c => c.data);
+
+// Filter out expired deals
+const today = new Date();
+const activeDeals = dealsData.filter(deal => {
+    if (!deal.expiration_date) return true;
+    const expDate = new Date(deal.expiration_date);
+    return expDate >= today;
+}).sort((a, b) => {
+    const dateA = new Date(a.created_at || 0);
+    const dateB = new Date(b.created_at || 0);
+    return dateB.getTime() - dateA.getTime(); 
+});
+
+// Calculate stats from real data
+const liveDealsCount = activeDeals.length;
+const codesVerifiedToday = activeDeals.length; // Each deal has one verified code
+const heroStats = [
+	{ label: 'Live deals', value: `${liveDealsCount}+` },
+	{ label: 'Codes verified today', value: `${codesVerifiedToday}` },
+	{ label: 'Active prop firms', value: `${new Set(activeDeals.map(d => d.firm_name)).size}` },
+];
+
+const categories = ['all', ...new Set(activeDeals.map((deal) => deal.category))];
+// Get popular deals for internal linking (top 3 by category)
+const popularDeals = {
+	forex: getDealsByCategory(activeDeals, 'forex').slice(0, 3),
+	instant: getDealsByCategory(activeDeals, 'instant').slice(0, 3),
+	crypto: getDealsByCategory(activeDeals, 'crypto').slice(0, 3),
+};
+
+// Get latest blog posts
+const allPosts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const latestPosts = allPosts.slice(0, 3);
+---
+
+<Layout title="GoPropReels - Best Prop Firm Coupon Codes" description="Find verified prop firm discount codes. Save on FTMO, The5ers, Funding Pips & 50+ funded trading firms. Codes tested daily." canonical="/">
+	{/* Structured Data for SEO */}
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"name": "GoPropReels",
+		"url": "https://gopropreels.com",
+		"description": "Find the latest prop firm coupons, discount codes, and funding deals. Verified daily.",
+		"potentialAction": {
+			"@type": "SearchAction",
+			"target": "https://gopropreels.com/?q={search_term_string}",
+			"query-input": "required name=search_term_string"
+		}
+	})} />
+	
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": [
+			{
+				"@type": "Question",
+				"name": "How does GoPropReels work?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "GoPropReels aggregates verified coupon codes for prop trading firms. Traders can browse deals, click to copy code, and be directed to the firm's checkout page."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "Are the discount codes verified?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Yes, all codes are tested daily to ensure they work at checkout."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "Is GoPropReels free to use?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Yes, GoPropReels is completely free for traders."
+				}
+			}
+		]
+	})} />
+	
+	<div class="relative min-h-screen overflow-hidden bg-brand-bg">
+		<div class="pointer-events-none absolute inset-0">
+			<div class="absolute -top-20 -left-10 h-72 w-72 rounded-full bg-brand-accent/30 blur-[120px]"></div>
+			<div class="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-blue-700/20 blur-[140px]"></div>
+		</div>
+
+		<Header>
+			<div class="border-t border-white/5">
+				<div class="mx-auto flex max-w-6xl gap-3 overflow-x-auto px-4 py-3 text-xs font-semibold uppercase tracking-wide text-gray-400 scrollbar-thin" id="category-bar">
+					{categories.map((category) => (
+						<button
+							type="button"
+							class="rounded-full border border-white/10 px-4 py-1.5 transition data-[active=true]:border-brand-accent data-[active=true]:bg-brand-accent/10 data-[active=true]:text-white"
+							data-filter={category}
+							data-active={category === 'all'}
+						>
+							{category === 'all' ? 'All' : category}
+						</button>
+					))}
+				</div>
+			</div>
+		</Header>
+
+		<main class="relative z-10 mx-auto flex max-w-6xl flex-col gap-16 px-4 py-16">
+			<section class="grid gap-8 md:grid-cols-[2fr,1fr]" id="highlights">
+				<div class="space-y-6">
+					<div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80">
+						<span class="h-2 w-2 animate-ping rounded-full bg-brand-accent"></span>
+						Verified prop firm discount codes - Updated daily
+					</div>
+					<div>
+						<h1 class="text-4xl font-black leading-tight text-white sm:text-5xl">
+							Verified Prop Firm Discount Codes & Coupons
+						</h1>
+						<p class="mt-4 max-w-xl text-base text-white/70">
+							Snag prop firm funding codes the moment they drop. Scroll like TikTok, but every card is a verified discount. See the payout perks, tap to copy the code, and jump straight to checkout.
+						</p>
+					</div>
+					
+					<div class="flex flex-wrap gap-3">
+						<a href="https://chromewebstore.google.com/detail/gopropreels-deal-finder/hbmkajnddnklgmlmcfmkeckkdnidieeg" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 rounded-full bg-brand-accent px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-accent/20 transition hover:bg-brand-accent-hover hover:scale-[1.02] active:scale-95">
+							<i class="fa-brands fa-chrome text-lg"></i>
+							<span>Add to Chrome</span>
+						</a>
+						<a href="#feed" class="flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10 hover:scale-[1.02] active:scale-95">
+							<span>Browse Feed</span>
+						</a>
+					</div>
+
+					<div class="grid gap-4 sm:grid-cols-3">
+						{heroStats.map((stat) => (
+							<div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+								<p class="text-sm text-white/60">{stat.label}</p>
+								<p class="text-2xl font-bold text-white">{stat.value}</p>
+							</div>
+						))}
+					</div>
+				</div>
+				<div class="rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.02] p-6 shadow-glow">
+					<p class="text-gray-400 text-sm mb-4">Why traders keep us pinned to their home screen</p>
+					<ol class="space-y-4 text-sm">
+						<li class="flex items-start gap-3">
+							<span class="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-xs font-bold">1</span>
+							<div>
+								<p class="font-semibold text-white">Codes that actually work</p>
+								<p class="text-white/60">We test each coupon at checkout so you never get bounced with “code invalid”.</p>
+							</div>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-xs font-bold">2</span>
+							<div>
+								<p class="font-semibold text-white">Deal info in one glance</p>
+								<p class="text-white/60">Account sizes, reset prices, payout splits—summarized like a social card.</p>
+							</div>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-xs font-bold">3</span>
+							<div>
+								<p class="font-semibold text-white">Built for phone-first traders</p>
+								<p class="text-white/60">Autoplay visuals and bold coupon chips keep you in flow on mobile data.</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+
+
+			{/* Google AdSense - Banner Ad (Above Feed)
+			<div class="flex justify-center py-4">
+				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6456170405994901" data-ad-slot="YOUR_AD_SLOT_ID" data-ad-format="auto" data-full-width-responsive="true"></ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+			*/}
+
+			<section class="space-y-6" id="feed">
+				<div class="flex flex-wrap items-end justify-between gap-4">
+					<div>
+						<h2 class="text-3xl font-bold text-white">For You Feed</h2>
+						<p class="text-white/60 text-sm">Browse verified funding deals.</p>
+					</div>
+					<a
+						href="http://t.me/GoPropReels_com"
+						target="_blank"
+						rel="noopener"
+						class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70 hover:bg-white/10 hover:text-white transition"
+					>
+						Notify me about new drops
+					</a>
+				</div>
+
+				{/* NEW CENTERED TABS */}
+				<div class="flex justify-center pb-2">
+					<div class="inline-flex rounded-full bg-white/5 p-1 border border-white/10 overflow-hidden">
+						<button data-filter="all" data-active="true" class="rounded-full px-6 py-2 text-sm font-semibold transition bg-brand-accent text-white hover:bg-white/10 data-[active=true]:bg-brand-accent data-[active=true]:text-white data-[active=false]:bg-transparent data-[active=false]:text-white/60">
+							All
+						</button>
+						<button data-filter="forex" class="rounded-full px-6 py-2 text-sm font-semibold transition text-white/60 hover:text-white hover:bg-white/10 data-[active=true]:bg-brand-accent data-[active=true]:text-white data-[active=false]:bg-transparent data-[active=false]:text-white/60">
+							Forex
+						</button>
+						<button data-filter="futures" class="rounded-full px-6 py-2 text-sm font-semibold transition text-white/60 hover:text-white hover:bg-white/10 data-[active=true]:bg-brand-accent data-[active=true]:text-white data-[active=false]:bg-transparent data-[active=false]:text-white/60">
+							Futures
+						</button>
+						<button data-filter="crypto" class="rounded-full px-6 py-2 text-sm font-semibold transition text-white/60 hover:text-white hover:bg-white/10 data-[active=true]:bg-brand-accent data-[active=true]:text-white data-[active=false]:bg-transparent data-[active=false]:text-white/60">
+							Crypto
+						</button>
+					</div>
+				</div>
+				<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" id="reel-grid">
+					{activeDeals.map((deal, index) => (
+						<ReelCard deal={deal} data-index={index} data-initially-hidden={index >= 12 ? 'true' : 'false'} />
+					))}
+				</div>
+				{activeDeals.length > 12 && (
+					<div class="flex justify-center pt-4">
+						<button
+							id="load-more-btn"
+							class="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+						>
+							Load more deals ({activeDeals.length - 12} remaining)
+						</button>
+					</div>
+				)}
+			</section>
+
+			{/* Google AdSense - In-Article Ad (Between Feed and FAQ) */}
+			<div class="py-4 overflow-hidden">
+				<ins class="adsbygoogle" 
+					style="display:block; text-align:center;" 
+					data-ad-layout="in-article" 
+					data-ad-format="fluid" 
+					data-ad-client="ca-pub-6456170405994901" 
+					data-ad-slot="9646186541"></ins>
+				<script is:inline>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+
+			<section class="grid gap-6 rounded-3xl border border-white/10 bg-white/5 p-8 lg:grid-cols-2" id="faq">
+				<div>
+					<p class="text-sm font-semibold uppercase tracking-wide text-brand-accent">Coupon First</p>
+					<h3 class="mt-2 text-3xl font-bold">Tap the code, get the toast, land on checkout—done.</h3>
+					<p class="mt-4 text-white/70">
+						Each card highlights the strongest angle—% off, reset price, payout split—so traders know exactly why to click.
+						Once they tap, the code is copied, a toast confirms, and the affiliate page opens in a new tab.
+					</p>
+					<ul class="mt-6 space-y-4 text-sm text-white/70">
+						<li>• 2-second toast keeps the feed snappy yet reassuring.</li>
+						<li>• Clipboard fallback surfaces the code on screen if permissions block copy.</li>
+						<li>• Optional “More info” modal for rules or payout schedules.</li>
+					</ul>
+				</div>
+				<div class="space-y-4 rounded-2xl border border-white/10 bg-black/40 p-6">
+					<div>
+						<p class="text-sm text-white/60">Verified daily</p>
+						<p class="text-lg font-semibold">All codes tested</p>
+						<p class="text-sm text-white/60">We check each coupon before it goes live to save you time.</p>
+					</div>
+					<div class="border-t border-white/10 pt-4">
+						<p class="text-sm text-white/60">Fresh deals</p>
+						<p class="text-lg font-semibold">Updated multiple times daily</p>
+						<p class="text-sm text-white/60">New discounts appear as soon as they're available.</p>
+					</div>
+					<div class="border-t border-white/10 pt-4">
+						<p class="text-sm text-white/60">One-tap action</p>
+						<p class="text-lg font-semibold">Copy code + open link</p>
+						<p class="text-sm text-white/60">No manual typing—just tap and you're at checkout.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="rounded-3xl border border-brand-accent/40 bg-brand-accent/10 p-8 text-center shadow-glow">
+				<p class="text-sm font-semibold uppercase tracking-wide text-brand-accent">Why traders trust us</p>
+				<h3 class="mt-2 text-3xl font-bold text-white">Save time, save money, get funded faster.</h3>
+				<p class="mt-3 text-white/70">
+					We scan prop firm ads daily to bring you the latest discounts. No hunting through Telegram groups or waiting for email updates—everything you need is right here.
+				</p>
+				<div class="mt-6 flex flex-wrap justify-center gap-3">
+					<a
+						href="http://t.me/GoPropReels_com"
+						class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-gray-100"
+					>
+						Join our Telegram
+					</a>
+
+				</div>
+			</section>
+
+			{/* Latest Insights (Blog) */}
+			<section class="space-y-6" id="blog">
+				<div class="flex items-center justify-between gap-4">
+					<h2 class="text-3xl font-bold text-white">Latest Insights</h2>
+					<a href="/blog" class="text-sm font-semibold text-brand-accent hover:text-white transition">
+						View all articles <i class="fa-solid fa-arrow-right ml-1"></i>
+					</a>
+				</div>
+				<div class="grid gap-6 md:grid-cols-3">
+					{latestPosts.map(post => (
+						<a href={`/blog/${post.slug}/`} class="group block rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-brand-accent/50 transition">
+							<div class="aspect-video overflow-hidden">
+								<img src={post.data.heroImage || '/og-image.jpg'} alt={post.data.title} class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+							</div>
+							<div class="p-5">
+								<h3 class="font-bold text-white text-lg mb-2 line-clamp-2 group-hover:text-brand-accent transition">{post.data.title}</h3>
+								<p class="text-sm text-white/60 line-clamp-2">{post.data.description}</p>
+							</div>
+						</a>
+					))}
+				</div>
+                <div class="flex justify-center pt-10">
+                    <a href="/blog" class="inline-flex items-center gap-2 rounded-full border border-brand-accent/30 bg-brand-accent/10 px-10 py-4 text-base font-bold text-white transition hover:bg-brand-accent/20 hover:border-brand-accent shadow-xl shadow-brand-accent/10 group">
+                        View all articles <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform ml-1"></i>
+                    </a>
+                </div>
+			</section>
+		</main>
+
+		<section class="relative z-10 border-t border-white/10 bg-black/60 px-4 py-8 text-xs text-white/60">
+			<div class="mx-auto flex max-w-6xl flex-col gap-6">
+				{/* Internal links for SEO */}
+				<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+					<div>
+						<h4 class="mb-3 text-sm font-semibold text-white">Popular Categories</h4>
+						<ul class="space-y-2">
+							{categories.filter(c => c !== 'all').map((category) => (
+								<li>
+									<a href={`/?category=${category}#feed`} class="hover:text-white transition capitalize">
+										{category} deals
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
+					<div>
+						<h4 class="mb-3 text-sm font-semibold text-white">Top Forex Deals</h4>
+						<ul class="space-y-2">
+							{popularDeals.forex.map((deal) => (
+								<li>
+									<a href={`/deals/${deal.id}`} class="hover:text-white transition">
+										{deal.firm_name} - {deal.discount_highlight}
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
+					<div>
+						<h4 class="mb-3 text-sm font-semibold text-white">Top Instant Deals</h4>
+						<ul class="space-y-2">
+							{popularDeals.instant.map((deal) => (
+								<li>
+									<a href={`/deals/${deal.id}`} class="hover:text-white transition">
+										{deal.firm_name} - {deal.discount_highlight}
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
+					<div>
+						<h4 class="mb-3 text-sm font-semibold text-white">Resources</h4>
+						<ul class="space-y-2">
+							<li><a href="/blog" class="hover:text-white transition">Blog</a></li>
+							<li><a href="/#faq" class="hover:text-white transition">FAQ</a></li>
+							<li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+							<li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+						</ul>
+					</div>
+				</div>
+				<Footer />
+			
+			<!-- Extension Promo Badge -->
+			<div class="fixed bottom-6 left-6 z-30 hidden lg:block">
+				<div class="relative group">
+					<div class="absolute -inset-1 rounded-xl bg-gradient-to-r from-brand-accent to-purple-600 opacity-25 blur transition duration-1000 group-hover:opacity-75 group-hover:duration-200"></div>
+					<a href="https://chromewebstore.google.com/detail/gopropreels-deal-finder/hbmkajnddnklgmlmcfmkeckkdnidieeg" target="_blank" rel="noopener noreferrer" class="relative flex items-center gap-4 rounded-xl border border-white/10 bg-black/90 p-4 pr-6 transition hover:bg-black">
+						<img src="/extension_promo.png" alt="Chrome Extension" class="h-16 w-auto rounded-lg shadow-lg" />
+						<div class="text-left">
+							<p class="text-xs font-bold uppercase text-brand-accent">Available now</p>
+							<p class="font-bold text-white">Get the Chrome Extension</p>
+							<p class="text-xs text-white/50">Never miss a deal again</p>
+						</div>
+					</a>
+					<button onclick="this.parentElement.parentElement.remove()" class="absolute -top-2 -right-2 rounded-full bg-white/10 p-1 text-white/50 hover:bg-white/20 hover:text-white">
+						<i class="fa-solid fa-xmark text-xs w-4 h-4 flex items-center justify-center"></i>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<ReportExpiredModal deals={dealsData} />
+
+
+
+		<div
+			id="copy-toast"
+			class="pointer-events-none fixed inset-x-0 bottom-24 z-50 mx-auto w-fit rounded-full border border-white/10 bg-black/80 px-6 py-3 text-sm font-semibold text-white opacity-0 shadow-glow transition"
+		>
+			Code copied
+		</div>
+		
+		<div
+			id="share-toast"
+			class="pointer-events-none fixed inset-x-0 bottom-24 z-50 mx-auto w-fit rounded-full border border-white/10 bg-black/80 px-6 py-3 text-sm font-semibold text-white opacity-0 shadow-glow transition"
+		>
+			Link copied!
+		</div>
+	</div>
+
+	<style>
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(10px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	</style>
+
+	<script is:inline define:vars={{ deals: dealsData }}>
+		// Make deals data available globally for ReportExpiredModal
+		window.dealsData = deals;
+		
+		document.addEventListener('DOMContentLoaded', () => {
+			const toast = document.getElementById('copy-toast');
+			const shareToast = document.getElementById('share-toast');
+			const buttons = document.querySelectorAll('[data-copy-code]');
+			const filters = document.querySelectorAll('[data-filter]');
+			const loadMoreBtn = document.getElementById('load-more-btn');
+			const grid = document.getElementById('reel-grid');
+
+			const showToast = (message, toastElement = toast) => {
+				if (!toastElement) return;
+				toastElement.textContent = message;
+				toastElement.style.opacity = '1';
+				clearTimeout(window.__toastTimeout);
+				window.__toastTimeout = setTimeout(() => {
+					toastElement.style.opacity = '0';
+				}, 1800);
+			};
+
+			// Like functionality - Save to localStorage
+			const initLikes = () => {
+				const likedDeals = JSON.parse(localStorage.getItem('likedDeals') || '[]');
+				document.querySelectorAll('.like-btn').forEach((btn) => {
+					const dealId = btn.dataset.dealId;
+					const icon = btn.querySelector('i');
+					if (likedDeals.includes(dealId)) {
+						icon?.classList.remove('fa-regular');
+						icon?.classList.add('fa-solid');
+						btn.style.color = '#FF2D55';
+					}
+				});
+			};
+
+			document.querySelectorAll('.like-btn').forEach((btn) => {
+				btn.addEventListener('click', () => {
+					const dealId = btn.dataset.dealId;
+					const icon = btn.querySelector('i');
+					let likedDeals = JSON.parse(localStorage.getItem('likedDeals') || '[]');
+					
+					if (likedDeals.includes(dealId)) {
+						// Unlike
+						likedDeals = likedDeals.filter(id => id !== dealId);
+						icon?.classList.remove('fa-solid');
+						icon?.classList.add('fa-regular');
+						btn.style.color = '';
+						showToast('Removed from favorites');
+					} else {
+						// Like
+						likedDeals.push(dealId);
+						icon?.classList.remove('fa-regular');
+						icon?.classList.add('fa-solid');
+						btn.style.color = '#FF2D55';
+						showToast('Added to favorites');
+					}
+					
+					localStorage.setItem('likedDeals', JSON.stringify(likedDeals));
+				});
+			});
+
+			// Share functionality - Web Share API or copy link
+			document.querySelectorAll('.share-btn').forEach((btn) => {
+				btn.addEventListener('click', async () => {
+					const url = btn.dataset.dealUrl;
+					const title = btn.dataset.dealTitle;
+					
+					if (navigator.share) {
+						// Use Web Share API on mobile
+						try {
+							await navigator.share({
+								title: title,
+								url: url,
+							});
+						} catch (err) {
+							// User cancelled or error
+							if (err.name !== 'AbortError') {
+								// Fallback to copy
+								await copyToClipboard(url);
+							}
+						}
+					} else {
+						// Fallback: Copy to clipboard
+						await copyToClipboard(url);
+					}
+				});
+			});
+
+			const copyToClipboard = async (text) => {
+				try {
+					await navigator.clipboard.writeText(text);
+					showToast('Link copied!', shareToast);
+				} catch (err) {
+					// Fallback for older browsers
+					const textarea = document.createElement('textarea');
+					textarea.value = text;
+					textarea.style.position = 'fixed';
+					textarea.style.opacity = '0';
+					document.body.appendChild(textarea);
+					textarea.select();
+					document.execCommand('copy');
+					document.body.removeChild(textarea);
+					showToast('Link copied!', shareToast);
+				}
+			};
+
+			// Initialize likes on page load
+			initLikes();
+
+			buttons.forEach((btn) => {
+				btn.addEventListener('click', () => {
+					const code = btn.dataset.copyCode;
+					const link = btn.dataset.link;
+					if (!code) return;
+					
+					// Reveal code
+					const codeDisplay = btn.querySelector('.code-display');
+					if (codeDisplay) {
+						codeDisplay.textContent = code;
+					}
+
+					navigator.clipboard?.writeText(code).catch(() => {});
+					showToast(`Copied code ${code}`);
+					if (link) {
+						window.open(link, '_blank', 'noopener');
+					}
+				});
+			});
+
+			// Filter functionality
+			if (filters && filters.length > 0) {
+				filters.forEach((filterBtn) => {
+					filterBtn.addEventListener('click', (e) => {
+						e.preventDefault();
+						e.stopPropagation();
+						
+						const category = filterBtn.dataset.filter;
+						
+						// Update active state
+						filters.forEach((btn) => {
+							btn.setAttribute('data-active', String(btn === filterBtn));
+						});
+						
+						// Filter cards
+						const allCards = document.querySelectorAll('[data-category]');
+						
+						allCards.forEach((card) => {
+							const cardCategory = card.dataset.category;
+							
+							if (category === 'all') {
+								// Show all cards - respect initially-hidden state
+								const isInitiallyHidden = card.getAttribute('data-initially-hidden') === 'true';
+								if (!isInitiallyHidden) {
+									card.classList.remove('hidden');
+								}
+							} else if (cardCategory === category) {
+								// Show matching category cards - show even if initially hidden
+								card.classList.remove('hidden');
+							} else {
+								// Hide non-matching cards
+								card.classList.add('hidden');
+							}
+						});
+						
+						// Update load more button after filter
+						const loadMoreBtnAfterFilter = document.getElementById('load-more-btn');
+						if (loadMoreBtnAfterFilter && grid) {
+							if (category !== 'all') {
+								// Hide load more when filtering by category
+								loadMoreBtnAfterFilter.style.display = 'none';
+							} else {
+								// Show load more when showing all
+								const hiddenCards = Array.from(grid.querySelectorAll('article[data-initially-hidden="true"]'))
+									.filter(card => card.classList.contains('hidden'));
+								if (hiddenCards.length > 0) {
+									loadMoreBtnAfterFilter.style.display = 'flex';
+									loadMoreBtnAfterFilter.textContent = `Load more deals (${hiddenCards.length} remaining)`;
+								} else {
+									loadMoreBtnAfterFilter.style.display = 'none';
+								}
+							}
+						}
+						
+						// Scroll to top of feed after filter
+						const feedSection = document.getElementById('feed');
+						if (feedSection) {
+							feedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+						}
+					});
+				});
+			}
+
+			if (loadMoreBtn && grid) {
+				// Get all cards that were initially hidden
+				const getInitiallyHiddenCards = () => {
+					return Array.from(grid.querySelectorAll('article[data-initially-hidden="true"]'));
+				};
+				
+				const updateButtonText = () => {
+					const hiddenCards = getInitiallyHiddenCards().filter(card => card.classList.contains('hidden'));
+					const remaining = hiddenCards.length;
+					
+					if (remaining <= 0) {
+						loadMoreBtn.style.display = 'none';
+					} else {
+						loadMoreBtn.textContent = `Load more deals (${remaining} remaining)`;
+						loadMoreBtn.style.display = 'flex';
+					}
+				};
+				
+				// Initial update
+				updateButtonText();
+
+				loadMoreBtn.addEventListener('click', (e) => {
+					e.preventDefault();
+					e.stopPropagation();
+					
+					// Get cards that are still hidden (initially hidden)
+					const hiddenCards = getInitiallyHiddenCards().filter(card => card.classList.contains('hidden'));
+					const toShow = hiddenCards.slice(0, 12);
+					
+					toShow.forEach((card) => {
+						card.classList.remove('hidden');
+						card.style.animation = 'fadeIn 0.4s ease-in';
+					});
+					
+					updateButtonText();
+				});
+			}
+
+
+			// Initialize likes on page load
+			initLikes();
+
+            // Handle URL Parameters for Filtering (Category & Search)
+            const params = new URLSearchParams(window.location.search);
+            const categoryParam = params.get('category');
+            const searchParam = params.get('q') || params.get('search'); // Support ?q= or ?search=
+
+            if (categoryParam) {
+                // Find and click the category button
+                const btn = document.querySelector(`button[data-filter="${categoryParam}"]`);
+                if (btn) {
+                    btn.click();
+                }
+            } else if (searchParam) {
+                // Filter by Firm Name (Brand Page simulation)
+                const term = searchParam.toLowerCase();
+                const allCards = document.querySelectorAll('[data-category]'); // Select all cards
+                let matchCount = 0;
+
+                allCards.forEach(card => {
+                    const firmName = card.dataset.firmName?.toLowerCase() || "";
+                    if (firmName.includes(term)) {
+                        card.classList.remove('hidden');
+                        matchCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                // Update UI to show we are searching
+                const feedTitle = document.querySelector('#feed h2');
+                if (feedTitle) feedTitle.textContent = `Results for "${searchParam}"`;
+                
+                // Hide load more button in search mode
+                if (loadMoreBtn) loadMoreBtn.style.display = 'none';
+                
+                // Scroll to feed
+                const feedSection = document.getElementById('feed');
+                if (feedSection) feedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+		});
+	</script>
+</Layout>

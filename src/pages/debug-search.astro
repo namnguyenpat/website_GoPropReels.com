@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+const posts = await getCollection('blog');
+const allCoupons = await getCollection('coupons');
+const deals = allCoupons.map(c => c.data);
+
+const searchIndex = [
+    ...deals.map(deal => ({
+        type: 'fund',
+        title: deal.firm_name,
+        description: deal.discount_highlight,
+        url: `/compare/${deal.firm_name.toLowerCase().replace(/\s+/g, '-')}`,
+        image: null,
+        icon: 'fa-building-columns'
+    })),
+    ...posts.map(post => ({
+        type: 'insight',
+        title: post.data.title,
+        description: post.data.description,
+        url: `/blog/${post.slug}`,
+        image: post.data.heroImage || '/og-image.jpg',
+        icon: 'fa-newspaper'
+    }))
+];
+---
+
+<pre>{JSON.stringify(searchIndex, null, 2)}</pre>

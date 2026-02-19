@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DynamicPoster from '../components/DynamicPoster.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const demoThemes = [
+  {
+    name: 'Cyber Theme',
+    theme: 'cyber',
+    firm: 'Cyber Capital',
+    discount: '80% OFF',
+    color: '#00f2ff',
+    desc: 'Neon glows, digital scanlines, and high-tech aesthetics.'
+  },
+  {
+    name: 'Minimal Luxury',
+    theme: 'minimal',
+    firm: 'Silent Profits',
+    discount: '$100 Deal',
+    color: '#111111',
+    desc: 'Clean, high-contrast typography on a white/light-gray base.'
+  },
+  {
+    name: 'Liquid Flow',
+    theme: 'liquid',
+    firm: 'Fluid Trading',
+    discount: 'BOGO FREE',
+    color: '#8b5cf6',
+    desc: 'Organic moving shapes with deep gradients and blur effects.'
+  },
+  {
+    name: 'Tech Grid',
+    theme: 'tech',
+    firm: 'Nexus Futures',
+    discount: 'Pips Sale',
+    color: '#3b82f6',
+    desc: 'Industrial grid patterns with monospace accents and technical feel.'
+  },
+  {
+    name: 'Bold Impact',
+    theme: 'bold',
+    firm: 'Titan Hub',
+    discount: 'MAX DEALS',
+    color: '#ff2d55',
+    desc: 'High-impact design with background watermark and rotated content.'
+  }
+];
+---
+
+<Layout title="Poster Style Showcase | GoPropReels" description="Explore the 5 premium dynamic poster themes.">
+  <Header />
+  
+  <main class="mx-auto max-w-7xl px-4 py-24 pt-32">
+    <div class="mb-16 text-center">
+      <h1 class="text-5xl font-black text-white">Theme Showcase</h1>
+      <p class="mt-4 text-xl text-white/60">
+        Every deal on GoPropReels is an automated work of art.
+      </p>
+    </div>
+
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+      {demoThemes.map((item) => (
+        <div class="group space-y-4">
+          <div class="aspect-[9/16] w-full shadow-2xl transition hover:scale-[1.02]">
+            <DynamicPoster 
+              firmName={item.firm}
+              discount={item.discount}
+              themeColor={item.color}
+              forceTheme={item.theme as any}
+            />
+          </div>
+          <div class="px-2">
+            <h3 class="text-2xl font-bold text-white">{item.name}</h3>
+            <p class="mt-1 text-sm text-white/50 leading-relaxed">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,139 @@
+---
+import SearchModal from './SearchModal.astro';
+---
+<header class="sticky top-0 z-[1000] border-b border-white/10 bg-brand-bg/95 backdrop-blur-xl transition-all duration-300" id="main-header">
+	<div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+		<a href="/" class="flex items-center gap-3 font-extrabold tracking-tight text-white transition hover:opacity-80" onclick="if(window.location.pathname === '/' || window.location.pathname === '') { window.scrollTo({top:0,behavior:'smooth'}); return false; }">
+			<img src="/logo.png" alt="GoPropReels logo" class="h-10 w-10 rounded-xl" />
+			<span class="text-lg">GoProp<span class="text-brand-accent">Reels</span></span>
+		</a>
+		<div class="flex items-center gap-3">
+            {/* Desktop Nav */}
+			<a
+				href="/compare"
+				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 md:flex"
+			>
+				<i class="fa-solid fa-scale-balanced text-brand-accent"></i>
+				<span>Compare</span>
+			</a>
+			<a
+				href="/blog"
+				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 md:flex"
+			>
+				<i class="fa-solid fa-newspaper text-brand-accent"></i>
+				<span>Blog</span>
+			</a>
+
+            <a
+				href="https://chromewebstore.google.com/detail/gopropreels-deal-finder/hbmkajnddnklgmlmcfmkeckkdnidieeg"
+                target="_blank"
+                rel="noopener noreferrer"
+				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 md:flex"
+			>
+				<i class="fa-brands fa-chrome text-brand-accent"></i>
+				<span>Extension</span>
+			</a>
+            
+            {/* Search Button (Desktop) */}
+            <button
+                id="search-btn-desktop"
+                class="hidden items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10 md:flex"
+                aria-label="Search"
+            >
+                <i class="fa-solid fa-magnifying-glass text-brand-accent"></i>
+            </button>
+
+			<a
+				href="http://t.me/GoPropReels_com"
+				class="hidden rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20 md:flex"
+			>
+				Join Telegram
+			</a>
+            
+            {/* Search Button (Mobile) */}
+             <button
+                id="search-btn-mobile"
+                class="flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-white md:hidden"
+                aria-label="Search"
+            >
+                <i class="fa-solid fa-magnifying-glass text-brand-accent"></i>
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button id="mobile-menu-btn" class="flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-white md:hidden">
+                <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+            </button>
+		</div>
+	</div>
+</header>
+
+    {/* Mobile Menu Overlay (Slides down from below header) */}
+    <div id="mobile-menu" class="fixed top-16 left-0 right-0 bottom-0 z-[1001] bg-[#020617] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col p-6 gap-4 border-t border-white/10 overflow-y-auto">
+        
+        <a href="/compare" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
+            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+                <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            Compare Firms
+        </a>
+        <a href="/blog" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
+            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+                <i class="fa-solid fa-newspaper"></i>
+            </div>
+            Trading Psychology
+        </a>
+        <a href="https://chromewebstore.google.com/detail/gopropreels-deal-finder/hbmkajnddnklgmlmcfmkeckkdnidieeg" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
+            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+                <i class="fa-brands fa-chrome"></i>
+            </div>
+            Chrome Extension
+        </a>
+        <a href="http://t.me/GoPropReels_com" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-[#0088cc]/20 border border-[#0088cc]/30">
+            <div class="w-10 h-10 rounded-full bg-[#0088cc] flex items-center justify-center text-white">
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+            Join Telegram
+        </a>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const searchBtnDesktop = document.getElementById('search-btn-desktop');
+        const searchBtnMobile = document.getElementById('search-btn-mobile');
+
+        function toggleMenu() {
+            const isClosed = mobileMenu.classList.contains('translate-x-full');
+            
+            if (isClosed) {
+                mobileMenu.classList.remove('translate-x-full');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+                document.body.classList.add('overflow-hidden');
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        mobileMenuBtn?.addEventListener('click', toggleMenu);
+        
+        // Search Buttons
+        searchBtnDesktop?.addEventListener('click', () => window.openSearch());
+        searchBtnMobile?.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('translate-x-full')) {
+                toggleMenu(); // Close mobile menu ONLY if it is open
+            }
+            window.openSearch();
+        });
+        
+        // Close menu when clicking a link
+        mobileMenu?.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+	<slot />
+    <SearchModal />

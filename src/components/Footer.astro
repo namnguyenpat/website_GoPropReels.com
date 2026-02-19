@@ -1,0 +1,29 @@
+---
+const today = new Date();
+---
+
+<footer class="relative z-10 border-t border-white/10 bg-black/60 px-4 py-8 text-xs text-white/60 mt-16">
+    <div class="mx-auto flex max-w-5xl flex-col md:flex-row gap-8 justify-between">
+        <div class="flex flex-col gap-4 max-w-md">
+            <p class="text-sm text-white">
+                GoPropReels is an affiliate bridge experience. Deals are curated for research and marketing purposes only.
+            </p>
+            <p>
+                Affiliate Disclosure: We may earn a commission if you buy through our links. Your price never changes.
+            </p>
+            <p class="text-white/50 italic">
+                Promotional programs may change according to each fund's policies.
+            </p>
+            <p>&copy; {today.getFullYear()} GoPropReels. All rights reserved.</p>
+            <p class="text-xs text-white/40">Contact: goreelsteam@gmail.com</p>
+        </div>
+        <div class="flex flex-col gap-4">
+            <h3 class="text-white font-semibold">Popular Categories</h3>
+            <div class="flex flex-col gap-2 text-sm text-white/60">
+                <a href="/?category=forex#feed" class="hover:text-white transition-colors">Forex Deals</a>
+                <a href="/?category=multi-asset#feed" class="hover:text-white transition-colors">Multi-Asset Deals</a>
+            </div>
+        </div>
+
+    </div>
+</footer>

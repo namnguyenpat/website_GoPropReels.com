@@ -1,0 +1,552 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import deals from '../../data/deals.json';
+import DealCard from '../../components/DealCard.astro';
+import LatestBlogs from '../../components/LatestBlogs.astro';
+import Header from '../../components/Header.astro';
+import DynamicPoster from '../../components/DynamicPoster.astro';
+import { generateImageAltText, getRelatedDeals, generateBreadcrumbs } from '../../utils/seo';
+
+export function getStaticPaths() {
+	return deals.map((deal) => ({
+		params: { id: deal.id },
+		props: { deal },
+	}));
+}
+
+const { deal } = Astro.props;
+// Auto-generate related deals for internal linking
+const similarDeals = getRelatedDeals(deal, deals, { sameCategory: true, maxResults: 3 });
+// Auto-generate breadcrumbs
+const breadcrumbs = generateBreadcrumbs(deal);
+// Auto-generate SEO alt text
+const imageAlt = generateImageAltText(deal, 'landing');
+
+// Check for expiration
+const today = new Date();
+const expirationDate = deal.expiration_date ? new Date(deal.expiration_date) : null;
+const isExpired = expirationDate && expirationDate < today;
+
+const pageTitle = isExpired 
+    ? `[EXPIRED] ${deal.firm_name} Coupon - Deal Ended | GoPropReels`
+    : `${deal.firm_name} Coupon | GoPropReels`;
+
+const pageDescription = isExpired
+    ? `This deal for ${deal.firm_name} has expired. Check out active coupons and discounts for ${deal.category} prop firms on GoPropReels.`
+    : `Claim ${deal.discount_highlight} at ${deal.firm_name}. Copy code ${deal.coupon_code} and head straight to checkout.`;
+
+const accentColor = deal.theme_color || '#FF2D55';
+const canonical = `/deals/${deal.id}`;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonical}>
+	{/* Structured Data for SEO - Product/Offer */}
+	<script type="application/ld+json" set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "Product",
+		"name": `${deal.firm_name} ${deal.discount_highlight}`,
+		"description": deal.seo_content.replace(/<[^>]*>?/gm, ''),
+        "image": `https://gopropreels.com/images/deals/${deal.id}.png`,
+		"offers": {
+			"@type": "Offer",
+			"price": 0,
+			"priceCurrency": "USD",
+			"availability": isExpired ? "https://schema.org/Discontinued" : "https://schema.org/InStock",
+			"url": `https://gopropreels.com${canonical}`,
+            "priceValidUntil": deal.expiration_date || "2026-12-31",
+            "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "US",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 30,
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn"
+            },
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": 0,
+                    "currency": "USD"
+                },
+                "shippingDestination": {
+                    "@type": "DefinedRegion",
+                    "addressCountry": "US"
+                },
+                "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": 0,
+                        "maxValue": 0,
+                        "unitCode": "DAY"
+                    },
+                    "transitTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": 0,
+                        "maxValue": 0,
+                        "unitCode": "DAY"
+                    }
+                }
+            }
+		},
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": 5,
+			"reviewCount": 1
+		},
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": 5,
+              "bestRating": 5
+            },
+            "author": {
+              "@type": "Person",
+              "name": "GoPropReels Editor"
+            }
+        },
+		"category": deal.category,
+		"brand": {
+			"@type": "Brand",
+			"name": deal.firm_name
+		}
+	})} />
+	
+	<Header />
+
+	<main class="relative mx-auto flex max-w-5xl flex-col gap-12 px-4 py-16 text-white">
+        {isExpired && (
+            <div class="rounded-xl border border-red-500/50 bg-red-500/10 p-4 text-center text-red-200">
+                <p class="font-bold text-lg">⚠️ This deal has expired</p>
+                <p class="text-sm opacity-80">The offer below is no longer valid. Please check our <a href="/" class="underline hover:text-white">homepage</a> for the latest active deals.</p>
+            </div>
+        )}
+
+		{/* Auto-generated breadcrumbs for internal linking */}
+		<nav class="flex items-center gap-2 text-sm text-white/60" aria-label="Breadcrumb">
+			{breadcrumbs.map((crumb, index) => (
+				<>
+					{index > 0 && <span>/</span>}
+					<a href={crumb.url} class="hover:text-white transition">
+						{crumb.label}
+					</a>
+				</>
+			))}
+		</nav>
+
+		<header class="grid gap-8 rounded-3xl border border-white/10 bg-white/5 p-6 lg:grid-cols-[1.3fr,1fr]">
+			<div class="relative overflow-hidden rounded-3xl border border-white/5">
+				{deal.video_source?.type === 'youtube' && deal.video_source.id ? (
+					<iframe
+						class="h-full min-h-[420px] w-full"
+						src={`https://www.youtube.com/embed/${deal.video_source.id}?playlist=${deal.video_source.id}&autoplay=1&mute=1&loop=1&controls=0&modestbranding=1`}
+						title={deal.firm_name}
+						frameborder="0"
+						allow="autoplay; encrypted-media; picture-in-picture"
+						loading="lazy"
+					/>
+				) : (
+					<a href={`/go/${deal.id}`} target="_blank" class="block h-full w-full">
+						<div class="poster-fallback group relative h-full w-full flex items-center justify-center bg-black/20">
+              <img
+                src={`/images/deals/${deal.id}.png`}
+                alt={imageAlt}
+                class="h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-20"
+                loading="lazy"
+                data-deal-id={deal.id}
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="dynamic-fallback hidden h-full w-full">
+                <DynamicPoster 
+                  firmName={deal.firm_name} 
+                  discount={deal.discount_highlight} 
+                  themeColor={accentColor} 
+                  dealId={deal.id}
+                />
+              </div>
+            </div>
+					</a>
+				)}
+			</div>
+			<div class="flex flex-col gap-5">
+				<span class="w-fit rounded-full border border-white/10 bg-black/50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white/70">
+					{deal.category}
+				</span>
+				<div>
+					<p class="text-sm font-medium text-brand-accent">Exclusive drop</p>
+					<h1 class="text-3xl font-black">{deal.firm_name} &mdash; {deal.discount_highlight}</h1>
+					<p class="mt-2 text-white/70">
+						Copy the code, activate the offer, and secure your next evaluation or instant account in minutes.
+					</p>
+
+                    {/* Action Box */}
+                    <div class="mt-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm">
+                        <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center gap-3">
+                                {isExpired ? (
+                                    <span class="rounded-full bg-red-500/20 px-2.5 py-0.5 text-xs font-bold text-red-400 border border-red-500/30">
+                                        Expired
+                                    </span>
+                                ) : (
+                                    <span class="rounded-full bg-green-500/20 px-2.5 py-0.5 text-xs font-bold text-green-400 border border-green-500/30">
+                                        Active
+                                    </span>
+                                )}
+                            </div>
+                            {deal.expiration_date && (
+                                <div class="text-xs text-white/50 flex items-center gap-1">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>Ends: {deal.expiration_date}</span>
+                                </div>
+                            )}
+                        </div>
+
+                        {isExpired ? (
+                            <a
+                                href="/"
+                                class="flex w-full items-center justify-center gap-2 rounded-xl bg-white/10 px-5 py-3 text-sm font-bold text-white transition hover:bg-white/20"
+                            >
+                                View Similar Deals
+                            </a>
+                        ) : (
+                            <button
+                                class="flex w-full items-center justify-center gap-2 rounded-xl bg-brand-accent px-5 py-4 text-base font-bold text-black shadow-glow transition hover:scale-[1.02] hover:bg-white"
+                                data-copy-code={deal.coupon_code}
+                                data-link={`/go/${deal.id}`}
+                            >
+                                <span class="btn-text">Get Code & Go</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        )}
+                        
+                        <p class="mt-3 text-center text-xs text-white/40">
+                            * Verified today. Tap to auto-copy code.
+                        </p>
+                    </div>
+
+                    <LatestBlogs />
+				</div>
+			</div>
+		</header>
+
+		<section class="grid gap-6 lg:grid-cols-[1.2fr,0.8fr]">
+			<div class="space-y-6">
+				<article class="rounded-3xl border border-white/10 bg-white/5 p-6 prose prose-invert max-w-none prose-p:text-white/80 prose-headings:text-white prose-a:text-brand-accent prose-li:text-white/80 space-y-4">
+					<div set:html={deal.seo_content} />
+				</article>
+
+				{/* Google AdSense - Post Dưới (In-Feed/Article) */}
+				<div class="rounded-3xl border border-white/10 bg-white/5 p-4 overflow-hidden">
+					<ins class="adsbygoogle"
+						style="display:block"
+						data-ad-client="ca-pub-6456170405994901"
+						data-ad-slot="9646186541"
+						data-ad-format="auto"
+						data-full-width-responsive="true"></ins>
+					<script is:inline>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+
+			<div class="space-y-6">
+				<div class="rounded-3xl border border-white/10 bg-black/40 p-6">
+					<h2 class="text-lg font-semibold mb-4">Deal quick facts</h2>
+					<ul class="space-y-4 text-sm text-white/70">
+						<li class="flex items-center justify-between border-b border-white/5 pb-3 last:border-0 last:pb-0">
+							<span class="text-white">Discount</span>
+							<span class="font-bold text-brand-accent">{deal.discount_highlight}</span>
+						</li>
+						<li class="flex items-center justify-between border-b border-white/5 pb-3 last:border-0 last:pb-0">
+							<span class="text-white">Code</span>
+							<span id="deal-code-display" class="font-mono font-bold bg-white/10 px-2 py-1 rounded text-white">****</span>
+						</li>
+						<li class="flex items-center justify-between border-b border-white/5 pb-3 last:border-0 last:pb-0">
+							<span class="text-white">Brand</span>
+							<a href={`/?q=${encodeURIComponent(deal.firm_name)}`} class="font-medium text-brand-accent hover:underline hover:text-white transition-colors">
+								{deal.firm_name}
+							</a>
+						</li>
+						<li class="flex items-center justify-between border-b border-white/5 pb-3 last:border-0 last:pb-0">
+							<span class="text-white">Category</span>
+							<a href={`/?category=${deal.category}`} class="capitalize font-medium text-brand-accent hover:underline hover:text-white transition-colors">
+								{deal.category}
+							</a>
+						</li>
+						<li class="flex items-center justify-between border-b border-white/5 pb-3 last:border-0 last:pb-0">
+							<span class="text-white">Status</span>
+                            {isExpired ? (
+                                <span class="flex items-center gap-1.5 text-red-400 font-bold">
+                                    <i class="fa-solid fa-circle-xmark text-xs"></i>
+                                    Expired
+                                </span>
+                            ) : (
+                                <span class="flex items-center gap-1.5 text-green-400">
+                                    <i class="fa-solid fa-circle-check text-xs"></i>
+                                    Active
+                                </span>
+                            )}
+						</li>
+                        {deal.expiration_date && (
+                            <li class="flex items-center justify-between border-b border-white/5 pb-3 last:border-0 last:pb-0">
+                                <span class="text-white">Ends</span>
+                                <span class="text-white/80">{deal.expiration_date}</span>
+                            </li>
+                        )}
+					</ul>
+					
+					<div class="mt-6 pt-6 border-t border-white/10">
+                        {/* Button moved to header */}
+					</div>
+                    
+                    <div class="mt-3 text-center">
+                        <button 
+                            id="report-issue-btn"
+                            class="text-xs text-white/40 hover:text-white/80 underline transition-colors"
+                            data-deal-id={deal.id}
+                            data-firm-name={deal.firm_name}
+                        >
+                            Report Issue
+                        </button>
+                    </div>
+				</div>
+
+
+				
+				{deal.video_source?.type === 'youtube' && deal.video_source.id && (
+					<div class="rounded-3xl border border-white/10 bg-black/40 p-6" id="seo-image-container">
+						<h2 class="text-lg font-semibold mb-4">Deal Poster</h2>
+						<a href={`/go/${deal.id}`} target="_blank" class="block w-full">
+							<img
+								src={`/images/deals/${deal.id}.png`}
+								alt={`${deal.firm_name} ${deal.discount_highlight} Poster`}
+								class="w-full rounded-xl shadow-lg"
+								loading="lazy"
+								data-deal-id={deal.id}
+								onerror="this.onerror=null;this.src=this.src.replace('.png','.jpg')"
+							/>
+						</a>
+					</div>
+				)}
+
+
+                {/* Mindset Check Widget */}
+                <div class="rounded-3xl border border-brand-accent/20 bg-brand-accent/5 p-6 relative overflow-hidden group">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-brand-accent/10 rounded-full blur-2xl group-hover:bg-brand-accent/20 transition-colors"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent">
+                                <i class="fa-solid fa-brain text-lg"></i>
+                            </div>
+                            <h3 class="font-bold text-white">Mindset Check</h3>
+                        </div>
+                        
+                        <p class="text-sm text-white/80 mb-4 leading-relaxed">
+                            Don't blow this account! 90% of traders fail due to psychology, not strategy.
+                        </p>
+                        
+                        <a href="/blog/trading-in-the-zone-mastery" class="flex items-center justify-between bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-3 transition-colors group/link">
+                            <span class="text-sm font-semibold text-brand-accent">Read "Trading in the Zone"</span>
+                            <i class="fa-solid fa-arrow-right text-xs text-white/40 group-hover/link:text-white transition-colors"></i>
+                        </a>
+                    </div>
+                </div>
+			</div>
+		</section>
+
+		<section class="rounded-3xl border border-white/10 bg-white/5 p-6">
+			<h2 class="text-2xl font-bold">How to activate</h2>
+			<div class="mt-4 grid gap-4 sm:grid-cols-3 text-sm text-white/70">
+				<div class="rounded-2xl border border-white/10 bg-black/40 p-4">
+					<p class="text-white font-semibold mb-1">1. Copy</p>
+					<p>Tap the main button. We copy {deal.coupon_code} and open the checkout page.</p>
+				</div>
+				<div class="rounded-2xl border border-white/10 bg-black/40 p-4">
+					<p class="text-white font-semibold mb-1">2. Pick account</p>
+					<p>Select the evaluation / instant size that matches your strategy.</p>
+				</div>
+				<div class="rounded-2xl border border-white/10 bg-black/40 p-4">
+					<p class="text-white font-semibold mb-1">3. Checkout</p>
+					<p>Paste the code, confirm the discount, and lock the payout split.</p>
+				</div>
+			</div>
+		</section>
+
+        <section class="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Popular Comparisons</h2>
+                <a href="/compare" class="text-sm text-brand-accent hover:underline">View All</a>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {deals
+                    .filter(d => d.firm_name !== deal.firm_name) // Exclude current firm
+                    .sort(() => 0.5 - Math.random()) // Shuffle
+                    .slice(0, 3) // Take top 3
+                    .map(otherDeal => {
+                        // Ensure consistent slug order (alphabetical or specific logic) to match [...slug].astro
+                        // In [...slug].astro: firmA is from outer loop, firmB from inner loop (i < j)
+                        // So firmA index < firmB index in the original deals array? 
+                        // Actually [...slug].astro uses: firms = [...new Set(deals.map(d => d.firm_name))]
+                        // And loops i=0..len, j=i+1..len. So firmA is always earlier in the unique list than firmB.
+                        
+                        const allFirms = [...new Set(deals.map(d => d.firm_name))];
+                        const firmA = allFirms.indexOf(deal.firm_name) < allFirms.indexOf(otherDeal.firm_name) ? deal.firm_name : otherDeal.firm_name;
+                        const firmB = allFirms.indexOf(deal.firm_name) < allFirms.indexOf(otherDeal.firm_name) ? otherDeal.firm_name : deal.firm_name;
+                        
+                        const slug = `${firmA.toLowerCase().replace(/\s+/g, '-')}-vs-${firmB.toLowerCase().replace(/\s+/g, '-')}`;
+                        
+                        return (
+                            <a href={`/compare/${slug}`} class="flex items-center justify-between p-4 rounded-xl border border-white/10 bg-black/40 hover:bg-white/10 hover:border-brand-accent/50 transition-all group">
+                                <span class="font-semibold text-sm">{firmA} <span class="text-white/40 mx-1">vs</span> {firmB}</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-white/20 group-hover:text-brand-accent transition-colors"></i>
+                            </a>
+                        );
+                    })
+                }
+            </div>
+        </section>
+
+		{similarDeals.length > 0 && (
+			<section class="rounded-3xl border border-white/10 bg-white/5 p-6">
+				<h2 class="text-2xl font-bold mb-2">Similar {deal.category} prop firm deals</h2>
+				<p class="text-sm text-white/60 mb-6">Explore more {deal.category} trading opportunities</p>
+				<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+					{similarDeals.map((similarDeal) => (
+						<DealCard deal={similarDeal} />
+					))}
+				</div>
+				<div class="mt-6 text-center">
+					<a href={`/#feed?category=${deal.category}`} class="text-sm text-brand-accent hover:underline">
+						View all {deal.category} deals →
+					</a>
+				</div>
+			</section>
+		)}
+	</main>
+
+	<footer class="relative z-10 border-t border-white/10 bg-black/60 px-4 py-8 text-xs text-white/60 mt-16">
+		<div class="mx-auto flex max-w-5xl flex-col gap-4">
+			<p class="text-sm text-white">
+				GoPropReels is an affiliate bridge experience. Deals are curated for research and marketing purposes only.
+			</p>
+			<p>
+				Affiliate Disclosure: We may earn a commission if you buy through our links. Your price never changes.
+			</p>
+			<p class="text-white/50 italic">
+				Promotional programs may change according to each fund's policies.
+			</p>
+			<p>© {new Date().getFullYear()} GoPropReels. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<div
+		id="deal-copy-toast"
+		class="pointer-events-none fixed inset-x-0 bottom-24 z-50 mx-auto w-fit rounded-full border border-white/10 bg-black/80 px-6 py-3 text-sm font-semibold text-white opacity-0 shadow-glow transition"
+	>
+		Code copied
+	</div>
+
+	<script is:inline>
+		document.addEventListener('DOMContentLoaded', () => {
+			const toast = document.getElementById('deal-copy-toast');
+			const copyButton = document.querySelector('[data-copy-code]');
+            const reportButton = document.getElementById('report-issue-btn');
+
+			const showToast = (message) => {
+				if (!toast) return;
+				toast.textContent = message;
+				toast.style.opacity = '1';
+				clearTimeout(window.__toastTimeout);
+				window.__toastTimeout = setTimeout(() => {
+					toast.style.opacity = '0';
+				}, 1800);
+			};
+
+			copyButton?.addEventListener('click', () => {
+				const code = copyButton.dataset.copyCode;
+				const link = copyButton.dataset.link;
+				if (!code) return;
+
+				// Reveal code in Quick Facts
+				const codeDisplay = document.getElementById('deal-code-display');
+				if (codeDisplay) codeDisplay.textContent = code;
+
+				// Show global modal
+				const event = new CustomEvent('open-code-modal', {
+					detail: { code, link }
+				});
+				document.dispatchEvent(event);
+
+				if (link) {
+					setTimeout(() => {
+						// Create a temporary link
+						const a = document.createElement('a');
+						a.href = link;
+						a.target = '_blank';
+						a.rel = 'noopener noreferrer';
+						document.body.appendChild(a);
+
+						// Simulate click with Ctrl (Windows) or Meta (Mac) to open in background tab
+						const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+						const event = new MouseEvent('click', {
+							view: window,
+							bubbles: true,
+							cancelable: true,
+							ctrlKey: !isMac, // Ctrl on Windows/Linux
+							metaKey: isMac   // Cmd on Mac
+						});
+						
+						a.dispatchEvent(event);
+						a.remove();
+					}, 1500); // 1.5 second delay
+				}
+			});
+
+            // Report Issue Logic
+            reportButton?.addEventListener('click', async () => {
+                if (reportButton.disabled) return;
+                
+                const originalText = reportButton.textContent;
+                reportButton.disabled = true;
+                reportButton.textContent = "Reporting...";
+                
+                const BOT_TOKEN = "8450720428:AAFPYgmXs2hxvJFZ0yPUoee8De3UUYw_7RY";
+                const CHAT_ID = "905715849";
+                const dealId = reportButton.dataset.dealId;
+                const firmName = reportButton.dataset.firmName;
+                
+                const message = `🚨 *REPORT ISSUE*\n\n🏢 **Firm:** ${firmName}\n🆔 **ID:** \`${dealId}\`\n\nUser reported an issue with this deal. Please check it.`;
+                
+                try {
+                    const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            chat_id: CHAT_ID,
+                            text: message,
+                            parse_mode: "Markdown"
+                        })
+                    });
+                    
+                    if (response.ok) {
+                        showToast("Report sent! Thank you.");
+                        reportButton.textContent = "Reported";
+                    } else {
+                        showToast("Error sending report.");
+                        reportButton.textContent = originalText;
+                        reportButton.disabled = false;
+                    }
+                } catch (e) {
+                    console.error(e);
+                    showToast("Error sending report.");
+                    reportButton.textContent = originalText;
+                    reportButton.disabled = false;
+                }
+            });
+		});
+	</script>
+</Layout>

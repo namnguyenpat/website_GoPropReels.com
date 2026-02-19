@@ -1,0 +1,177 @@
+---
+import { generateImageAltText } from '../utils/seo';
+import DynamicPoster from './DynamicPoster.astro';
+
+interface VideoSource {
+	type: 'image' | 'youtube';
+	src?: string;
+	id?: string;
+}
+
+interface Deal {
+	id: string;
+	firm_name: string;
+	title: string;
+	description: string;
+	category: string;
+	discount_highlight: string;
+	coupon_code: string;
+	theme_color: string;
+	video_source: VideoSource;
+	features: string[];
+	affiliate_link: string;
+	key_benefit?: string;
+}
+
+const { deal, ...rest } = Astro.props as { deal: Deal; [key: string]: any };
+const accentColor = deal.theme_color || '#3B82F6';
+const copyButtonId = `copy-${deal.id}`;
+
+const initiallyHidden = rest['data-initially-hidden'] === 'true';
+// Auto-generate SEO alt text
+const imageAlt = generateImageAltText(deal, 'card');
+
+const firmInitial = deal.firm_name.charAt(0);
+const cardDescription = deal.description || "";
+---
+
+<article
+	class={`group relative aspect-[9/16] w-full overflow-hidden rounded-3xl border border-white/10 bg-brand-surface ${initiallyHidden ? 'hidden' : ''}`}
+	style={`--accent:${accentColor};`}
+	data-category={deal.category}
+	data-firm-name={deal.firm_name}
+	{...rest}
+>
+	{/* Video/Image Background */}
+	<div class="absolute inset-0 video-container" data-video-id={deal.video_source?.id} data-video-type={deal.video_source?.type}>
+		<img
+			src={deal.video_source?.src || (deal.video_source?.type === 'youtube' && deal.video_source?.id ? `https://img.youtube.com/vi/${deal.video_source.id}/maxresdefault.jpg` : `/images/deals/${deal.id}.jpg`)}
+			alt={imageAlt}
+			class="h-full w-full object-cover transition-transform duration-700"
+			loading="lazy"
+			onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+		/>
+    <div class="dynamic-fallback hidden h-full w-full">
+      <DynamicPoster
+        firmName={deal.firm_name}
+        discount={deal.discount_highlight}
+        themeColor={accentColor}
+        dealId={deal.id}
+        variant="background"
+        category={deal.category}
+        keyBenefit={deal.key_benefit}
+        logo={deal.firm_logo}
+      />
+    </div>
+	</div>
+
+	<script>
+		const containers = document.querySelectorAll('.video-container');
+		
+		containers.forEach(container => {
+			const videoId = container.getAttribute('data-video-id');
+			const videoType = container.getAttribute('data-video-type');
+			
+			if (videoType !== 'youtube' || !videoId) return;
+
+			const img = container.querySelector('img');
+			const playBtn = container.querySelector('div.absolute'); // The play button wrapper
+			let iframe = null;
+
+			container.addEventListener('click', () => {
+				if (!iframe) {
+					iframe = document.createElement('iframe');
+					iframe.src = `https://www.youtube.com/embed/${videoId}?playlist=${videoId}&autoplay=1&mute=0&loop=1&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&origin=https://gopropreels.com`;
+					iframe.className = "absolute inset-0 h-full w-full border-0 z-10"; 
+					iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+					container.appendChild(iframe);
+					if (img) img.style.opacity = '0';
+					if (playBtn) playBtn.style.display = 'none'; // Hide play button
+				}
+			});
+		});
+	</script>
+
+	{/* Gradient Overlay - Stronger at bottom for text readability */}
+	<div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/95 pointer-events-none"></div>
+
+	{/* Top Actions */}
+	<div class="absolute inset-x-0 top-0 flex items-start justify-between p-4 z-20">
+		<span class="rounded-full bg-black/40 backdrop-blur-md border border-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white/90 shadow-lg">
+			{deal.category}
+		</span>
+		<div class="flex flex-col gap-3">
+			<button 
+				id={`like-${deal.id}`}
+				class="like-btn flex h-10 w-10 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md border border-white/10 transition hover:bg-[var(--accent)] hover:text-white active:scale-95 shadow-lg group/heart"
+				data-deal-id={deal.id}
+				aria-label={`Like ${deal.firm_name} deal`}
+			>
+				<i class="fa-regular fa-heart text-lg group-hover/heart:fa-solid"></i>
+			</button>
+			<button 
+				id={`share-${deal.id}`}
+				class="share-btn flex h-10 w-10 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md border border-white/10 transition hover:bg-white/20 active:scale-95 shadow-lg"
+				data-deal-id={deal.id}
+				data-deal-url={`https://gopropreels.com/deals/${deal.id}`}
+				data-deal-title={`${deal.firm_name} - ${deal.discount_highlight}`}
+				aria-label={`Share ${deal.firm_name} deal`}
+			>
+				<i class="fa-solid fa-share-nodes text-lg"></i>
+			</button>
+		</div>
+	</div>
+
+	{/* Bottom Content Area - Floating Glass Panel */}
+	<div class="absolute inset-x-4 bottom-4 z-20 overflow-hidden rounded-2xl border border-white/15 bg-black/60 p-4 backdrop-blur-xl shadow-2xl transition-transform duration-300 group-hover:-translate-y-1">
+		
+		{/* Firm Info - Linked to Detail Page */}
+		<a href={`/coupons/${deal.id}`} class="group/info mb-3 block hover:opacity-90 transition-opacity">
+			<div class="flex items-center gap-3">
+				<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-white/20 to-transparent border border-white/10 text-lg font-black text-white shadow-inner">
+					{firmInitial}
+				</div>
+				<div class="overflow-hidden">
+					<h3 class="text-sm font-bold text-white leading-tight truncate group-hover/info:text-brand-accent transition-colors">
+						{deal.firm_name}
+					</h3>
+					<div class="flex items-center gap-2">
+						<div class="h-1 w-1 rounded-full bg-green-500 animate-pulse"></div>
+						<span class="text-[9px] font-black uppercase tracking-wider text-brand-accent">
+							Verified Deal
+						</span>
+					</div>
+				</div>
+			</div>
+		</a>
+
+		{/* Descriptive Content (Replacing technical features) */}
+		{cardDescription && (
+			<p class="mb-3 text-[11px] leading-relaxed text-white/70 line-clamp-2">
+				{cardDescription}
+			</p>
+		)}
+
+		<div class="flex items-center gap-2">
+			<button
+				id={copyButtonId}
+				class="relative flex-1 overflow-hidden rounded-xl bg-gradient-to-br from-brand-accent via-brand-accent to-orange-400 py-2.5 text-[11px] font-black text-white transition-all hover:scale-[1.05] hover:shadow-[0_0_25px_rgba(255,45,85,0.4)] active:scale-[0.95] group/btn"
+				data-copy-code={deal.coupon_code}
+				data-link={`/go/${deal.id}`}
+			>
+				<span class="relative z-10 flex items-center justify-center gap-2">
+					<span>GET CODE</span>
+					<i class="fa-solid fa-arrow-right text-[9px] opacity-70 group-hover/btn:translate-x-1 transition-transform"></i>
+				</span>
+				<div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full"></div>
+			</button>
+			<a 
+				href={`/coupons/${deal.id}`}
+				class="px-3 flex items-center justify-center rounded-xl bg-white/10 backdrop-blur-md border border-white/10 py-2.5 text-[10px] font-bold text-white/90 transition hover:bg-white/20 active:scale-95"
+			>
+				See details
+			</a>
+		</div>
+	</div>
+</article>
+

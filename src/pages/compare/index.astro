@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const allCoupons = await getCollection('coupons');
+const dealsData = allCoupons.map(c => c.data);
+const firms = [...new Set(dealsData.map(d => d.firm_name))];
+const comparisons = [];
+
+for (let i = 0; i < firms.length; i++) {
+    for (let j = i + 1; j < firms.length; j++) {
+        const firmA = firms[i];
+        const firmB = firms[j];
+        const slug = `${firmA.toLowerCase().replace(/\s+/g, '-')}-vs-${firmB.toLowerCase().replace(/\s+/g, '-')}`;
+        comparisons.push({ firmA, firmB, slug });
+    }
+}
+---
+
+<Layout title="Prop Firm Comparisons | GoPropReels" description="Compare the best prop trading firms side-by-side. FTMO vs The5ers, Funding Pips vs FundedNext, and more.">
+    <Header />
+    <main class="min-h-screen pb-24">
+        <div class="relative bg-brand-surface border-b border-white/5 py-20 px-4 mb-12">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight">
+                    Compare <span class="text-brand-accent">Prop Firms</span>
+                </h1>
+                <p class="text-xl text-white/60">
+                    Find the perfect funding partner for your trading style.
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-4">
+                {comparisons.map(comp => (
+                    <a href={`/compare/${comp.slug}`} class="flex items-center justify-between p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-brand-accent/50 transition-all group">
+                        <span class="font-bold text-lg">
+                            {comp.firmA} <span class="text-white/40 mx-2 text-sm">vs</span> {comp.firmB}
+                        </span>
+                        <i class="fa-solid fa-arrow-right text-white/20 group-hover:text-brand-accent transition-colors"></i>
+                    </a>
+                ))}
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>

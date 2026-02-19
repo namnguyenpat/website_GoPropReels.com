@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import { getCollection } from 'astro:content';
+
+const pageTitle = '404 - Page Not Found | GoPropReels';
+const pageDescription = 'The page you are looking for does not exist. Browse our prop firm deals and coupon codes.';
+
+// Get all coupons and pick random ones for suggestions
+const allCoupons = await getCollection('coupons');
+const randomDeals = allCoupons
+    .map(c => c.data)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 3);
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+	<Header />
+	<main class="relative mx-auto flex min-h-screen max-w-5xl flex-col items-center justify-center gap-8 px-4 py-16 text-center text-white">
+		<div class="flex flex-col items-center gap-4">
+			<h1 class="text-6xl font-black text-brand-accent">404</h1>
+			<h2 class="text-2xl font-bold">Page Not Found</h2>
+			<p class="max-w-md text-white/70">
+				The deal or page you're looking for doesn't exist. But don't worry, we've got plenty of hot prop firm coupons waiting for you!
+			</p>
+		</div>
+
+		<div class="flex flex-col gap-4 sm:flex-row">
+			<a
+				href="/"
+				class="rounded-2xl bg-brand-accent px-6 py-3 text-sm font-semibold text-black transition hover:opacity-90"
+			>
+				Go to Home Feed
+			</a>
+			<a
+				href="/#deals"
+				class="rounded-2xl border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40"
+			>
+				Browse All Deals
+			</a>
+		</div>
+
+		{randomDeals.length > 0 && (
+			<section class="mt-12 w-full">
+				<h3 class="mb-6 text-xl font-bold">Popular Deals You Might Like</h3>
+				<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+					{randomDeals.map((deal) => (
+						<a
+							href={`/deals/${deal.id}`}
+							class="group rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-white/20 hover:bg-white/10"
+						>
+							<div class="mb-2 flex items-center gap-2">
+								<div
+									class="flex h-8 w-8 items-center justify-center rounded-lg text-xs font-black text-black"
+									style={`background:${deal.theme_color || '#FF2D55'}`}
+								>
+									PR
+								</div>
+								<div class="text-left">
+									<p class="text-sm font-bold">{deal.firm_name}</p>
+									<p class="text-xs text-white/60">{deal.category}</p>
+								</div>
+							</div>
+							<div class="flex items-center justify-between">
+								<span class="text-sm font-semibold text-brand-accent">{deal.discount_highlight}</span>
+								<span class="text-xs text-white/70">Code: {deal.coupon_code}</span>
+							</div>
+						</a>
+					))}
+				</div>
+			</section>
+		)}
+	</main>
+</Layout>
+

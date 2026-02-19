@@ -1,0 +1,109 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+    const coupons = await getCollection('coupons');
+    const deals = coupons.map(c => c.data);
+    
+    // Create a path for each unique firm
+    return deals.map(deal => {
+        const slug = deal.firm_name.toLowerCase().replace(/\s+/g, '-');
+        return {
+            params: { firm: slug },
+            props: { deal },
+        };
+    });
+}
+
+const { deal } = Astro.props;
+
+const title = `${deal.firm_name} Review & Discount Code (2025) | GoPropReels`;
+const description = `Get the latest ${deal.firm_name} discount code and review. ${deal.discount_highlight}. Features, rules, and funding program details.`;
+---
+
+<Layout title={title} description={description}>
+    <Header />
+    <main class="min-h-screen pb-24 bg-[#0f172a]">
+        
+        {/* Hero Section */}
+        <div class="relative py-20 px-4 overflow-hidden border-b border-white/5">
+            <div class="absolute inset-0 bg-brand-accent/5 radial-gradient"></div>
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/5 border border-white/10 mb-6 text-4xl font-bold text-white shadow-2xl shadow-brand-accent/10">
+                    {deal.firm_name.charAt(0)}
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight text-white">
+                    {deal.firm_name}
+                </h1>
+                <p class="text-xl text-brand-accent font-medium mb-8">
+                    {deal.discount_highlight}
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href={`/go/${deal.id}`} target="_blank" class="px-8 py-4 bg-brand-accent text-[#0f172a] font-bold rounded-xl hover:bg-white transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-accent/20">
+                        Get Deal Now
+                    </a>
+                    <a href="#features" class="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all">
+                        View Features
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-3 gap-12">
+                
+                {/* Main Content */}
+                <div class="md:col-span-2 space-y-12">
+                    
+                    {/* Features Grid */}
+                    <section id="features">
+                        <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                            <i class="fa-solid fa-star text-brand-accent"></i>
+                            Key Features
+                        </h2>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            {deal.features.map(feature => (
+                                <div class="p-4 rounded-xl bg-white/5 border border-white/5 flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-green-400 mt-1"></i>
+                                    <span class="text-white/80 font-medium">{feature}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    {/* SEO Content / Description */}
+                    <section class="prose prose-invert prose-lg max-w-none">
+                        <div set:html={deal.seo_content} />
+                    </section>
+                </div>
+
+                {/* Sidebar */}
+                <div class="space-y-8">
+                    {/* Coupon Card */}
+                    <div class="bg-gradient-to-br from-brand-accent/20 to-brand-accent/5 border border-brand-accent/20 rounded-3xl p-8 text-center sticky top-24">
+                        <h3 class="text-white font-bold text-lg mb-2">Active Coupon</h3>
+                        <div class="bg-[#0f172a] border border-brand-accent/30 rounded-xl p-4 mb-4 relative group cursor-pointer" onclick="navigator.clipboard.writeText(this.innerText); alert('Copied!')">
+                            <code class="text-2xl font-mono font-bold text-brand-accent">{deal.coupon_code}</code>
+                            <div class="absolute inset-0 flex items-center justify-center bg-brand-accent/90 text-[#0f172a] font-bold opacity-0 group-hover:opacity-100 transition-opacity rounded-xl">
+                                Copy Code
+                            </div>
+                        </div>
+                        <p class="text-white/60 text-sm mb-6">Click to copy and apply at checkout.</p>
+                        <a href={`/go/${deal.id}`} target="_blank" class="block w-full py-3 bg-brand-accent text-[#0f172a] font-bold rounded-xl hover:bg-white transition-colors">
+                            Claim Offer &rarr;
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <Footer />
+</Layout>
+
+<style>
+    .radial-gradient {
+        background: radial-gradient(circle at center, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+    }
+</style>

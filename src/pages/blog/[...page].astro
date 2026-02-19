@@ -1,0 +1,245 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths({ paginate }) {
+    const allPosts = (await getCollection('blog')).sort(
+        (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+    );
+
+    const newsPosts = allPosts.filter(p => p.data.category === 'News');
+    const knowledgePosts = allPosts.filter(p => p.data.category === 'Knowledge');
+
+    // Paginate all posts for the feed, or specifically News if preferred
+    return paginate(allPosts, { 
+        pageSize: 15,
+        props: { newsPosts, knowledgePosts } 
+    });
+}
+
+const { page, newsPosts, knowledgePosts } = Astro.props;
+---
+
+<Layout title="Prop Trading Blog | GoPropReels" description="Educational content, tips, and guides for prop traders.">
+    <Header />
+	<main class="min-h-screen bg-[#0f172a]">
+        
+        {/* Show Hero and Towers ONLY on Page 1 */}
+        {page.currentPage === 1 && (
+            <>
+                {/* Hero Section */}
+                <div class="relative py-20 px-4 overflow-hidden">
+                    <div class="absolute inset-0 bg-brand-accent/5 radial-gradient"></div>
+                    <div class="max-w-6xl mx-auto text-center relative z-10">
+                        <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight text-white">
+                            Master Your <span class="text-brand-accent">Trading Journey</span>
+                        </h1>
+                        <p class="text-white/60 text-xl max-w-2xl mx-auto leading-relaxed">
+                            Stay ahead of the game with the latest <strong>News</strong> and level up your skills with our <strong>Trading Knowledge</strong> guides.
+                        </p>
+                    </div>
+                </div>
+
+                {/* The Dual Towers */}
+                <div class="max-w-7xl mx-auto px-4 mb-20">
+                    <div class="grid lg:grid-cols-2 gap-12">
+                        
+                        {/* Tower 1: News (Latest Industry Updates) */}
+                        <section class="flex flex-col gap-8 h-full">
+                            <div class="flex items-center gap-4 border-b border-cyan-500/20 pb-4">
+                                <div class="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+                                    <i class="fa-solid fa-newspaper text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-3xl font-bold text-white">Latest News</h2>
+                                    <p class="text-cyan-400/60 text-sm font-mono uppercase tracking-wider">Industry Updates</p>
+                                </div>
+                            </div>
+
+                            {/* News Featured Post */}
+                            {newsPosts.slice(0, 1).map(post => (
+                                <a href={`/blog/${post.slug}/`} class="group relative block h-auto shrink-0 rounded-3xl overflow-hidden border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-500 shadow-2xl shadow-cyan-900/10 bg-white/5 p-8">
+                                    <div class="relative z-10">
+                                        <span class="inline-block px-3 py-1 bg-cyan-500 text-[#0f172a] text-xs font-bold rounded-full mb-4">
+                                            LATEST NEWS
+                                        </span>
+                                        <h3 class="text-3xl font-bold text-white mb-4 leading-tight group-hover:text-cyan-400 transition-colors">
+                                            {post.data.title}
+                                        </h3>
+                                        <p class="text-white/50 text-sm line-clamp-3 mb-4">
+                                            {post.data.description}
+                                        </p>
+                                        <span class="text-cyan-400 text-sm font-bold">Read Full Update &rarr;</span>
+                                    </div>
+                                </a>
+                            ))}
+
+                            {/* Tier 2: Categories & Rules */}
+                            <div class="relative group/card flex-1">
+                                <div class="absolute inset-0 bg-cyan-500/20 blur-xl rounded-3xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
+                                <div class="relative bg-[#0f172a]/80 backdrop-blur-md rounded-3xl p-8 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 h-full flex flex-col">
+                                    <div class="flex items-center justify-between mb-6">
+                                        <h3 class="text-2xl font-bold text-white flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400">
+                                                <i class="fa-solid fa-clock-rotate-left"></i>
+                                            </div>
+                                            <span>Recent Briefs</span>
+                                        </h3>
+                                        <a href="/blog/category/News" class="text-xs font-bold text-cyan-400 hover:text-white transition-colors uppercase tracking-wider border border-cyan-500/30 rounded-full px-3 py-1 hover:bg-cyan-500/20">
+                                            View All <i class="fa-solid fa-arrow-right ml-1"></i>
+                                        </a>
+                                    </div>
+                                    <div class="space-y-4 flex-1">
+                                        {newsPosts.slice(1, 4).map(post => (
+                                            <a href={`/blog/${post.slug}/`} class="flex items-center gap-4 p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-cyan-500/10 hover:border-cyan-500/30 transition-all group/item">
+                                                <div class="flex-1">
+                                                    <h4 class="text-white/90 font-bold text-sm leading-tight group-hover/item:text-cyan-400 transition-colors mb-1 line-clamp-2">
+                                                        {post.data.title}
+                                                    </h4>
+                                                    <span class="text-xs text-white/40 group-hover/item:text-white/60 transition-colors">Read Brief &rarr;</span>
+                                                </div>
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* Tower 2: Trading Knowledge (The Pillars) */}
+                        <section class="flex flex-col gap-8 h-full">
+                            <div class="flex items-center gap-4 border-b border-purple-500/20 pb-4">
+                                <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400">
+                                    <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h2 class="text-3xl font-bold text-white">Trading Knowledge</h2>
+                                    <p class="text-purple-400/60 text-sm font-mono uppercase tracking-wider">Master the Markets</p>
+                                </div>
+                            </div>
+
+                            {/* Knowledge Featured Post */}
+                            {knowledgePosts.slice(0, 1).map(post => (
+                                <a href={`/blog/${post.slug}/`} class="group relative block h-auto shrink-0 rounded-3xl overflow-hidden border border-purple-500/20 hover:border-purple-400/50 transition-all duration-500 shadow-2xl shadow-purple-900/10 bg-white/5 p-8">
+                                    <div class="relative z-10">
+                                        <span class="inline-block px-3 py-1 bg-purple-500 text-white text-xs font-bold rounded-full mb-4">
+                                            MASTER GUIDE
+                                        </span>
+                                        <h3 class="text-3xl font-bold text-white mb-4 leading-tight group-hover:text-purple-400 transition-colors">
+                                            {post.data.title}
+                                        </h3>
+                                        <p class="text-white/50 text-sm line-clamp-3 mb-4">
+                                            {post.data.description}
+                                        </p>
+                                        <span class="text-purple-400 text-sm font-bold">Learn More &rarr;</span>
+                                    </div>
+                                </a>
+                            ))}
+
+                            {/* Tier 2: Core Concepts Grid */}
+                            <div class="relative group/card flex-1">
+                                <div class="absolute inset-0 bg-purple-500/20 blur-xl rounded-3xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
+                                <div class="relative bg-[#0f172a]/80 backdrop-blur-md rounded-3xl p-8 border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 h-full flex flex-col">
+                                    <div class="flex items-center justify-between mb-6">
+                                        <h3 class="text-2xl font-bold text-white flex items-center gap-3">
+                                            <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400">
+                                                <i class="fa-solid fa-book-open"></i>
+                                            </div>
+                                            <span>Key Learning</span>
+                                        </h3>
+                                        <a href="/blog/category/Knowledge" class="text-xs font-bold text-purple-400 hover:text-white transition-colors uppercase tracking-wider border border-purple-500/30 rounded-full px-3 py-1 hover:bg-purple-500/20">
+                                            View All <i class="fa-solid fa-arrow-right ml-1"></i>
+                                        </a>
+                                    </div>
+                                    <div class="grid grid-cols-1 gap-3 flex-1">
+                                        {knowledgePosts.slice(1, 4).map(post => (
+                                            <a href={`/blog/${post.slug}/`} class="flex items-center gap-4 p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-purple-500/10 hover:border-purple-500/30 transition-all group/item">
+                                                <div class="flex-1">
+                                                    <h4 class="text-white/80 font-bold text-sm leading-tight group-hover/item:text-white transition-colors line-clamp-2 mb-1">
+                                                        {post.data.title.replace('Trading Psychology: ', '').replace('The ', '')}
+                                                    </h4>
+                                                    <span class="text-xs text-white/40 group-hover/item:text-white/60 transition-colors">Read More &rarr;</span>
+                                                </div>
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </>
+        )}
+
+        {/* Tier 3: Latest Insights (The Feed) */}
+        <section class="max-w-7xl mx-auto px-4 pb-20 border-t border-white/5 pt-16">
+            <div class="flex items-center justify-center gap-3 mb-12">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+                    <i class="fa-solid fa-bolt text-xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-white">Latest Insights</h2>
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {page.data.map(post => (
+                    <a href={`/blog/${post.slug}/`} class="group block bg-[#1e293b] border border-white/5 rounded-2xl overflow-hidden hover:border-brand-accent/30 transition-all duration-300 hover:-translate-y-1">
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 text-xs text-brand-accent mb-3 font-medium uppercase tracking-wider">
+                                <span>{post.data.tags?.[0] || 'Insight'}</span>
+                            </div>
+                            <h3 class="font-bold text-white text-xl mb-3 leading-snug group-hover:text-brand-accent transition-colors line-clamp-2">
+                                {post.data.title}
+                            </h3>
+                            <p class="text-white/50 text-sm line-clamp-2 mb-4">
+                                {post.data.description}
+                            </p>
+                            <div class="flex items-center justify-between text-xs text-white/30 border-t border-white/5 pt-4">
+                                <time datetime={post.data.pubDate.toISOString()}>
+                                    {post.data.pubDate.toLocaleDateString('en-us', { month: 'short', day: 'numeric' })}
+                                </time>
+                                <span class="group-hover:translate-x-1 transition-transform">Read Article &rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                ))}
+            </div>
+            
+            {/* Pagination Controls */}
+            <div class="flex justify-center items-center gap-4 mt-16">
+                {page.url.prev ? (
+                    <a href={page.url.prev} class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-brand-accent hover:border-brand-accent transition-all font-bold">
+                        &larr; Previous
+                    </a>
+                ) : (
+                    <span class="px-6 py-3 rounded-xl bg-white/5 border border-white/5 text-white/20 cursor-not-allowed">
+                        &larr; Previous
+                    </span>
+                )}
+                
+                <span class="text-white/40 font-mono">
+                    Page {page.currentPage} of {page.lastPage}
+                </span>
+
+                {page.url.next ? (
+                    <a href={page.url.next} class="px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-brand-accent hover:border-brand-accent transition-all font-bold">
+                        Next &rarr;
+                    </a>
+                ) : (
+                    <span class="px-6 py-3 rounded-xl bg-white/5 border border-white/5 text-white/20 cursor-not-allowed">
+                        Next &rarr;
+                    </span>
+                )}
+            </div>
+        </section>
+
+	</main>
+    <Footer />
+</Layout>
+
+<style>
+    .radial-gradient {
+        background: radial-gradient(circle at center, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+    }
+</style>

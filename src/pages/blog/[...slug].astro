@@ -1,0 +1,123 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<'blog'>;
+
+const post = Astro.props;
+const { Content } = await post.render();
+
+// Get related posts
+const allPosts = await getCollection('blog');
+const relatedPosts = allPosts
+    .filter(p => p.slug !== post.slug) // Exclude current post
+    .filter(p => {
+        // Find intersection of tags
+        const currentTags = post.data.tags || [];
+        const otherTags = p.data.tags || [];
+        return currentTags.some(tag => otherTags.includes(tag));
+    })
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()) // Sort by newest
+    .slice(0, 3); // Limit to 3
+---
+
+<Layout title={post.data.title} description={post.data.description} ogImage={post.data.heroImage}>
+    <Header />
+	<main class="min-h-screen pb-24">
+        {/* Hero Section */}
+        <div class="relative bg-brand-surface border-b border-white/5 py-20 px-4 mb-12 overflow-hidden">
+            <div class="absolute inset-0 bg-brand-accent/5 blur-3xl opacity-30"></div>
+            <div class="absolute inset-0 bg-brand-accent/5 blur-3xl opacity-30"></div>
+            <div class="max-w-3xl mx-auto relative z-10 text-center">
+                <a href="/blog" class="inline-flex items-center gap-2 text-sm font-semibold text-white/60 hover:text-brand-accent transition-colors mb-8 bg-white/5 px-4 py-2 rounded-full border border-white/10 hover:bg-white/10">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Blog
+                </a>
+                
+                <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight tracking-tight text-white">
+                    {post.data.title}
+                </h1>
+                
+                <div class="flex items-center justify-center gap-6 text-sm text-white/60">
+                    <time datetime={post.data.pubDate.toISOString()} class="flex items-center gap-2">
+                        <i class="fa-regular fa-calendar"></i>
+                        {post.data.pubDate.toLocaleDateString('en-us', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                        })}
+                    </time>
+                    {post.data.tags && (
+                        <div class="flex gap-2">
+                            {post.data.tags.map(tag => (
+                                <span class="bg-brand-accent/10 text-brand-accent px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-accent/20">#{tag}</span>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+
+		<article class="max-w-3xl mx-auto px-4 prose prose-invert prose-lg 
+            prose-headings:font-bold prose-headings:text-white prose-headings:tracking-tight
+            prose-p:text-white/80 prose-p:leading-relaxed
+            prose-a:text-brand-accent prose-a:no-underline hover:prose-a:underline prose-a:font-semibold
+            prose-strong:text-white prose-strong:font-bold
+            prose-blockquote:border-l-4 prose-blockquote:border-brand-accent prose-blockquote:bg-white/5 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:not-italic prose-blockquote:rounded-r-xl prose-blockquote:text-white/90
+            prose-ul:text-white/80 prose-li:marker:text-brand-accent
+            prose-img:rounded-2xl prose-img:shadow-2xl prose-img:border prose-img:border-white/10
+            prose-hr:border-white/10
+            ">
+            
+
+
+			<Content />
+            
+            {/* Google AdSense - Post Dưới (In-Article) */}
+            <div class="mt-12 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4">
+                <ins class="adsbygoogle"
+                    style="display:block; text-align:center;"
+                    data-ad-layout="in-article"
+                    data-ad-format="fluid"
+                    data-ad-client="ca-pub-6456170405994901"
+                    data-ad-slot="9646186541"></ins>
+                <script is:inline>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+		</article>
+
+        {/* Related Posts */}
+        {relatedPosts.length > 0 && (
+            <div class="max-w-4xl mx-auto px-4 mt-20 pt-12 border-t border-white/10">
+                <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                    <i class="fa-solid fa-layer-group text-brand-accent"></i>
+                    Related Articles
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {relatedPosts.map(related => (
+                        <a href={`/blog/${related.slug}`} class="group block bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-brand-accent/50 transition-all hover:-translate-y-1 p-6">
+                            <div class="p-5">
+                                <h4 class="font-bold text-white group-hover:text-brand-accent transition-colors line-clamp-2 mb-2">
+                                    {related.data.title}
+                                </h4>
+                                <time class="text-xs text-white/50 block">
+                                    {related.data.pubDate.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' })}
+                                </time>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        )}
+	</main>
+    <Footer />
+</Layout>

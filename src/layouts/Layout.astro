@@ -1,0 +1,218 @@
+---
+import '../styles/tailwind.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+	canonical?: string;
+	ogImage?: string;
+}
+
+const { title = 'GoPropReels - Prop Firm Discount Codes', description = 'Find verified prop firm coupon codes. Save on FTMO, The5ers & 50+ funded trading firms.', canonical, ogImage } =
+	Astro.props as Props;
+const siteUrl = 'https://gopropreels.com';
+const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
+const fullOgImage = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/og-image.jpg`;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth bg-brand-bg text-white">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		
+		{/* SEO Meta Tags */}
+		<link rel="canonical" href={fullCanonical} />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="GoPropReels" />
+		<meta name="keywords" content="prop firm, prop firm coupon, prop firm discount, funded trading, forex prop firm, futures prop firm, trading challenge, prop firm codes" />
+		
+		{/* Open Graph / Facebook */}
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={fullCanonical} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={fullOgImage} />
+		<meta property="og:site_name" content="GoPropReels" />
+		
+		{/* Twitter */}
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={fullCanonical} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={fullOgImage} />
+
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "GoPropReels",
+			"url": "https://gopropreels.com",
+			"logo": "https://gopropreels.com/favicon-192x192.png",
+			"sameAs": [
+				"https://t.me/GoPropReels_com"
+			]
+		})} />
+		
+		{/* Google Consent Mode v2 - Must load before AdSense & Analytics */}
+{/* Google Consent Mode v2 - Temporarily disabled for debugging
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('consent', 'default', {
+				'ad_storage': 'denied',
+				'ad_user_data': 'denied',
+				'ad_personalization': 'denied',
+				'analytics_storage': 'denied',
+				'wait_for_update': 500,
+			});
+		</script>
+		*/}
+		
+		{/* Google Analytics 4 - Replace G-XXXXXXXXXX with your GA4 Measurement ID */}
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-XXXXXXXXXX', {
+				'anonymize_ip': true,
+				'cookie_flags': 'SameSite=None;Secure'
+			});
+		</script>
+		
+		{/* Google AdSense - Load after consent mode */}
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6456170405994901" crossorigin="anonymous"></script>
+		
+		{/* Note: CMP will be added automatically when you complete the setup in AdSense dashboard */}
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
+	<body class="bg-brand-bg text-white antialiased selection:bg-brand-accent/80 selection:text-white">
+		<slot />
+
+		<button
+			id="scroll-to-top"
+			class="fixed bottom-6 right-6 z-40 flex h-12 w-12 translate-y-20 items-center justify-center rounded-full border border-white/10 bg-brand-accent text-black shadow-glow transition duration-300 hover:scale-110 hover:bg-white opacity-0"
+			aria-label="Scroll to top"
+		>
+			<i class="fa-solid fa-arrow-up text-lg"></i>
+		</button>
+
+		<div id="code-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm">
+			<div class="relative w-full max-w-md transform rounded-3xl border border-white/10 bg-[#1C1C1E] p-8 shadow-2xl transition-all scale-95" id="code-modal-content">
+				<button id="close-modal" class="absolute right-4 top-4 h-8 w-8 rounded-full bg-white/5 text-white/50 hover:bg-white/10 hover:text-white transition flex items-center justify-center">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+				<div class="text-center">
+					<div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-brand-accent/10 text-brand-accent shadow-glow">
+						<i class="fa-solid fa-check text-3xl"></i>
+					</div>
+					<h3 class="mb-2 text-2xl font-bold text-white">Code Copied!</h3>
+					<p class="mb-6 text-white/60">Paste this code at checkout to claim your deal.</p>
+					
+					<div class="group relative mb-6 cursor-pointer rounded-xl bg-black/50 p-4 border border-white/10 hover:border-brand-accent/50 transition" id="modal-copy-area">
+						<code id="modal-code-display" class="text-3xl font-mono font-bold text-brand-accent tracking-wider">CODE123</code>
+						<div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition rounded-xl">
+							<span class="text-xs font-bold text-white uppercase tracking-wider">Click to Copy Again</span>
+						</div>
+					</div>
+
+					<a id="modal-action-btn" href="#" target="_blank" class="flex w-full items-center justify-center gap-2 rounded-xl bg-brand-accent py-4 font-bold text-black hover:bg-white hover:scale-[1.02] transition shadow-lg shadow-brand-accent/20">
+						<span>Continue to Site</span>
+						<i class="fa-solid fa-arrow-right"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			const scrollTopBtn = document.getElementById('scroll-to-top');
+			const modal = document.getElementById('code-modal');
+			const modalContent = document.getElementById('code-modal-content');
+			const closeModalBtn = document.getElementById('close-modal');
+			const modalCodeDisplay = document.getElementById('modal-code-display');
+			const modalActionBtn = document.getElementById('modal-action-btn');
+			const modalCopyArea = document.getElementById('modal-copy-area');
+			
+			if (scrollTopBtn) {
+				window.addEventListener('scroll', () => {
+					if (window.scrollY > 500) {
+						scrollTopBtn.classList.remove('translate-y-20', 'opacity-0');
+					} else {
+						scrollTopBtn.classList.add('translate-y-20', 'opacity-0');
+					}
+				});
+
+				scrollTopBtn.addEventListener('click', () => {
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+				});
+			}
+
+			// Global Modal Logic
+			if (modal && modalContent && closeModalBtn && modalCodeDisplay && modalActionBtn) {
+				const hideModal = () => {
+					modal.classList.add('opacity-0', 'pointer-events-none');
+					modalContent.classList.add('scale-95');
+				};
+
+				const showModal = (code, link) => {
+					modalCodeDisplay.textContent = code;
+					if (link) {
+						modalActionBtn.href = link;
+						modalActionBtn.style.display = 'flex';
+					} else {
+						modalActionBtn.style.display = 'none';
+					}
+					
+					modal.classList.remove('opacity-0', 'pointer-events-none');
+					modalContent.classList.remove('scale-95');
+				};
+
+				closeModalBtn.addEventListener('click', hideModal);
+				modal.addEventListener('click', (e) => {
+					if (e.target === modal) hideModal();
+				});
+
+				// Re-copy on click
+				modalCopyArea?.addEventListener('click', () => {
+					const code = modalCodeDisplay.textContent;
+					navigator.clipboard.writeText(code);
+					
+					// Visual feedback
+					modalCopyArea.style.borderColor = '#fff';
+					setTimeout(() => {
+						modalCopyArea.style.borderColor = '';
+					}, 200);
+				});
+
+				// Listen for copy events from cards/pages
+				document.addEventListener('open-code-modal', (e) => {
+					const { code, link } = e.detail;
+					showModal(code, link);
+				});
+			}
+		</script>
+	</body>
+</html>

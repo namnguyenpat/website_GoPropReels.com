@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const coupons = await getCollection('coupons');
+  return coupons.map((entry) => ({
+    params: { id: entry.data.id },
+    props: { deal: entry.data },
+  }));
+}
+
+const { deal } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to {deal.firm_name}...</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="refresh" content={`0;url=${deal.affiliate_link}`} />
+    
+    <script define:vars={{ link: deal.affiliate_link }}>
+        window.location.href = link;
+    </script>
+</head>
+<body class="bg-slate-900 text-white flex items-center justify-center min-h-screen">
+    <div class="text-center p-8">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+        <p class="text-lg mb-4">Redirecting you to <strong>{deal.firm_name}</strong>...</p>
+        <p class="text-sm text-slate-400">
+            If you are not redirected automatically, <a href={deal.affiliate_link} class="text-blue-400 hover:underline">click here</a>.
+        </p>
+    </div>
+</body>
+</html>
