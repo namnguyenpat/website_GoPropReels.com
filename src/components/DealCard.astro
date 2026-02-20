@@ -42,12 +42,12 @@ const firmInitial = deal.firm_name.charAt(0);
 			/>
 		) : (
 			<img
-				src={`/images/deals/${deal.id}.png`}
+				src={deal.firm_logo || `/images/deals/${deal.id}.png`}
 				alt={imageAlt}
 				class="h-full w-full object-cover transition-transform group-hover:scale-105"
 				loading="lazy"
 				data-deal-id={deal.id}
-				onerror="this.onerror=null;this.src=this.src.replace('.png','.jpg')"
+				onerror={`this.onerror=null; this.src='/images/logos/${deal.firm_name.toLowerCase().replace(/ /g, "-")}.png';`}
 			/>
 		)}
 		<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>

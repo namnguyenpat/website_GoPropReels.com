@@ -17,10 +17,38 @@ import SearchModal from './SearchModal.astro';
 				<span>Deals</span>
 			</a>
 			<a
+				href="/forex"
+				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 lg:flex"
+			>
+				<i class="fa-solid fa-chart-line text-brand-accent"></i>
+				<span>Forex</span>
+			</a>
+			<a
+				href="/futures"
+				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 lg:flex"
+			>
+				<i class="fa-solid fa-arrow-trend-up text-brand-accent"></i>
+				<span>Futures</span>
+			</a>
+			<a
+				href="/crypto"
+				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 lg:flex"
+			>
+				<i class="fa-solid fa-bitcoin-sign text-brand-accent"></i>
+				<span>Crypto</span>
+			</a>
+			<a
 				href="/news"
 				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 md:flex"
 			>
 				<i class="fa-solid fa-newspaper text-brand-accent"></i>
+				<span>News</span>
+			</a>
+			<a
+				href="/blog"
+				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 md:flex"
+			>
+				<i class="fa-solid fa-brain text-brand-accent"></i>
 				<span>Blog</span>
 			</a>
 
@@ -70,6 +98,24 @@ import SearchModal from './SearchModal.astro';
     {/* Mobile Menu Overlay (Slides down from below header) */}
     <div id="mobile-menu" class="fixed top-16 left-0 right-0 bottom-0 z-[1001] bg-[#020617] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col p-6 gap-4 border-t border-white/10 overflow-y-auto">
         
+        <a href="/forex" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
+            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+            Forex Coupons
+        </a>
+        <a href="/futures" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
+            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+            Futures Coupons
+        </a>
+        <a href="/crypto" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
+            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+                <i class="fa-solid fa-bitcoin-sign"></i>
+            </div>
+            Crypto Coupons
+        </a>
         <a href="/compare" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
             <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
                 <i class="fa-solid fa-scale-balanced"></i>

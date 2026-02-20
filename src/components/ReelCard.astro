@@ -45,7 +45,7 @@ const cardDescription = deal.description || "";
 	{/* Video/Image Background */}
 	<div class="absolute inset-0 video-container" data-video-id={deal.video_source?.id} data-video-type={deal.video_source?.type}>
 		<img
-			src={deal.video_source?.src || (deal.video_source?.type === 'youtube' && deal.video_source?.id ? `https://img.youtube.com/vi/${deal.video_source.id}/maxresdefault.jpg` : `/images/deals/${deal.id}.jpg`)}
+			src={deal.video_source?.src || (deal.video_source?.type === 'youtube' && deal.video_source?.id ? `https://img.youtube.com/vi/${deal.video_source.id}/maxresdefault.jpg` : deal.firm_logo || `/images/deals/${deal.id}.jpg`)}
 			alt={imageAlt}
 			class="h-full w-full object-cover transition-transform duration-700"
 			loading="lazy"
@@ -60,7 +60,6 @@ const cardDescription = deal.description || "";
         variant="background"
         category={deal.category}
         keyBenefit={deal.key_benefit}
-        logo={deal.firm_logo}
       />
     </div>
 	</div>
