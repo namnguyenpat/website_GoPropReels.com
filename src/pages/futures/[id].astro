@@ -1,0 +1,127 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import DealCard from '../../components/DealCard.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import LatestBlogs from '../../components/LatestBlogs.astro';
+import { getCollection, getEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+	const coupons = await getCollection('coupons');
+    // Filter for futures firms
+    const futuresCoupons = coupons.filter(c => c.data.category.toLowerCase() === 'futures');
+    // Get unique firm IDs
+    const uniqueFirms = [...new Set(futuresCoupons.map(c => c.data.id))];
+    
+	return uniqueFirms.map((id) => {
+        const deal = futuresCoupons.find(c => c.data.id === id).data;
+        return {
+            params: { id: id },
+            props: { deal: deal },
+        };
+    });
+}
+
+const { deal } = Astro.props;
+
+// Fetch ALL deals for this firm in this category
+const allCoupons = await getCollection('coupons');
+const firmDeals = allCoupons
+    .filter(c => c.data.id === deal.id && c.data.category.toLowerCase() === 'futures')
+    .map(c => c.data);
+
+// Try to fetch rich content from Markdown
+const blogPost = await getEntry('reviews', deal.id);
+const { Content } = blogPost ? await blogPost.render() : { Content: null };
+
+const pageTitle = `${deal.firm_name} Review & Coupons (Futures) | GoPropReels`;
+const pageDescription = `Explore ${deal.firm_name} prop firm details, ratings, and exclusive ${deal.category} discount codes for futures traders. Claim the best deals today.`;
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <Header />
+    
+    <main class="relative mx-auto flex max-w-5xl flex-col gap-12 px-4 py-16 text-white">
+        {/* Breadcrumb */}
+        <nav class="flex items-center gap-2 text-sm text-white/60" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-white transition">Home</a>
+            <span>/</span>
+            <a href="/?category=futures" class="hover:text-white transition">Futures Firms</a>
+            <span>/</span>
+            <span class="text-brand-accent">{deal.firm_name}</span>
+        </nav>
+
+        <header class="flex flex-col md:flex-row items-center gap-8 rounded-3xl border border-white/10 bg-white/5 p-8">
+            <div class="h-32 w-32 shrink-0 overflow-hidden rounded-2xl bg-white/10 p-4">
+                <img src={deal.firm_logo} alt={deal.firm_name} class="h-full w-full object-contain" />
+            </div>
+            <div class="text-center md:text-left">
+                <div class="inline-flex items-center gap-2 rounded-full bg-futures/10 border border-futures/20 px-3 py-1 text-[10px] font-black uppercase text-futures mb-4">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Futures Trading Partner
+                </div>
+                <h1 class="text-4xl font-black mb-2">{deal.broker || deal.firm_name}</h1>
+                <p class="text-white/60 text-lg max-w-2xl">{deal.description || `Comprehensive review and active coupons for ${deal.firm_name}.`}</p>
+            </div>
+        </header>
+
+        <section class="grid gap-12 lg:grid-cols-[1.2fr,0.8fr]">
+            <div class="space-y-12">
+                {/* Content Section */}
+                <article class="prose prose-invert max-w-none">
+                    <h2 class="text-3xl font-black mb-8 border-l-4 border-brand-accent pl-6">Firm Intel & Review</h2>
+                    {Content ? <Content /> : <div set:html={deal.seo_content} />}
+                </article>
+
+                {/* Firm Deals List */}
+                <section>
+                    <h3 class="text-2xl font-black mb-6">Active {deal.firm_name} Deals</h3>
+                    <div class="grid gap-6 sm:grid-cols-2">
+                        {firmDeals.map(d => (
+                            <DealCard deal={d} />
+                        ))}
+                    </div>
+                </section>
+            </div>
+
+            <aside class="space-y-8">
+                {/* Quick Info Box */}
+                <div class="rounded-3xl border border-white/10 bg-black/40 p-6">
+                    <h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-info text-brand-accent"></i>
+                        Quick Summary
+                    </h3>
+                    <ul class="space-y-4 text-sm text-white/70">
+                        <li class="flex items-center justify-between border-b border-white/5 pb-3">
+                            <span class="text-white">Category</span>
+                            <span class="font-bold text-futures uppercase">{deal.category}</span>
+                        </li>
+                        <li class="flex items-center justify-between border-b border-white/5 pb-3">
+                            <span class="text-white">Verification Status</span>
+                            <span class="text-green-400 font-bold">✓ Verified Firm</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+					<h3 class="text-lg font-semibold px-2">Latest Insights</h3>
+					<LatestBlogs />
+				</div>
+            </aside>
+        </section>
+    </main>
+
+    <Footer />
+</Layout>
+
+<style>
+    .text-futures {
+        color: #facc15;
+    }
+    .bg-futures\/10 {
+        background-color: rgba(250, 204, 21, 0.1);
+    }
+    .border-futures\/20 {
+        border-color: rgba(250, 204, 21, 0.2);
+    }
+</style>

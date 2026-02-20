@@ -40,11 +40,16 @@ const popularDeals = {
 	crypto: getDealsByCategory(activeDeals, 'crypto').slice(0, 3),
 };
 
-// Get latest blog posts
-const allPosts = (await getCollection('blog')).sort(
+// Get latest blog posts (Knowledge)
+const allBlogPosts = (await getCollection('blog', ({ data }) => data.category === 'Knowledge')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-const latestPosts = allPosts.slice(0, 3);
+const latestPosts = allBlogPosts.slice(0, 3);
+
+// Get latest news
+const latestNews = (await getCollection('blog', ({ data }) => data.category === 'News')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).slice(0, 3);
 ---
 
 <Layout title="GoPropReels - Best Prop Firm Coupon Codes" description="Find verified prop firm discount codes. Save on FTMO, The5ers, Funding Pips & 50+ funded trading firms. Codes tested daily." canonical="/">

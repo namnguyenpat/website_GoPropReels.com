@@ -6,7 +6,7 @@ import Footer from '../../components/Footer.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog', ({ data }) => {
-        return data.category === 'Knowledge';
+        return data.category === 'News';
     });
 	return posts.map((post) => ({
 		params: { slug: post.slug },
@@ -18,31 +18,23 @@ type Props = CollectionEntry<'blog'>;
 const post = Astro.props;
 const { Content } = await post.render();
 
-// Get related posts
-const allPosts = await getCollection('blog');
-const relatedPosts = allPosts
-    .filter(p => p.slug !== post.slug) // Exclude current post
-    .filter(p => {
-        // Find intersection of tags
-        const currentTags = post.data.tags || [];
-        const otherTags = p.data.tags || [];
-        return currentTags.some(tag => otherTags.includes(tag));
-    })
-    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()) // Sort by newest
-    .slice(0, 3); // Limit to 3
+// Get related news
+const allNews = await getCollection('blog', ({ data }) => data.category === 'News');
+const relatedPosts = allNews
+    .filter(p => p.slug !== post.slug)
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 3);
 ---
 
 <Layout title={post.data.title} description={post.data.description} ogImage={post.data.heroImage}>
     <Header />
 	<main class="min-h-screen pb-24">
-        {/* Hero Section */}
         <div class="relative bg-brand-surface border-b border-white/5 py-20 px-4 mb-12 overflow-hidden">
             <div class="absolute inset-0 bg-brand-accent/5 blur-3xl opacity-30"></div>
-            <div class="absolute inset-0 bg-brand-accent/5 blur-3xl opacity-30"></div>
             <div class="max-w-3xl mx-auto relative z-10 text-center">
-                <div class="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 text-xs font-black uppercase text-blue-400 mb-8">
-                    <i class="fa-solid fa-brain"></i>
-                    Trading Psychology
+                <div class="inline-flex items-center gap-2 rounded-full bg-brand-accent/10 border border-brand-accent/20 px-4 py-1.5 text-xs font-black uppercase text-brand-accent mb-8">
+                    <i class="fa-solid fa-newspaper"></i>
+                    Industry News
                 </div>
                 
                 <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight tracking-tight text-white">
@@ -58,13 +50,6 @@ const relatedPosts = allPosts
                             day: 'numeric',
                         })}
                     </time>
-                    {post.data.tags && (
-                        <div class="flex gap-2">
-                            {post.data.tags.map(tag => (
-                                <span class="bg-brand-accent/10 text-brand-accent px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-accent/20">#{tag}</span>
-                            ))}
-                        </div>
-                    )}
                 </div>
             </div>
         </div>
@@ -79,43 +64,24 @@ const relatedPosts = allPosts
             prose-img:rounded-2xl prose-img:shadow-2xl prose-img:border prose-img:border-white/10
             prose-hr:border-white/10
             ">
-            
-
-
 			<Content />
-            
-            {/* Google AdSense - Post Dưới (In-Article) */}
-            <div class="mt-12 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4">
-                <ins class="adsbygoogle"
-                    style="display:block; text-align:center;"
-                    data-ad-layout="in-article"
-                    data-ad-format="fluid"
-                    data-ad-client="ca-pub-6456170405994901"
-                    data-ad-slot="9646186541"></ins>
-                <script is:inline>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
 		</article>
 
-        {/* Related Posts */}
         {relatedPosts.length > 0 && (
             <div class="max-w-4xl mx-auto px-4 mt-20 pt-12 border-t border-white/10">
                 <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
                     <i class="fa-solid fa-layer-group text-brand-accent"></i>
-                    Related Articles
+                    Related News
                 </h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {relatedPosts.map(related => (
-                        <a href={`/blog/${related.slug}`} class="group block bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-brand-accent/50 transition-all hover:-translate-y-1 p-6">
-                            <div class="p-5">
-                                <h4 class="font-bold text-white group-hover:text-brand-accent transition-colors line-clamp-2 mb-2">
-                                    {related.data.title}
-                                </h4>
-                                <time class="text-xs text-white/50 block">
-                                    {related.data.pubDate.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' })}
-                                </time>
-                            </div>
+                        <a href={`/news/${related.slug}`} class="group block bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-brand-accent/50 transition-all hover:-translate-y-1 p-6">
+                            <h4 class="font-bold text-white group-hover:text-brand-accent transition-colors line-clamp-2 mb-2">
+                                {related.data.title}
+                            </h4>
+                            <time class="text-xs text-white/50 block">
+                                {related.data.pubDate.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' })}
+                            </time>
                         </a>
                     ))}
                 </div>
