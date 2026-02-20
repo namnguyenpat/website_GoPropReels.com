@@ -304,32 +304,34 @@ const latestPosts = allPosts.slice(0, 3);
 			</section>
 
 			{/* Latest Insights (Blog) */}
-			<section class="space-y-6" id="blog">
-				<div class="flex items-center justify-between gap-4">
-					<h2 class="text-3xl font-bold text-white">Latest Insights</h2>
-					<a href="/blog" class="text-sm font-semibold text-brand-accent hover:text-white transition">
-						View all articles <i class="fa-solid fa-arrow-right ml-1"></i>
-					</a>
-				</div>
-				<div class="grid gap-6 md:grid-cols-3">
-					{latestPosts.map(post => (
-						<a href={`/blog/${post.slug}/`} class="group block rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-brand-accent/50 transition">
-							<div class="aspect-video overflow-hidden">
-								<img src={post.data.heroImage || '/og-image.jpg'} alt={post.data.title} class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-							</div>
-							<div class="p-5">
-								<h3 class="font-bold text-white text-lg mb-2 line-clamp-2 group-hover:text-brand-accent transition">{post.data.title}</h3>
-								<p class="text-sm text-white/60 line-clamp-2">{post.data.description}</p>
-							</div>
+			{latestPosts.length > 0 && (
+				<section class="space-y-6" id="blog">
+					<div class="flex items-center justify-between gap-4">
+						<h2 class="text-3xl font-bold text-white">Latest Insights</h2>
+						<a href="/blog" class="text-sm font-semibold text-brand-accent hover:text-white transition">
+							View all articles <i class="fa-solid fa-arrow-right ml-1"></i>
 						</a>
-					))}
-				</div>
-                <div class="flex justify-center pt-10">
-                    <a href="/blog" class="inline-flex items-center gap-2 rounded-full border border-brand-accent/30 bg-brand-accent/10 px-10 py-4 text-base font-bold text-white transition hover:bg-brand-accent/20 hover:border-brand-accent shadow-xl shadow-brand-accent/10 group">
-                        View all articles <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform ml-1"></i>
-                    </a>
-                </div>
-			</section>
+					</div>
+					<div class="grid gap-6 md:grid-cols-3">
+						{latestPosts.map(post => (
+							<a href={`/blog/${post.slug}/`} class="group block rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-brand-accent/50 transition">
+								<div class="aspect-video overflow-hidden">
+									<img src={post.data.heroImage || '/og-image.jpg'} alt={post.data.title} class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+								</div>
+								<div class="p-5">
+									<h3 class="font-bold text-white text-lg mb-2 line-clamp-2 group-hover:text-brand-accent transition">{post.data.title}</h3>
+									<p class="text-sm text-white/60 line-clamp-2">{post.data.description}</p>
+								</div>
+							</a>
+						))}
+					</div>
+					<div class="flex justify-center pt-10">
+						<a href="/blog" class="inline-flex items-center gap-2 rounded-full border border-brand-accent/30 bg-brand-accent/10 px-10 py-4 text-base font-bold text-white transition hover:bg-brand-accent/20 hover:border-brand-accent shadow-xl shadow-brand-accent/10 group">
+							View all articles <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform ml-1"></i>
+						</a>
+					</div>
+				</section>
+			)}
 		</main>
 
 		<section class="relative z-10 border-t border-white/10 bg-black/60 px-4 py-8 text-xs text-white/60">
