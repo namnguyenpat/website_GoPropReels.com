@@ -1,70 +1,72 @@
-# GUIDE: GoPropReels Coupon Workflow
+# GUIDE: GoPropReels Definitive Workflow (v2.0)
 
-This guide explains the "Premium Reel" architecture of [GoPropReels.com](file:///d:/Dropbox/@Code%20_offical/New_skills/website_GoPropReels.com). It serves as the source of truth for AI agents creating or updating coupons.
+This guide is the **Source of Truth** for managing [GoPropReels.com](file:///d:/Dropbox/@Code%20_offical/New_skills/website_GoPropReels.com). It covers data structure, UI standards, and the deployment pipeline.
 
 ## 1. Core Architecture
-GoPropReels follows a **Data-Driven Architecture** using **Astro Content Collections**:
--   **Source of Truth**: Every coupon is its own `.json` file in [src/content/coupons/](file:///d:/Dropbox/@Code%20_offical/New_skills/website_GoPropReels.com/src/content/coupons/).
--   **Dynamic Rendering**: The route `coupons/[id].astro` automatically renders a landing page using data from the collection.
--   **AI Writing**: Agents must create a NEW JSON file for every deal, ensuring unique content in the `seo_content` field.
+The site is built with **Astro Content Collections** for maximum performance and type safety.
+-   **Coupons**: Data-driven `.json` files in `src/content/coupons/`.
+-   **Blog**: Content-driven `.md` files in `src/content/blog/`.
+-   **Schema**: Managed in `src/content/config.ts`. Validation happens during build.
 
-## 2. The "Reel" Aesthetic
-The UI is built on a **Premium Dark/Carbon** theme.
--   **Card (ReelCard.astro)**: Compact, 9/16 aspect ratio, clean typography, stable background (no zoom on hover).
--   **Poster (DynamicPoster.astro)**: High-impact animated visual using CSS/SVG filters. Features:
-    -   **Branding**: Logo at top.
-    -   **Highlight**: Large, single-line discount (e.g., "80% OFF").
-    -   **Context**: Category tag (e.g., "FUTURES") and Key Benefit (e.g., "1-STEP EVALUATION").
-    -   **Transitions**: Smooth vertical slide-up (12px) on hover.
-
-## 3. Coupon Data Structure (JSON)
-
-When creating a new coupon file (e.g., `src/content/coupons/[id].json`), ensure these fields are populated:
+## 2. Coupon Management (JSON)
+Every deal must be a JSON file. Use the following schema:
 
 ```json
 {
-  "id": "unique-id-matches-filename",
+  "id": "firm-name-discount-code",
   "firm_name": "Apex Trader Funding",
-  "category": "futures",
+  "category": "futures", 
   "discount_highlight": "80% OFF",
-  "title": "Unique High-Impact Title (Critical for Conversion)",
-  "description": "Unique 2-line teaser (Must be attractive, not generic).",
   "coupon_code": "APEX80",
-  "expiration_date": "2026-03-01",
   "theme_color": "#D4AF37",
-  "features": [
-    "Feature 1",
-    "Feature 2"
-  ],
-  "affiliate_link": "https://link.com",
-  "seo_content": "<h3>HTML Title</h3><p>Persuasive article...</p>",
-  "firm_logo": "/images/logos/filename.svg",
-  "created_at": "2026-02-18T23:00:00.000Z"
+  "features": ["1-Step Evaluation", "No Daily Drawdown"],
+  "affiliate_link": "https://...",
+  "firm_logo": "/images/logos/apex.svg",
+  "seo_content": "<h3>High impact title</h3><p>Detailed review content...</p>",
+  "created_at": "2026-02-19T20:00:00Z"
 }
 ```
 
-## 4. Step-by-Step Workflow for New Coupons
+### Critical Rules:
+1.  **Category Enum**: Must be exactly `"forex"` or `"futures"`. Other values will break the build.
+2.  **ID Unicity**: The `id` string inside the JSON must match the filename exactly.
+3.  **SEO Content**: Use HTML tags (`<h3>`, `<p>`, `<ul>`) for the deep-review section.
 
-### Step 1: Logo Acquisition
--   Check the [AI Agent Assets](file:///d:/Dropbox/@Code%20_offical/New_skills/website_AI_agent/public/logos/) for the firm's SVG logo.
--   **CRITICAL**: Use the **ORIGINAL** logo file. Do not redraw.
--   Copy to `website_GoPropReels.com/public/images/logos/[firm-slug].svg`.
+## 3. Blog Management (Markdown)
+The blog is optimized for **Typographic Excellence** (No images).
 
-### Step 2: Create Collection File
--   Create a new file in `src/content/coupons/`. Filename should be the `id`.
--   Fill out all fields. 
--   **Pro Tip**: Update the `created_at` to the current time to push it to the top.
+### Frontmatter Template:
+```markdown
+---
+title: "Article Title"
+description: "Compelling 2-line summary."
+pubDate: 2026-02-19
+category: "News" 
+tags: ["News", "Trading"]
+---
+```
+-   **Category**: Must be `"News"` or `"Knowledge"`.
+-   **No Hero Image**: Do not add `heroImage`. The layout is designed to be purely text-based for premium speed.
 
-### Step 3: AI Content Writing
--   Write the detailed article directly into the `seo_content` field using **HTML**.
--   **Prompt for AI**: "Write a high-converting, SEO-optimized landing page content for [Firm Name] [Discount]. Use <h3> for subheaders. Tone: Stoic, professional, and urgent."
+## 4. UI Layout Standards
+-   **ReelCard**: Displays a `DynamicPoster` background.
+-   **Detail Page**: Group of [CTA + Trust Signals] is placed directly under the Title.
+-   **Logos**: Use original colored logos. No background pads or borders.
 
-### Step 4: Verification
--   **Home Card**: Check for text wrapping in `discount_highlight`. (Should be 1 line).
--   **Detail Page**: Verify [localhost:4322/coupons/[id]](http://localhost:4322/coupons/...) renders with the new the high-conversion layout.
+## 5. Deployment Pipeline
+The website is synced via Git and deployed via Vercel.
 
-## 5. UI Standardization Rules
-1.  **Alignment**: Keep discount text on one line (`white-space: nowrap`).
-2.  **Truncation**: Card descriptions are limited to 2 lines (`line-clamp-2`).
-3.  **Stability**: NEVER re-introduce `scale-105` on card hover. 
-4.  **Premium Colors**: Use curated accent colors (Gold, Cyber Blue, Ruby Red).
+### Steps to Deploy Changes:
+1.  **Commit locally**:
+    ```powershell
+    git add .
+    git commit -m "feat: new coupon added and content update"
+    ```
+2.  **Push to GitHub**:
+    ```powershell
+    git push origin main
+    ```
+3.  **Vercel Auto-Deploy**: Vercel monitors the GitHub repo and starts building immediately. Check the dashboard at [vercel.com](https://vercel.com) for status.
+
+---
+**Build Fix Tip**: If the Vercel build fails, run `npx astro sync` locally to catch schema errors before pushing.
