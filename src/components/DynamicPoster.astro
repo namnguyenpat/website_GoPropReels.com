@@ -81,8 +81,10 @@ const initials = firmName
       </h2>
 
       {logo && (
-        <div class="firm-logo-container mt-2 flex h-16 w-32 items-center justify-center overflow-hidden">
-          <img src={logo} alt={firmName} class="h-full w-full object-contain" />
+        <div class="mb-6 flex animate-fade-in items-center justify-center">
+            <div class="logo-wrapper h-20 w-32 flex items-center justify-center p-2 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg">
+                <img src={logo} alt={firmName} class="max-h-12 max-w-[100px] object-contain brightness-110 contrast-125" />
+            </div>
         </div>
       )}
 
