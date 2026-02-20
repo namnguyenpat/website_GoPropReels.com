@@ -1,0 +1,17 @@
+{
+    "id": "ftmo-100k-special-deal",
+    "firm_name": "FTMO",
+    "category": "forex",
+    "discount_highlight": "€101 OFF",
+    "coupon_code": "AUTO_APPLIED",
+    "theme_color": "#3B82F6",
+    "features": [
+        "Regulated Infrastructure",
+        "100% Fee Refund",
+        "Institutional Liquidity"
+    ],
+    "affiliate_link": "https://trader.ftmo.com/",
+    "firm_logo": "/images/logos/ftmo.svg",
+    "seo_content": "<h3>FTMO: The Industry Benchmark</h3><p>Experience the most trusted prop firm in the world. Secure a $100K Standard Challenge for only <b>€439</b>. No code needed—the gold standard just became more accessible.</p>",
+    "created_at": "2026-02-20T12:00:00Z"
+}
