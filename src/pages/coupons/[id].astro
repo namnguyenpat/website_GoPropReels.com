@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 const { deal } = Astro.props;
 
 // Try to fetch rich content from Markdown (High Priority)
-const blogPost = await getEntry('blog', deal.id);
+const blogPost = await getEntry('reviews', deal.id);
 const { Content } = blogPost ? await blogPost.render() : { Content: null };
 
 // Auto-generate related deals for internal linking

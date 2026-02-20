@@ -40,4 +40,18 @@ const coupons = defineCollection({
     }),
 });
 
-export const collections = { blog, coupons };
+const reviews = defineCollection({
+    type: 'content',
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        pubDate: z.coerce.date(),
+        updatedDate: z.coerce.date().optional(),
+        heroImage: z.string().optional(),
+        tags: z.array(z.string()).optional(),
+        tier: z.string().optional(),
+        category: z.string().optional(), // Flexible for reviews
+    }),
+});
+
+export const collections = { blog, coupons, reviews };
