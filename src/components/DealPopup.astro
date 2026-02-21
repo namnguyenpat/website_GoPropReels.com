@@ -1,0 +1,105 @@
+---
+layout: ../../layouts/Layout.astro
+---
+<div id="deal-popup" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-md p-4">
+    <div class="relative w-full max-w-lg overflow-hidden rounded-[2.5rem] border border-white/10 bg-brand-surface shadow-2xl animate-fade-in-up">
+        
+        <!-- Header / Close -->
+        <div class="absolute right-6 top-6 z-10">
+            <button id="close-deal-popup" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-white/50 transition hover:bg-white/10 hover:text-white">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Content -->
+        <div class="p-8 md:p-12 text-center">
+            <div id="popup-logo-container" class="mx-auto mb-6 flex h-20 w-32 items-center justify-center rounded-2xl bg-white/5 p-4 border border-white/10">
+                <img id="popup-logo" src="" alt="" class="max-h-full max-w-full object-contain brightness-110" />
+            </div>
+
+            <h3 id="popup-firm-name" class="text-xs font-black uppercase tracking-[0.3em] text-brand-accent mb-2"></h3>
+            <h2 id="popup-title" class="text-2xl font-bold text-white mb-6"></h2>
+
+            <!-- Coupon Box -->
+            <div class="relative mb-8 group">
+                <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-accent to-orange-500 opacity-20 blur group-hover:opacity-40 transition"></div>
+                <div id="copy-trigger" class="relative flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-black/40 p-6 cursor-pointer hover:bg-black/60 transition">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">Click to copy code</span>
+                    <span id="popup-code" class="text-4xl font-black tracking-tighter text-white"></span>
+                    <div id="popup-copy-status" class="mt-2 text-[10px] font-bold text-green-400 opacity-0 transition-opacity">COPIED TO CLIPBOARD</div>
+                </div>
+            </div>
+
+            <!-- External Link (The Transparent Part) -->
+            <div class="space-y-4">
+                <p class="text-[11px] text-white/50 leading-relaxed italic">
+                    Use the code at checkout on the official website.
+                </p>
+                <a id="popup-affiliate-link" href="" target="_blank" rel="noopener noreferrer nofollow" class="flex w-full items-center justify-center gap-3 rounded-2xl bg-brand-accent py-5 text-sm font-black text-white shadow-xl shadow-brand-accent/20 transition hover:scale-[1.02] active:scale-95">
+                    <span>GO TO PARTNER WEBSITE</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-50"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Info -->
+        <div class="bg-black/40 px-8 py-4 text-center border-t border-white/5">
+            <p class="text-[9px] font-medium uppercase tracking-widest text-white/30">
+                Verified Deal • Secure Connection
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.openDealPopup = (deal) => {
+        const modal = document.getElementById('deal-popup');
+        const logo = document.getElementById('popup-logo') as HTMLImageElement;
+        const name = document.getElementById('popup-firm-name');
+        const title = document.getElementById('popup-title');
+        const code = document.getElementById('popup-code');
+        const affLink = document.getElementById('popup-affiliate-link') as HTMLAnchorElement;
+        const copyBtn = document.getElementById('copy-trigger');
+        const copyStatus = document.getElementById('popup-copy-status');
+
+        if (!modal || !deal) return;
+
+        // Set content
+        if (logo) logo.src = deal.logo || '';
+        if (name) name.textContent = deal.firm_name;
+        if (title) title.textContent = deal.discount;
+        if (code) code.textContent = deal.code;
+        if (affLink) affLink.href = deal.link;
+
+        // Show modal
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+
+        // Direct copy on open (Premium feel)
+        if (deal.code) {
+           navigator.clipboard.writeText(deal.code).catch(() => {});
+        }
+
+        // Handle inner copy click
+        copyBtn?.addEventListener('click', () => {
+            navigator.clipboard.writeText(deal.code).catch(() => {});
+            if (copyStatus) {
+                copyStatus.style.opacity = '1';
+                setTimeout(() => { copyStatus.style.opacity = '0'; }, 2000);
+            }
+        }, { once: true });
+    };
+
+    const closePopup = () => {
+        const modal = document.getElementById('deal-popup');
+        modal?.classList.add('hidden');
+        modal?.classList.remove('flex');
+        document.body.style.overflow = '';
+    };
+
+    document.getElementById('close-deal-popup')?.addEventListener('click', closePopup);
+    document.getElementById('deal-popup')?.addEventListener('click', (e) => {
+        if (e.target === document.getElementById('deal-popup')) closePopup();
+    });
+</script>

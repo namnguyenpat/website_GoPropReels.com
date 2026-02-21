@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ReelCard from '../components/ReelCard.astro';
+import DealPopup from '../components/DealPopup.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ReportExpiredModal from '../components/ReportExpiredModal.astro';
@@ -411,6 +412,7 @@ const latestNews = (await getCollection('blog', ({ data }) => data.category === 
 		</section>
 
 		<ReportExpiredModal deals={dealsData} />
+		<DealPopup />
 
 
 
@@ -565,9 +567,21 @@ const latestNews = (await getCollection('blog', ({ data }) => data.category === 
 					}
 
 					navigator.clipboard?.writeText(code).catch(() => {});
-					showToast(`Copied code ${code}`);
-					if (link) {
-						window.open(link, '_blank', 'noopener');
+					
+					// Use the new transparent Popup mechanism
+					if (window.openDealPopup) {
+						window.openDealPopup({
+							firm_name: btn.closest('article')?.dataset.firmName || 'Prop Firm',
+							code: code,
+							discount: btn.closest('article')?.querySelector('h3')?.textContent || 'Special Discount',
+							link: link,
+							logo: btn.closest('article')?.querySelector('img')?.src || ''
+						});
+					} else {
+						showToast(`Copied code ${code}`);
+						if (link) {
+							window.open(link, '_blank', 'noopener');
+						}
 					}
 				});
 			});
