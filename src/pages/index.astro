@@ -555,34 +555,8 @@ const latestNews = (await getCollection('blog', ({ data }) => data.category === 
 			initLikes();
 
 			buttons.forEach((btn) => {
-				btn.addEventListener('click', () => {
-					const code = btn.dataset.copyCode;
-					const link = btn.dataset.link;
-					if (!code) return;
-					
-					// Reveal code
-					const codeDisplay = btn.querySelector('.code-display');
-					if (codeDisplay) {
-						codeDisplay.textContent = code;
-					}
-
-					navigator.clipboard?.writeText(code).catch(() => {});
-					
-					// Use the new transparent Popup mechanism
-					if (window.openDealPopup) {
-						window.openDealPopup({
-							firm_name: btn.closest('article')?.dataset.firmName || 'Prop Firm',
-							code: code,
-							discount: btn.closest('article')?.querySelector('h3')?.textContent || 'Special Discount',
-							link: link,
-							logo: btn.closest('article')?.querySelector('img')?.src || ''
-						});
-					} else {
-						showToast(`Copied code ${code}`);
-						if (link) {
-							window.open(link, '_blank', 'noopener');
-						}
-					}
+				btn.addEventListener('click', (e) => {
+					// Navigation is handled by the <a> tag now
 				});
 			});
 

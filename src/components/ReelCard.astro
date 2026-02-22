@@ -153,18 +153,16 @@ const cardDescription = deal.description || "";
 		)}
 
 		<div class="flex items-center gap-2">
-			<button
-				id={copyButtonId}
-				class="relative flex-1 overflow-hidden rounded-xl bg-gradient-to-br from-brand-accent via-brand-accent to-orange-400 py-2.5 text-[11px] font-black text-white transition-all hover:scale-[1.05] hover:shadow-[0_0_25px_rgba(255,45,85,0.4)] active:scale-[0.95] group/btn"
-				data-copy-code={deal.coupon_code}
-				data-link={`/go/${deal.id}`}
+			<a
+				href={`/coupons/${deal.id}`}
+				class="relative flex-1 overflow-hidden rounded-xl bg-gradient-to-br from-brand-accent via-brand-accent to-orange-400 py-2.5 text-[11px] font-black text-white transition-all hover:scale-[1.05] hover:shadow-[0_0_25px_rgba(255,45,85,0.4)] active:scale-[0.95] group/btn flex items-center justify-center gap-2"
 			>
 				<span class="relative z-10 flex items-center justify-center gap-2">
 					<span>GET CODE</span>
 					<i class="fa-solid fa-arrow-right text-[9px] opacity-70 group-hover/btn:translate-x-1 transition-transform"></i>
 				</span>
 				<div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full"></div>
-			</button>
+			</a>
 			<a 
 				href={`/coupons/${deal.id}`}
 				class="px-3 flex items-center justify-center rounded-xl bg-white/10 backdrop-blur-md border border-white/10 py-2.5 text-[10px] font-bold text-white/90 transition hover:bg-white/20 active:scale-95"
