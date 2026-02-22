@@ -89,6 +89,11 @@ layout: ../../layouts/Layout.astro
                 setTimeout(() => { copyStatus.style.opacity = '0'; }, 2000);
             }
         }, { once: true });
+
+        // Auto-copy when clicking the partner link (as requested)
+        affLink?.addEventListener('click', () => {
+            navigator.clipboard.writeText(deal.code).catch(() => {});
+        });
     };
 
     const closePopup = () => {
