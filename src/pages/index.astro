@@ -42,13 +42,13 @@ const popularDeals = {
 };
 
 // Get latest blog posts (Knowledge)
-const allBlogPosts = (await getCollection('blog', ({ data }) => data.category === 'Knowledge')).sort(
+const allBlogPosts = (await getCollection('reviews', ({ data }) => data.category === 'Knowledge')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 const latestPosts = allBlogPosts.slice(0, 3);
 
 // Get latest news
-const latestNews = (await getCollection('blog', ({ data }) => data.category === 'News')).sort(
+const latestNews = (await getCollection('reviews', ({ data }) => data.category === 'News')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 ).slice(0, 3);
 ---

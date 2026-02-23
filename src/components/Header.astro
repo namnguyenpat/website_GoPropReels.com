@@ -10,7 +10,7 @@ import SearchModal from './SearchModal.astro';
 		<div class="flex items-center gap-3">
             {/* Desktop Nav */}
 			<a
-				href="/"
+				href="/#feed"
 				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 md:flex"
 			>
 				<i class="fa-solid fa-bolt-lightning text-brand-accent"></i>
@@ -49,7 +49,7 @@ import SearchModal from './SearchModal.astro';
 				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 md:flex"
 			>
 				<i class="fa-solid fa-brain text-brand-accent"></i>
-				<span>Blog</span>
+				<span>Knowledge</span>
 			</a>
 
             <a
@@ -98,6 +98,12 @@ import SearchModal from './SearchModal.astro';
     {/* Mobile Menu Overlay (Slides down from below header) */}
     <div id="mobile-menu" class="fixed top-16 left-0 right-0 bottom-0 z-[1001] bg-[#020617] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col p-6 gap-4 border-t border-white/10 overflow-y-auto">
         
+        <a href="/#feed" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
+            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+                <i class="fa-solid fa-bolt-lightning"></i>
+            </div>
+            Active Deals
+        </a>
         <a href="/forex" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
             <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
                 <i class="fa-solid fa-chart-line"></i>
@@ -116,17 +122,17 @@ import SearchModal from './SearchModal.astro';
             </div>
             Crypto Coupons
         </a>
-        <a href="/compare" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
-            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
-                <i class="fa-solid fa-scale-balanced"></i>
-            </div>
-            Compare Firms
-        </a>
-        <a href="/blog" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
+        <a href="/news" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
             <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
                 <i class="fa-solid fa-newspaper"></i>
             </div>
-            Trading Psychology
+            Latest News
+        </a>
+        <a href="/blog" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
+            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+            Trading Knowledge
         </a>
         <a href="https://chromewebstore.google.com/detail/gopropreels-deal-finder/hbmkajnddnklgmlmcfmkeckkdnidieeg" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
             <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">

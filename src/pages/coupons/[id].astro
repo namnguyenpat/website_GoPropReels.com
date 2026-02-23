@@ -44,7 +44,7 @@ const pageDescription = isExpired
     : `Claim ${deal.discount_highlight} at ${deal.firm_name}. Copy code ${deal.coupon_code} and head straight to checkout.`;
 
 const accentColor = deal.theme_color || '#FF2D55';
-const canonical = `/deals/${deal.id}`;
+const canonical = `/coupons/${deal.id}`;
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonical={canonical}>
