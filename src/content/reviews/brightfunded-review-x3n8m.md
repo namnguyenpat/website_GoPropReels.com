@@ -2,7 +2,7 @@
 title: "BrightFunded: The Visual Future of Prop Trading"
 description: "Diving into the UAE's brightest prop firm hub. Save 20% on the native DXTrade experience with our exclusive spotlight deal."
 pubDate: 2026-02-20
-category: "Knowledge"
+category: "Review"
 tags: ["BrightFunded", "UAE", "Review"]
 tier: "Tier 1: Modern Hub"
 ---

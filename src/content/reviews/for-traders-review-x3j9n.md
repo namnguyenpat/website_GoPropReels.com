@@ -2,7 +2,7 @@
 title: "For Traders: Psychological Mastery in the UAE"
 description: "Why For Traders is the safest bet for disciplined traders. Spotlight on their 20% discount and innovative Lockout Mode."
 pubDate: 2026-02-20
-category: "Knowledge"
+category: "Review"
 tags: ["For Traders", "Dubai", "Review"]
 tier: "Tier 2: Trader Mindset"
 ---

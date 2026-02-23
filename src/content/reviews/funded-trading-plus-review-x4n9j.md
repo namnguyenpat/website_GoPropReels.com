@@ -2,7 +2,7 @@
 title: "Funded Trading Plus: The Prestige Masterclass"
 description: "Why the Prestige Program is the screenplay every serious trader needs. Spotlight on the 10% FTPLUS discount."
 pubDate: 2026-02-20
-category: "Knowledge"
+category: "Review"
 tags: ["Funded Trading Plus", "UK", "Review"]
 tier: "Tier 1: Institutional Style"
 ---

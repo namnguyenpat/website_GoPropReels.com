@@ -2,7 +2,7 @@
 title: "For Traders: The $9.99 Flash Blockbuster"
 description: "The biggest deal in prop trading history. How to grab a $3k account for less than $10 today."
 pubDate: 2026-02-21
-category: "Knowledge"
+category: "Review"
 tags: ["For Traders", "Flash Sale", "Review"]
 tier: "Tier 1: Extreme Value"
 ---

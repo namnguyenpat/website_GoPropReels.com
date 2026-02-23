@@ -2,7 +2,7 @@
 title: "Audacity Capital: 14 Years of Trading Heritage"
 description: "Celebrating 14 years of UK institutional backing. Discover why Audacity Capital remains the gold standard for reputation."
 pubDate: 2026-02-20
-category: "Knowledge"
+category: "Review"
 tags: ["Audacity Capital", "Anniversary", "Review"]
 tier: "Tier 2: Trading Legacy"
 ---
