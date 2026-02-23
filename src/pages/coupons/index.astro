@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ReelCard from '../../components/ReelCard.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+// Fetch all coupons from the collection
+const allCoupons = await getCollection('coupons');
+const dealsData = allCoupons.map(c => c.data);
+
+// Filter out expired deals
+const today = new Date();
+const activeDeals = dealsData.filter(deal => {
+    if (!deal.expiration_date) return true;
+    const expDate = new Date(deal.expiration_date);
+    return expDate >= today;
+}).sort((a, b) => {
+    const dateA = new Date(a.created_at || 0);
+    const dateB = new Date(b.created_at || 0);
+    return dateB.getTime() - dateA.getTime(); 
+});
+
+const categories = ['all', ...new Set(activeDeals.map((deal) => deal.category))];
+---
+
+<Layout title="All Prop Firm Coupons & Discount Codes | GoPropReels" description="Browse all verified prop firm discount codes. Save on FTMO, Funding Pips, Apex and more. Verified daily.">
+    <Header />
+    
+    <main class="min-h-screen bg-brand-bg pb-24">
+        {/* Coupons Hero */}
+        <div class="relative py-20 px-4 overflow-hidden border-b border-white/5 bg-white/5">
+            <div class="absolute inset-0 bg-brand-accent/5 blur-3xl opacity-30"></div>
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <div class="inline-flex items-center gap-2 rounded-full bg-brand-accent/10 border border-brand-accent/20 px-4 py-1.5 text-xs font-black uppercase text-brand-accent mb-8">
+                    <i class="fa-solid fa-tag"></i>
+                    Coupon Directory
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight text-white">
+                    All <span class="text-brand-accent">Coupons</span>
+                </h1>
+                <p class="text-white/60 text-xl max-w-2xl mx-auto leading-relaxed">
+                    The most comprehensive list of active prop firm discount codes. Verified daily by our team.
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 mt-16" id="feed">
+            {/* Category Filter */}
+            <div class="mb-12 flex flex-wrap justify-center gap-3">
+                {categories.map((cat) => (
+                    <button
+                        class="rounded-full border border-white/10 bg-white/5 px-6 py-2.5 text-xs font-black uppercase tracking-widest text-white transition-all hover:bg-white/10 data-[active=true]:border-brand-accent data-[active=true]:bg-brand-accent data-[active=true]:text-black shadow-lg"
+                        data-filter={cat}
+                        data-active={cat === 'all' ? 'true' : 'false'}
+                    >
+                        {cat}
+                    </button>
+                ))}
+            </div>
+
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="reel-grid">
+                {activeDeals.map((deal, index) => (
+                    <ReelCard deal={deal} data-index={index} />
+                ))}
+            </div>
+
+            {activeDeals.length === 0 && (
+                <div class="text-center py-24 bg-white/5 rounded-3xl border border-dashed border-white/10">
+                    <p class="text-white/40">No coupons found. Check back soon!</p>
+                </div>
+            )}
+        </div>
+    </main>
+
+    <Footer />
+
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filters = document.querySelectorAll('[data-filter]');
+            const grid = document.getElementById('reel-grid');
+            
+            if (filters && filters.length > 0) {
+                filters.forEach((filterBtn) => {
+                    filterBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const category = filterBtn.dataset.filter;
+                        
+                        // Update active state
+                        filters.forEach((btn) => {
+                            btn.setAttribute('data-active', String(btn === filterBtn));
+                        });
+                        
+                        // Filter cards
+                        const allCards = document.querySelectorAll('[data-category]');
+                        allCards.forEach((card) => {
+                            const cardCategory = card.dataset.category;
+                            if (category === 'all' || cardCategory === category) {
+                                card.classList.remove('hidden');
+                            } else {
+                                card.classList.add('hidden');
+                            }
+                        });
+                    });
+                });
+            }
+
+            // Handle URL Parameters for Filtering
+            const params = new URLSearchParams(window.location.search);
+            const categoryParam = params.get('category');
+            if (categoryParam) {
+                const btn = document.querySelector(`button[data-filter="${categoryParam}"]`);
+                if (btn) btn.click();
+            }
+        });
+    </script>
+</Layout>

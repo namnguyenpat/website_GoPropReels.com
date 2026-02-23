@@ -1,0 +1,93 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('reviews', ({ data }) => {
+        return data.category === 'Knowledge';
+    });
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<'reviews'>;
+
+const post = Astro.props;
+const { Content } = await post.render();
+
+// Get related posts
+const allPosts = await getCollection('reviews', ({ data }) => data.category === 'Knowledge');
+const relatedPosts = allPosts
+    .filter(p => p.slug !== post.slug)
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 3);
+---
+
+<Layout title={post.data.title} description={post.data.description} ogImage={post.data.heroImage} canonical={`/blog/${post.slug}`}>
+    <Header />
+	<main class="min-h-screen pb-24">
+        {/* Hero Section */}
+        <div class="relative bg-brand-surface border-b border-white/5 py-20 px-4 mb-12 overflow-hidden">
+            <div class="absolute inset-0 bg-brand-accent/5 blur-3xl opacity-30"></div>
+            <div class="max-w-3xl mx-auto relative z-10 text-center">
+                <div class="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 text-xs font-black uppercase text-blue-400 mb-8">
+                    <i class="fa-solid fa-brain"></i>
+                    {post.data.category || 'Knowledge'}
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight tracking-tight text-white">
+                    {post.data.title}
+                </h1>
+                
+                <div class="flex items-center justify-center gap-6 text-sm text-white/60">
+                    <time datetime={post.data.pubDate.toISOString()} class="flex items-center gap-2">
+                        <i class="fa-regular fa-calendar"></i>
+                        {post.data.pubDate.toLocaleDateString('en-us', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                        })}
+                    </time>
+                </div>
+            </div>
+        </div>
+
+		<article class="max-w-3xl mx-auto px-4 prose prose-invert prose-lg 
+            prose-headings:font-bold prose-headings:text-white prose-headings:tracking-tight
+            prose-p:text-white/80 prose-p:leading-relaxed
+            prose-a:text-brand-accent prose-a:no-underline hover:prose-a:underline prose-a:font-semibold
+            prose-strong:text-white prose-strong:font-bold
+            prose-blockquote:border-l-4 prose-blockquote:border-brand-accent prose-blockquote:bg-white/5 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:not-italic prose-blockquote:rounded-r-xl prose-blockquote:text-white/90
+            prose-ul:text-white/80 prose-li:marker:text-brand-accent
+            prose-img:rounded-2xl prose-img:shadow-2xl prose-img:border prose-img:border-white/10
+            prose-hr:border-white/10
+            ">
+			<Content />
+		</article>
+
+        {relatedPosts.length > 0 && (
+            <div class="max-w-4xl mx-auto px-4 mt-20 pt-12 border-t border-white/10">
+                <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                    <i class="fa-solid fa-layer-group text-brand-accent"></i>
+                    Related Articles
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {relatedPosts.map(related => (
+                        <a href={`/blog/${related.slug}`} class="group block bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-brand-accent/50 transition-all hover:-translate-y-1 p-6">
+                            <h4 class="font-bold text-white group-hover:text-brand-accent transition-colors line-clamp-2 mb-2">
+                                {related.data.title}
+                            </h4>
+                            <time class="text-xs text-white/50 block">
+                                {related.data.pubDate.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' })}
+                            </time>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        )}
+	</main>
+    <Footer />
+</Layout>

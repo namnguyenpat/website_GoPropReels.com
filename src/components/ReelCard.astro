@@ -160,12 +160,12 @@ const cardDescription = deal.description || "";
 		<div class="flex items-center gap-2 relative z-30 pointer-events-auto">
 			<button
 				class="relative flex-1 overflow-hidden rounded-xl bg-gradient-to-br from-brand-accent via-brand-accent to-orange-400 py-2.5 text-[11px] font-black text-white transition-all hover:scale-[1.05] hover:shadow-[0_0_25px_rgba(255,45,85,0.4)] active:scale-[0.95] group/btn flex items-center justify-center gap-2"
-                onclick={`window.location.href='/coupons/${deal.id}'`}
+                onclick={`event.stopPropagation(); window.location.href='/coupons/${deal.id}'`}
 			>
-				<span class="relative z-10 flex items-center justify-center gap-2">
-					<span>GET CODE</span>
-					<i class="fa-solid fa-arrow-right text-[9px] opacity-70 group-hover/btn:translate-x-1 transition-transform"></i>
-				</span>
+				<div class="relative flex items-center gap-2 opacity-100 group-hover:scale-105 transition-transform">
+					<i class="fa-solid fa-bolt-lightning animate-sparkle text-sm drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"></i>
+					<span class="drop-shadow-sm uppercase">GET COUPON</span>
+				</div>
 				<div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full"></div>
 			</button>
 			<button 
