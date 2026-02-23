@@ -570,30 +570,6 @@ const canonical = `/deals/${deal.id}`;
 					detail: { code, link }
 				});
 				document.dispatchEvent(event);
-
-				if (link) {
-					setTimeout(() => {
-						// Create a temporary link
-						const a = document.createElement('a');
-						a.href = link;
-						a.target = '_blank';
-						a.rel = 'noopener noreferrer';
-						document.body.appendChild(a);
-
-						// Simulate click with Ctrl (Windows) or Meta (Mac) to open in background tab
-						const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-						const event = new MouseEvent('click', {
-							view: window,
-							bubbles: true,
-							cancelable: true,
-							ctrlKey: !isMac, // Ctrl on Windows/Linux
-							metaKey: isMac   // Cmd on Mac
-						});
-						
-						a.dispatchEvent(event);
-						a.remove();
-					}, 1500); // 1.5 second delay
-				}
 			});
 
             // Report Issue Logic
