@@ -1,8 +1,57 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ReelCard from '../../components/ReelCard.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const categoryName = 'forex';
+const allCoupons = await getCollection('coupons');
+const forexDeals = allCoupons
+    .map(c => c.data)
+    .filter(deal => deal.category.toLowerCase() === categoryName)
+    .sort((a, b) => {
+        const dateA = new Date(a.created_at || 0);
+        const dateB = new Date(b.created_at || 0);
+        return dateB.getTime() - dateA.getTime();
+    });
+
+const pageTitle = "Best Forex Prop Firm Coupon Codes & Discounts | GoPropReels";
+const pageDescription = "Find verified discount codes for top Forex prop firms including FTMO, Funding Pips, and more. Daily updated coupons for Forex traders.";
 ---
-<Layout title="Forex Prop Firm Coupons" description="Browse only Forex prop firm deals." canonical="/forex">
-    <script is:inline>
-        window.location.href = '/?category=forex#feed';
-    </script>
+
+<Layout title={pageTitle} description={pageDescription}>
+    <div class="relative min-h-screen bg-brand-bg">
+        <Header />
+        
+        <main class="relative z-10 mx-auto max-w-6xl px-4 py-16">
+            <header class="mb-12">
+                <nav class="mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/40">
+                    <a href="/" class="hover:text-brand-accent transition">Home</a>
+                    <span>/</span>
+                    <span class="text-brand-accent">Forex Coupons</span>
+                </nav>
+                <h1 class="text-4xl font-black text-white sm:text-5xl">
+                    Forex Prop Firm <span class="text-brand-accent">Coupons</span>
+                </h1>
+                <p class="mt-4 max-w-2xl text-lg text-white/60">
+                    Verified discount codes and funding deals specifically for Forex traders. Save on your next evaluation or instant funding account.
+                </p>
+            </header>
+
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {forexDeals.map((deal, index) => (
+                    <ReelCard deal={deal} data-index={index} />
+                ))}
+            </div>
+
+            {forexDeals.length === 0 && (
+                <div class="rounded-3xl border border-white/10 bg-white/5 p-12 text-center">
+                    <p class="text-white/60">No active Forex deals found at the moment. Please check back later!</p>
+                </div>
+            )}
+        </main>
+
+        <Footer />
+    </div>
 </Layout>

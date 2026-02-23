@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const newsPosts = allPosts
+    .filter(p => p.data.category === 'News')
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const pageTitle = "Prop Trading Industry News | GoPropReels";
+const pageDescription = "Stay updated with the latest news, updates, and announcements from the prop trading industry.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <Header />
+    
+    <main class="min-h-screen bg-brand-bg pb-24">
+        {/* News Hero */}
+        <div class="relative py-20 px-4 overflow-hidden border-b border-white/5 bg-white/5">
+            <div class="absolute inset-0 bg-brand-accent/5 blur-3xl opacity-30"></div>
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <div class="inline-flex items-center gap-2 rounded-full bg-brand-accent/10 border border-brand-accent/20 px-4 py-1.5 text-xs font-black uppercase text-brand-accent mb-8">
+                    <i class="fa-solid fa-newspaper"></i>
+                    Industry Intelligence
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight text-white">
+                    Latest <span class="text-brand-accent">News</span>
+                </h1>
+                <p class="text-white/60 text-xl max-w-2xl mx-auto leading-relaxed">
+                    Breaking updates from the prop firm world. From payout proof to rule changes, keep your finger on the pulse.
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 mt-16">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {newsPosts.map(post => (
+                    <a href={`/news/${post.slug}`} class="group flex flex-col bg-white/5 rounded-3xl overflow-hidden border border-white/10 hover:border-brand-accent/30 transition-all duration-300 hover:-translate-y-2">
+                        <div class="p-8 flex flex-col h-full">
+                            <div class="flex items-center gap-3 text-xs text-brand-accent mb-4 font-bold uppercase tracking-widest">
+                                <i class="fa-solid fa-circle text-[6px]"></i>
+                                <span>{post.data.category}</span>
+                            </div>
+                            <h2 class="text-2xl font-black text-white mb-4 leading-tight group-hover:text-brand-accent transition-colors line-clamp-2">
+                                {post.data.title}
+                            </h2>
+                            <p class="text-white/50 text-sm line-clamp-3 mb-8 flex-1">
+                                {post.data.description}
+                            </p>
+                            <div class="flex items-center justify-between pt-6 border-t border-white/5 text-xs text-white/30">
+                                <time datetime={post.data.pubDate.toISOString()}>
+                                    {post.data.pubDate.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' })}
+                                </time>
+                                <span class="group-hover:translate-x-1 transition-transform font-bold text-white/50">Read More &rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                ))}
+            </div>
+
+            {newsPosts.length === 0 && (
+                <div class="text-center py-24 bg-white/5 rounded-3xl border border-dashed border-white/10">
+                    <p class="text-white/40">No news articles published yet. Check back soon!</p>
+                </div>
+            )}
+        </div>
+    </main>
+
+    <Footer />
+</Layout>
