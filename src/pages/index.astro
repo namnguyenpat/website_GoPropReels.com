@@ -28,8 +28,8 @@ const activeDeals = dealsData.filter(deal => {
 const liveDealsCount = activeDeals.length;
 const codesVerifiedToday = activeDeals.length; // Each deal has one verified code
 const heroStats = [
-	{ label: 'Live deals', value: `${liveDealsCount}+` },
-	{ label: 'Codes verified today', value: `${codesVerifiedToday}` },
+	{ label: 'Live coupons', value: `${liveDealsCount}+` },
+	{ label: 'Verified today', value: `${codesVerifiedToday}` },
 	{ label: 'Active prop firms', value: `${new Set(activeDeals.map(d => d.firm_name)).size}` },
 ];
 

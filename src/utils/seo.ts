@@ -82,7 +82,7 @@ export function getDealsByCategory(allDeals: Deal[], category: string): Deal[] {
 export function generateBreadcrumbs(deal: Deal): Array<{ label: string; url: string }> {
 	return [
 		{ label: 'Home', url: '/' },
-		{ label: 'Deals', url: '/#feed' },
+		{ label: 'Coupons', url: '/coupons' },
 		{ label: deal.category.charAt(0).toUpperCase() + deal.category.slice(1), url: `/?category=${deal.category}` },
 		{ label: deal.firm_name, url: `/?q=${encodeURIComponent(deal.firm_name)}` },
 	];

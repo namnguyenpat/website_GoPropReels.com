@@ -12,7 +12,7 @@ const blog = defineCollection({
         heroImage: z.string().optional(),
         tags: z.array(z.string()).optional(),
         tier: z.string().optional(),
-        category: z.enum(['News', 'Knowledge']),
+        category: z.enum(['News', 'Knowledge', 'Review']),
     }),
 });
 

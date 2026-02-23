@@ -2,7 +2,7 @@
 title: "FTMO: The Legend Continues (2026 Special Edition)"
 description: "Why the industry's most trusted firm is now more accessible than ever with their €439 special deal."
 pubDate: 2026-02-20
-category: "Knowledge"
+category: "Review"
 tags: ["FTMO", "Forex", "Review"]
 tier: "Tier 1: Masterpiece"
 ---
