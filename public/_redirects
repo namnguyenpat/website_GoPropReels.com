@@ -1,3 +1,32 @@
-/deals/*    / 301
-/coupons/*  / 301
-/blog/*     / 301
+# Cloudflare Pages redirects for Astro static site
+
+# Preserve all static assets
+/images/* /images/:splat 200
+/fonts/* /fonts/:splat 200
+/_astro/* /_astro/:splat 200
+
+# Blog routes - serve the actual HTML files
+/blog /blog/index.html 200
+/blog/ /blog/index.html 200
+/blog/:page /blog/:page/index.html 200
+
+# Coupon detail pages - serve the actual HTML files
+/coupons/:id /coupons/:id/index.html 200
+/coupons/:id/ /coupons/:id/index.html 200
+
+# Compare pages
+/compare/:slug /compare/:slug/index.html 200
+/compare/:slug/ /compare/:slug/index.html 200
+
+# Go redirect pages
+/go/:id /go/:id/index.html 200
+
+# Tier pages
+/blog/tier /blog/index.html 301
+/blog/tier/ /blog/index.html 301
+
+# Home page
+/ /index.html 200
+
+# Fallback - serve 404 page
+/* /404.html 404
