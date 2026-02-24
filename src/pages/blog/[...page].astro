@@ -37,6 +37,7 @@ const { page } = Astro.props;
             </div>
         </div>
 
+        <div class="max-w-6xl mx-auto px-4 mt-16">
             {page.data.length > 0 ? (
                 <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {page.data.map(post => (
@@ -73,6 +74,7 @@ const { page } = Astro.props;
                     </p>
                 </div>
             )}
+        </div>
 
             {/* Pagination */}
             <div class="flex justify-center items-center gap-4 mt-20">
