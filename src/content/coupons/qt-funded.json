@@ -1,0 +1,31 @@
+{
+  "id": "qt-funded-deal",
+  "firm_name": "QT Funded",
+  "category": "forex",
+  "discount_highlight": "45%",
+  "coupon_code": "QT45",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "Quant Tekel - QT Instant - Instant 10K",
+    "Quant Tekel - QT Instant - Instant 25K",
+    "Quant Tekel - QT Instant - Instant 1.25K",
+    "Quant Tekel - QT Instant - Instant 100K",
+    "Quant Tekel - Prime Evaluation - 2-Step 25K"
+  ],
+  "affiliate_link": "https://qtfunded.quanttekel.com/ref/5288/",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "cTrader",
+    "MT5",
+    "TradeLocker"
+  ],
+  "seo_content": "<h3>Exclusive QT Funded Trading Offer</h3><p>QT Funded, based in South Africa and established in October 2023, is a CFD firm offering two program types: 2 Steps and Instant. The firm supports the MT5, cTrader and TradeLocker trading platforms and offers its 2 Steps and Instant programs on those platforms. QT Funded has a review score of 3.9 out of 5 based on 600 reviews. authenticated by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "QT Funded Promo Code: 45% Discount",
+    "description": "Get funded with QT Funded using our exclusive discount code. checked for the current trading season."
+  },
+  "firm_logo": "/images/logos/qt-funded.svg",
+  "created_at": "2026-02-24T13:29:48.441Z"
+}

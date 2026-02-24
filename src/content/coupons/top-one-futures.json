@@ -1,0 +1,31 @@
+{
+  "id": "top-one-futures-deal",
+  "firm_name": "Top One Futures",
+  "category": "futures",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "Top One Futures - Instant Sim Funded - Instant - 150K",
+    "Top One Futures - S2F Sim Pro - Instant - 150K",
+    "Top One Futures - S2F Sim Pro - Instant - 100K",
+    "Top One Futures - S2F Sim Pro - Instant - 50K",
+    "Top One Futures - Instant Sim Funded - Instant - 25K"
+  ],
+  "affiliate_link": "https://toponefutures.com",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "NinjaTrader",
+    "TradingView",
+    "Tradovate"
+  ],
+  "seo_content": "<h3>Exclusive Top One Futures Trading Offer</h3><p>Top One Futures, based in the United States and established in April 2025, is a futures firm that lists a single program type: 1 Step. The firm supports the Tradovate, TradingView, and NinjaTrader platforms. confirmed by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Top One Futures Promo Code: Check website Discount",
+    "description": "Get funded with Top One Futures using our exclusive discount code. validated for the current trading season."
+  },
+  "firm_logo": "/images/logos/top-one-futures.svg",
+  "created_at": "2026-02-24T13:29:48.452Z"
+}

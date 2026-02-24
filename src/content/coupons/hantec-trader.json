@@ -1,0 +1,30 @@
+{
+  "id": "hantec-trader-deal",
+  "firm_name": "Hantec Trader",
+  "category": "forex",
+  "discount_highlight": "20%",
+  "coupon_code": "INSTANT20",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "Hantec financial strategist - Enhanced Program - 2- Step 200K",
+    "Hantec financial strategist - Enhanced Program - 2- Step 25K",
+    "Hantec financial strategist - Enhanced Program - 2- Step 5K",
+    "Hantec financial strategist - EnhancedX Program - 2- Step 10K",
+    "Hantec financial strategist - Express Program - 1- Step 25K"
+  ],
+  "affiliate_link": "https://htrader.hmarkets.com",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "MT4",
+    "MT5"
+  ],
+  "seo_content": "<h3>Exclusive Hantec trading professional Trading Offer</h3><p>Hantec market participant, based in MU, was established in December 2023. The firm is a CFD provider offering three program types: 1 Step, Instant, and 2 Steps, and it supports the MT5 and MT4 trading platforms. Hantec market participant has a review score of 4.6 out of 5 based on 21 reviews. certified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Hantec investor Promo Code: 20% Discount",
+    "description": "Get funded with Hantec financial strategist using our exclusive discount code. confirmed for the current trading season."
+  },
+  "firm_logo": "/images/logos/hantec-trader.svg",
+  "created_at": "2026-02-24T13:29:48.428Z"
+}

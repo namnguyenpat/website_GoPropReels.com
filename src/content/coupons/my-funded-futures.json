@@ -1,0 +1,36 @@
+{
+  "id": "my-funded-futures-deal",
+  "firm_name": "My Funded Futures",
+  "category": "futures",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "My Funded Futures - Rapid - 1-Step - 150K",
+    "My Funded Futures - Pro - 1-Step - 150K",
+    "My Funded Futures - Rapid - 1-Step - 100K",
+    "My Funded Futures - Pro - 1-Step - 100K",
+    "My Funded Futures - Rapid - 1-Step - 50K"
+  ],
+  "affiliate_link": "https://myfundedfutures.com",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "ATAS Orderflow Trading",
+    "NinjaTrader",
+    "Quantower",
+    "TradingView",
+    "Tradovate",
+    "Volbook",
+    "Volsys",
+    "Volumetrica Trading"
+  ],
+  "seo_content": "<h3>Exclusive My Funded Futures Trading Offer</h3><p>My Funded Futures is a futures firm based in the United States, established in November 2023. It offers a 1 Step evaluation program. Account sizes range from $25,000 to $150,000. Supported platforms include Tradovate, TradingView, Quantower, Volumetrica Trading, Volsys, Volbook, ATAS Orderflow Trading and NinjaTrader. validated by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "My Funded Futures Promo Code: Check website Discount",
+    "description": "Get funded with My Funded Futures using our exclusive discount code. authenticated for the current trading season."
+  },
+  "firm_logo": "/images/logos/my-funded-futures.svg",
+  "created_at": "2026-02-24T13:29:48.436Z"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "top-one-trader-deal",
+  "firm_name": "Top One Trader",
+  "category": "forex",
+  "discount_highlight": "special",
+  "coupon_code": "VDAY",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "Top One trading professional - Flash test - 1-Step 100K",
+    "Top One trading professional - Flash test - 1-Step 25K",
+    "Top One trading professional - Flash test - 1-Step 5K",
+    "Top One trading professional - Pro test - 2-Steps 50K",
+    "Top One trading professional - Pro test - 2-Steps 5K"
+  ],
+  "affiliate_link": "https://toponetrader.com",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "cTrader",
+    "Match Trader",
+    "MT5",
+    "TradeLocker"
+  ],
+  "seo_content": "<h3>Exclusive Top One market participant Trading Offer</h3><p>Top One investor, based in the United States and established in September 2023, is a CFD firm offering three program types: Instant, 1 Step, and 2 Steps. The firm supports MT5, cTrader, Match investor, and TradeLocker platforms. Its public reputation shows a review score of 4.5 out of 5 based on 125 reviews. authenticated by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Top One financial strategist Promo Code: special Discount",
+    "description": "Get funded with Top One trading professional using our exclusive discount code. checked for the current trading season."
+  },
+  "firm_logo": "/images/logos/top-one-trader.svg",
+  "created_at": "2026-02-24T13:29:48.453Z"
+}

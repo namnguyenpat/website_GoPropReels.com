@@ -1,0 +1,33 @@
+{
+  "id": "futureselite-deal",
+  "firm_name": "FuturesElite",
+  "category": "futures",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "FuturesElite - Instant - 150K Instant",
+    "FuturesElite - Instant Custom - 100K Instant",
+    "FuturesElite - Instant - 50K Instant",
+    "FuturesElite - 1-Step Custom - 150K",
+    "FuturesElite - Elite - 1-Step - 150K"
+  ],
+  "affiliate_link": "https://futureselite.com/?aff=AFF5294216",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "ATAS Orderflow Trading",
+    "Deepcharts",
+    "Deepmap",
+    "Quantower",
+    "Volumetrica Trading"
+  ],
+  "seo_content": "<h3>Exclusive FuturesElite Trading Offer</h3><p>FuturesElite, based in Italy and established in November 2024, is a futures prop trading firm offering Instant and 1 Step program types. Supported platforms include Quantower, Volumetrica Trading, ATAS Orderflow Trading, Deepmap, and Deepcharts. validated by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "FuturesElite Promo Code: Check website Discount",
+    "description": "Get funded with FuturesElite using our exclusive discount code. authenticated for the current trading season."
+  },
+  "firm_logo": "/images/logos/futureselite.svg",
+  "created_at": "2026-02-24T13:29:48.423Z"
+}

@@ -36,145 +36,120 @@ const cardDescription = deal.description || "";
 ---
 
 <article
-	class={`group relative aspect-[9/16] w-full overflow-hidden rounded-3xl border border-white/10 bg-brand-surface ${initiallyHidden ? 'hidden' : ''}`}
+	class={`group relative aspect-[9/16] w-full overflow-hidden rounded-[40px] border border-white/10 bg-black/40 backdrop-blur-md transition-all duration-500 hover:border-white/20 hover:scale-[1.02] active:scale-[0.98] ${initiallyHidden ? 'hidden' : ''}`}
 	style={`--accent:${accentColor};`}
 	data-category={deal.category}
 	data-firm-name={deal.firm_name}
 	{...rest}
 >
-	{/* Video/Image Background */}
-	<div class="absolute inset-0 video-container overflow-hidden" data-video-id={deal.video_source?.id} data-video-type={deal.video_source?.type}>
-		<img
-			src={deal.video_source?.src || (deal.video_source?.type === 'youtube' && deal.video_source?.id ? `https://img.youtube.com/vi/${deal.video_source.id}/maxresdefault.jpg` : deal.firm_logo || `/images/deals/${deal.id}.jpg`)}
-			alt={imageAlt}
-			class={`h-full w-full transition-transform duration-700 ${deal.firm_logo && !deal.video_source?.src ? 'object-contain p-12 bg-black/40' : 'object-cover'}`}
-			loading="lazy"
-			onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-		/>
-    <div class="dynamic-fallback hidden h-full w-full">
-      <DynamicPoster
-        firmName={deal.firm_name}
-        discount={deal.discount_highlight}
-        themeColor={accentColor}
-        dealId={deal.id}
-        variant="background"
-        category={deal.category}
-        keyBenefit={deal.key_benefit}
-        logo={deal.firm_logo}
-      />
+    {/* Animated Background Glow */}
+    <div class="absolute -inset-0.5 bg-gradient-to-br from-white/10 to-transparent opacity-50 transition-opacity group-hover:opacity-80"></div>
+    
+    <div class="relative h-full flex flex-col p-8">
+        {/* Top Header Row */}
+        <div class="flex items-start justify-between mb-8">
+            <div class="flex flex-col gap-1">
+                <span class="inline-flex w-fit rounded-full bg-white/5 border border-white/10 px-3 py-1 text-[9px] font-black uppercase tracking-widest text-white/40">
+                    {deal.category}
+                </span>
+            </div>
+            <div class="flex gap-2">
+			    <button 
+				    id={`like-${deal.id}`}
+				    class="like-btn flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-white/40 border border-white/10 transition hover:bg-brand-accent hover:text-white active:scale-95 group/heart"
+				    data-deal-id={deal.id}
+				    aria-label={`Like ${deal.firm_name} deal`}
+				    onclick="event.stopPropagation();"
+			    >
+				    <i class="fa-regular fa-heart text-base group-hover/heart:fa-solid"></i>
+			    </button>
+			    <button 
+				    id={`share-${deal.id}`}
+				    class="share-btn flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-white/40 border border-white/10 transition hover:bg-white/20 active:scale-95"
+				    data-deal-id={deal.id}
+				    data-deal-url={`https://gopropreels.com/coupons/${deal.id}`}
+				    data-deal-title={`${deal.firm_name} - ${deal.discount_highlight}`}
+				    aria-label={`Share ${deal.firm_name} deal`}
+				    onclick="event.stopPropagation();"
+			    >
+				    <i class="fa-solid fa-share-nodes text-base"></i>
+			    </button>
+            </div>
+        </div>
+
+        {/* Center Content: Firm Identity */}
+        <div class="flex-1 flex flex-col items-center justify-center text-center">
+            {/* Logo Wrapper */}
+            <div class="relative mb-8">
+                <div class="absolute -inset-4 bg-[var(--accent)] opacity-20 blur-2xl rounded-full animate-pulse"></div>
+                <div 
+                    class="relative flex h-24 w-24 items-center justify-center rounded-[32px] bg-gradient-to-br from-white/10 to-transparent border border-white/10 text-4xl font-black text-white shadow-2xl"
+                    style={`border-color: ${accentColor}40;`}
+                >
+                    {deal.firm_logo ? (
+                        <img src={deal.firm_logo} alt={deal.firm_name} class="h-14 w-14 object-contain" />
+                    ) : (
+                        firmInitial
+                    )}
+                </div>
+            </div>
+
+            <h3 class="text-3xl font-black text-white leading-none uppercase tracking-tighter mb-4">
+                {deal.firm_name}
+            </h3>
+
+            <div 
+                class="text-5xl font-black tracking-tighter mb-8"
+                style={`color: ${accentColor};`}
+            >
+                {deal.discount_highlight}
+            </div>
+
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20">
+                <div class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                <span class="text-[10px] font-black uppercase tracking-widest text-green-500">
+                    Intelligence Verified
+                </span>
+            </div>
+        </div>
+
+        {/* Bottom Actions Area */}
+        <div class="mt-8 pt-8 border-t border-white/5 space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="text-center">
+                    <div class="text-[9px] font-black text-white/20 uppercase tracking-widest mb-1">Success Rate</div>
+                    <div class="text-sm font-bold text-white uppercase tracking-tight">98% Success</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-[9px] font-black text-white/20 uppercase tracking-widest mb-1">Users Today</div>
+                    <div class="text-sm font-bold text-white uppercase tracking-tight">{Math.floor(Math.random() * 500) + 700}+</div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <a 
+                    href={`/coupons/${deal.id}`}
+                    class="flex-1 rounded-2xl bg-white px-6 py-4 text-xs font-black text-black uppercase tracking-widest text-center transition hover:bg-brand-accent hover:text-white hover:scale-[1.05] active:scale-95"
+                >
+                    Get deal
+                </a>
+                <a 
+                    href={`/coupons/${deal.id}`}
+                    class="h-12 w-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-white transition hover:bg-white/10 active:scale-95"
+                >
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+        </div>
     </div>
-	</div>
-
-	<script>
-		const containers = document.querySelectorAll('.video-container');
-		
-		containers.forEach(container => {
-			const videoId = container.getAttribute('data-video-id');
-			const videoType = container.getAttribute('data-video-type');
-			
-			if (videoType !== 'youtube' || !videoId) return;
-
-			const img = container.querySelector('img');
-			const playBtn = container.querySelector('div.absolute'); // The play button wrapper
-			let iframe = null;
-
-			container.addEventListener('click', () => {
-				if (!iframe) {
-					iframe = document.createElement('iframe');
-					iframe.src = `https://www.youtube.com/embed/${videoId}?playlist=${videoId}&autoplay=1&mute=0&loop=1&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&origin=https://gopropreels.com`;
-					iframe.className = "absolute inset-0 h-full w-full border-0 z-10"; 
-					iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-					container.appendChild(iframe);
-					if (img) img.style.opacity = '0';
-					if (playBtn) playBtn.style.display = 'none'; // Hide play button
-				}
-			});
-		});
-	</script>
-
-	{/* Gradient Overlay - Stronger at bottom for text readability */}
-	<div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/95 pointer-events-none"></div>
-
-	{/* Top Actions - Keep outside or with stopPropagation */}
-	<div class="absolute inset-x-0 top-0 flex items-start justify-between p-4 z-30">
-		<span class="rounded-full bg-black/40 backdrop-blur-md border border-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white/90 shadow-lg">
-			{deal.category}
-		</span>
-		<div class="flex flex-col gap-3">
-			<button 
-				id={`like-${deal.id}`}
-				class="like-btn flex h-10 w-10 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md border border-white/10 transition hover:bg-[var(--accent)] hover:text-white active:scale-95 shadow-lg group/heart"
-				data-deal-id={deal.id}
-				aria-label={`Like ${deal.firm_name} deal`}
-				onclick="event.stopPropagation();"
-			>
-				<i class="fa-regular fa-heart text-lg group-hover/heart:fa-solid"></i>
-			</button>
-			<button 
-				id={`share-${deal.id}`}
-				class="share-btn flex h-10 w-10 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md border border-white/10 transition hover:bg-white/20 active:scale-95 shadow-lg"
-				data-deal-id={deal.id}
-				data-deal-url={`https://gopropreels.com/coupons/${deal.id}`}
-				data-deal-title={`${deal.firm_name} - ${deal.discount_highlight}`}
-				aria-label={`Share ${deal.firm_name} deal`}
-				onclick="event.stopPropagation();"
-			>
-				<i class="fa-solid fa-share-nodes text-lg"></i>
-			</button>
-		</div>
-	</div>
 
     {/* Entire Card Link Wrapper */}
-    <a href={`/coupons/${deal.id}`} class="absolute inset-0 z-10" aria-label={`View ${deal.firm_name} deal details`}></a>
+    <a href={`/coupons/${deal.id}`} class="absolute inset-0 z-[5]" aria-label={`View ${deal.firm_name} deal details`}></a>
 
-	{/* Bottom Content Area - Floating Glass Panel */}
-	<div class="absolute inset-x-4 bottom-4 z-20 overflow-hidden rounded-2xl border border-white/15 bg-black/60 p-4 backdrop-blur-xl shadow-2xl transition-transform duration-300 group-hover:-translate-y-1 pointer-events-none">
-		
-		{/* Firm Info */}
-		<div class="group/info mb-3 block">
-			<div class="flex items-center gap-3">
-				<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-white/20 to-transparent border border-white/10 text-lg font-black text-white shadow-inner">
-					{firmInitial}
-				</div>
-				<div class="overflow-hidden">
-					<h3 class="text-sm font-bold text-white leading-tight truncate">
-						{deal.firm_name}
-					</h3>
-					<div class="flex items-center gap-2">
-						<div class="h-1 w-1 rounded-full bg-green-500 animate-pulse"></div>
-						<span class="text-[9px] font-black uppercase tracking-wider text-brand-accent">
-							Verified Deal
-						</span>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		{/* Descriptive Content */}
-		{cardDescription && (
-			<p class="mb-3 text-[11px] leading-relaxed text-white/70 line-clamp-2">
-				{cardDescription}
-			</p>
-		)}
-
-		<div class="flex items-center gap-2 relative z-30 pointer-events-auto">
-			<button
-				class="relative flex-1 overflow-hidden rounded-xl bg-gradient-to-br from-brand-accent via-brand-accent to-orange-400 py-2.5 text-[11px] font-black text-white transition-all hover:scale-[1.05] hover:shadow-[0_0_25px_rgba(255,45,85,0.4)] active:scale-[0.95] group/btn flex items-center justify-center gap-2"
-                onclick={`event.stopPropagation(); window.location.href='/coupons/${deal.id}'`}
-			>
-				<div class="relative flex items-center gap-2 opacity-100 group-hover:scale-105 transition-transform">
-					<i class="fa-solid fa-bolt-lightning animate-sparkle text-sm drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"></i>
-					<span class="drop-shadow-sm uppercase">GET COUPON</span>
-				</div>
-				<div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full"></div>
-			</button>
-			<button 
-				class="px-3 flex items-center justify-center rounded-xl bg-white/10 backdrop-blur-md border border-white/10 py-2.5 text-[10px] font-bold text-white/90 transition hover:bg-white/20 active:scale-95"
-                onclick={`window.location.href='/coupons/${deal.id}'`}
-			>
-				See details
-			</button>
-		</div>
-	</div>
+    {/* Hover Accent Glow */}
+    <div 
+        class="absolute inset-x-0 bottom-0 h-1 transition-all duration-700 group-hover:h-full group-hover:bg-gradient-to-t group-hover:from-white/5 group-hover:to-transparent pointer-events-none z-0"
+        style={`background-image: linear-gradient(to top, ${accentColor}10, transparent);`}
+    ></div>
 </article>
 

@@ -1,55 +1,138 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import ReelCard from '../../components/ReelCard.astro';
+import FirmCard from '../../components/FirmCard.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
 
 const categoryName = 'futures';
 const allCoupons = await getCollection('coupons');
-const futuresDeals = allCoupons
-    .map(c => c.data)
-    .filter(deal => deal.category.toLowerCase() === categoryName)
-    .sort((a, b) => {
-        const dateA = new Date(a.created_at || 0);
-        const dateB = new Date(b.created_at || 0);
-        return dateB.getTime() - dateA.getTime();
-    });
 
-const pageTitle = "Best Futures Prop Firm Coupon Codes & Discounts | GoPropReels";
-const pageDescription = "Find verified discount codes for top Futures prop firms including Apex Trader Funding, MyFundedFutures, and more. Daily updated coupons for Futures traders.";
+// Group by firm name
+const categoryDeals = allCoupons
+    .map(c => c.data)
+    .filter(deal => deal.category.toLowerCase() === categoryName);
+
+const uniqueFirms = [];
+const seenFirms = new Set();
+
+categoryDeals.forEach(deal => {
+    if (!seenFirms.has(deal.firm_name)) {
+        uniqueFirms.push(deal);
+        seenFirms.add(deal.firm_name);
+    }
+});
+
+uniqueFirms.sort((a, b) => a.firm_name.localeCompare(b.firm_name));
+
+const pageTitle = "Best Futures Prop Firms & Funding Programs 2026 | GoPropReels";
+const pageDescription = "Find the best Futures prop firms including Apex Trader Funding, Topstep, and more. Trade CME/CBOT with massive funded capital and exclusive discounts.";
+
+const faqItems = [
+    { q: "What is the best futures prop firm in 2026?", a: "Apex Trader Funding and Topstep are currently the market leaders. Apex is known for massive 80-90% discounts, while Topstep is prized for its reputation and training environment." },
+    { q: "Which platforms can I use for futures trading?", a: "Most futures prop firms support Tradovate, NinjaTrader, and Rithmic. Some also offer web-based platforms for easier access." }
+];
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-    <div class="relative min-h-screen bg-brand-bg">
+    <div class="relative min-h-screen bg-brand-bg selection:bg-brand-accent/30">
+        {/* Background Gradients */}
+        <div class="absolute inset-x-0 top-0 h-[500px] bg-gradient-to-b from-brand-accent/10 to-transparent pointer-events-none"></div>
+        
         <Header />
         
         <main class="relative z-10 mx-auto max-w-6xl px-4 py-16">
-            <header class="mb-12">
-                <nav class="mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/40">
-                    <a href="/" class="hover:text-brand-accent transition">Home</a>
-                    <span>/</span>
-                    <span class="text-brand-accent">Futures Coupons</span>
-                </nav>
-                <h1 class="text-4xl font-black text-white sm:text-5xl">
-                    Futures Prop Firm <span class="text-brand-accent">Coupons</span>
+            {/* Breadcrumb */}
+            <nav class="mb-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/30">
+                <a href="/" class="hover:text-brand-accent transition">Home</a>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                <span class="text-brand-accent">Futures Prop Firms</span>
+            </nav>
+
+            <header class="mb-16">
+                <div class="inline-flex items-center gap-2 rounded-full bg-brand-accent/10 border border-brand-accent/20 px-3 py-1 text-[10px] font-black uppercase text-brand-accent mb-6">
+                    <i class="fa-solid fa-bolt"></i>
+                    Futures Hub
+                </div>
+                <h1 class="text-5xl font-black text-white sm:text-7xl tracking-tighter leading-none mb-6">
+                    FUTURES <span class="text-white/20">CAPITAL</span>
                 </h1>
-                <p class="mt-4 max-w-2xl text-lg text-white/60">
-                    Verified discount codes and funding coupons specifically for Futures traders. Save on your next evaluation or instant funding account.
+                <p class="max-w-2xl text-lg text-white/50 leading-relaxed font-medium">
+                    Institutional-grade futures prop firms. Trade ES, NQ, CL and more with massive funded accounts and direct market access.
                 </p>
+                
+                {/* Stats Row */}
+                <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+                        <div class="text-[10px] font-black text-white/30 uppercase tracking-[0.2em] mb-2">Active Firms</div>
+                        <div class="text-2xl font-black text-white">{uniqueFirms.length} Nodes</div>
+                    </div>
+                    <div class="rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+                        <div class="text-[10px] font-black text-white/30 uppercase tracking-[0.2em] mb-2">Max Capital</div>
+                        <div class="text-2xl font-black text-white">$300K+</div>
+                    </div>
+                    <div class="rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+                        <div class="text-[10px] font-black text-white/30 uppercase tracking-[0.2em] mb-2">Max Discount</div>
+                        <div class="text-2xl font-black text-white">80%</div>
+                    </div>
+                    <div class="rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+                        <div class="text-[10px] font-black text-white/30 uppercase tracking-[0.2em] mb-2">Access</div>
+                        <div class="text-2xl font-black text-brand-accent">DMA</div>
+                    </div>
+                </div>
             </header>
 
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {futuresDeals.map((deal, index) => (
-                    <ReelCard deal={deal} data-index={index} />
+            {/* Firm Grid */}
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-24">
+                {uniqueFirms.map((firm, index) => (
+                    <FirmCard firm={firm} rank={index + 1} />
                 ))}
             </div>
 
-            {futuresDeals.length === 0 && (
-                <div class="rounded-3xl border border-white/10 bg-white/5 p-12 text-center">
-                    <p class="text-white/60">No active Futures deals found at the moment. Please check back later!</p>
-                </div>
-            )}
+            {/* Content Sections */}
+            <div class="grid gap-16 lg:grid-cols-[1fr,350px]">
+                <section class="space-y-12">
+                    <div class="prose prose-invert max-w-none">
+                        <h2 class="text-3xl font-black mb-6 flex items-center gap-3">
+                            <span class="h-8 w-1.5 bg-brand-accent rounded-full"></span>
+                            Advantages of Futures Prop Firms
+                        </h2>
+                        <p class="text-white/60 text-lg leading-relaxed italic">
+                            Trading futures through a prop firm allows you to trade high-volume assets like S&P 500 (ES) and Nasdaq 100 (NQ) without the heavy margin requirements of a personal account.
+                        </p>
+                        <p class="text-white/60 leading-relaxed">
+                            Unlike Forex firms which often use CFDs, futures prop firms connect you to centralized exchanges. This means more transparent pricing and direct market interaction. Firms like Apex and Topstep provide the capital and risk management framework to help you scale your trading career.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-black mb-8 flex items-center gap-3">
+                            <span class="h-8 w-1.5 bg-brand-accent rounded-full"></span>
+                            Frequently Asked Questions
+                        </h2>
+                        <div class="grid gap-4">
+                            {faqItems.map(faq => (
+                                <div class="rounded-3xl border border-white/10 bg-white/5 p-8">
+                                    <h3 class="text-lg font-bold text-white mb-3">{faq.q}</h3>
+                                    <p class="text-white/60 leading-relaxed">{faq.a}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="space-y-8">
+                    <div class="rounded-[32px] border border-brand-accent/20 bg-brand-accent/5 p-8 border-dashed">
+                        <h3 class="text-xl font-black text-white mb-4 uppercase tracking-tight">Need Help?</h3>
+                        <p class="text-sm text-white/60 leading-relaxed mb-6">
+                            Not sure which Futures firm matches your setup? Compare rules or contact our verification team.
+                        </p>
+                        <a href="/news" class="block text-center py-4 rounded-2xl bg-brand-accent text-white font-black uppercase text-[10px] tracking-widest hover:scale-[1.05] transition-all">
+                            Latest Intelligence →
+                        </a>
+                    </div>
+                </aside>
+            </div>
         </main>
 
         <Footer />

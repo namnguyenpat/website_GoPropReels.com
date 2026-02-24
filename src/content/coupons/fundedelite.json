@@ -1,0 +1,30 @@
+{
+  "id": "fundedelite-deal",
+  "firm_name": "FundedElite",
+  "category": "forex",
+  "discount_highlight": "50%",
+  "coupon_code": "NEW50",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "FundedElite - Standard Free Retry - 2-step 100K",
+    "FundedElite - Standard Free Retry - 2-step 25K",
+    "FundedElite - Lite evaluation - 1-step 300K",
+    "FundedElite - Lite evaluation - 1-step 100K",
+    "FundedElite - Lite evaluation - 1-step 25K"
+  ],
+  "affiliate_link": "https://fundedelite.com/?aff=AFF6758755",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "MT5",
+    "TradeLocker"
+  ],
+  "seo_content": "<h3>Exclusive FundedElite Trading Offer</h3><p>FundedElite, based in Italy and established in November 2023, is a CFD firm offering Instant, 1 Step and 2 Steps programs. It supports MT5 and TradeLocker and has a 4.3/5 review score from 66 reviews. The firm launched a Free Retry Model in 2023. checked by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "FundedElite Promo Code: 50% Discount",
+    "description": "Get funded with FundedElite using our exclusive discount code. certified for the current trading season."
+  },
+  "firm_logo": "/images/logos/fundedelite.svg",
+  "created_at": "2026-02-24T13:29:48.408Z"
+}

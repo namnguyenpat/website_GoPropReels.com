@@ -35,6 +35,9 @@ const coupons = defineCollection({
             title: z.string(),
             description: z.string()
         }).optional(),
+        trust_score: z.string().optional(),
+        leverage: z.string().optional(),
+        platforms: z.array(z.string()).optional(),
         firm_logo: z.string(),
         created_at: z.string()
     }),

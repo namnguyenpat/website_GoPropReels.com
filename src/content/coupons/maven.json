@@ -1,0 +1,30 @@
+{
+  "id": "maven-deal",
+  "firm_name": "Maven",
+  "category": "forex",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "Maven - 1-Step audition - Standard - 1-Step 100K",
+    "Maven - 1-Step audition - Standard - 1-Step 50K",
+    "Maven - 1-Step audition - Standard - 1-Step 20K",
+    "Maven - 1-Step audition - Standard - 1-Step 10K",
+    "Maven - 1-Step audition - Standard - 1-Step 5K"
+  ],
+  "affiliate_link": "https://maventrading.com",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "Match Trader",
+    "MT5"
+  ],
+  "seo_content": "<h3>Exclusive Maven Trading Offer</h3><p>Maven, based in Saint Lucia and established in November 2022, is a CFD firm offering 1 Step, 2 Steps and Instant programs. Account sizes range from $2,000 to $200,000. Supported platforms are MT5 and Match market participant. Tradable instruments include major forex pairs such as EURUSD and GBPUSD, XAUUSD (gold), and indices including US30 and UK100; leverage is 30:1. The firm has a review score of 4.3/5 from 637 reviews. confirmed by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Maven Promo Code: Check website Discount",
+    "description": "Get funded with Maven using our exclusive discount code. validated for the current trading season."
+  },
+  "firm_logo": "/images/logos/maven.svg",
+  "created_at": "2026-02-24T13:29:48.433Z"
+}

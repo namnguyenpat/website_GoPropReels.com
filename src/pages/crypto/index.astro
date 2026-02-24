@@ -1,55 +1,138 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import ReelCard from '../../components/ReelCard.astro';
+import FirmCard from '../../components/FirmCard.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
 
 const categoryName = 'crypto';
 const allCoupons = await getCollection('coupons');
-const cryptoDeals = allCoupons
-    .map(c => c.data)
-    .filter(deal => deal.category.toLowerCase() === categoryName)
-    .sort((a, b) => {
-        const dateA = new Date(a.created_at || 0);
-        const dateB = new Date(b.created_at || 0);
-        return dateB.getTime() - dateA.getTime();
-    });
 
-const pageTitle = "Best Crypto Prop Firm Coupon Codes & Discounts | GoPropReels";
-const pageDescription = "Find verified discount codes for top Crypto prop firms. Daily updated coupons for Crypto traders looking for funded accounts.";
+// Group by firm name
+const categoryDeals = allCoupons
+    .map(c => c.data)
+    .filter(deal => deal.category.toLowerCase() === categoryName);
+
+const uniqueFirms = [];
+const seenFirms = new Set();
+
+categoryDeals.forEach(deal => {
+    if (!seenFirms.has(deal.firm_name)) {
+        uniqueFirms.push(deal);
+        seenFirms.add(deal.firm_name);
+    }
+});
+
+uniqueFirms.sort((a, b) => a.firm_name.localeCompare(b.firm_name));
+
+const pageTitle = "Best Crypto Prop Firms & Funded Accounts 2026 | GoPropReels";
+const pageDescription = "Explore top Crypto prop firms for trading Bitcoin, Ethereum, and Altcoins. Get funded with up to $200K capital using our verified discount codes.";
+
+const faqItems = [
+    { q: "Can I trade Bitcoin and Altcoins with prop firms?", a: "Yes, many modern prop firms offer specialized crypto funding programs. Firms like Breakout and Crypto Fund Trader allow you to trade major pairs like BTC, ETH, and various altcoins." },
+    { q: "What is the typical profit split for Crypto prop firms?", a: "Profit splits for crypto-focused firms usually range from 80% to as high as 90%, depending on the firm and the specific evaluation model." }
+];
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-    <div class="relative min-h-screen bg-brand-bg">
+    <div class="relative min-h-screen bg-brand-bg selection:bg-brand-accent/30">
+        {/* Background Gradients */}
+        <div class="absolute inset-x-0 top-0 h-[500px] bg-gradient-to-b from-brand-accent/10 to-transparent pointer-events-none"></div>
+        
         <Header />
         
         <main class="relative z-10 mx-auto max-w-6xl px-4 py-16">
-            <header class="mb-12">
-                <nav class="mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/40">
-                    <a href="/" class="hover:text-brand-accent transition">Home</a>
-                    <span>/</span>
-                    <span class="text-brand-accent">Crypto Coupons</span>
-                </nav>
-                <h1 class="text-4xl font-black text-white sm:text-5xl">
-                    Crypto Prop Firm <span class="text-brand-accent">Coupons</span>
+            {/* Breadcrumb */}
+            <nav class="mb-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/30">
+                <a href="/" class="hover:text-brand-accent transition">Home</a>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                <span class="text-brand-accent">Crypto Prop Firms</span>
+            </nav>
+
+            <header class="mb-16">
+                <div class="inline-flex items-center gap-2 rounded-full bg-brand-accent/10 border border-brand-accent/20 px-3 py-1 text-[10px] font-black uppercase text-brand-accent mb-6">
+                    <i class="fa-brands fa-bitcoin"></i>
+                    Crypto Intelligence
+                </div>
+                <h1 class="text-5xl font-black text-white sm:text-7xl tracking-tighter leading-none mb-6">
+                    CRYPTO <span class="text-white/20">EDGES</span>
                 </h1>
-                <p class="mt-4 max-w-2xl text-lg text-white/60">
-                    Verified discount codes and funding coupons specifically for Crypto traders. Save on your next evaluation or instant funding account.
+                <p class="max-w-2xl text-lg text-white/50 leading-relaxed font-medium">
+                    The next generation of proprietary trading focused on digital assets. Trade BTC, ETH, and 20+ Altcoins with funded capital.
                 </p>
+                
+                {/* Stats Row */}
+                <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+                        <div class="text-[10px] font-black text-white/30 uppercase tracking-[0.2em] mb-2">Live Firms</div>
+                        <div class="text-2xl font-black text-white">{uniqueFirms.length} Firms</div>
+                    </div>
+                    <div class="rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+                        <div class="text-[10px] font-black text-white/30 uppercase tracking-[0.2em] mb-2">Max Account</div>
+                        <div class="text-2xl font-black text-white">$200K+</div>
+                    </div>
+                    <div class="rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+                        <div class="text-[10px] font-black text-white/30 uppercase tracking-[0.2em] mb-2">Assets</div>
+                        <div class="text-2xl font-black text-white">20+ Pairs</div>
+                    </div>
+                    <div class="rounded-3xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+                        <div class="text-[10px] font-black text-white/30 uppercase tracking-[0.2em] mb-2">Payout</div>
+                        <div class="text-2xl font-black text-green-500">Up to 90%</div>
+                    </div>
+                </div>
             </header>
 
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {cryptoDeals.map((deal, index) => (
-                    <ReelCard deal={deal} data-index={index} />
+            {/* Firm Grid */}
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-24">
+                {uniqueFirms.map((firm, index) => (
+                    <FirmCard firm={firm} rank={index + 1} />
                 ))}
             </div>
 
-            {cryptoDeals.length === 0 && (
-                <div class="rounded-3xl border border-white/10 bg-white/5 p-12 text-center">
-                    <p class="text-white/60">No active Crypto deals found at the moment. Please check back later!</p>
-                </div>
-            )}
+            {/* Content Sections */}
+            <div class="grid gap-16 lg:grid-cols-[1fr,350px]">
+                <section class="space-y-12">
+                    <div class="prose prose-invert max-w-none">
+                        <h2 class="text-3xl font-black mb-6 flex items-center gap-3">
+                            <span class="h-8 w-1.5 bg-brand-accent rounded-full"></span>
+                            The Rise of Crypto Prop Trading
+                        </h2>
+                        <p class="text-white/60 text-lg leading-relaxed italic">
+                            Crypto prop firms leverage the volatility of digital assets to provide high-yield opportunities for skilled traders who don't want to risk their own capital.
+                        </p>
+                        <p class="text-white/60 leading-relaxed">
+                            Firms like Breakout and Crypto Fund Trader specialize in providing accounts for traders focused on Bitcoin, Ethereum, and major Altcoins. These firms often have more flexible trading rules and 24/7 market access, matching the around-the-clock nature of the crypto markets.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-black mb-8 flex items-center gap-3">
+                            <span class="h-8 w-1.5 bg-brand-accent rounded-full"></span>
+                            Frequently Asked Questions
+                        </h2>
+                        <div class="grid gap-4">
+                            {faqItems.map(faq => (
+                                <div class="rounded-3xl border border-white/10 bg-white/5 p-8">
+                                    <h3 class="text-lg font-bold text-white mb-3">{faq.q}</h3>
+                                    <p class="text-white/60 leading-relaxed">{faq.a}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="space-y-8">
+                    <div class="rounded-[32px] border border-brand-accent/20 bg-brand-accent/5 p-8 border-dashed">
+                        <h3 class="text-xl font-black text-white mb-4 uppercase tracking-tight">Trade Crypto?</h3>
+                        <p class="text-sm text-white/60 leading-relaxed mb-6">
+                            Maximize your crypto edge with verified funding. Compare profit splits and trading parameters for top firms.
+                        </p>
+                        <a href="/news" class="block text-center py-4 rounded-2xl bg-brand-accent text-white font-black uppercase text-[10px] tracking-widest hover:scale-[1.05] transition-all">
+                            Latest Intelligence →
+                        </a>
+                    </div>
+                </aside>
+            </div>
         </main>
 
         <Footer />

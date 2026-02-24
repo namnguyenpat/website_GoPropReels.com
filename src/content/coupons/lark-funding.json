@@ -1,0 +1,31 @@
+{
+  "id": "lark-funding-deal",
+  "firm_name": "Lark Funding",
+  "category": "forex",
+  "discount_highlight": "special",
+  "coupon_code": "Auto-applied",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "Lark Funding - 3-Stage Evaluation - 3-Steps 200K",
+    "Lark Funding - 3-Stage Evaluation - 3-Steps 100K",
+    "Lark Funding - 3-Stage Evaluation - 3-Steps 50K",
+    "Lark Funding - 3-Stage Evaluation - 3-Steps 25K",
+    "Lark Funding - 3-Stage Evaluation - 3-Steps 10K"
+  ],
+  "affiliate_link": "https://dashboard.larkfunding.com/challenges?affiliateId=fund24",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "cTrader",
+    "DXTrade",
+    "Match Trader"
+  ],
+  "seo_content": "<h3>Exclusive Lark Funding Trading Offer</h3><p>Lark Funding, based in Canada and established June 2022, is a CFD firm offering Instant, 1 Step, 2 Steps and 3 Steps programs. Account sizes range from $5,000 to $1,000,000. Platforms supported include cTrader, DXTrade, Match trading professional, MT4 and MT5. Tradable instruments include over 40 Forex pairs, over 100 crypto derivatives and major US, Australian, LSE and XETRA stocks. validated by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Lark Funding Promo Code: special Discount",
+    "description": "Get funded with Lark Funding using our exclusive discount code. authenticated for the current trading season."
+  },
+  "firm_logo": "/images/logos/lark-funding.svg",
+  "created_at": "2026-02-24T13:29:48.432Z"
+}

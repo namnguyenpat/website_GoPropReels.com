@@ -1,0 +1,30 @@
+{
+  "id": "the-5-ers-deal",
+  "firm_name": "The 5%ers",
+  "category": "forex",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "The 5%ers - Bootcamp Program - 3-Steps *250K",
+    "The 5%ers - High Stakes test - 2-Steps 100K",
+    "The 5%ers - Hyper Growth Program - 1-Step 20K",
+    "The 5%ers - Bootcamp Program - 3-Steps *100K",
+    "The 5%ers - High Stakes test - 2-Steps 50K"
+  ],
+  "affiliate_link": "https://www.the5ers.com/?afmc=fn",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "cTrader",
+    "MT5"
+  ],
+  "seo_content": "<h3>Exclusive The 5%ers Trading Offer</h3><p>The 5%ers, based in Israel, was established in April 2016. The firm is a CFD provider offering Instant, 2 Steps, and Bootcamp program types. Account sizes range from $5,000 to $250,000. Platforms supported include MT5 and TradeLocker. Tradable instruments include Forex, Commodities and Indices, with leverage options up to 1:100 for majors, exotics, and cryptocurrencies. The 5%ers has a 4.8/5 review score based on 21,250 reviews. authenticated by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "The 5%ers Promo Code: Check website Discount",
+    "description": "Get funded with The 5%ers using our exclusive discount code. checked for the current trading season."
+  },
+  "firm_logo": "/images/logos/the-5-ers.svg",
+  "created_at": "2026-02-24T13:29:48.445Z"
+}

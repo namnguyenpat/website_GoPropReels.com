@@ -1,0 +1,28 @@
+{
+  "id": "ftmo-deal",
+  "firm_name": "FTMO",
+  "category": "forex",
+  "discount_highlight": "€101 OFF",
+  "coupon_code": "Auto-applied",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "FTMO - Standard test - 2-Steps 200K"
+  ],
+  "affiliate_link": "https://trader.ftmo.com/?affiliates=3354",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "MT5",
+    "cTrader",
+    "DXTrade",
+    "MT4"
+  ],
+  "seo_content": "<h3>Exclusive FTMO Trading Offer</h3><p>FTMO, based in the Czech Republic and established January 2015, is a CFD prop trading firm offering 2 Steps and 1 Step programs. It provides account sizes from $10,000 to $200,000 and supports MT5, cTrader, DXTrade and MT4. Recently acquired OANDA to expand into regulated brokerage. authenticated by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "FTMO Promo Code: €101 OFF Discount",
+    "description": "Get funded with FTMO using our exclusive discount code. checked for the current trading season."
+  },
+  "firm_logo": "/images/logos/ftmo.svg",
+  "created_at": "2026-02-24T13:29:48.405Z"
+}

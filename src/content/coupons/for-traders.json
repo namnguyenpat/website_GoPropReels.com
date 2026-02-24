@@ -1,0 +1,31 @@
+{
+  "id": "for-traders-deal",
+  "firm_name": "For Traders",
+  "category": "forex",
+  "discount_highlight": "special",
+  "coupon_code": "3KFEB",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "For Traders - 2-Step evaluation - 2-Steps 100K",
+    "For Traders - 2-Step evaluation - 2-Steps 50K",
+    "For Traders - 2-Step evaluation - 2-Steps 25K",
+    "For Traders - 2-Step evaluation - 2-Steps 15K",
+    "For Traders - 2-Step evaluation - 2-Steps 6K"
+  ],
+  "affiliate_link": "https://fortraders.com/?aff_id=ENUT5ABW9S",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "cTrader",
+    "MT5",
+    "TradeLocker"
+  ],
+  "seo_content": "<h3>Exclusive For Traders Trading Offer</h3><p>For Traders, based in the United Arab Emirates and established June 2023, is a CFD firm offering Instant, 1 Step, 2 Steps and 3 Steps programs. Account sizes range from $5,000 to $200,000. Platforms supported include MetaTrader 4, MetaTrader 5 (MT5), cTrader and TradeLocker. Tradable instruments include forex pairs, commodities, equities, indices and cryptocurrencies. checked by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "For Traders Promo Code: special Discount",
+    "description": "Get funded with For Traders using our exclusive discount code. certified for the current trading season."
+  },
+  "firm_logo": "/images/logos/for-traders.svg",
+  "created_at": "2026-02-24T13:29:48.403Z"
+}

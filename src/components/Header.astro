@@ -9,58 +9,57 @@ import SearchModal from './SearchModal.astro';
 		</a>
 		<div class="flex items-center gap-3">
             {/* Desktop Nav */}
-			<a
-				href="/coupons"
-				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 md:flex"
-			>
-				<i class="fa-solid fa-tag text-brand-accent"></i>
-				<span>Coupons</span>
-			</a>
-			<a
-				href="/forex"
-				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 lg:flex"
-			>
-				<i class="fa-solid fa-chart-line text-brand-accent"></i>
-				<span>Forex</span>
-			</a>
-			<a
-				href="/futures"
-				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 lg:flex"
-			>
-				<i class="fa-solid fa-arrow-trend-up text-brand-accent"></i>
-				<span>Futures</span>
-			</a>
-			<a
-				href="/crypto"
-				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 lg:flex"
-			>
-				<i class="fa-solid fa-bitcoin-sign text-brand-accent"></i>
-				<span>Crypto</span>
-			</a>
-			<a
-				href="/news"
-				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 md:flex"
-			>
-				<i class="fa-solid fa-newspaper text-brand-accent"></i>
-				<span>News</span>
-			</a>
-			<a
-				href="/blog"
-				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 md:flex"
-			>
-				<i class="fa-solid fa-newspaper text-brand-accent"></i>
-				<span>Blog</span>
-			</a>
+            <div class="hidden md:flex items-center gap-3">
+                {/* Propfirm Dropdown */}
+                <div class="relative group">
+                    <button class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10">
+                        <i class="fa-solid fa-building text-brand-accent"></i>
+                        <span>Propfirm</span>
+                        <i class="fa-solid fa-chevron-down text-[10px] opacity-50 group-hover:rotate-180 transition-transform"></i>
+                    </button>
+                    <div class="absolute top-full left-0 w-48 scale-95 opacity-0 pointer-events-none group-hover:scale-100 group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-[1100]">
+                        <div class="pt-2"> {/* Invisible bridge and spacing */}
+                            <div class="rounded-2xl border border-white/10 bg-brand-bg/95 backdrop-blur-xl p-2 shadow-2xl">
+                            <a href="/forex" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition text-sm text-white/80 hover:text-white">
+                                <i class="fa-solid fa-chart-line text-brand-accent w-5"></i>
+                                Forex
+                            </a>
+                            <a href="/futures" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition text-sm text-white/80 hover:text-white">
+                                <i class="fa-solid fa-arrow-trend-up text-brand-accent w-5"></i>
+                                Futures
+                            </a>
+                            <a href="/crypto" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition text-sm text-white/80 hover:text-white">
+                                <i class="fa-solid fa-bitcoin-sign text-brand-accent w-5"></i>
+                                Crypto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <a
-				href="https://chromewebstore.google.com/detail/gopropreels-deal-finder/hbmkajnddnklgmlmcfmkeckkdnidieeg"
-                target="_blank"
-                rel="noopener noreferrer"
-				class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10 md:flex"
-			>
-				<i class="fa-brands fa-chrome text-brand-accent"></i>
-				<span>Extension</span>
-			</a>
+                <a
+                    href="/coupons"
+                    class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                    <i class="fa-solid fa-tag text-brand-accent"></i>
+                    <span>Coupons</span>
+                </a>
+                
+                <a
+                    href="/news"
+                    class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                    <i class="fa-solid fa-newspaper text-brand-accent"></i>
+                    <span>News</span>
+                </a>
+                <a
+                    href="/blog"
+                    class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                    <i class="fa-solid fa-newspaper text-brand-accent"></i>
+                    <span>Blog</span>
+                </a>
+            </div>
             
             {/* Search Button (Desktop) */}
             <button
@@ -71,13 +70,6 @@ import SearchModal from './SearchModal.astro';
                 <i class="fa-solid fa-magnifying-glass text-brand-accent"></i>
             </button>
 
-			<a
-				href="http://t.me/GoPropReels_com"
-				class="hidden rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20 md:flex"
-			>
-				Join Telegram
-			</a>
-            
             {/* Search Button (Mobile) */}
              <button
                 id="search-btn-mobile"
@@ -133,18 +125,6 @@ import SearchModal from './SearchModal.astro';
                 <i class="fa-solid fa-newspaper"></i>
             </div>
             Trading Blog
-        </a>
-        <a href="https://chromewebstore.google.com/detail/gopropreels-deal-finder/hbmkajnddnklgmlmcfmkeckkdnidieeg" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
-            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
-                <i class="fa-brands fa-chrome"></i>
-            </div>
-            Chrome Extension
-        </a>
-        <a href="http://t.me/GoPropReels_com" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-[#0088cc]/20 border border-[#0088cc]/30">
-            <div class="w-10 h-10 rounded-full bg-[#0088cc] flex items-center justify-center text-white">
-                <i class="fa-brands fa-telegram"></i>
-            </div>
-            Join Telegram
         </a>
     </div>
 

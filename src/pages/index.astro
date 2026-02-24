@@ -105,22 +105,7 @@ const latestNews = (await getCollection('reviews', ({ data }) => data.category =
 			<div class="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full bg-blue-700/20 blur-[140px]"></div>
 		</div>
 
-		<Header>
-			<div class="border-t border-white/5">
-				<div class="mx-auto flex max-w-6xl gap-3 overflow-x-auto px-4 py-3 text-xs font-semibold uppercase tracking-wide text-gray-400 scrollbar-thin" id="category-bar">
-					{categories.map((category) => (
-						<button
-							type="button"
-							class="rounded-full border border-white/10 px-4 py-1.5 transition data-[active=true]:border-brand-accent data-[active=true]:bg-brand-accent/10 data-[active=true]:text-white"
-							data-filter={category}
-							data-active={category === 'all'}
-						>
-							{category === 'all' ? 'All' : category}
-						</button>
-					))}
-				</div>
-			</div>
-		</Header>
+		<Header />
 
 		<main class="relative z-10 mx-auto flex max-w-6xl flex-col gap-16 px-4 py-16">
 			<section class="grid gap-8 md:grid-cols-[2fr,1fr]" id="highlights">
@@ -139,10 +124,6 @@ const latestNews = (await getCollection('reviews', ({ data }) => data.category =
 					</div>
 					
 					<div class="flex flex-wrap gap-3">
-						<a href="https://chromewebstore.google.com/detail/gopropreels-deal-finder/hbmkajnddnklgmlmcfmkeckkdnidieeg" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 rounded-full bg-brand-accent px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-accent/20 transition hover:bg-brand-accent-hover hover:scale-[1.02] active:scale-95">
-							<i class="fa-brands fa-chrome text-lg"></i>
-							<span>Add to Chrome</span>
-						</a>
 						<a href="#feed" class="flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10 hover:scale-[1.02] active:scale-95">
 							<span>Browse Feed</span>
 						</a>
@@ -340,70 +321,7 @@ const latestNews = (await getCollection('reviews', ({ data }) => data.category =
 			)}
 		</main>
 
-		<section class="relative z-10 border-t border-white/10 bg-black/60 px-4 py-8 text-xs text-white/60">
-			<div class="mx-auto flex max-w-6xl flex-col gap-6">
-				{/* Internal links for SEO */}
-				<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-					<div>
-						<ul class="space-y-2">
-							<li><a href="/forex" class="hover:text-white transition">Forex Coupons</a></li>
-							<li><a href="/futures" class="hover:text-white transition">Futures Coupons</a></li>
-							<li><a href="/crypto" class="hover:text-white transition">Crypto Coupons</a></li>
-						</ul>
-					</div>
-					<div>
-						<h4 class="mb-3 text-sm font-semibold text-white">Top Forex Coupons</h4>
-						<ul class="space-y-2">
-							{popularDeals.forex.map((deal) => (
-								<li>
-									<a href={`/coupons/${deal.id}`} class="hover:text-white transition">
-										{deal.firm_name} - {deal.discount_highlight}
-									</a>
-								</li>
-							))}
-						</ul>
-					</div>
-					<div>
-						<h4 class="mb-3 text-sm font-semibold text-white">Top Instant Coupons</h4>
-						<ul class="space-y-2">
-							{popularDeals.instant.map((deal) => (
-								<li>
-									<a href={`/coupons/${deal.id}`} class="hover:text-white transition">
-										{deal.firm_name} - {deal.discount_highlight}
-									</a>
-								</li>
-							))}
-						</ul>
-					</div>
-					<div>
-						<h4 class="mb-3 text-sm font-semibold text-white">Resources</h4>
-						<ul class="space-y-2">
-							<li><a href="/blog" class="hover:text-white transition">Blog</a></li>
-							<li><a href="/#faq" class="hover:text-white transition">FAQ</a></li>
-							<li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
-							<li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
-						</ul>
-					</div>
-				</div>
 				<Footer />
-			
-			<!-- Extension Promo Badge -->
-			<div class="fixed bottom-6 left-6 z-30 hidden lg:block">
-				<div class="relative group">
-					<div class="absolute -inset-1 rounded-xl bg-gradient-to-r from-brand-accent to-purple-600 opacity-25 blur transition duration-1000 group-hover:opacity-75 group-hover:duration-200"></div>
-					<a href="https://chromewebstore.google.com/detail/gopropreels-deal-finder/hbmkajnddnklgmlmcfmkeckkdnidieeg" target="_blank" rel="noopener noreferrer" class="relative flex items-center gap-4 rounded-xl border border-white/10 bg-black/90 p-4 pr-6 transition hover:bg-black">
-						<img src="/extension_promo.png" alt="Chrome Extension" class="h-16 w-auto rounded-lg shadow-lg" />
-						<div class="text-left">
-							<p class="text-xs font-bold uppercase text-brand-accent">Available now</p>
-							<p class="font-bold text-white">Get the Chrome Extension</p>
-							<p class="text-xs text-white/50">Never miss a deal again</p>
-						</div>
-					</a>
-					<button onclick="this.parentElement.parentElement.remove()" class="absolute -top-2 -right-2 rounded-full bg-white/10 p-1 text-white/50 hover:bg-white/20 hover:text-white">
-						<i class="fa-solid fa-xmark text-xs w-4 h-4 flex items-center justify-center"></i>
-					</button>
-				</div>
-			</div>
 		</section>
 
 		<ReportExpiredModal deals={dealsData} />

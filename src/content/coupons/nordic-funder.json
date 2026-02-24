@@ -1,0 +1,31 @@
+{
+  "id": "nordic-funder-deal",
+  "firm_name": "Nordic Funder",
+  "category": "forex",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#000000",
+  "features": [
+    "Nordic Funder - 3-Phase Evaluation - 3-Steps 250K",
+    "Nordic Funder - 1-Phase Evaluation - 1-Step 100K",
+    "Nordic Funder - 2-Phase Evaluation - 2-Steps 100K",
+    "Nordic Funder - 1-Phase Evaluation - 1-Step 50K",
+    "Nordic Funder - 2-Phase Evaluation - 2-Steps 50K"
+  ],
+  "affiliate_link": "https://nordicfunder.com",
+  "trust_score": "4.5",
+  "leverage": "1:100",
+  "platforms": [
+    "cTrader",
+    "DXTrade",
+    "Match Trader"
+  ],
+  "seo_content": "<h3>Exclusive Nordic Funder Trading Offer</h3><p>Nordic Funder, based in Sweden and established in November 2021, is a CFD proprietary trading firm offering 1 Step, 2 Steps, and 3 Steps program types. The firm supports cTrader, DXTrade, and Match market participant platforms. Nordic Funder uses broker Scandinavian Capital Markets. certified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Nordic Funder Promo Code: Check website Discount",
+    "description": "Get funded with Nordic Funder using our exclusive discount code. confirmed for the current trading season."
+  },
+  "firm_logo": "/images/logos/nordic-funder.svg",
+  "created_at": "2026-02-24T13:29:48.438Z"
+}
