@@ -4,27 +4,19 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
 
-export async function getStaticPaths({ paginate }) {
-    let knowledgePosts = [];
-    try {
-        const allReviews = await getCollection('reviews');
-        knowledgePosts = allReviews
-            .filter(p => p.data.category === 'Knowledge')
-            .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-    } catch (e) {
-        // Collection may not exist
-    }
-
-    // Always generate at least the /blog/ page, even if empty
-    if (knowledgePosts.length === 0) {
-        return [{ params: { page: undefined }, props: { page: { data: [], start: 0, end: 0, total: 0, currentPage: 1, lastPage: 1, size: 12, url: { current: '/blog/', prev: undefined, next: undefined } } } }];
-    }
-
-    // Exclude page 1 since it's handled by index.astro
-    return paginate(knowledgePosts, { pageSize: 12 }).filter(p => p.params.page !== undefined);
+let knowledgePosts = [];
+try {
+    const allReviews = await getCollection('reviews');
+    knowledgePosts = allReviews
+        .filter(p => p.data.category === 'Knowledge')
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+} catch (e) {
+    // Collection may not exist
 }
 
-const { page } = Astro.props;
+// Show first 12 posts on the first page
+const displayPosts = knowledgePosts.slice(0, 12);
+const totalPages = Math.max(1, Math.ceil(knowledgePosts.length / 12));
 ---
 
 <Layout title="Prop Trading Knowledge & Guides | GoPropReels" description="Educational content, trading guides, and firm comparisons for professional traders.">
@@ -49,9 +41,9 @@ const { page } = Astro.props;
         </div>
 
         <div class="max-w-6xl mx-auto px-4 mt-16">
-            {page.data.length > 0 ? (
+            {displayPosts.length > 0 ? (
                 <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {page.data.map(post => (
+                    {displayPosts.map(post => (
                         <a href={`/blog/${post.slug}/`} class="group flex flex-col bg-white/5 rounded-3xl overflow-hidden border border-white/10 hover:border-brand-accent/30 transition-all duration-300 hover:-translate-y-2">
                             <div class="p-8 flex flex-col h-full">
                                 <div class="flex items-center gap-3 text-xs text-brand-accent mb-4 font-bold uppercase tracking-widest">
@@ -87,33 +79,22 @@ const { page } = Astro.props;
             )}
         </div>
 
-            {/* Pagination */}
+        {/* Pagination - Only show if more than 1 page */}
+        {totalPages > 1 && (
             <div class="flex justify-center items-center gap-4 mt-20">
-                {page.url.prev ? (
-                    <a href={page.url.prev} class="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-black hover:bg-brand-accent hover:border-brand-accent transition-all text-sm uppercase tracking-widest">
-                        Previous
-                    </a>
-                ) : (
-                    <span class="px-8 py-3 rounded-full bg-white/5 border border-white/5 text-white/20 cursor-not-allowed text-sm font-black uppercase tracking-widest">
-                        Previous
-                    </span>
-                )}
+                <span class="px-8 py-3 rounded-full bg-white/5 border border-white/5 text-white/20 cursor-not-allowed text-sm font-black uppercase tracking-widest">
+                    Previous
+                </span>
                 
                 <span class="text-white/40 font-black text-sm uppercase tracking-widest">
-                    {page.currentPage} / {page.lastPage}
+                    1 / {totalPages}
                 </span>
 
-                {page.url.next ? (
-                    <a href={page.url.next} class="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-black hover:bg-brand-accent hover:border-brand-accent transition-all text-sm uppercase tracking-widest">
-                        Next
-                    </a>
-                ) : (
-                    <span class="px-8 py-3 rounded-full bg-white/5 border border-white/5 text-white/20 cursor-not-allowed text-sm font-black uppercase tracking-widest">
-                        Next
-                    </span>
-                )}
+                <a href="/blog/2" class="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-black hover:bg-brand-accent hover:border-brand-accent transition-all text-sm uppercase tracking-widest">
+                    Next
+                </a>
             </div>
-        </div>
+        )}
     </main>
 
     <Footer />
