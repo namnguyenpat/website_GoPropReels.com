@@ -5,10 +5,20 @@ import Footer from '../../components/Footer.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths({ paginate }) {
-    const allReviews = await getCollection('reviews');
-    const knowledgePosts = allReviews
-        .filter(p => p.data.category === 'Knowledge')
-        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+    let knowledgePosts = [];
+    try {
+        const allReviews = await getCollection('reviews');
+        knowledgePosts = allReviews
+            .filter(p => p.data.category === 'Knowledge')
+            .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+    } catch (e) {
+        // Collection may not exist
+    }
+
+    // Always generate at least the /blog/ page, even if empty
+    if (knowledgePosts.length === 0) {
+        return [{ params: { page: undefined }, props: { page: { data: [], start: 0, end: 0, total: 0, currentPage: 1, lastPage: 1, size: 12, url: { current: '/blog/', prev: undefined, next: undefined } } } }];
+    }
 
     return paginate(knowledgePosts, { pageSize: 12 });
 }
