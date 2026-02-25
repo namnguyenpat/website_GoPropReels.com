@@ -1,11 +1,14 @@
 {
-  "id": "take-profit-trader-deal",
+  "id": "take-profit-trader",
   "firm_name": "Take Profit Trader",
+  "broker": "Take Profit Trader",
+  "title": "Take Profit Trader Check website",
+  "description": "Take Profit Trader, based in the United States, was established in March 2021. The firm operates in futures markets and offers a 1 Step program. Supported platforms include Tradovate, TradingView, Quantower, NinjaTrader, and more. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "forex",
   "discount_highlight": "Check website",
   "coupon_code": "No Code",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#64D2FF",
   "features": [
     "TakeProfitTrader - 1-Step Test - 150K",
     "TakeProfitTrader - 1-Step Test - 100K",
@@ -15,7 +18,57 @@
   ],
   "affiliate_link": "https://takeprofittrader.com",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {},
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "TakeProfitTrader - 1-Step Test - 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "216.00",
+      "original_price": "360.00"
+    },
+    {
+      "name": "TakeProfitTrader - 1-Step Test - 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "198.00",
+      "original_price": "330.00"
+    },
+    {
+      "name": "TakeProfitTrader - 1-Step Test - 75K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "75000",
+      "price": "147.00",
+      "original_price": "245.00"
+    },
+    {
+      "name": "TakeProfitTrader - 1-Step Test - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "102.00",
+      "original_price": "170.00"
+    },
+    {
+      "name": "TakeProfitTrader - 1-Step Test - 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "90.00",
+      "original_price": "150.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Counter Positions: Cannot hold open positions in opposite directions on same/related products.",
+    "CME Price Limit: Responsibility to exit before hitting limits.",
+    "High Frequency Trading / Micro Scalping prohibited."
+  ],
   "platforms": [
     "ATAS Orderflow Trading",
     "Bookmap",
@@ -32,11 +85,54 @@
     "Tradovate",
     "VolFix"
   ],
-  "seo_content": "<h3>Exclusive Take Profit market participant Trading Offer</h3><p>Take Profit investor, based in the United States, was established in March 2021. The firm operates in futures markets and offers a 1 Step program. Supported platforms include Tradovate, TradingView, Quantower, NinjaTrader, and more. certified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "instruments": [
+    "Futures"
+  ],
+  "payment_methods": [
+    "Built-in wallet",
+    "Credit/Debit Card",
+    "PayPal"
+  ],
+  "payout_methods": [
+    "PayPal",
+    "Plaid",
+    "Wise"
+  ],
+  "founded": "2021-03",
+  "payout_policy": {
+    "minimum_payout": "Not specified, but implies a 'buffer zone' (max drawdown level) must be reached.",
+    "processing_time": "Same day (Tech updates for AML mentioned).",
+    "details": "80% split (Pro), 90% split (Pro+). Payouts available day one if buffer reached ($10K profit in single day or consistent withdrawals for Pro+).",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed for up to 5 accounts (Pro+).",
+    "expert_advisor": "Not allowed.",
+    "inactivity_rule": "Must trade at least one day per calendar week (Sunday-Friday).",
+    "news_trading": "Test: Allowed. Pro/Pro+: Restricted 1 min before/after specific events (FOMC, NFP, CPI, Inventories).",
+    "weekend_holding": "Not specified in scraped data.",
+    "forbidden_strategies": [
+      "Counter Positions: Cannot hold open positions in opposite directions on same/related products.",
+      "CME Price Limit: Responsibility to exit before hitting limits.",
+      "High Frequency Trading / Micro Scalping prohibited."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-05-15",
+      "event": "Take Profit Trader Logo",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/take-profit-trader.svg"
+  },
+  "seo_content": "<h3>Take Profit Trader Technical Infrastructure</h3><p>Take Profit Trader, based in the United States, was established in March 2021. The firm operates in futures markets and offers a 1 Step program. Supported platforms include Tradovate, TradingView, Quantower, NinjaTrader, and more. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
   "youtube_metadata": {
-    "title": "Take Profit financial strategist Promo Code: Check website Discount",
-    "description": "Get funded with Take Profit trading professional using our exclusive discount code. confirmed for the current trading season."
+    "title": "Take Profit Trader Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Take Profit Trader. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/take-profit-trader.svg",
-  "created_at": "2026-02-24T13:29:48.443Z"
+  "created_at": "2026-02-24T16:30:43.415Z"
 }

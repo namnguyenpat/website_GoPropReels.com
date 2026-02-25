@@ -1,11 +1,14 @@
 {
-  "id": "breakout-deal",
+  "id": "breakout",
   "firm_name": "Breakout",
+  "broker": "Breakout",
+  "title": "Breakout Check website",
+  "description": "Breakout, based in VG and established in November 2023, is a crypto-only firm that focuses exclusively on cryptocurrency markets and lists two program types labeled ",
   "category": "forex",
   "discount_highlight": "Check website",
   "coupon_code": "No Code",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#0A84FF",
   "features": [
     "Breakout Prop - Crypto - 1-Step Classic - 1-Step 100K",
     "Breakout Prop - Crypto - 1-Step Classic - 1-Step 50K",
@@ -15,15 +18,157 @@
   ],
   "affiliate_link": "https://breakoutprop.com",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {
+    "Crypto": {}
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Breakout Prop - Crypto - 1-Step Classic - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "979.02",
+      "original_price": "999.00"
+    },
+    {
+      "name": "Breakout Prop - Crypto - 1-Step Classic - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "485.10",
+      "original_price": "495.00"
+    },
+    {
+      "name": "Breakout Prop - Crypto - 1-Step Classic - 1-Step 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "269.50",
+      "original_price": "275.00"
+    },
+    {
+      "name": "Breakout Prop - Crypto - 1-Step Classic - 1-Step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "107.80",
+      "original_price": "110.00"
+    },
+    {
+      "name": "Breakout Prop - Crypto - 1-Step Classic - 1-Step 5K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "58.80",
+      "original_price": "60.00"
+    },
+    {
+      "name": "Breakout Prop - Crypto - 2-Step Evaluation - 2-Steps 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "734.02",
+      "original_price": "749.00"
+    },
+    {
+      "name": "Breakout Prop - Crypto - 2-Step Evaluation - 2-Steps 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "441.00",
+      "original_price": "450.00"
+    },
+    {
+      "name": "Breakout Prop - Crypto - 2-Step Evaluation - 2-Steps 25K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "245.00",
+      "original_price": "250.00"
+    },
+    {
+      "name": "Breakout Prop - Crypto - 2-Step Evaluation - 2-Steps 10K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "98.00",
+      "original_price": "100.00"
+    },
+    {
+      "name": "Breakout Prop - Crypto - 2-Step Evaluation - 2-Steps 5K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "49.00",
+      "original_price": "50.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "No anti-gambling rule",
+    "No profit cap",
+    "No consistency rule",
+    "No reverse trading restriction",
+    "No news trading restriction",
+    "No one-sided betting rule",
+    "No negative margin/equity rule"
+  ],
   "platforms": [
     "Breakout Terminal"
   ],
-  "seo_content": "<h3>Exclusive Breakout Trading Offer</h3><p>Breakout, based in VG and established in November 2023, is a crypto-only firm that focuses exclusively on cryptocurrency markets and lists two program types labeled </p>",
+  "instruments": [
+    "Major Crypto Pairs",
+    "Minor Crypto Pairs"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Crypto",
+    "PayPal"
+  ],
+  "payout_methods": [
+    "Crypto (USDC ERC-20)"
+  ],
+  "founded": "2023-11",
+  "payout_policy": {
+    "minimum_payout": "$50",
+    "processing_time": "Daily Payouts (USDC ERC-20).",
+    "details": "No Profit Cap. Zero Lifetime Payout Denials stated (marketing claim). Payouts On-Demand.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Not explicitly detailed, implies standard policies or see FAQ.",
+    "expert_advisor": "Not explicitly detailed.",
+    "inactivity_rule": "Not specified.",
+    "news_trading": "No news trading restriction.",
+    "weekend_holding": "Allowed (implied).",
+    "forbidden_strategies": [
+      "No anti-gambling rule",
+      "No profit cap",
+      "No consistency rule",
+      "No reverse trading restriction",
+      "No news trading restriction",
+      "No one-sided betting rule",
+      "No negative margin/equity rule"
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2023-11-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/breakout.svg"
+  },
+  "seo_content": "<h3>Breakout Technical Infrastructure</h3><p>Breakout, based in VG and established in November 2023, is a crypto-only firm that focuses exclusively on cryptocurrency markets and lists two program types labeled </p>",
   "youtube_metadata": {
-    "title": "Breakout Promo Code: Check website Discount",
-    "description": "Get funded with Breakout using our exclusive discount code. confirmed for the current trading season."
+    "title": "Breakout Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Breakout. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/breakout.svg",
-  "created_at": "2026-02-24T13:29:48.383Z"
+  "created_at": "2026-02-24T16:30:43.352Z"
 }

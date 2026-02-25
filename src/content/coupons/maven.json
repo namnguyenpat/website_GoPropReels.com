@@ -1,30 +1,262 @@
 {
-  "id": "maven-deal",
+  "id": "maven",
   "firm_name": "Maven",
+  "broker": "Maven",
+  "title": "Maven Check website",
+  "description": "Maven, based in Saint Lucia and established in November 2022, is a CFD firm offering 1 Step, 2 Steps and Instant programs. Account sizes range from $2,000 to $200,000. Supported platforms are MT5 and Match Trader. Tradable instruments include major forex pairs such as EURUSD and GBPUSD, XAUUSD (gold), and indices including US30 and UK100; leverage is 30:1. The firm has a review score of 4.3/5 from 637 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "forex",
   "discount_highlight": "Check website",
   "coupon_code": "No Code",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#FF9F0A",
   "features": [
-    "Maven - 1-Step audition - Standard - 1-Step 100K",
-    "Maven - 1-Step audition - Standard - 1-Step 50K",
-    "Maven - 1-Step audition - Standard - 1-Step 20K",
-    "Maven - 1-Step audition - Standard - 1-Step 10K",
-    "Maven - 1-Step audition - Standard - 1-Step 5K"
+    "Maven - 1-Step Challenge - Standard - 1-Step 100K",
+    "Maven - 1-Step Challenge - Standard - 1-Step 50K",
+    "Maven - 1-Step Challenge - Standard - 1-Step 20K",
+    "Maven - 1-Step Challenge - Standard - 1-Step 10K",
+    "Maven - 1-Step Challenge - Standard - 1-Step 5K"
   ],
   "affiliate_link": "https://maventrading.com",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "Instant": "1:75",
+      "1-Step": "1:75",
+      "2-Steps": "1:75",
+      "3-Steps": "1:75"
+    },
+    "Metals": {
+      "Instant": "1:20",
+      "1-Step": "1:20",
+      "2-Steps": "1:20",
+      "3-Steps": "1:20"
+    },
+    "Indices": {
+      "Instant": "1:20",
+      "1-Step": "1:20",
+      "2-Steps": "1:20",
+      "3-Steps": "1:20"
+    },
+    "Energy": {
+      "Instant": "1:20",
+      "1-Step": "1:20",
+      "2-Steps": "1:20",
+      "3-Steps": "1:20"
+    },
+    "Crypto": {
+      "Instant": "1:2",
+      "1-Step": "1:2",
+      "2-Steps": "1:2",
+      "3-Steps": "1:2"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Maven - 1-Step Challenge - Standard - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "364.80",
+      "original_price": "380.00"
+    },
+    {
+      "name": "Maven - 1-Step Challenge - Standard - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "163.20",
+      "original_price": "170.00"
+    },
+    {
+      "name": "Maven - 1-Step Challenge - Standard - 1-Step 20K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "20000",
+      "price": "65.28",
+      "original_price": "68.00"
+    },
+    {
+      "name": "Maven - 1-Step Challenge - Standard - 1-Step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "35.52",
+      "original_price": "37.00"
+    },
+    {
+      "name": "Maven - 1-Step Challenge - Standard - 1-Step 5K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "18.24",
+      "original_price": "19.00"
+    },
+    {
+      "name": "Maven - 2-Step Challenge - Standard - 2-Steps 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "440.00",
+      "original_price": "440.00"
+    },
+    {
+      "name": "Maven - 2-Step Challenge - Standard - 2-Steps 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "211.20",
+      "original_price": "220.00"
+    },
+    {
+      "name": "Maven - 2-Step Challenge - Standard - 2-Steps 20K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "20000",
+      "price": "84.48",
+      "original_price": "88.00"
+    },
+    {
+      "name": "Maven - 2-Step Challenge - Standard - 2-Steps 10K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "42.24",
+      "original_price": "44.00"
+    },
+    {
+      "name": "Maven - 2-Step Challenge - Standard - 2-Steps 5K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "21.12",
+      "original_price": "22.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Excessive Scalping: Holding 50%+ of trades for less than a minute.",
+    "Martingale: Opening 5 simultaneous positions in drawdown on the same pair.",
+    "All-in: Making a single trade with no stop-loss or risking more than the drawdown limit to pass or fail the challenge. This rule also applies for the funded stage.",
+    "Gamifying: Trading 2 accounts against each other",
+    "going long on one and short on the other",
+    "with the hope of passing the challenge.",
+    "High-Frequency Trading",
+    "Toxic Trading Order Flow",
+    "Long/Short arbitrage",
+    "reverse arbitrage",
+    "tick scalping",
+    "server execution",
+    "Reverse/Group Hedging and Hedging. Violation Leads to account termination"
+  ],
   "platforms": [
     "Match Trader",
     "MT5"
   ],
-  "seo_content": "<h3>Exclusive Maven Trading Offer</h3><p>Maven, based in Saint Lucia and established in November 2022, is a CFD firm offering 1 Step, 2 Steps and Instant programs. Account sizes range from $2,000 to $200,000. Supported platforms are MT5 and Match market participant. Tradable instruments include major forex pairs such as EURUSD and GBPUSD, XAUUSD (gold), and indices including US30 and UK100; leverage is 30:1. The firm has a review score of 4.3/5 from 637 reviews. confirmed by our [Intelligence Hub](/) for prop trading excellence.</p>",
-  "youtube_metadata": {
-    "title": "Maven Promo Code: Check website Discount",
-    "description": "Get funded with Maven using our exclusive discount code. validated for the current trading season."
+  "instruments": [
+    "FX",
+    "Metals",
+    "Indices",
+    "Energy",
+    "Crypto",
+    "Other Commodities"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Crypto",
+    "Korapay"
+  ],
+  "payout_methods": [
+    "Bank Transfer",
+    "Crypto",
+    "Riseworks"
+  ],
+  "founded": "2022-11",
+  "payout_policy": {
+    "minimum_payout": "Depends on program (typically 3% profit for Instant)",
+    "payout_limits": [
+      "Withdrawal Limit: $10",
+      "000 per 30-day cycle",
+      "Profits from trades closed within 2 minutes are not counted on Funded accounts (Excessive Scalping rule)"
+    ],
+    "processing_time": "Every 10 business days (1-Step, 2-Step, 3-Step, Instant). Immediate for Maven Mini.",
+    "details": "80% Profit split, Withdrawal every 10 business days For 1 Step, 2 Step, 3 Step and Instant Program. 80% Profit Split and immediate withdrawal for Maven Mini.",
+    "payout_cycles": []
   },
-  "firm_logo": "/images/logos/maven.svg",
-  "created_at": "2026-02-24T13:29:48.433Z"
+  "firm_rules": {
+    "copy_trading": "Manual Copy Trading is allowed Between your own Maven trading accounts, other prop firm accounts and broker accounts. Trade copiers can't be used on platforms offered and copy others trades is strictly prohibited",
+    "expert_advisor": "EAs are not permitted under any circumstances across all our platforms.",
+    "inactivity_rule": "Accounts must not be dormant for more than 30 calendar days",
+    "news_trading": "Trades cannot be opened or closed within 2 minutes before or after a red folder news. Violations, including during auto-closure, disqualify evaluation or challenge accounts. Profits from restricted news events are not credited during the challenge or live phase. Instant funding & Mini accounts are exempt from this rule.",
+    "weekend_holding": "Weekend Holding | Crypto Trading on weekends: Allowed",
+    "forbidden_strategies": [
+      "Excessive Scalping: Holding 50%+ of trades for less than a minute.",
+      "Martingale: Opening 5 simultaneous positions in drawdown on the same pair.",
+      "All-in: Making a single trade with no stop-loss or risking more than the drawdown limit to pass or fail the challenge. This rule also applies for the funded stage.",
+      "Gamifying: Trading 2 accounts against each other",
+      "going long on one and short on the other",
+      "with the hope of passing the challenge.",
+      "High-Frequency Trading",
+      "Toxic Trading Order Flow",
+      "Long/Short arbitrage",
+      "reverse arbitrage",
+      "tick scalping",
+      "server execution",
+      "Reverse/Group Hedging and Hedging. Violation Leads to account termination"
+    ],
+    "ip_vpn_policy": "Your IP address for Challenge Phase, and live accounts must match the same geographical region. If it changes, you must provide proof (e.g., plane tickets or live location verification) to justify the change.",
+    "risk_rules": [
+      "Risk Limit: This rule applies only to a small minority of traders who show poor risk management. It’s intended to help them trade more responsibly and with discipline. Unless notified",
+      "you may trade freely without restrictions. However",
+      "if you exceed the risk limits stated in your email",
+      "your account will be breached.",
+      "Withdrawal Limit (Funded): Traders can withdraw up to $10",
+      "000 per 30-day cycle",
+      "regardless of the number of accounts. Profits above this limit are voided",
+      "and the account resets to its starting balance after payout.",
+      "Funded Profit Threshold: In the funded stage",
+      "if total profits exceed $5",
+      "000",
+      "no single trade or trading day (measured as the time between two trades",
+      "not by calendar day) may account for more than 50% of the total profit. Profits above this threshold are reduced to meet the 50% limit.",
+      "Instant Funding Floating Loss: At no point can your account have more than a 1% loss in floating PnL. This is the difference between your balance and equity",
+      "if this happens then your account will be breached.",
+      "Instant Funding Max Drawdown: There is a daily loss limit of 2%",
+      "meaning whatever is highest out of your equity/balance you must not hit 2% loss",
+      "If this happens then your account will be breached. There is a max trailing loss limit of 3%",
+      "Maven Mini Time Limit: You have 24 hours to trade on the Mini program. The timer starts once you’ve placed your first trade. You must submit your payout within the 24-hour period.",
+      "Maven Mini Rules: One time payout per account",
+      "after the payout",
+      "the account is closed. Max opening of 1 trade at any giving moment. At no point can your account have more than a 1% loss in floating PnL. There is a max trailing loss limit of 3% | 2% Daily Drawdown"
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-03-29",
+      "event": "Instant Funding Arrives at Maven Trading",
+      "type": "update"
+    },
+    {
+      "date": "2025-01-15",
+      "event": "Get Instant Funded",
+      "type": "update"
+    },
+    {
+      "date": "2024-10-31",
+      "event": "South Africans! Pay and Get Paid in ZAR with Maven",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/maven.png"
+  },
+  "seo_content": "<h3>Maven Technical Infrastructure</h3><p>Maven, based in Saint Lucia and established in November 2022, is a CFD firm offering 1 Step, 2 Steps and Instant programs. Account sizes range from $2,000 to $200,000. Supported platforms are MT5 and Match Trader. Tradable instruments include major forex pairs such as EURUSD and GBPUSD, XAUUSD (gold), and indices including US30 and UK100; leverage is 30:1. The firm has a review score of 4.3/5 from 637 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Maven Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Maven. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/maven.png",
+  "created_at": "2026-02-24T16:30:43.407Z"
 }

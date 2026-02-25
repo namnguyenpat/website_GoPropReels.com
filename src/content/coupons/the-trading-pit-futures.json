@@ -1,11 +1,14 @@
 {
-  "id": "the-trading-pit-futures-deal",
+  "id": "the-trading-pit-futures",
   "firm_name": "The Trading Pit Futures",
+  "broker": "The Trading Pit Futures",
+  "title": "The Trading Pit Futures Check website",
+  "description": "The Trading Pit Futures, based in Liechtenstein and established in October 2022, is a futures prop trading firm offering a 1 Step program. Account sizes range from $10,000 to $100,000. Supported platforms include ATAS Orderflow Trading, Bookmap, R Trader Pro, and others via Rithmic connection. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "futures",
   "discount_highlight": "Check website",
   "coupon_code": "No Code",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#FF9F0A",
   "features": [
     "The Trading Pit - Futures Prime - 1-Phase Evaluation - 1-Step 150K",
     "The Trading Pit - Futures Prime - 1-Phase Evaluation - 1-Step 100K",
@@ -13,7 +16,44 @@
   ],
   "affiliate_link": "https://affiliate.thetradingpit.com/visit/?bta=118&brand=thetradingpit",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {},
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "The Trading Pit - Futures Prime - 1-Phase Evaluation - 1-Step 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "260.10",
+      "original_price": "289.00"
+    },
+    {
+      "name": "The Trading Pit - Futures Prime - 1-Phase Evaluation - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "170.10",
+      "original_price": "189.00"
+    },
+    {
+      "name": "The Trading Pit - Futures Prime - 1-Phase Evaluation - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "89.10",
+      "original_price": "99.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Martingale or similar high-risk strategies prohibited.",
+    "Grid trading prohibited.",
+    "Gap trading prohibited.",
+    "High-Frequency Trading (HFT) prohibited.",
+    "Exploitation of system errors or slow data feeds.",
+    "Inconsistent lot sizes: must maintain disciplinary lot consistency."
+  ],
   "platforms": [
     "ATAS Orderflow Trading",
     "Bookmap",
@@ -31,11 +71,64 @@
     "MetaTrader 4",
     "MetaTrader 5"
   ],
-  "seo_content": "<h3>Exclusive The Trading Pit Futures Trading Offer</h3><p>The Trading Pit Futures, based in Liechtenstein and established in October 2022, is a futures prop trading firm offering a 1 Step program. Account sizes range from $10,000 to $100,000. Supported platforms include ATAS Orderflow Trading, Bookmap, R financial strategist Pro, and others via Rithmic connection. certified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "instruments": [
+    "Futures",
+    "Forex"
+  ],
+  "payment_methods": [
+    "Apple Pay",
+    "Bank Transfer",
+    "Binance",
+    "Credit Card",
+    "Crypto",
+    "Giropay (DE)",
+    "Google Pay",
+    "Neteller",
+    "PayPal",
+    "Skrill"
+  ],
+  "payout_methods": [
+    "Bank Wire Transfer",
+    "Crypto"
+  ],
+  "founded": "2022-10",
+  "payout_policy": {
+    "minimum_payout": "$200.",
+    "processing_time": "Every 7 days (after 2nd payout).",
+    "details": "80% profit share. 1st/2nd payout: require 5 profitable days of $200+. Subsequent: every 7 days for profits > $200 with no profitable day requirement.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed for up to 5 accounts (manual or auto). Copying from personal external accounts allowed. prohibited between Challenge & Earning.",
+    "expert_advisor": "Allowed using own EA; must not perform prohibited activities.",
+    "inactivity_rule": "Inactive for 21 consecutive days results in suspension.",
+    "news_trading": "Allowed (Futures Prime).",
+    "weekend_holding": "Not allowed (Futures Prime). Overnight holding prohibited.",
+    "forbidden_strategies": [
+      "Martingale or similar high-risk strategies prohibited.",
+      "Grid trading prohibited.",
+      "Gap trading prohibited.",
+      "High-Frequency Trading (HFT) prohibited.",
+      "Exploitation of system errors or slow data feeds.",
+      "Inconsistent lot sizes: must maintain disciplinary lot consistency."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2022-10-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/the-trading-pit-futures.svg"
+  },
+  "seo_content": "<h3>The Trading Pit Futures Technical Infrastructure</h3><p>The Trading Pit Futures, based in Liechtenstein and established in October 2022, is a futures prop trading firm offering a 1 Step program. Account sizes range from $10,000 to $100,000. Supported platforms include ATAS Orderflow Trading, Bookmap, R Trader Pro, and others via Rithmic connection. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
   "youtube_metadata": {
-    "title": "The Trading Pit Futures Promo Code: Check website Discount",
-    "description": "Get funded with The Trading Pit Futures using our exclusive discount code. confirmed for the current trading season."
+    "title": "The Trading Pit Futures Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of The Trading Pit Futures. We analyze their futures environment and execution rules."
   },
   "firm_logo": "/images/logos/the-trading-pit-futures.svg",
-  "created_at": "2026-02-24T13:29:48.447Z"
+  "created_at": "2026-02-24T16:30:43.419Z"
 }

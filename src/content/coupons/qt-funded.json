@@ -1,11 +1,14 @@
 {
-  "id": "qt-funded-deal",
+  "id": "qt-funded",
   "firm_name": "QT Funded",
+  "broker": "QT Funded",
+  "title": "QT Funded 45%",
+  "description": "QT Funded, based in South Africa and established in October 2023, is a CFD firm offering two program types: 2 Steps and Instant. The firm supports the MT5, cTrader and TradeLocker trading platforms and offers its 2 Steps and Instant programs on those platforms. QT Funded has a review score of 3.9 out of 5 based on 600 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "forex",
   "discount_highlight": "45%",
   "coupon_code": "QT45",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#5E5CE6",
   "features": [
     "Quant Tekel - QT Instant - Instant 10K",
     "Quant Tekel - QT Instant - Instant 25K",
@@ -15,17 +18,201 @@
   ],
   "affiliate_link": "https://qtfunded.quanttekel.com/ref/5288/",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "Instant": "1:50",
+      "2-Steps": "1:100"
+    },
+    "Metals": {
+      "Instant": "1:15",
+      "2-Steps": "1:35"
+    },
+    "Indices": {
+      "Instant": "1:20",
+      "2-Steps": "1:35"
+    },
+    "Crypto": {
+      "Instant": "1:1"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Quant Tekel - QT Instant - Instant 10K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "72.60",
+      "original_price": "132.00"
+    },
+    {
+      "name": "Quant Tekel - QT Instant - Instant 25K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "137.50",
+      "original_price": "250.00"
+    },
+    {
+      "name": "Quant Tekel - QT Instant - Instant 1.25K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "1250",
+      "price": "14.30",
+      "original_price": "26.00"
+    },
+    {
+      "name": "Quant Tekel - QT Instant - Instant 100K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "594.00",
+      "original_price": "1080.00"
+    },
+    {
+      "name": "Quant Tekel - Prime Evaluation - 2-Step 25K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "126.50",
+      "original_price": "230.00"
+    },
+    {
+      "name": "Quant Tekel - Prime Evaluation - 2-Step 5K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "33.00",
+      "original_price": "60.00"
+    },
+    {
+      "name": "Quant Tekel - QT Ultra Evaluation - 2-Step 10K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "72.25",
+      "original_price": "85.00"
+    },
+    {
+      "name": "Quant Tekel - QT Ultra Evaluation - 2-Step 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "446.25",
+      "original_price": "525.00"
+    },
+    {
+      "name": "Quant Tekel - QT Ultra Evaluation - 2-Step 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "242.25",
+      "original_price": "285.00"
+    },
+    {
+      "name": "Quant Tekel - Power Evaluation - 2-Step 25K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "48.00",
+      "original_price": "120.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Latency Trading",
+    "Arbitrage Trading",
+    "High-Frequency Trading (tick scalping",
+    "reverse trading",
+    "group hedging",
+    "order book spamming).",
+    "Excessive One-Sided Positions.",
+    "Toxic Behaviors.",
+    "All-or-Nothing Approach.",
+    "Account Management Services.",
+    "No Group Trading.",
+    "Excessive Exposure: Risking more than 75% of daily/max drawdown limits.",
+    "Max Risk Rule (Instant): 2% max risk allowed.",
+    "Max Risk Rule (Funded Prime): 2.5% max risk allowed.",
+    "Max Risk Rule (Funded Ultra): 1.5% max risk allowed."
+  ],
   "platforms": [
     "cTrader",
     "MT5",
     "TradeLocker"
   ],
-  "seo_content": "<h3>Exclusive QT Funded Trading Offer</h3><p>QT Funded, based in South Africa and established in October 2023, is a CFD firm offering two program types: 2 Steps and Instant. The firm supports the MT5, cTrader and TradeLocker trading platforms and offers its 2 Steps and Instant programs on those platforms. QT Funded has a review score of 3.9 out of 5 based on 600 reviews. authenticated by our [Intelligence Hub](/) for prop trading excellence.</p>",
-  "youtube_metadata": {
-    "title": "QT Funded Promo Code: 45% Discount",
-    "description": "Get funded with QT Funded using our exclusive discount code. checked for the current trading season."
+  "instruments": [
+    "FX",
+    "Metals",
+    "Indices",
+    "Crypto",
+    "Other Commodities"
+  ],
+  "payment_methods": [
+    "Apple Pay",
+    "Credit/Debit Card",
+    "Crypto",
+    "Google Pay",
+    "PayPal",
+    "UPI Payment"
+  ],
+  "payout_methods": [
+    "Crypto"
+  ],
+  "founded": "2023-10",
+  "payout_policy": {
+    "minimum_payout": "QT Instant, Prime & Power: 1% or $100 whichever is higher | QT Ultra: 2% of the account size.",
+    "processing_time": "Every 14 days (Prime/Instant/Ultra subsequent). QT Power: On demand.",
+    "details": "QT Instant: 80% split every 14 days (5% min profit, 25% consistency). QT Prime: Bi-weekly 80% split (90% w/ add-on). QT Power: On demand w/ 80% split (35% consistency). QT Ultra: 80% split, 21 day first cycle then 14 days.",
+    "Requirements": "3",
+    "payout_cycles": []
   },
-  "firm_logo": "/images/logos/qt-funded.svg",
-  "created_at": "2026-02-24T13:29:48.441Z"
+  "firm_rules": {
+    "copy_trading": "Allowed between accounts personally owned by them. Copy trading or using the same strategy across accounts is NOT allowed if total allocation is $400,000 or above.",
+    "expert_advisor": "Pre-Approval for EA: Only Risk Management EAs are allowed which must go through a pre-approval process. Fully automated or self-trading EAs & bots are strictly prohibited unless approved.",
+    "inactivity_rule": "If no trading activity occurs for 30 consecutive days, the account will be breached and deleted.",
+    "news_trading": "Evaluation: Allowed. Funded (Prime & Instant & Ultra): Restrictions of 5 minutes before or after high Impact News. QT PRIME ON-DEMAND DOES NOT have the news rule applied.",
+    "weekend_holding": "Allowed (not explicitly prohibited except for potentially specific programs, checking... 'ThinkCapital Dual Step Intraday prohibited",
+    "forbidden_strategies": [
+      "Latency Trading",
+      "Arbitrage Trading",
+      "High-Frequency Trading (tick scalping",
+      "reverse trading",
+      "group hedging",
+      "order book spamming).",
+      "Excessive One-Sided Positions.",
+      "Toxic Behaviors.",
+      "All-or-Nothing Approach.",
+      "Account Management Services.",
+      "No Group Trading.",
+      "Excessive Exposure: Risking more than 75% of daily/max drawdown limits.",
+      "Max Risk Rule (Instant): 2% max risk allowed.",
+      "Max Risk Rule (Funded Prime): 2.5% max risk allowed.",
+      "Max Risk Rule (Funded Ultra): 1.5% max risk allowed."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2023-10-01",
+      "event": "Established",
+      "type": "update"
+    },
+    {
+      "date": "2025-05-14",
+      "event": "Trading Quote Resumption",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/qt-funded.png"
+  },
+  "seo_content": "<h3>QT Funded Technical Infrastructure</h3><p>QT Funded, based in South Africa and established in October 2023, is a CFD firm offering two program types: 2 Steps and Instant. The firm supports the MT5, cTrader and TradeLocker trading platforms and offers its 2 Steps and Instant programs on those platforms. QT Funded has a review score of 3.9 out of 5 based on 600 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "QT Funded Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of QT Funded. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/qt-funded.png",
+  "created_at": "2026-02-24T16:30:43.414Z"
 }

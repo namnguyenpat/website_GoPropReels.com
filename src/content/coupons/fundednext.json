@@ -1,32 +1,264 @@
 {
-  "id": "fundednext-deal",
+  "id": "fundednext",
   "firm_name": "FundedNext",
+  "broker": "FundedNext",
+  "title": "FundedNext Check website",
+  "description": "FundedNext, based in the United Arab Emirates, was established in March 2022. The firm is a CFD provider offering 1 Step and 2 Steps program types. Account sizes range from $5,000 to $200,000. Platforms supported include cTrader, MT4 and MT5. Tradable instruments include Forex, Commodities and Indices, with leverage options up to 1:100 for majors, exotics, and cryptocurrencies. FundedNext has a 4.6/5 review score based on 14,350 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "forex",
   "discount_highlight": "Check website",
   "coupon_code": "No Code",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#30D158",
   "features": [
-    "FundedNext - Stellar audition - 1-Step 200K",
-    "FundedNext - Stellar audition - 1-Step 100K",
-    "FundedNext - Stellar audition - 1-Step 50K",
-    "FundedNext - Stellar audition - 1-Step 25K",
-    "FundedNext - Stellar audition - 1-Step 15K"
+    "FundedNext - Stellar Challenge - 1-Step 200K",
+    "FundedNext - Stellar Challenge - 1-Step 100K",
+    "FundedNext - Stellar Challenge - 1-Step 50K",
+    "FundedNext - Stellar Challenge - 1-Step 25K",
+    "FundedNext - Stellar Challenge - 1-Step 15K"
   ],
   "affiliate_link": "https://fundednext.com/?fpr=ngpat",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {
+    "Forex": {
+      "Instant": "1:30",
+      "1-Step": "1:30",
+      "2-Steps": "1:100"
+    },
+    "Metals": {
+      "1-Step": "1:10",
+      "2-Steps": "1:15"
+    },
+    "Indices": {
+      "Instant": "1:5",
+      "1-Step": "1:5",
+      "2-Steps": "1:15"
+    },
+    "Energy": {
+      "1-Step": "1:10",
+      "2-Steps": "1:15"
+    },
+    "Crypto": {
+      "Instant": "1:1",
+      "1-Step": "1:1",
+      "2-Steps": "1:1"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "FundedNext - Stellar Challenge - 1-Step 200K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "1022.99",
+      "original_price": "1099.99"
+    },
+    {
+      "name": "FundedNext - Stellar Challenge - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "530.09",
+      "original_price": "569.99"
+    },
+    {
+      "name": "FundedNext - Stellar Challenge - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "306.89",
+      "original_price": "329.99"
+    },
+    {
+      "name": "FundedNext - Stellar Challenge - 1-Step 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "204.59",
+      "original_price": "219.99"
+    },
+    {
+      "name": "FundedNext - Stellar Challenge - 1-Step 15K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "15000",
+      "price": "120.89",
+      "original_price": "129.99"
+    },
+    {
+      "name": "FundedNext - Stellar Challenge - 1-Step 6K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "6000",
+      "price": "61.37",
+      "original_price": "65.99"
+    },
+    {
+      "name": "FundedNext - Stellar Challenge - 2-Steps 200K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "1022.99",
+      "original_price": "1099.99"
+    },
+    {
+      "name": "FundedNext - Stellar Challenge - 2-Steps 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "511.49",
+      "original_price": "549.99"
+    },
+    {
+      "name": "FundedNext - Stellar Challenge - 2-Steps 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "278.99",
+      "original_price": "299.99"
+    },
+    {
+      "name": "FundedNext - Stellar Challenge - 2-Steps 15K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "15000",
+      "price": "111.59",
+      "original_price": "119.99"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "You must use the same trading strategy and method (manual or EA) during both the Challenge and Funded Account. Switching between them is not allowed.",
+    "Utilizing specific asset classes",
+    "symbol categories",
+    "specific margin or risk usages to pass the evaluation phase and then switching to entirely different asset classes or symbol categories and significantly increasing the margin utilization or risk usages in the FundedNext Account",
+    "is prohibited.",
+    "Account rolling is strictly prohibited",
+    "buying multiple evaluations to sacrifice some while passing others is considered a high-risk",
+    "luck-based tactic that violates FundedNext\\u2019s principles of skill and responsible trading. Violations may lead to restrictions on new purchases or lifetime allocation limits.",
+    "One-sided Betting: One-Sided Betting is a gambling-like trading behavior where a trader takes concentrated directional exposure",
+    "opens multiple trades in the same direction",
+    "or enters reactive positions without sufficient consideration of market conditions",
+    "fundamental news",
+    "or technical analysis",
+    "Grid Trading: Grid trading is a strategy where a trader places multiple buy and sell orders at different price levels above and below the current market price. The goal is to profit from price fluctuations as the market moves up and down",
+    "hitting various price points.",
+    "Other prohibited trading strategies: https://help.fundednext.com/en/articles/8020351-what-are-the-restricted-prohibited-trading-strategies?q=risk"
+  ],
   "platforms": [
     "cTrader",
     "Match Trader",
     "MT4",
     "MT5"
   ],
-  "seo_content": "<h3>Exclusive FundedNext Trading Offer</h3><p>FundedNext, based in the United Arab Emirates, was established in March 2022. The firm is a CFD provider offering 1 Step and 2 Steps program types. Account sizes range from $5,000 to $200,000. Platforms supported include cTrader, MT4 and MT5. Tradable instruments include Forex, Commodities and Indices, with leverage options up to 1:100 for majors, exotics, and cryptocurrencies. FundedNext has a 4.6/5 review score based on 14,350 reviews. confirmed by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "instruments": [
+    "Forex",
+    "Metals",
+    "Indices",
+    "Energy",
+    "Crypto"
+  ],
+  "payment_methods": [
+    "Apple Pay",
+    "Astropay",
+    "Credit/Debit Card",
+    "Crypto",
+    "Google Pay",
+    "PayPal",
+    "Perfect Money",
+    "Skrill"
+  ],
+  "payout_methods": [
+    "Crypto",
+    "Riseworks",
+    "TC Pay"
+  ],
+  "founded": "2022-03",
+  "payout_policy": {
+    "minimum_payout": "Important Note: If payout is below $20, you can't withdraw.",
+    "payout_schedules": [
+      "{ program: Stellar 1-Step",
+      "frequency: Every 7 days }",
+      "{ program: Stellar 2-Step",
+      "frequency: First payout is 21 days",
+      "then 14 days }",
+      "{ program: Stellar Lite",
+      "frequency: First payout is 21 days",
+      "then 14 days }",
+      "{ program: Stellar Instant (Profit >= 5%)",
+      "frequency: On demand (available anytime",
+      "withdrawal immediate) }",
+      "{ program: Stellar Instant (Profit < 5%)",
+      "frequency: Bi-Weekly (withdrawal after 14 days with minimum 1% profit) }"
+    ],
+    "payout_limits": [
+      "USDT (TRC20): Lowest Payout Amount: $20",
+      "Highest Payout Amount: $1",
+      "999",
+      "USDT (ERC20) and USDC (ERC20): Lowest Payout Amount: $50",
+      "Highest Payout Amount: $1",
+      "999",
+      "RiseWorks: Lowest Payout Amount: $50",
+      "Highest Payout Amount: No Limits",
+      "Payout Limits for TC Pay: Lowest Payout Amount: $20",
+      "Highest Payout Amount: $5",
+      "000"
+    ],
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Copy trading is only allowed between challenge accounts and between instant accounts.",
+    "expert_advisor": "EAs are only available as an add-on. EAs are allowed, only works on MetaTrader 4 and MetaTrader 5. EA must be customized to suit your trading style. Identical trades across accounts are not allowed. Switching between EA and manual trading is not allowed. There is a maximum allocation limit of $300,000 for each EA or trading bot's strategy.",
+    "inactivity_rule": "To avoid the account inactivity period, traders can simply login to their account at least once or execute a single trade within a period of 30 consecutive days.",
+    "news_trading": "Allowed without restriction during evaluation stage. Allowed with restriction on funded stage and instant accounts (Trades executed 5 minutes before and after a High Impact News event are subject to a 40% news profit split rule.)",
+    "weekend_holding": "Allowed (News trading allowed with 40% split rule on funded/instant).",
+    "forbidden_strategies": [
+      "You must use the same trading strategy and method (manual or EA) during both the Challenge and Funded Account. Switching between them is not allowed.",
+      "Utilizing specific asset classes",
+      "symbol categories",
+      "specific margin or risk usages to pass the evaluation phase and then switching to entirely different asset classes or symbol categories and significantly increasing the margin utilization or risk usages in the FundedNext Account",
+      "is prohibited.",
+      "Account rolling is strictly prohibited",
+      "buying multiple evaluations to sacrifice some while passing others is considered a high-risk",
+      "luck-based tactic that violates FundedNext\\u2019s principles of skill and responsible trading. Violations may lead to restrictions on new purchases or lifetime allocation limits.",
+      "One-sided Betting: One-Sided Betting is a gambling-like trading behavior where a trader takes concentrated directional exposure",
+      "opens multiple trades in the same direction",
+      "or enters reactive positions without sufficient consideration of market conditions",
+      "fundamental news",
+      "or technical analysis",
+      "Grid Trading: Grid trading is a strategy where a trader places multiple buy and sell orders at different price levels above and below the current market price. The goal is to profit from price fluctuations as the market moves up and down",
+      "hitting various price points.",
+      "Other prohibited trading strategies: https://help.fundednext.com/en/articles/8020351-what-are-the-restricted-prohibited-trading-strategies?q=risk"
+    ],
+    "ip_vpn_policy": "Standard procedures; Maintain account integrity."
+  },
+  "timeline": [
+    {
+      "date": "2024-08-28",
+      "event": "📢TradingView is now available on all FundedNext Challenge Accounts! 📢",
+      "type": "update"
+    },
+    {
+      "date": "2024-08-22",
+      "event": "Introducing the \\\"My Offers\\\" Section in FundedNext Dashboard",
+      "type": "update"
+    },
+    {
+      "date": "2024-08-19",
+      "event": "Apple Pay and Google Pay as payment methods on FundedNext",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/fundednext.svg"
+  },
+  "seo_content": "<h3>FundedNext Technical Infrastructure</h3><p>FundedNext, based in the United Arab Emirates, was established in March 2022. The firm is a CFD provider offering 1 Step and 2 Steps program types. Account sizes range from $5,000 to $200,000. Platforms supported include cTrader, MT4 and MT5. Tradable instruments include Forex, Commodities and Indices, with leverage options up to 1:100 for majors, exotics, and cryptocurrencies. FundedNext has a 4.6/5 review score based on 14,350 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
   "youtube_metadata": {
-    "title": "FundedNext Promo Code: Check website Discount",
-    "description": "Get funded with FundedNext using our exclusive discount code. validated for the current trading season."
+    "title": "FundedNext Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of FundedNext. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/fundednext.svg",
-  "created_at": "2026-02-24T13:29:48.417Z"
+  "created_at": "2026-02-24T16:30:43.389Z"
 }

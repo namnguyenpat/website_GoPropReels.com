@@ -1,29 +1,252 @@
 {
-  "id": "thinkcapital-deal",
+  "id": "thinkcapital",
   "firm_name": "ThinkCapital",
+  "broker": "ThinkCapital",
+  "title": "ThinkCapital Check website",
+  "description": "ThinkCapital is a CFD firm based in the United Kingdom, established in June 2024. The firm offers program types labeled 1 Step, 2 Steps, and 3 Steps and supports the ThinkTrader platform for trading. ThinkCapital has a review score of 4.3 out of 5 from 48 reviews. The firm is a recently established CFD provider focusing on structured multi-step programs delivered through the ThinkTrader platform. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "forex",
   "discount_highlight": "Check website",
   "coupon_code": "No Code",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#FF2D55",
   "features": [
-    "ThinkCapital - Lightning combine - 1-Step 100K",
-    "ThinkCapital - Lightning combine - 1-Step 50K",
-    "ThinkCapital - Lightning combine - 1-Step 10K",
-    "ThinkCapital - Dual Step Swing combine - 2-Step - 200K",
-    "ThinkCapital - Dual Step Swing combine - 2-Step - 100K"
+    "ThinkCapital - Lightning Challenge - 1-Step 100K",
+    "ThinkCapital - Lightning Challenge - 1-Step 50K",
+    "ThinkCapital - Lightning Challenge - 1-Step 10K",
+    "ThinkCapital - Dual Step Swing Challenge - 2-Step - 200K",
+    "ThinkCapital - Dual Step Swing Challenge - 2-Step - 100K"
   ],
   "affiliate_link": "https://thinkcapital.com/?ref=NAM001",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "1-Step": "1:100",
+      "2-Steps": "1:100",
+      "3-Steps": "1:100"
+    },
+    "Metals": {
+      "1-Step": "1:30",
+      "2-Steps": "1:30",
+      "3-Steps": "1:30"
+    },
+    "Indices": {
+      "1-Step": "1:20",
+      "2-Steps": "1:20",
+      "3-Steps": "1:20"
+    },
+    "Energy": {
+      "1-Step": "1:20",
+      "2-Steps": "1:20",
+      "3-Steps": "1:20"
+    },
+    "Crypto": {
+      "1-Step": "1:2",
+      "2-Steps": "1:2",
+      "3-Steps": "1:2"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "ThinkCapital - Lightning Challenge - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "374.25",
+      "original_price": "499.00"
+    },
+    {
+      "name": "ThinkCapital - Lightning Challenge - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "224.25",
+      "original_price": "299.00"
+    },
+    {
+      "name": "ThinkCapital - Lightning Challenge - 1-Step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "74.25",
+      "original_price": "99.00"
+    },
+    {
+      "name": "ThinkCapital - Dual Step Swing Challenge - 2-Step - 200K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "1123.50",
+      "original_price": "1498.00"
+    },
+    {
+      "name": "ThinkCapital - Dual Step Swing Challenge - 2-Step - 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "523.50",
+      "original_price": "698.00"
+    },
+    {
+      "name": "ThinkCapital - Dual Step Swing Challenge - 2-Step - 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "313.50",
+      "original_price": "418.00"
+    },
+    {
+      "name": "ThinkCapital - Dual Step Swing Challenge - 2-Step - 5K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "61.50",
+      "original_price": "82.00"
+    },
+    {
+      "name": "ThinkCapital - Dual Step Intraday Challenge - 2-Step - 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "374.25",
+      "original_price": "499.00"
+    },
+    {
+      "name": "ThinkCapital - Dual Step Intraday Challenge - 2-Step - 25K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "149.25",
+      "original_price": "199.00"
+    },
+    {
+      "name": "ThinkCapital - Nexus Challenge - 3 - Step - 200K",
+      "model": "3-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "561.75",
+      "original_price": "749.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Gambling behavior includes overleveraging",
+    "all-in trades",
+    "doubling down after losses (Martingale)",
+    "overexposure to correlated assets",
+    "excessive high-frequency scalping",
+    "punting",
+    "coinflip trading patterns",
+    "and account rolling.",
+    "Copy trading (between accounts not owned by the same person)",
+    "Grid trading",
+    "Hedging or group hedging across multiple accounts",
+    "Collusion between users",
+    "Account sharing/account management/account sale.",
+    "Latency arbitrage",
+    "High-frequency trading (HFT)",
+    "Abuse of a delayed data feed",
+    "Abuse of the simulated environment",
+    "Trading on delayed charts.",
+    "Unauthorized use of Expert Advisors (EAs)",
+    "Challenge passing services",
+    "Martingale trading.",
+    "Use of guarantee of compliance with limit orders",
+    "Trading in sanctioned countries",
+    "Exploiting platform or data freezing due to technical errors.",
+    "News trading (within restricted window)",
+    "Order layering",
+    "Gambling/punting."
+  ],
   "platforms": [
     "ThinkTrader"
   ],
-  "seo_content": "<h3>Exclusive ThinkCapital Trading Offer</h3><p>ThinkCapital is a CFD firm based in the United Kingdom, established in June 2024. The firm offers program types labeled 1 Step, 2 Steps, and 3 Steps and supports the ThinkTrader platform for trading. ThinkCapital has a review score of 4.3 out of 5 from 48 reviews. The firm is a recently established CFD provider focusing on structured multi-step programs delivered through the ThinkTrader platform. validated by our [Intelligence Hub](/) for prop trading excellence.</p>",
-  "youtube_metadata": {
-    "title": "ThinkCapital Promo Code: Check website Discount",
-    "description": "Get funded with ThinkCapital using our exclusive discount code. authenticated for the current trading season."
+  "instruments": [
+    "FX",
+    "Metals",
+    "Indices",
+    "Energy",
+    "Crypto"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Crypto"
+  ],
+  "payout_methods": [
+    "Broker Profit Transfer",
+    "Crypto",
+    "Riseworks"
+  ],
+  "founded": "2024-06",
+  "payout_policy": {
+    "minimum_payout": "$100 profit required to request a payout.",
+    "processing_time": "Available every 14 days (unless purchased with the Weekly Payouts add-on).",
+    "details": "80% (90% with scaling or add-on) Available every 14 days.",
+    "payout_cycles": []
   },
-  "firm_logo": "/images/logos/thinkcapital.svg",
-  "created_at": "2026-02-24T13:29:48.450Z"
+  "firm_rules": {
+    "copy_trading": "Only manual copy trading allowed if accounts are both owned by the same person.",
+    "expert_advisor": "Not Allowed (Except Dual Step Swing & Intraday on MT5 where they are allowed)",
+    "inactivity_rule": "You must place at least one trade every 30 days to keep your account active.",
+    "news_trading": "Lightning (1-Step) & Nexus (3-Step) & Dual Step Intraday: News trading is strictly prohibited within 2 minutes before and after high-impact news. Dual Step Swing: Allowed With No Restrictions.",
+    "weekend_holding": "Lightning & Dual Step Swing: Allowed. Dual Step Intraday: Prohibited.",
+    "forbidden_strategies": [
+      "Gambling behavior includes overleveraging",
+      "all-in trades",
+      "doubling down after losses (Martingale)",
+      "overexposure to correlated assets",
+      "excessive high-frequency scalping",
+      "punting",
+      "coinflip trading patterns",
+      "and account rolling.",
+      "Copy trading (between accounts not owned by the same person)",
+      "Grid trading",
+      "Hedging or group hedging across multiple accounts",
+      "Collusion between users",
+      "Account sharing/account management/account sale.",
+      "Latency arbitrage",
+      "High-frequency trading (HFT)",
+      "Abuse of a delayed data feed",
+      "Abuse of the simulated environment",
+      "Trading on delayed charts.",
+      "Unauthorized use of Expert Advisors (EAs)",
+      "Challenge passing services",
+      "Martingale trading.",
+      "Use of guarantee of compliance with limit orders",
+      "Trading in sanctioned countries",
+      "Exploiting platform or data freezing due to technical errors.",
+      "News trading (within restricted window)",
+      "Order layering",
+      "Gambling/punting."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2024-06-01",
+      "event": "Established",
+      "type": "update"
+    },
+    {
+      "date": "2026-01-22",
+      "event": "New Website",
+      "type": "update"
+    },
+    {
+      "date": "2025-12-17",
+      "event": "Dual Step Rebuilt",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/thinkcapital.png"
+  },
+  "seo_content": "<h3>ThinkCapital Technical Infrastructure</h3><p>ThinkCapital is a CFD firm based in the United Kingdom, established in June 2024. The firm offers program types labeled 1 Step, 2 Steps, and 3 Steps and supports the ThinkTrader platform for trading. ThinkCapital has a review score of 4.3 out of 5 from 48 reviews. The firm is a recently established CFD provider focusing on structured multi-step programs delivered through the ThinkTrader platform. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "ThinkCapital Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of ThinkCapital. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/thinkcapital.png",
+  "created_at": "2026-02-24T16:30:43.424Z"
 }

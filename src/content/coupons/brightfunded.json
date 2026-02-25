@@ -1,31 +1,189 @@
 {
-  "id": "brightfunded-deal",
+  "id": "brightfunded",
   "firm_name": "BrightFunded",
+  "broker": "BrightFunded",
+  "title": "BrightFunded 20% OFF",
+  "description": "BrightFunded, based in the United Arab Emirates and established in September 2023, is a CFD firm offering a two-step evaluation program. Account sizes range from $10,000 to $200,000. Platforms supported include MT5, cTrader and the BrightFunded Platform (DxTrade). Tradable instruments include cryptocurrencies, forex currency pairs, indices, commodities and global stocks; leverage options are listed as 1:100 for forex, 1:40 for gold and commodities, and 1:20 for indices. The evaluation includes profit targets of 8% in Phase 1 and 5% in Phase 2 and a maximum total drawdown of 10% across accounts. The firm has a 4.6/5 review score from 92 reviews. This summary outlines BrightFunded\\u2019s service offering and structure. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "forex",
   "discount_highlight": "20% OFF",
   "coupon_code": "LOVE20",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#FF9F0A",
   "features": [
-    "BrightFunded - 2-Step combine - 25K",
-    "BrightFunded - 2-Step combine - 10K",
-    "BrightFunded - 2-Step combine - 100K",
-    "BrightFunded - 2-Step combine - 50K",
-    "BrightFunded - 2-Step combine - 200K"
+    "BrightFunded - 2-Step Challenge - 25K",
+    "BrightFunded - 2-Step Challenge - 10K",
+    "BrightFunded - 2-Step Challenge - 100K",
+    "BrightFunded - 2-Step Challenge - 50K",
+    "BrightFunded - 2-Step Challenge - 200K"
   ],
   "affiliate_link": "https://brightfunded.com/a/hBoBqf4tSDudCmwVEb7-LQ",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {
+    "Forex": {
+      "2-Step": "1:100"
+    },
+    "Metals": {
+      "2-Step": "1:40"
+    },
+    "Indices": {
+      "2-Step": "1:20"
+    },
+    "Crypto": {
+      "2-Step": "1:5"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "BrightFunded - 2-Step Challenge - 25K",
+      "model": "2-step",
+      "currency": "EUR",
+      "account_size": "25000",
+      "price": "156.00",
+      "original_price": "195.00"
+    },
+    {
+      "name": "BrightFunded - 2-Step Challenge - 10K",
+      "model": "2-step",
+      "currency": "EUR",
+      "account_size": "10000",
+      "price": "76.00",
+      "original_price": "95.00"
+    },
+    {
+      "name": "BrightFunded - 2-Step Challenge - 100K",
+      "model": "2-step",
+      "currency": "EUR",
+      "account_size": "100000",
+      "price": "396.00",
+      "original_price": "495.00"
+    },
+    {
+      "name": "BrightFunded - 2-Step Challenge - 50K",
+      "model": "2-step",
+      "currency": "EUR",
+      "account_size": "50000",
+      "price": "236.00",
+      "original_price": "295.00"
+    },
+    {
+      "name": "BrightFunded - 2-Step Challenge - 200K",
+      "model": "2-step",
+      "currency": "EUR",
+      "account_size": "200000",
+      "price": "780.00",
+      "original_price": "975.00"
+    },
+    {
+      "name": "BrightFunded - 2-Step Challenge - 5K",
+      "model": "2-step",
+      "currency": "EUR",
+      "account_size": "5000",
+      "price": "44.00",
+      "original_price": "55.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Hedging( between two or more different accounts",
+    "Between Different Prop Firms",
+    "Across Different Trading Platforms)",
+    "Exploiting Service Errors or Platform Delays",
+    "Using External or Delayed Data Feeds",
+    "Coordinated or Multi-Account Manipulation",
+    "Violating Platform or Provider Terms",
+    "Use of Automated Software",
+    "AI",
+    "or High-Speed Trading Tools",
+    "Risk-Abusive Trading; Overleveraging",
+    "Overexposure",
+    "One-Sided Bets",
+    "and Account Rolling",
+    "Trading During High-Impact News or Events",
+    "Abusive Strategy Types; Grid Trading",
+    "Arbitrage",
+    "Tick Scalping",
+    "High-Frequency Trading (HFT)."
+  ],
   "platforms": [
     "BrightFunded Platform (DxTrade)",
     "cTrader",
     "MT5"
   ],
-  "seo_content": "<h3>Exclusive BrightFunded Trading Offer</h3><p>BrightFunded, based in the United Arab Emirates and established in September 2023, is a CFD firm offering a two-step evaluation program. Account sizes range from $10,000 to $200,000. Platforms supported include MT5, cTrader and the BrightFunded Platform (DxTrade). Tradable instruments include cryptocurrencies, forex currency pairs, indices, commodities and global stocks; leverage options are listed as 1:100 for forex, 1:40 for gold and commodities, and 1:20 for indices. The evaluation includes profit targets of 8% in Phase 1 and 5% in Phase 2 and a peak total drawdown of 10% across accounts. The firm has a 4.6/5 review score from 92 reviews. This summary outlines BrightFunded\\u2019s service offering and structure. validated by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "instruments": [
+    "Forex",
+    "Metals",
+    "Indices",
+    "Crypto",
+    "Other Commodities",
+    "Global Stocks"
+  ],
+  "payment_methods": [
+    "Apple Pay",
+    "Credit/Debit Card",
+    "Crypto",
+    "Google Pay",
+    "PayPal"
+  ],
+  "payout_methods": [
+    "Bank Transfer",
+    "Crypto"
+  ],
+  "founded": "2023-09",
+  "payout_policy": {
+    "minimum_payout": "No Minimum Payout amount",
+    "processing_time": "1st payout in 30 days, subsequent payout in 14 days. 14 days & 7 days payout with add-ons",
+    "scaling_plan": "SCALING PLAN: Evaluation Period: 4 consecutive months from the first trade. Profit Requirement: Must be profitable in at least 2 of the 4 months with a minimum total profit of 10%. Payout Requirement: Must have completed at least 2 successful payout transactions. Balance Condition: Account must be at breakeven or in profit at the time of scaling. Scaling Increase: Account balance increases by 30% of the original account size each time conditions are met. Unlimited Scaling: No upper balance limit accounts can be scaled indefinitely with consistent profitability. Bonus Benefit: From the 3rd scale-up onwards, traders receive a 100% profit reward split.",
+    "Split": "80",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Copy trading is allowed only between accounts you personally own (BrightFunded, other prop firms, retail broker). copying trades between different owners\\u2019 accounts is strictly prohibited. BrightFunded\\u2019s partnership with Prop Firm One enables you to extend your copy trading capabilities even further. PF1 allows traders to seamlessly copy trades across different proprietary firm accounts within a single platform, offering increased flexibility and a broader range of opportunities. This means that, in addition to BrightFunded\\u2019s internal copy trading feature, PF1 empowers users to manage trades across multiple firms, enhancing scalability and trading efficiency without breaching BrightFunded\\u2019s core rules. For more details on this enhanced functionality, visit PropFirmOne.com.",
+    "expert_advisor": "Allowed but must align with trading conditions and rules. While EAs are allowed, not all third-party EAs are compatible with brightFunded's platform environment. BrightFunded does not guarantee compatibility or performance of any external EA, and are not responsible for issues caused by non-compatible EAs",
+    "inactivity_rule": "30 Days Inactivity Rule: Must place at least one trade every 30 days or account will be deactivated, and if not reactivated via support within 6 months, it will be permanently closed. To count, the trade must remain open for at least 1 minute.",
+    "news_trading": "Evaluation Accounts: No Restriction. Funded Accounts: No trading 5 min before/after high impact News, profits made during this 10 min window will be deducted (This is a soft breach). Profits from trades opened 48 Hours before high impact news and closed within the 10 minutes window won't be deducted.",
+    "weekend_holding": "Overnight | Weekend Holding/Trading Crypto: Allowed",
+    "forbidden_strategies": [
+      "Hedging( between two or more different accounts",
+      "Between Different Prop Firms",
+      "Across Different Trading Platforms)",
+      "Exploiting Service Errors or Platform Delays",
+      "Using External or Delayed Data Feeds",
+      "Coordinated or Multi-Account Manipulation",
+      "Violating Platform or Provider Terms",
+      "Use of Automated Software",
+      "AI",
+      "or High-Speed Trading Tools",
+      "Risk-Abusive Trading; Overleveraging",
+      "Overexposure",
+      "One-Sided Bets",
+      "and Account Rolling",
+      "Trading During High-Impact News or Events",
+      "Abusive Strategy Types; Grid Trading",
+      "Arbitrage",
+      "Tick Scalping",
+      "High-Frequency Trading (HFT)."
+    ],
+    "ip_vpn_policy": "VPNs and different IPs are allowed for travel, but only the account owner may trade (no account sharing).",
+    "Evaluation": "5"
+  },
+  "timeline": [
+    {
+      "date": "2023-09-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/brightfunded.svg"
+  },
+  "seo_content": "<h3>BrightFunded Technical Infrastructure</h3><p>BrightFunded, based in the United Arab Emirates and established in September 2023, is a CFD firm offering a two-step evaluation program. Account sizes range from $10,000 to $200,000. Platforms supported include MT5, cTrader and the BrightFunded Platform (DxTrade). Tradable instruments include cryptocurrencies, forex currency pairs, indices, commodities and global stocks; leverage options are listed as 1:100 for forex, 1:40 for gold and commodities, and 1:20 for indices. The evaluation includes profit targets of 8% in Phase 1 and 5% in Phase 2 and a maximum total drawdown of 10% across accounts. The firm has a 4.6/5 review score from 92 reviews. This summary outlines BrightFunded\\u2019s service offering and structure. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
   "youtube_metadata": {
-    "title": "BrightFunded Promo Code: 20% OFF Discount",
-    "description": "Get funded with BrightFunded using our exclusive discount code. authenticated for the current trading season."
+    "title": "BrightFunded Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of BrightFunded. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/brightfunded.svg",
-  "created_at": "2026-02-24T13:29:48.385Z"
+  "created_at": "2026-02-24T16:30:43.357Z"
 }

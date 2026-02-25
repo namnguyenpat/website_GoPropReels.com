@@ -211,20 +211,23 @@ const latestNews = (await getCollection('reviews', ({ data }) => data.category =
 					</div>
 				</div>
 				<div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" id="reel-grid">
-					{activeDeals.map((deal, index) => (
-						<ReelCard deal={deal} data-index={index} data-initially-hidden={index >= 12 ? 'true' : 'false'} />
+					{activeDeals.slice(0, 12).map((deal, index) => (
+						<ReelCard deal={deal} data-index={index} />
 					))}
 				</div>
+
 				{activeDeals.length > 12 && (
-					<div class="flex justify-center pt-4">
-						<button
-							id="load-more-btn"
-							class="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+					<div class="flex justify-center pt-8">
+						<a
+							href="/coupons"
+							class="rounded-full border border-brand-accent/50 bg-brand-accent/10 px-10 py-4 text-base font-bold text-white transition hover:bg-brand-accent/20 hover:border-brand-accent shadow-xl shadow-brand-accent/10 group flex items-center gap-3"
 						>
-							Load more deals ({activeDeals.length - 12} remaining)
-						</button>
+							<span>View All Coupons</span>
+							<i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+						</a>
 					</div>
 				)}
+
 			</section>
 
 			{/* Google AdSense - In-Article Ad (Between Feed and FAQ) */}
@@ -494,38 +497,13 @@ const latestNews = (await getCollection('reviews', ({ data }) => data.category =
 							const cardCategory = card.dataset.category;
 							
 							if (category === 'all') {
-								// Show all cards - respect initially-hidden state
-								const isInitiallyHidden = card.getAttribute('data-initially-hidden') === 'true';
-								if (!isInitiallyHidden) {
-									card.classList.remove('hidden');
-								}
+								card.classList.remove('hidden');
 							} else if (cardCategory === category) {
-								// Show matching category cards - show even if initially hidden
 								card.classList.remove('hidden');
 							} else {
-								// Hide non-matching cards
 								card.classList.add('hidden');
 							}
 						});
-						
-						// Update load more button after filter
-						const loadMoreBtnAfterFilter = document.getElementById('load-more-btn');
-						if (loadMoreBtnAfterFilter && grid) {
-							if (category !== 'all') {
-								// Hide load more when filtering by category
-								loadMoreBtnAfterFilter.style.display = 'none';
-							} else {
-								// Show load more when showing all
-								const hiddenCards = Array.from(grid.querySelectorAll('article[data-initially-hidden="true"]'))
-									.filter(card => card.classList.contains('hidden'));
-								if (hiddenCards.length > 0) {
-									loadMoreBtnAfterFilter.style.display = 'flex';
-									loadMoreBtnAfterFilter.textContent = `Load more deals (${hiddenCards.length} remaining)`;
-								} else {
-									loadMoreBtnAfterFilter.style.display = 'none';
-								}
-							}
-						}
 						
 						// Scroll to top of feed after filter
 						const feedSection = document.getElementById('feed');
@@ -536,43 +514,6 @@ const latestNews = (await getCollection('reviews', ({ data }) => data.category =
 				});
 			}
 
-			if (loadMoreBtn && grid) {
-				// Get all cards that were initially hidden
-				const getInitiallyHiddenCards = () => {
-					return Array.from(grid.querySelectorAll('article[data-initially-hidden="true"]'));
-				};
-				
-				const updateButtonText = () => {
-					const hiddenCards = getInitiallyHiddenCards().filter(card => card.classList.contains('hidden'));
-					const remaining = hiddenCards.length;
-					
-					if (remaining <= 0) {
-						loadMoreBtn.style.display = 'none';
-					} else {
-						loadMoreBtn.textContent = `Load more deals (${remaining} remaining)`;
-						loadMoreBtn.style.display = 'flex';
-					}
-				};
-				
-				// Initial update
-				updateButtonText();
-
-				loadMoreBtn.addEventListener('click', (e) => {
-					e.preventDefault();
-					e.stopPropagation();
-					
-					// Get cards that are still hidden (initially hidden)
-					const hiddenCards = getInitiallyHiddenCards().filter(card => card.classList.contains('hidden'));
-					const toShow = hiddenCards.slice(0, 12);
-					
-					toShow.forEach((card) => {
-						card.classList.remove('hidden');
-						card.style.animation = 'fadeIn 0.4s ease-in';
-					});
-					
-					updateButtonText();
-				});
-			}
 
 
 			// Initialize likes on page load

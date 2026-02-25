@@ -61,58 +61,73 @@ const firmInitial = firm.firm_name.charAt(0);
             "{firm.description || `Leading ${firm.category} prop firm offering competitive leverage and high profit splits for professional traders.`}"
         </p>
 
-        {/* Stats Row */}
+        {/* Trading Stats - PREMIUM GRID */}
         <div class="grid grid-cols-2 gap-3 mb-6">
-            <div class="rounded-2xl border border-white/5 bg-white/5 p-3">
-                <div class="text-[9px] font-black text-white/20 uppercase tracking-widest mb-1">Leverage</div>
-                <div class="text-sm font-bold text-white group-hover:text-brand-accent transition-colors">{firm.leverage || '1:100'}</div>
+            <div class="group/stat relative overflow-hidden rounded-2xl border border-white/5 bg-white/[0.03] p-4 transition-all hover:bg-white/[0.05] hover:border-brand-accent/30">
+                <div class="text-[8px] font-black text-white/30 uppercase tracking-[0.2em] mb-1">Max Capital</div>
+                <div class="text-lg font-black text-white group-hover:text-brand-accent transition-colors">$400,000</div>
+                <div class="absolute -right-2 -bottom-2 h-8 w-8 rounded-full bg-brand-accent/5 blur-xl group-hover/stat:bg-brand-accent/20 transition-all"></div>
             </div>
-            <div class="rounded-2xl border border-white/5 bg-white/5 p-3 flex flex-col justify-center">
-                <div class="text-[9px] font-black text-white/20 uppercase tracking-widest mb-1">Trust Score</div>
-                <div class="flex items-center gap-1.5">
-                    <i class="fa-solid fa-star text-[10px] text-green-500"></i>
-                    <div class="text-sm font-bold text-white group-hover:text-brand-accent transition-colors">{firm.trust_score || '4.5'}</div>
-                </div>
+            <div class="group/stat relative overflow-hidden rounded-2xl border border-white/5 bg-white/[0.03] p-4 transition-all hover:bg-white/[0.05] hover:border-brand-accent/30">
+                <div class="text-[8px] font-black text-white/30 uppercase tracking-[0.2em] mb-1">Profit Split</div>
+                <div class="text-lg font-black text-white group-hover:text-brand-accent transition-colors">Up to 90%</div>
+                <div class="absolute -right-2 -bottom-2 h-8 w-8 rounded-full bg-brand-accent/5 blur-xl group-hover/stat:bg-brand-accent/20 transition-all"></div>
             </div>
         </div>
 
-        {/* Platforms */}
-        {firm.platforms && firm.platforms.length > 0 && (
-            <div class="mb-6">
-                <div class="text-[9px] font-black text-white/20 uppercase tracking-widest mb-2">Platforms</div>
-                <div class="flex flex-wrap gap-2">
-                    {firm.platforms.slice(0, 3).map(platform => (
-                        <span class="text-[9px] font-bold text-white/40 border border-white/10 rounded-lg px-2 py-1 bg-white/5">
-                            {platform}
-                        </span>
-                    ))}
-                    {firm.platforms.length > 3 && (
-                        <span class="text-[9px] font-bold text-white/20 px-1 py-1">
-                            +{firm.platforms.length - 3} more
-                        </span>
-                    )}
+        {/* Dynamic Meta Info */}
+        <div class="flex items-center justify-between mb-8 px-2">
+            <div class="flex gap-4">
+                <div class="flex flex-col">
+                    <span class="text-[8px] font-black text-white/20 uppercase tracking-widest mb-0.5">Leverage</span>
+                    <span class="text-[11px] font-bold text-white/70">{firm.leverage || '1:100'}</span>
+                </div>
+                <div class="h-6 w-px bg-white/5"></div>
+                <div class="flex flex-col">
+                    <span class="text-[8px] font-black text-white/20 uppercase tracking-widest mb-0.5">Trust Score</span>
+                    <div class="flex items-center gap-1">
+                        <i class="fa-solid fa-star text-[8px] text-green-500"></i>
+                        <span class="text-[11px] font-bold text-white/70">{firm.trust_score || '4.5'}</span>
+                    </div>
                 </div>
             </div>
-        )}
+            
+            {firm.platforms && firm.platforms.length > 0 && (
+                <div class="flex -space-x-2">
+                    {firm.platforms.slice(0, 3).map((p, i) => (
+                        <div 
+                            title={p}
+                            class="flex h-6 w-6 items-center justify-center rounded-full border border-white/10 bg-black text-[7px] font-black text-white/40 ring-2 ring-black uppercase"
+                            style={`z-index: ${10-i}`}
+                        >
+                            {p.charAt(0)}
+                        </div>
+                    ))}
+                </div>
+            )}
+        </div>
 
         {/* CTA Area */}
-        <div class="flex items-center justify-between border-t border-white/5 pt-4">
-            <span 
-                class="text-[10px] font-black tracking-widest uppercase"
-                style={`color: ${accentColor};`}
-            >
-                {firm.discount_highlight || 'EXCLUSIVE DEAL'}
-            </span>
-            <div class="flex items-center gap-1.5 text-[10px] font-black text-white/80 uppercase tracking-widest group-hover:gap-3 transition-all">
-                Read Reviews
-                <i class="fa-solid fa-arrow-right-long text-xs"></i>
+        <div class="flex items-center justify-between border-t border-white/10 pt-5">
+            <div class="flex flex-col">
+                <span class="text-[8px] font-black text-white/20 uppercase tracking-widest mb-0.5 italic">Active Promo</span>
+                <span 
+                    class="text-[11px] font-black tracking-widest uppercase"
+                    style={`color: ${accentColor};`}
+                >
+                    {firm.discount_highlight || 'EXCLUSIVE DEAL'}
+                </span>
+            </div>
+            <div class="group/btn flex items-center gap-2 rounded-xl bg-white/5 border border-white/10 px-4 py-2 text-[10px] font-black text-white/80 uppercase tracking-widest hover:bg-white/10 hover:text-white transition-all">
+                Insights
+                <i class="fa-solid fa-chevron-right text-[8px] transition-transform group-hover/btn:translate-x-1"></i>
             </div>
         </div>
     </div>
 
     {/* Hover Glow Effect */}
     <div 
-        class="absolute inset-x-0 bottom-0 h-1 transition-all duration-500 group-hover:h-full group-hover:bg-gradient-to-t group-hover:from-white/5 group-hover:to-transparent pointer-events-none"
-        style={`background-image: linear-gradient(to top, ${accentColor}10, transparent);`}
+        class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+        style={`background: radial-gradient(circle at 50% 100%, ${accentColor}15 0%, transparent 70%);`}
     ></div>
 </a>

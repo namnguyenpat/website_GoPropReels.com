@@ -90,8 +90,9 @@ const fullOgImage = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/og-image.jpg`
 			});
 		</script>
 		
-		{/* Google AdSense - Load after consent mode */}
+{/* Google AdSense - Temporarily disabled by user request
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6456170405994901" crossorigin="anonymous"></script>
+		*/}
 		
 		{/* Note: CMP will be added automatically when you complete the setup in AdSense dashboard */}
 		
@@ -213,6 +214,40 @@ const fullOgImage = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/og-image.jpg`
 					showModal(code, link);
 				});
 			}
+
+			// Global Logo Fallback Logic
+			window.handleLogoError = function(img, firmName) {
+				const extensions = ['png', 'jpg', 'jpeg', 'svg', 'webp'];
+				const baseUrl = '/images/logos/';
+				const slug = firmName.toLowerCase().replace(/\s+/g, '-');
+				
+				if (!img.dataset.triedIndex) {
+					img.dataset.triedIndex = '0';
+				}
+				
+				let index = parseInt(img.dataset.triedIndex);
+				
+				if (index < extensions.length) {
+					const nextExt = extensions[index];
+					img.dataset.triedIndex = (index + 1).toString();
+					// Use a small delay to avoid rapid-fire errors if multiple images fail
+					setTimeout(() => {
+						img.src = `${baseUrl}${slug}.${nextExt}`;
+					}, 10);
+				} else {
+					img.style.display = 'none';
+					const parent = img.parentElement;
+					const fallback = parent.querySelector('.firm-initial-fallback');
+					if (fallback) {
+						fallback.style.display = 'flex';
+					} else {
+						// For ReelCard style
+						parent.innerText = firmName.charAt(0);
+					}
+
+				}
+			};
 		</script>
+
 	</body>
 </html>

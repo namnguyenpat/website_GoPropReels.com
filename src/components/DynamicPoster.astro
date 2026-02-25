@@ -76,48 +76,67 @@ const initials = firmName
         </span>
       )}
 
-      <h2 class="firm-name font-black uppercase tracking-widest text-white drop-shadow-2xl">
-        {firmName}
-      </h2>
+      {variant !== 'background' && (
+        <>
+          <h2 class="firm-name font-black uppercase tracking-widest text-white drop-shadow-2xl">
+            {firmName}
+          </h2>
 
-      {logo && (
-        <div class="mb-6 flex animate-fade-in items-center justify-center">
-            <div class="logo-wrapper h-20 w-32 flex items-center justify-center p-2 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg">
-                <img src={logo} alt={firmName} class="max-h-12 max-w-[100px] object-contain brightness-110 contrast-125" />
+          {logo && (
+            <div class="mb-6 flex animate-fade-in items-center justify-center">
+                <div class="logo-wrapper h-20 w-32 flex items-center justify-center p-2 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 shadow-lg">
+                    <img 
+                        src={logo} 
+                        alt={firmName} 
+                        class="max-h-12 max-w-[100px] object-contain brightness-110 contrast-125 transition-opacity" 
+                        onerror={`window.handleLogoError(this, "${firmName}");`}
+                    />
+                </div>
             </div>
-        </div>
-      )}
+          )}
 
-      <p class="discount-text font-black text-white leading-none drop-shadow-2xl">
-        {discount}
-      </p>
 
-      {keyBenefit && (
-        <p class="key-benefit mt-4 text-[11px] font-bold uppercase tracking-[0.2em] text-brand-accent drop-shadow-lg opacity-90">
-          {keyBenefit}
-        </p>
+          <p class="discount-text font-black text-white leading-none drop-shadow-2xl">
+            {discount}
+          </p>
+
+          {keyBenefit && (
+            <p class="key-benefit mt-4 text-[11px] font-bold uppercase tracking-[0.2em] text-brand-accent drop-shadow-lg opacity-90">
+              {keyBenefit}
+            </p>
+          )}
+        </>
       )}
       
       {variant === 'full' && (
-        <div class="badge mt-6 flex items-center gap-2">
-          <div class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
-          <span class="rounded-full bg-white/10 backdrop-blur-md px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white border border-white/20">
-            Intelligence Verified
+          <div class="badge mt-6 flex items-center gap-2">
+            <div class="flex items-center gap-1 rounded-full bg-[#00b67a]/10 border border-[#00b67a]/30 px-4 py-1.5 backdrop-blur-md">
+              <i class="fa-solid fa-star text-[10px] text-[#00b67a]"></i>
+              <span class="text-[10px] font-black uppercase tracking-[0.2em] text-white">
+                Trust Score: 4.5
+              </span>
+            </div>
+          </div>
+      )}
+
+
+      </div>
+    </div>
+
+  
+    {/* Absolute Badge for Background Variant (Floating above glass) */}
+    {variant === 'background' && (
+      <div class="absolute bottom-4 left-6 z-20 flex items-center gap-2 animate-fade-in-up" style="animation-delay: 0.5s;">
+        <div class="flex items-center gap-1 rounded-full bg-[#00b67a]/10 border border-[#00b67a]/20 px-3 py-1 backdrop-blur-sm">
+          <i class="fa-solid fa-star text-[8px] text-[#00b67a]"></i>
+          <span class="text-[8px] font-black uppercase tracking-[0.2em] text-white/60">
+            Trust Score: 4.5
           </span>
         </div>
-      )}
-    </div>
-  </div>
+      </div>
+    )}
 
-  {/* Absolute Badge for Background Variant (Floating above glass) */}
-  {variant === 'background' && (
-    <div class="absolute bottom-4 left-6 z-20 flex items-center gap-2 animate-fade-in-up" style="animation-delay: 0.5s;">
-      <div class="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse"></div>
-      <span class="rounded-full bg-white/5 backdrop-blur-sm px-3 py-1 text-[8px] font-black uppercase tracking-[0.2em] text-white/40 border border-white/10 uppercase">
-        Intelligence Verified
-      </span>
-    </div>
-  )}
+
 
   <!-- Decorative Particles (Active in all modes) -->
   <div class="particles absolute inset-0 pointer-events-none">

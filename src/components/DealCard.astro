@@ -44,13 +44,21 @@ const firmInitial = deal.firm_name.charAt(0);
 			<img
 				src={deal.firm_logo || `/images/deals/${deal.id}.png`}
 				alt={imageAlt}
-				class="h-full w-full object-cover transition-transform group-hover:scale-105"
+				class="h-full w-full object-contain p-4 transition-transform group-hover:scale-110"
 				loading="lazy"
 				data-deal-id={deal.id}
-				onerror={`this.onerror=null; this.src='/images/logos/${deal.firm_name.toLowerCase().replace(/ /g, "-")}.png';`}
+				onerror={`window.handleLogoError(this, "${deal.firm_name}");`}
+
 			/>
+			<div class="firm-initial-fallback absolute inset-0 flex items-center justify-center text-4xl font-black text-white/20" style="display: none;">
+				{firmInitial}
+			</div>
+
+
+
 		)}
-		<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+		<div class="absolute inset-0" style={`background: radial-gradient(circle at center, ${accentColor}20, transparent);`}></div>
+		<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
 		<div class="absolute left-3 top-3">
 			<span 
 				class="rounded-full bg-white/20 px-3 py-1 text-xs font-semibold text-white backdrop-blur"

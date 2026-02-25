@@ -1,11 +1,14 @@
 {
-  "id": "my-funded-futures-deal",
+  "id": "my-funded-futures",
   "firm_name": "My Funded Futures",
+  "broker": "My Funded Futures",
+  "title": "My Funded Futures Check website",
+  "description": "My Funded Futures is a futures firm based in the United States, established in November 2023. It offers a 1 Step evaluation program. Account sizes range from $25,000 to $150,000. Supported platforms include Tradovate, TradingView, Quantower, Volumetrica Trading, Volsys, Volbook, ATAS Orderflow Trading and NinjaTrader. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "futures",
   "discount_highlight": "Check website",
   "coupon_code": "No Code",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#FF9F0A",
   "features": [
     "My Funded Futures - Rapid - 1-Step - 150K",
     "My Funded Futures - Pro - 1-Step - 150K",
@@ -15,7 +18,79 @@
   ],
   "affiliate_link": "https://myfundedfutures.com",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {},
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "My Funded Futures - Rapid - 1-Step - 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "277.60",
+      "original_price": "347.00"
+    },
+    {
+      "name": "My Funded Futures - Pro - 1-Step - 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "238.50",
+      "original_price": "477.00"
+    },
+    {
+      "name": "My Funded Futures - Rapid - 1-Step - 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "213.60",
+      "original_price": "267.00"
+    },
+    {
+      "name": "My Funded Futures - Pro - 1-Step - 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "172.00",
+      "original_price": "344.00"
+    },
+    {
+      "name": "My Funded Futures - Rapid - 1-Step - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "125.60",
+      "original_price": "157.00"
+    },
+    {
+      "name": "My Funded Futures - Pro - 1-Step - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "113.50",
+      "original_price": "227.00"
+    },
+    {
+      "name": "My Funded Futures - Flex - 1-Step - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "107.00"
+    },
+    {
+      "name": "My Funded Futures - Flex - 1-Step - 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "84.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "2% Price Limit Rule: No trading within 2% of CME price limit.",
+    "Cross Instrument Policy: Single instrument limits apply. Deliberate bypass = breach.",
+    "See: https://help.myfundedfutures.com/en/articles/8444599-fair-play-and-prohibited-trading-practices"
+  ],
   "platforms": [
     "ATAS Orderflow Trading",
     "NinjaTrader",
@@ -26,11 +101,53 @@
     "Volsys",
     "Volumetrica Trading"
   ],
-  "seo_content": "<h3>Exclusive My Funded Futures Trading Offer</h3><p>My Funded Futures is a futures firm based in the United States, established in November 2023. It offers a 1 Step evaluation program. Account sizes range from $25,000 to $150,000. Supported platforms include Tradovate, TradingView, Quantower, Volumetrica Trading, Volsys, Volbook, ATAS Orderflow Trading and NinjaTrader. validated by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "instruments": [
+    "Futures"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Crypto"
+  ],
+  "payout_methods": [
+    "Riseworks"
+  ],
+  "founded": "2023-11",
+  "payout_policy": {
+    "minimum_payout": "Flex: $250. Pro: $1000. Rapid: $500.",
+    "processing_time": "Instant approval (6-12 business hours if manual review).",
+    "details": "Pro: 80% split, every 14 days. Max $100K Sim stage. Flex: 80/20, 5 winning days, max 50% up to $3-5K. Rapid: 90%, daily after buffer, no consistency rule.",
+    "Eval": "10",
+    "Funded": "5",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed if own strategies, not exploiting simulator fills. CME guidelines for live.",
+    "expert_advisor": "Automated strategies allowed (no simulator exploitation). CME rules for live.",
+    "inactivity_rule": "7 days cycle - 1 trade per 7 days to stay active.",
+    "news_trading": "Prohibited: Exploiting news volatility (straddles/strangles). T1 news: Pro/Rapid can't trade 2 mins before/after. Flex unrestricted.",
+    "weekend_holding": "Not allowed. Auto-close at 4:10 PM EST (no breach).",
+    "forbidden_strategies": [
+      "2% Price Limit Rule: No trading within 2% of CME price limit.",
+      "Cross Instrument Policy: Single instrument limits apply. Deliberate bypass = breach.",
+      "See: https://help.myfundedfutures.com/en/articles/8444599-fair-play-and-prohibited-trading-practices"
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2023-11-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/my-funded-futures.svg"
+  },
+  "seo_content": "<h3>My Funded Futures Technical Infrastructure</h3><p>My Funded Futures is a futures firm based in the United States, established in November 2023. It offers a 1 Step evaluation program. Account sizes range from $25,000 to $150,000. Supported platforms include Tradovate, TradingView, Quantower, Volumetrica Trading, Volsys, Volbook, ATAS Orderflow Trading and NinjaTrader. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
   "youtube_metadata": {
-    "title": "My Funded Futures Promo Code: Check website Discount",
-    "description": "Get funded with My Funded Futures using our exclusive discount code. authenticated for the current trading season."
+    "title": "My Funded Futures Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of My Funded Futures. We analyze their futures environment and execution rules."
   },
   "firm_logo": "/images/logos/my-funded-futures.svg",
-  "created_at": "2026-02-24T13:29:48.436Z"
+  "created_at": "2026-02-24T16:30:43.409Z"
 }

@@ -1,9 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('reviews', ({ data }) => data.category === 'Knowledge'))
+const posts = (await getCollection('reviews', ({ data }) => ['Knowledge', 'News'].includes(data.category)))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-    .slice(0, 3);
+    .slice(0, 5); // Increased to 5 for better coverage
+
 ---
 
 {posts.length > 0 ? (

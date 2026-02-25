@@ -1,11 +1,14 @@
 {
-  "id": "fxify-deal",
+  "id": "fxify",
   "firm_name": "FXIFY",
+  "broker": "FXIFY",
+  "title": "FXIFY Check website",
+  "description": "FXIFY, based in the United Kingdom, was established in April 2023. It is a CFD firm offering Instant, 1 Step, 2 Steps and 3 Steps evaluation programs. Account sizes range from $15,000 to $400,000. Platforms supported include MT5, DXTrade, TradingView and MT4. FXIFY checks CID (computer ID) to prevent account management. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "forex",
   "discount_highlight": "Check website",
   "coupon_code": "No Code",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#FF9F0A",
   "features": [
     "FXIFY - Trailing - 2-Steps 400K",
     "FXIFY - 1-Phase - 1-Step 400K",
@@ -15,18 +18,203 @@
   ],
   "affiliate_link": "https://fxify.com",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "Instant": "1:50",
+      "1-Step": "1:30",
+      "2-Steps": "1:30",
+      "3-Steps": "1:30"
+    },
+    "Metals": {
+      "Instant": "1:20",
+      "1-Step": "1:30",
+      "2-Steps": "1:30",
+      "3-Steps": "1:30"
+    },
+    "Indices": {
+      "Instant": "1:15",
+      "1-Step": "1:10",
+      "2-Steps": "1:10",
+      "3-Steps": "1:10"
+    },
+    "Stocks": {
+      "Instant": "1:2",
+      "1-Step": "1:2",
+      "2-Steps": "1:2",
+      "3-Steps": "1:2"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "FXIFY - Trailing - 2-Steps 400K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "400000",
+      "price": "2360.00",
+      "original_price": "2950.00"
+    },
+    {
+      "name": "FXIFY - 1-Phase - 1-Step 400K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "400000",
+      "price": "2360.00",
+      "original_price": "2950.00"
+    },
+    {
+      "name": "FXIFY - Trailing - 2-Steps 200K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "839.20",
+      "original_price": "1049.00"
+    },
+    {
+      "name": "FXIFY - 1-Phase - 1-Step 200K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "839.20",
+      "original_price": "1049.00"
+    },
+    {
+      "name": "FXIFY - Trailing - 2-Steps 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "439.20",
+      "original_price": "549.00"
+    },
+    {
+      "name": "FXIFY - 1-Phase - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "439.20",
+      "original_price": "549.00"
+    },
+    {
+      "name": "FXIFY - Trailing - 2-Steps 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "303.20",
+      "original_price": "379.00"
+    },
+    {
+      "name": "FXIFY - 1-Phase - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "303.20",
+      "original_price": "379.00"
+    },
+    {
+      "name": "FXIFY - 1-Phase - 1-Step 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "159.20",
+      "original_price": "199.00"
+    },
+    {
+      "name": "FXIFY - 1-Phase - 1-Step 15K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "15000",
+      "price": "95.20",
+      "original_price": "119.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "HFT",
+    "Reverse/Group Hedging",
+    "Account Management",
+    "Latency Arbitrage.",
+    "Order Book Spamming",
+    "Herd Trading",
+    "Collusion.",
+    "Gambling Behavior (YOLO strategies).",
+    "Third party purchase policy: prohibited.",
+    "Crypto Availability: No crypto on Forex-based accounts effective Dec 1",
+    "2025."
+  ],
   "platforms": [
     "DXTrade",
     "MT4",
     "MT5",
     "TradingView"
   ],
-  "seo_content": "<h3>Exclusive FXIFY Trading Offer</h3><p>FXIFY, based in the United Kingdom, was established in April 2023. It is a CFD firm offering Instant, 1 Step, 2 Steps and 3 Steps evaluation programs. Account sizes range from $15,000 to $400,000. Platforms supported include MT5, DXTrade, TradingView and MT4. FXIFY checks CID (computer ID) to prevent account management. confirmed by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "instruments": [
+    "FX",
+    "Metals",
+    "Indices",
+    "Stocks",
+    "Other Commodities"
+  ],
+  "payment_methods": [
+    "Apple Pay",
+    "Credit/Debit Card",
+    "Crypto",
+    "Google Pay",
+    "PayPal"
+  ],
+  "payout_methods": [
+    "Bank Transfer",
+    "Crypto",
+    "Riseworks"
+  ],
+  "founded": "2023-04",
+  "payout_policy": {
+    "minimum_payout": "$50.",
+    "processing_time": "Within 3 Business Days.",
+    "details": "1st Payout on demand (Standard/Classic/3-Phase). Lightning: 1st in 7 days then Bi-weekly. Instant: Bi-weekly (Standard) / 10 days (Lite).",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed between own FXIFY accounts. Allowed from external accounts to FXIFY (proof required). Third-party prohibited. Instant/Lightning: Prohibited.",
+    "expert_advisor": "Allowed (except Instant/Lightning). Prohibited practices (HFT, Arbitrage) apply.",
+    "inactivity_rule": "60 Days.",
+    "news_trading": "Allowed generally. Instant/Lightning: Restricted 5 mins before/after high impact news.",
+    "weekend_holding": "Allowed (except Instant/Lightning - closed Friday before market close).",
+    "forbidden_strategies": [
+      "HFT",
+      "Reverse/Group Hedging",
+      "Account Management",
+      "Latency Arbitrage.",
+      "Order Book Spamming",
+      "Herd Trading",
+      "Collusion.",
+      "Gambling Behavior (YOLO strategies).",
+      "Third party purchase policy: prohibited.",
+      "Crypto Availability: No crypto on Forex-based accounts effective Dec 1",
+      "2025."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2023-04-01",
+      "event": "Established",
+      "type": "update"
+    },
+    {
+      "date": "2025-12-01",
+      "event": "Crypto Restriction",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/fxify.svg"
+  },
+  "seo_content": "<h3>FXIFY Technical Infrastructure</h3><p>FXIFY, based in the United Kingdom, was established in April 2023. It is a CFD firm offering Instant, 1 Step, 2 Steps and 3 Steps evaluation programs. Account sizes range from $15,000 to $400,000. Platforms supported include MT5, DXTrade, TradingView and MT4. FXIFY checks CID (computer ID) to prevent account management. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
   "youtube_metadata": {
-    "title": "FXIFY Promo Code: Check website Discount",
-    "description": "Get funded with FXIFY using our exclusive discount code. validated for the current trading season."
+    "title": "FXIFY Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of FXIFY. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/fxify.svg",
-  "created_at": "2026-02-24T13:29:48.425Z"
+  "created_at": "2026-02-24T16:30:43.395Z"
 }

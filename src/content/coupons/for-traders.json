@@ -1,31 +1,236 @@
 {
-  "id": "for-traders-deal",
+  "id": "for-traders",
   "firm_name": "For Traders",
+  "broker": "For Traders",
+  "title": "For Traders special",
+  "description": "For Traders, based in the United Arab Emirates and established June 2023, is a CFD firm offering Instant, 1 Step, 2 Steps and 3 Steps programs. Account sizes range from $5,000 to $200,000. Platforms supported include MetaTrader 4, MetaTrader 5 (MT5), cTrader and TradeLocker. Tradable instruments include forex pairs, commodities, equities, indices and cryptocurrencies. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "forex",
   "discount_highlight": "special",
   "coupon_code": "3KFEB",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#5E5CE6",
   "features": [
-    "For Traders - 2-Step evaluation - 2-Steps 100K",
-    "For Traders - 2-Step evaluation - 2-Steps 50K",
-    "For Traders - 2-Step evaluation - 2-Steps 25K",
-    "For Traders - 2-Step evaluation - 2-Steps 15K",
-    "For Traders - 2-Step evaluation - 2-Steps 6K"
+    "For Traders - 2-Step Challenge - 2-Steps 100K",
+    "For Traders - 2-Step Challenge - 2-Steps 50K",
+    "For Traders - 2-Step Challenge - 2-Steps 25K",
+    "For Traders - 2-Step Challenge - 2-Steps 15K",
+    "For Traders - 2-Step Challenge - 2-Steps 6K"
   ],
   "affiliate_link": "https://fortraders.com/?aff_id=ENUT5ABW9S",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "Instant": "1:10",
+      "1-Step": "1:125",
+      "2-Steps": "1:125",
+      "3-Steps": "1:125"
+    },
+    "Metals": {
+      "Instant": "1:5",
+      "1-Step": "1:40",
+      "2-Steps": "1:40",
+      "3-Steps": "1:40"
+    },
+    "Indices": {
+      "Instant": "1:5",
+      "1-Step": "1:20",
+      "2-Steps": "1:20",
+      "3-Steps": "1:20"
+    },
+    "Energy": {
+      "Instant": "1:5",
+      "1-Step": "1:40",
+      "2-Steps": "1:40",
+      "3-Steps": "1:40"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "For Traders - 2-Step Challenge - 2-Steps 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "483.65",
+      "original_price": "569.00"
+    },
+    {
+      "name": "For Traders - 2-Step Challenge - 2-Steps 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "271.15",
+      "original_price": "319.00"
+    },
+    {
+      "name": "For Traders - 2-Step Challenge - 2-Steps 25K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "174.25",
+      "original_price": "205.00"
+    },
+    {
+      "name": "For Traders - 2-Step Challenge - 2-Steps 15K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "15000",
+      "price": "99.45",
+      "original_price": "117.00"
+    },
+    {
+      "name": "For Traders - 2-Step Challenge - 2-Steps 6K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "6000",
+      "price": "56.95",
+      "original_price": "67.00"
+    },
+    {
+      "name": "For Traders - 1-Step Challenge Trailing - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "398.65",
+      "original_price": "469.00"
+    },
+    {
+      "name": "For Traders - 1-Step Challenge Trailing - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "211.65",
+      "original_price": "249.00"
+    },
+    {
+      "name": "For Traders - 1-Step Challenge Trailing - 1-Step 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "152.15",
+      "original_price": "179.00"
+    },
+    {
+      "name": "For Traders - 1-Step Challenge Trailing - 1-Step 15K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "15000",
+      "price": "84.15",
+      "original_price": "99.00"
+    },
+    {
+      "name": "For Traders - 1-Step Challenge Trailing - 1-Step 6K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "6000",
+      "price": "9.99",
+      "original_price": "0.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "High-Frequency Trading (HFT)",
+    "Arbitrage trading",
+    "Grid trading",
+    "Tick scalping",
+    "Group trading",
+    "Martingale",
+    "Hedging",
+    "Account rolling",
+    "Third-party account operation",
+    "Use of Automated Bots",
+    "Gambling",
+    "Copy Trading To Our Account",
+    "Group and Signal Trading",
+    "Overleveraging",
+    "One-sided Betting.",
+    "Passing the challenge in a single trade is not allowed; your largest trade must not exceed 70% of your profit target.",
+    "40% Margin Rule: This rule prevents you from using more than 40% of your available margin for a single trade or multiple trades on the same instrument in the same direction.",
+    "Account Limits: Max allocation $200k ($100k from challenge account and $100k instant funding). $300k with Premium program."
+  ],
   "platforms": [
     "cTrader",
     "MT5",
     "TradeLocker"
   ],
-  "seo_content": "<h3>Exclusive For Traders Trading Offer</h3><p>For Traders, based in the United Arab Emirates and established June 2023, is a CFD firm offering Instant, 1 Step, 2 Steps and 3 Steps programs. Account sizes range from $5,000 to $200,000. Platforms supported include MetaTrader 4, MetaTrader 5 (MT5), cTrader and TradeLocker. Tradable instruments include forex pairs, commodities, equities, indices and cryptocurrencies. checked by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "instruments": [
+    "FX",
+    "Metals",
+    "Indices",
+    "Energy",
+    "Other Commodities"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Crypto"
+  ],
+  "payout_methods": [
+    "Crypto",
+    "Riseworks"
+  ],
+  "founded": "2023-06",
+  "payout_policy": {
+    "minimum_payout": "Minimum withdrawal amount: $100",
+    "processing_time": "14 days across all programs",
+    "details": "1 & 2-step: 80%, 90% with higher cost or 70% with cheaper cost. 3-Step: 80%. Instant Master: 70%, increases by 5% with each payout up to 90%. Instant Master Pro: 60% increases by 10% with each payout up to 90%. (To be eligible for any withdrawal, your account must have at least 3% growth). For rewards over $500: Rise Pay (Processing fee: $50). For rewards under $500: Direct Crypto Transfer via ERC20 in USDC (Processing fee: $25).",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed between For Traders Accounts and from your For Traders account (acting as the Master account), but copying trades to a For Traders account is strictly prohibited.",
+    "expert_advisor": "EAs are allowed only if they assist your personal trading decisions — fully automated or self-trading EAs & bots are strictly prohibited.",
+    "inactivity_rule": "Accounts with no meaningful trading activity for 30 consecutive days will be terminated (7 days for Instant accounts), with inactivity counted from the time the last position is closed.",
+    "news_trading": "Evaluation Phase: Allowed with No Restriction. Master Accounts: You can hold trades during news events but opening positions within 5 minutes before or after high-impact news is not allowed; profits from such trades will be deducted.",
+    "weekend_holding": "Overnight | Weekend Holding: Allowed",
+    "forbidden_strategies": [
+      "High-Frequency Trading (HFT)",
+      "Arbitrage trading",
+      "Grid trading",
+      "Tick scalping",
+      "Group trading",
+      "Martingale",
+      "Hedging",
+      "Account rolling",
+      "Third-party account operation",
+      "Use of Automated Bots",
+      "Gambling",
+      "Copy Trading To Our Account",
+      "Group and Signal Trading",
+      "Overleveraging",
+      "One-sided Betting.",
+      "Passing the challenge in a single trade is not allowed; your largest trade must not exceed 70% of your profit target.",
+      "40% Margin Rule: This rule prevents you from using more than 40% of your available margin for a single trade or multiple trades on the same instrument in the same direction.",
+      "Account Limits: Max allocation $200k ($100k from challenge account and $100k instant funding). $300k with Premium program."
+    ],
+    "ip_vpn_policy": "Standard procedures; Maintain account integrity.",
+    "Challenge": "180"
+  },
+  "timeline": [
+    {
+      "date": "2023-06-01",
+      "event": "Established",
+      "type": "update"
+    },
+    {
+      "date": "2025-11-17",
+      "event": "Lock Out Mode",
+      "type": "update"
+    },
+    {
+      "date": "2025-10-22",
+      "event": "Lucky Wheel",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/for-traders.svg"
+  },
+  "seo_content": "<h3>For Traders Technical Infrastructure</h3><p>For Traders, based in the United Arab Emirates and established June 2023, is a CFD firm offering Instant, 1 Step, 2 Steps and 3 Steps programs. Account sizes range from $5,000 to $200,000. Platforms supported include MetaTrader 4, MetaTrader 5 (MT5), cTrader and TradeLocker. Tradable instruments include forex pairs, commodities, equities, indices and cryptocurrencies. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
   "youtube_metadata": {
-    "title": "For Traders Promo Code: special Discount",
-    "description": "Get funded with For Traders using our exclusive discount code. certified for the current trading season."
+    "title": "For Traders Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of For Traders. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/for-traders.svg",
-  "created_at": "2026-02-24T13:29:48.403Z"
+  "created_at": "2026-02-24T16:30:43.377Z"
 }

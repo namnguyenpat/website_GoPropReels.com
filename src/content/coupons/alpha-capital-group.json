@@ -1,11 +1,14 @@
 {
-  "id": "alpha-capital-group-deal",
+  "id": "alpha-capital-group",
   "firm_name": "Alpha Capital",
+  "broker": "Alpha Capital",
+  "title": "Alpha Capital Check website",
+  "description": "Alpha Capital, based in the United Kingdom, was established in November 2021. It operates as a CFD firm and offers 1 Step, 2 Steps, and 3 Steps programs. Account sizes range from $25,000 to $200,000. Platforms supported include MT5, cTrader, DXTrade, and TradeLocker. Tradable instruments include forex, commodities, and indices, with leverage options up to 100:1. The firm has a review score of 4.4/5 based on 811 reviews. Overall, Alpha Capital presents multiple program step options, several platform choices, and a range of instruments and leverage levels. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "forex",
   "discount_highlight": "Check website",
   "coupon_code": "No Code",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#BF5AF2",
   "features": [
     "Alpha Capital - Alpha Pro 10% - 2-Step 200K",
     "Alpha Capital - Alpha Pro 10% - 2-Step 100K",
@@ -15,18 +18,184 @@
   ],
   "affiliate_link": "https://app.alphacapitalgroup.uk/signup/FGJKZ",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "1-Step": "1:30",
+      "2-Steps": "1:100",
+      "3-Steps": "1:50"
+    },
+    "Metals": {
+      "1-Step": "1:9",
+      "2-Steps": "1:30",
+      "3-Steps": "1:9"
+    },
+    "Indices": {
+      "1-Step": "1:10",
+      "2-Steps": "1:20",
+      "3-Steps": "1:10"
+    },
+    "Energy": {
+      "1-Step": "1:10",
+      "2-Steps": "1:10",
+      "3-Steps": "1:10"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Alpha Capital - Alpha Pro 10% - 2-Step 200K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "697.90",
+      "original_price": "997.00"
+    },
+    {
+      "name": "Alpha Capital - Alpha Pro 10% - 2-Step 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "347.90",
+      "original_price": "497.00"
+    },
+    {
+      "name": "Alpha Capital - Alpha Pro 10% - 2-Step 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "207.90",
+      "original_price": "297.00"
+    },
+    {
+      "name": "Alpha Capital - Alpha Pro 10% - 2-Step 25K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "137.90",
+      "original_price": "197.00"
+    },
+    {
+      "name": "Alpha Capital - Alpha Pro 10% - 2-Step 10K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "40.00",
+      "original_price": "40.00"
+    },
+    {
+      "name": "Alpha Capital - Alpha Pro 10% - 2-Step 5K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "35.00",
+      "original_price": "50.00"
+    },
+    {
+      "name": "Alpha Capital - Alpha Swing - 2-Step 200K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "932.45",
+      "original_price": "1097.00"
+    },
+    {
+      "name": "Alpha Capital - Alpha Swing - 2-Step 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "490.45",
+      "original_price": "577.00"
+    },
+    {
+      "name": "Alpha Capital - Alpha Swing - 2-Step 10K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "40.00",
+      "original_price": "40.00"
+    },
+    {
+      "name": "Alpha Capital - Alpha Swing - 2-Step 5K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "59.50",
+      "original_price": "70.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "All or Nothing: All or nothing practices are prohibited.",
+    "Order Block Spamming: Entering multiple orders in a short period of time is prohibited.",
+    "Traders must ensure that the average duration of all their trades exceeds 2 minutes. At least 50% of the requested profit must come from trades that exceed 2 minutes.",
+    "Risk Management: Consistently losing or risking 2% or more in a single trade or sequence of trades closed around the same time is prohibited.",
+    "Qualified Analyst Allocation Rules: $300",
+    "000 is the MAXIMUM allocation per trading strategy on a Qualified Analyst Account. strategy is defined as the assets themselves."
+  ],
   "platforms": [
     "cTrader",
     "DXTrade",
     "MT5",
     "TradeLocker"
   ],
-  "seo_content": "<h3>Exclusive Alpha Capital Trading Offer</h3><p>Alpha Capital, based in the United Kingdom, was established in November 2021. It operates as a CFD firm and offers 1 Step, 2 Steps, and 3 Steps programs. Account sizes range from $25,000 to $200,000. Platforms supported include MT5, cTrader, DXTrade, and TradeLocker. Tradable instruments include forex, commodities, and indices, with leverage options up to 100:1. The firm has a review score of 4.4/5 based on 811 reviews. Overall, Alpha Capital presents multiple program step options, several platform choices, and a range of instruments and leverage levels. certified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "instruments": [
+    "Forex",
+    "Metals",
+    "Indices",
+    "Energy"
+  ],
+  "payment_methods": [
+    "Apple Pay",
+    "Credit/Debit Card",
+    "Crypto",
+    "Google Pay",
+    "PayPal"
+  ],
+  "payout_methods": [
+    "Bank Transfer",
+    "Riseworks",
+    "Wise"
+  ],
+  "founded": "2021-11",
+  "payout_policy": {
+    "minimum_payout": "Minimum withdrawal: $100 in gross profits.",
+    "processing_time": "Payouts every 14 days for Biweekly option. Anytime for 2% On Demand.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed, personal accounts only. Proof of ownership is required if Alpha capital account is to be treated as slave. MT5 only. Alpha Capital's partnership with Prop Firm One enables you to extend your copy trading capabilities even further. PF1 allows traders to seamlessly copy trades across different proprietary firm accounts within a single platform, offering increased flexibility and a broader range of opportunities. This means that, in addition to Alpha Capital's internal copy trading feature, PF1 empowers users to manage trades across multiple firms, enhancing scalability and trading efficiency without breaching Alpha Capital's core rules. For more details on this enhanced functionality, visit PropFirmOne.com. https://help.alphacapitalgroup.uk/en/articles/8786973-is-copy-trading-allowed",
+    "expert_advisor": "Allowed, follow terms & conditions. (Verify details in source).",
+    "inactivity_rule": "All accounts will be deactivated after 30 days of inactivity. To avoid deactivation, log in and maintain an active connection. Once deactivated, accounts cannot be restored.",
+    "news_trading": "Allowed only for Swing accounts. If a trade is initiated within 2 minutes before or up to 2 minutes after a news release (a 4-minute window), its duration must exceed 2 minutes for the trade to be valid. For Alpha Pro 8/10% accounts, trading around high-impact news is restricted to 2 minutes before or after the news release. For Alpha One, Alpha pro 6% and Alpha Three accounts, trading around high-impact news is restricted to 5 minutes before or after the news release. News trading is allowed in all evaluation program without any restriction.",
+    "weekend_holding": "Allowed only for Swing accounts. (Verify for others).",
+    "forbidden_strategies": [
+      "All or Nothing: All or nothing practices are prohibited.",
+      "Order Block Spamming: Entering multiple orders in a short period of time is prohibited.",
+      "Traders must ensure that the average duration of all their trades exceeds 2 minutes. At least 50% of the requested profit must come from trades that exceed 2 minutes.",
+      "Risk Management: Consistently losing or risking 2% or more in a single trade or sequence of trades closed around the same time is prohibited.",
+      "Qualified Analyst Allocation Rules: $300",
+      "000 is the MAXIMUM allocation per trading strategy on a Qualified Analyst Account. strategy is defined as the assets themselves."
+    ],
+    "ip_vpn_policy": "Standard procedures; Maintain account integrity.",
+    "order_limits": "Maximum lot allowed (Funded): Alpha Swing: [$5k:1.25, $10k:2.5, $25k:5, $50k:10, $100k:20, $200k:40, $300k:60]. Alpha One, Alpha Pro 6%, Alpha Pro 8/10% and Alpha Three: [$5k:2.5, $10k:5, $25k:10, $50k:20, $100k:40, $200k:80, $300k:120]."
+  },
+  "timeline": [
+    {
+      "date": "2021-11-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/alpha-capital-group.svg"
+  },
+  "seo_content": "<h3>Alpha Capital Technical Infrastructure</h3><p>Alpha Capital, based in the United Kingdom, was established in November 2021. It operates as a CFD firm and offers 1 Step, 2 Steps, and 3 Steps programs. Account sizes range from $25,000 to $200,000. Platforms supported include MT5, cTrader, DXTrade, and TradeLocker. Tradable instruments include forex, commodities, and indices, with leverage options up to 100:1. The firm has a review score of 4.4/5 based on 811 reviews. Overall, Alpha Capital presents multiple program step options, several platform choices, and a range of instruments and leverage levels. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
   "youtube_metadata": {
-    "title": "Alpha Capital Promo Code: Check website Discount",
-    "description": "Get funded with Alpha Capital using our exclusive discount code. confirmed for the current trading season."
+    "title": "Alpha Capital Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Alpha Capital. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/alpha-capital-group.svg",
-  "created_at": "2026-02-24T13:29:48.353Z"
+  "created_at": "2026-02-24T16:30:43.314Z"
 }

@@ -1,32 +1,195 @@
 {
-  "id": "crypto-fund-trader-deal",
+  "id": "crypto-fund-trader",
   "firm_name": "Crypto Fund Trader",
+  "broker": "Crypto Fund Trader",
+  "title": "Crypto Fund Trader Check website",
+  "description": "Crypto Fund Trader, based in Switzerland and established in November 2022, is a crypto-only prop trading firm offering 1 Step, 2 Steps and Instant programs. Account sizes range from $5,000 to $200,000. Platforms supported include MT5, Match Trader, CFT Platform and Bybit. The firm offers over 500 tradable instruments with leverage of 1:100. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "crypto",
   "discount_highlight": "Check website",
   "coupon_code": "No Code",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#FF9F0A",
   "features": [
-    "Crypto Fund trading professional - 1-Phase - 1-Step 200K",
-    "Crypto Fund trading professional - 1-Phase - 1-Step 100K",
-    "Crypto Fund trading professional - 1-Phase - 1-Step 50K",
-    "Crypto Fund trading professional - 1-Phase - 1-Step 25K",
-    "Crypto Fund trading professional - 1-Phase - 1-Step 10K"
+    "Crypto Fund Trader - 1-Phase - 1-Step 200K",
+    "Crypto Fund Trader - 1-Phase - 1-Step 100K",
+    "Crypto Fund Trader - 1-Phase - 1-Step 50K",
+    "Crypto Fund Trader - 1-Phase - 1-Step 25K",
+    "Crypto Fund Trader - 1-Phase - 1-Step 10K"
   ],
   "affiliate_link": "https://cryptofundtrader.com/?affiliate=askpf",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "Instant": "1:30",
+      "1-Step": "1:30",
+      "2-Steps": "1:30"
+    },
+    "Indices": {
+      "Instant": "1:20",
+      "1-Step": "1:20",
+      "2-Steps": "1:20"
+    },
+    "Crypto": {
+      "Instant": "1:5",
+      "1-Step": "1:5",
+      "2-Steps": "1:5"
+    },
+    "Stocks": {
+      "Instant": "1:5",
+      "1-Step": "1:5",
+      "2-Steps": "1:5"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Crypto Fund Trader - 1-Phase - 1-Step 200K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "1376.40",
+      "original_price": "1480.00"
+    },
+    {
+      "name": "Crypto Fund Trader - 1-Phase - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "733.77",
+      "original_price": "789.00"
+    },
+    {
+      "name": "Crypto Fund Trader - 1-Phase - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "418.50",
+      "original_price": "450.00"
+    },
+    {
+      "name": "Crypto Fund Trader - 1-Phase - 1-Step 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "243.66",
+      "original_price": "262.00"
+    },
+    {
+      "name": "Crypto Fund Trader - 1-Phase - 1-Step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "111.60",
+      "original_price": "120.00"
+    },
+    {
+      "name": "Crypto Fund Trader - 1-Phase - 1-Step 5K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "58.59",
+      "original_price": "63.00"
+    },
+    {
+      "name": "Crypto Fund Trader - 2-Phases - 2-Steps 200K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "1162.50",
+      "original_price": "1250.00"
+    },
+    {
+      "name": "Crypto Fund Trader - 2-Phases - 2-Steps 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "613.80",
+      "original_price": "660.00"
+    },
+    {
+      "name": "Crypto Fund Trader - 2-Phases - 2-Steps 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "361.77",
+      "original_price": "389.00"
+    },
+    {
+      "name": "Crypto Fund Trader - 2-Phases - 2-Steps 25K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "223.20",
+      "original_price": "240.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Max allocation: $300",
+    "000 for 1 and 2 step combined. Max 3 instant accounts up to $30k.",
+    "Reverse trading rule: Closing all open trades in one direction before opening opposite direction if simultaneous duration >= 60 seconds.",
+    "Gambling rule: Daily and/or per-trade profit limit is $10",
+    "000."
+  ],
   "platforms": [
     "Bybit",
     "CFT Platform",
     "Match Trader",
     "MT5"
   ],
-  "seo_content": "<h3>Exclusive Crypto Fund market participant Trading Offer</h3><p>Crypto Fund investor, based in Switzerland and established in November 2022, is a crypto-only prop trading firm offering 1 Step, 2 Steps and Instant programs. Account sizes range from $5,000 to $200,000. Platforms supported include MT5, Match investor, CFT Platform and Bybit. The firm offers over 500 tradable instruments with leverage of 1:100. certified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "instruments": [
+    "FX",
+    "Indices",
+    "Crypto",
+    "Stocks",
+    "Other Commodities"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Crypto"
+  ],
+  "payout_methods": [
+    "Bank Transfer",
+    "Crypto"
+  ],
+  "founded": "2022-11",
+  "payout_policy": {
+    "minimum_payout": "Not specified.",
+    "processing_time": "1 & 2-step: 15 trading days or 30 calendar days. Instant: On demand (after 10% profit) or 15/30 days.",
+    "details": "Ascend Program: Payout on demand after passing evaluation, then account closed.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Copy trading between Ascend accounts is prohibited.",
+    "expert_advisor": "Allowed (implied, no explicit ban mentioned except no HFT/Arbitrage typically seen in industry, but text only says 'Reverse trading rule' and 'Gambling rule' specifically).",
+    "inactivity_rule": "Not specified in scraped text (only mentions Restricted Countries n/a).",
+    "news_trading": "1 Phase, 2 Phases and Instant accounts: Allowed. Ascend accounts: Not allowed within 2 mins before/after high-impact news.",
+    "weekend_holding": "Allowed (implied).",
+    "forbidden_strategies": [
+      "Max allocation: $300",
+      "000 for 1 and 2 step combined. Max 3 instant accounts up to $30k.",
+      "Reverse trading rule: Closing all open trades in one direction before opening opposite direction if simultaneous duration >= 60 seconds.",
+      "Gambling rule: Daily and/or per-trade profit limit is $10",
+      "000."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2022-11-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/crypto-fund-trader.svg"
+  },
+  "seo_content": "<h3>Crypto Fund Trader Technical Infrastructure</h3><p>Crypto Fund Trader, based in Switzerland and established in November 2022, is a crypto-only prop trading firm offering 1 Step, 2 Steps and Instant programs. Account sizes range from $5,000 to $200,000. Platforms supported include MT5, Match Trader, CFT Platform and Bybit. The firm offers over 500 tradable instruments with leverage of 1:100. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
   "youtube_metadata": {
-    "title": "Crypto Fund financial strategist Promo Code: Check website Discount",
-    "description": "Get funded with Crypto Fund trading professional using our exclusive discount code. confirmed for the current trading season."
+    "title": "Crypto Fund Trader Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Crypto Fund Trader. We analyze their crypto environment and execution rules."
   },
   "firm_logo": "/images/logos/crypto-fund-trader.svg",
-  "created_at": "2026-02-24T13:29:48.390Z"
+  "created_at": "2026-02-24T16:30:43.362Z"
 }

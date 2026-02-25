@@ -1,11 +1,14 @@
 {
-  "id": "funding-pips-deal",
-  "firm_name": "FundingPips",
+  "id": "funding-pips",
+  "firm_name": "Funding Pips",
+  "broker": "Funding Pips",
+  "title": "Funding Pips 20% OFF",
+  "description": "FundingPips, based in the United Arab Emirates and established in August 2022, is a CFD firm providing a two-step evaluation program. Account sizes range from $5,000 to $100,000. Tradable instruments include cryptocurrencies, forex currency pairs, indices and commodities; leverage is provided up to 1:100. Review scores for the firm are high, at 4.7/5 from 10,744 reviews. This summary provides an overview of FundingPips\\u2019 service offering and evaluation structure. Verified by our [Intelligence Hub](/) for prop trading excellence.",
   "category": "forex",
   "discount_highlight": "20% OFF",
   "coupon_code": "FPDAY",
   "expiration_date": "2026-12-31",
-  "theme_color": "#000000",
+  "theme_color": "#0A84FF",
   "features": [
     "FundingPips - Challenges - 2-Steps 100K",
     "FundingPips - Challenges - 2-Steps 50K",
@@ -15,17 +18,216 @@
   ],
   "affiliate_link": "https://app.fundingpips.com/register?ref=e1f77f27",
   "trust_score": "4.5",
-  "leverage": "1:100",
+  "reviews_count": "0",
+  "leverage_details": {
+    "Forex": {
+      "Instant": "1:50",
+      "1-Step": "1:30",
+      "2-Step": "1:100"
+    },
+    "Metals": {
+      "Instant": "1:5",
+      "1-Step": "1:5",
+      "2-Step": "1:5"
+    },
+    "Indices": {
+      "Instant": "1:5",
+      "1-Step": "1:5",
+      "2-Step": "1:5"
+    },
+    "Energy": {
+      "Instant": "1:5",
+      "1-Step": "1:5",
+      "2-Step": "1:5"
+    },
+    "Crypto": {
+      "Instant": "1:1",
+      "1-Step": "1:1",
+      "2-Step": "1:1"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "FundingPips - Challenges - 2-Steps 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "529.00",
+      "original_price": "529.00"
+    },
+    {
+      "name": "FundingPips - Challenges - 2-Steps 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "231.20",
+      "original_price": "289.00"
+    },
+    {
+      "name": "FundingPips - Challenges - 2-Steps 25K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "124.80",
+      "original_price": "156.00"
+    },
+    {
+      "name": "FundingPips - Challenges - 2-Steps 10K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "52.80",
+      "original_price": "66.00"
+    },
+    {
+      "name": "FundingPips - Challenges - 2-Steps 5K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "28.80",
+      "original_price": "36.00"
+    },
+    {
+      "name": "FundingPips - Challenges - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "555.00",
+      "original_price": "555.00"
+    },
+    {
+      "name": "FundingPips - Challenges - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "255.20",
+      "original_price": "319.00"
+    },
+    {
+      "name": "FundingPips - Challenges - 1-Step 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "159.20",
+      "original_price": "199.00"
+    },
+    {
+      "name": "FundingPips - Challenges - 1-Step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "79.20",
+      "original_price": "99.00"
+    },
+    {
+      "name": "FundingPips - Challenges - 1-Step 5K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "47.20",
+      "original_price": "59.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Gap trading",
+    "server spamming",
+    "latency arbitrage",
+    "hedging",
+    "long-short arbitrage",
+    "reverse arbitrage",
+    "server execution",
+    "toxic trading flow",
+    "tick scalping and opposite account trading are prohibited.",
+    "Forbidden strategies detailed at: https://help.fundingpips.com/en/articles/8536000-what-are-the-forbidden-strategies"
+  ],
   "platforms": [
     "cTrader",
     "Match Trader",
     "MT5"
   ],
-  "seo_content": "<h3>Exclusive FundingPips Trading Offer</h3><p>FundingPips, based in the United Arab Emirates and established in August 2022, is a CFD firm providing a two-step evaluation program. Account sizes range from $5,000 to $100,000. Tradable instruments include cryptocurrencies, forex currency pairs, indices and commodities; leverage is provided up to 1:100. Review scores for the firm are high, at 4.7/5 from 10,744 reviews. This summary provides an overview of FundingPips\\u2019 service offering and evaluation structure. checked by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "instruments": [
+    "Forex",
+    "Metals",
+    "Indices",
+    "Energy",
+    "Crypto"
+  ],
+  "payment_methods": [
+    "Apple Pay",
+    "Astropay",
+    "Bank Transfer",
+    "Credit/Debit Card",
+    "Crypto",
+    "Google Pay",
+    "Neteller",
+    "PayPal",
+    "Paysafe Card",
+    "Skrill"
+  ],
+  "payout_methods": [
+    "Bank Transfer",
+    "Crypto",
+    "Riseworks"
+  ],
+  "founded": "2022-11",
+  "payout_policy": {
+    "minimum_payout": "1% of balance",
+    "processing_time": "Rise, Crypto, Bank Transfer: 1 to 3 working days.",
+    "payout_cycles": [
+      "1-Step Model: Tuesday Paydays (60% Split)",
+      "Bi-weekly (80% Split)",
+      "On-Demand (90% Split)",
+      "Monthly (100% Split)",
+      "2-Step Model: Tuesday Paydays (60% Split)",
+      "Bi-weekly (80% Split)",
+      "On-Demand (90% Split)",
+      "Monthly (100% Split)",
+      "FundingPips Pro: Daily Payouts (Selected during checkout with 80% split and 35% Consistency rule applicable during the evaluation only)",
+      "Weekly (80% Split)",
+      "FundingPips Zero: Bi-weekly (95% Split)",
+      "Scaling (Hot Seat): On-Demand (100% Split)"
+    ],
+    "Requirements": "35"
+  },
+  "firm_rules": {
+    "copy_trading": "You can copy trades between your own FundingPips accounts (i.e., accounts registered under the same individual). For external copy trading, a FundingPips account may only act as a master to an external slave account. FundingPips' partnership with Prop Firm One enables you to extend your copy trading capabilities even further. PF1 allows traders to seamlessly copy trades across different proprietary firm accounts within a single platform, offering increased flexibility and a broader range of opportunities. This means that, in addition to FundingPips\\u2019 internal copy trading feature, PF1 empowers users to manage trades across multiple firms, enhancing scalability and trading efficiency without breaching FundingPips\\u2019 core rules. For more details on this enhanced functionality, visit PropFirmOne.com.",
+    "expert_advisor": "EAs are allowed as long as it functions as a trade or risk manager. Using any other third-party Expert Advisor is not allowed.",
+    "inactivity_rule": "You must open and close at least one trade within 30 consecutive days.",
+    "news_trading": "Evaluation: Allowed. Funded: Executing orders 5 minutes before and 5 minutes after high impact news events and speeches is prohibited. Any profits made within this window will be voided. Trades Opened More Than 5 Hours Before the News: Profits will count if closed within the 10-minute window before the event. Purposely trading news is prohibited and will lead to account termination. Note: Traders who choose the On Demand reward cycle for 1 step and 2 Step models will be allowed to trade during news without any restrictions.",
+    "weekend_holding": "Temporary Risk Management Rules: Risk management rules for all Funded accounts now prohibit weekend holding and include automatic closure of open trades on Friday at market close (Effective 29 January 2026). FundingPips Zero: Not Allowed. 1-Step/2-Step: Not explicitly listed as allowed for funded, news trading note suggests 'On Demand' models allow it, but general temporary rule prohibits it.",
+    "forbidden_strategies": [
+      "Gap trading",
+      "server spamming",
+      "latency arbitrage",
+      "hedging",
+      "long-short arbitrage",
+      "reverse arbitrage",
+      "server execution",
+      "toxic trading flow",
+      "tick scalping and opposite account trading are prohibited.",
+      "Forbidden strategies detailed at: https://help.fundingpips.com/en/articles/8536000-what-are-the-forbidden-strategies"
+    ],
+    "ip_vpn_policy": "Your IP region for purchasing, logging in, and trading must remain consistent to avoid account flags. See Details: https://help.fundingpips.com/en/articles/8535886-what-is-the-ip-rule",
+    "order_limits": "20 lot limit per click: Traders are restricted to a maximum order size of 20 lots per single click or transaction. This limit applies to both opening and closing positions."
+  },
+  "timeline": [
+    {
+      "date": "2025-03-17",
+      "event": "MT5 is back - FundingPips",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/funding-pips.svg"
+  },
+  "seo_content": "<h3>Funding Pips Technical Infrastructure</h3><p>FundingPips, based in the United Arab Emirates and established in August 2022, is a CFD firm providing a two-step evaluation program. Account sizes range from $5,000 to $100,000. Tradable instruments include cryptocurrencies, forex currency pairs, indices and commodities; leverage is provided up to 1:100. Review scores for the firm are high, at 4.7/5 from 10,744 reviews. This summary provides an overview of FundingPips\\u2019 service offering and evaluation structure. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
   "youtube_metadata": {
-    "title": "FundingPips Promo Code: 20% OFF Discount",
-    "description": "Get funded with FundingPips using our exclusive discount code. certified for the current trading season."
+    "title": "Funding Pips Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Funding Pips. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/funding-pips.svg",
-  "created_at": "2026-02-24T13:29:48.419Z"
+  "created_at": "2026-02-24T16:30:43.391Z"
 }

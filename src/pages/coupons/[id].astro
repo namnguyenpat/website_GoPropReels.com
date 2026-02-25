@@ -216,10 +216,11 @@ const canonical = `/coupons/${deal.id}`;
                             <div class="space-y-6">
                                 <div class="flex flex-wrap items-center justify-between gap-4">
                                     <div class="flex items-center gap-3">
-                                        <div class="flex items-center gap-2 rounded-full bg-green-500/10 border border-green-500/20 px-3 py-1 text-[10px] font-black uppercase text-green-400">
-                                            <div class="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse"></div>
-                                            Active & Verified
+                                        <div class="flex items-center gap-2 rounded-full bg-brand-accent/10 border border-brand-accent/20 px-3 py-1 text-[10px] font-black uppercase text-brand-accent">
+                                            <i class="fa-solid fa-star text-[10px]"></i>
+                                            Trust Score: {deal.trust_score || "4.5"}
                                         </div>
+
                                         <div class="flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1 text-[10px] font-bold text-white/40">
                                             <i class="fa-solid fa-bolt text-brand-accent"></i>
                                             98% Success
@@ -419,32 +420,14 @@ const canonical = `/coupons/${deal.id}`;
 
 
 				<div class="space-y-4">
-					<h2 class="text-lg font-semibold px-2">Latest Insights</h2>
+					<h2 class="text-lg font-black uppercase tracking-widest text-white px-2">
+                        <i class="fa-solid fa-newspaper text-brand-accent mr-2"></i>
+                        News & Insights
+                    </h2>
+
 					<LatestBlogs />
 				</div>
 
-                {/* Mindset Check Widget */}
-                <div class="rounded-3xl border border-brand-accent/20 bg-brand-accent/5 p-6 relative overflow-hidden group">
-                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-brand-accent/10 rounded-full blur-2xl group-hover:bg-brand-accent/20 transition-colors"></div>
-                    
-                    <div class="relative z-10">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="w-10 h-10 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent">
-                                <i class="fa-solid fa-brain text-lg"></i>
-                            </div>
-                            <h3 class="font-bold text-white">Mindset Check</h3>
-                        </div>
-                        
-                        <p class="text-sm text-white/80 mb-4 leading-relaxed">
-                            Don't blow this account! 90% of traders fail due to psychology, not strategy.
-                        </p>
-                        
-                        <a href="/blog/ultimate-funding-guide-2026" class="flex items-center justify-between bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-3 transition-colors group/link">
-                            <span class="text-sm font-semibold text-brand-accent">Read "Funding Guide 2026"</span>
-                            <i class="fa-solid fa-arrow-right text-xs text-white/40 group-hover/link:text-white transition-colors"></i>
-                        </a>
-                    </div>
-                </div>
 			</div>
 		</section>
 
