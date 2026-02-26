@@ -80,13 +80,47 @@ const faqItems = [
                         <div class="text-2xl font-black text-green-500">100%</div>
                     </div>
                 </div>
+
+                {/* Search Bar */}
+                <div class="mt-12 relative max-w-md">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <i class="fa-solid fa-magnifying-glass text-white/20 text-sm"></i>
+                    </div>
+                    <input 
+                        type="text" 
+                        id="firm-search" 
+                        placeholder="Search Forex firms (e.g. FTMO, Pips...)" 
+                        class="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent/50 transition-all font-medium"
+                    />
+                    <div id="search-count" class="absolute inset-y-0 right-4 flex items-center text-[10px] font-black text-white/20 uppercase tracking-widest pointer-events-none">
+                        {uniqueFirms.length} Total
+                    </div>
+                </div>
             </header>
 
             {/* Firm Grid */}
-            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-24">
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-16" id="firm-grid">
                 {uniqueFirms.map((firm, index) => (
-                    <FirmCard firm={firm} rank={index + 1} />
+                    <div 
+                        class={`firm-card-wrapper ${index >= 9 ? 'hidden' : ''}`} 
+                        data-firm-name={firm.firm_name.toLowerCase()}
+                        data-index={index}
+                        data-initial-visible={index < 9 ? 'true' : 'false'}
+                    >
+                        <FirmCard firm={firm} rank={index + 1} />
+                    </div>
                 ))}
+            </div>
+
+            {/* Pagination */}
+            <div class={`flex justify-center mb-24 ${uniqueFirms.length <= 9 ? 'hidden' : ''}`} id="pagination-container">
+                <button 
+                    id="load-more-btn"
+                    class="px-10 py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 hover:border-white/20 transition-all active:scale-95 flex items-center gap-3"
+                >
+                    <span>Load More Firms</span>
+                    <i class="fa-solid fa-plus text-xs"></i>
+                </button>
             </div>
 
             {/* Rich Content Sections */}
@@ -138,3 +172,80 @@ const faqItems = [
         <Footer />
     </div>
 </Layout>
+
+<script is:inline define:vars={{ totalFirms: uniqueFirms.length }}>
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('firm-search');
+        const searchCount = document.getElementById('search-count');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        const paginationContainer = document.getElementById('pagination-container');
+        const wrappers = document.querySelectorAll('.firm-card-wrapper');
+        
+        let visibleCount = 9;
+        let isSearching = false;
+
+        const updatePaginationVisibility = () => {
+            if (paginationContainer) {
+                if (isSearching || visibleCount >= totalFirms) {
+                    paginationContainer.classList.add('hidden');
+                } else {
+                    paginationContainer.classList.remove('hidden');
+                }
+            }
+        };
+
+        // Search logic
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase().trim();
+                isSearching = term.length > 0;
+                let matches = 0;
+
+                wrappers.forEach(wrapper => {
+                    const name = wrapper.dataset.firmName || '';
+                    const isInitial = wrapper.dataset.initialVisible === 'true';
+                    const index = parseInt(wrapper.dataset.index);
+
+                    if (isSearching) {
+                        if (name.includes(term)) {
+                            wrapper.classList.remove('hidden');
+                            matches++;
+                        } else {
+                            wrapper.classList.add('hidden');
+                        }
+                    } else {
+                        // Reset to pagination state
+                        if (index < visibleCount) {
+                            wrapper.classList.remove('hidden');
+                        } else {
+                            wrapper.classList.add('hidden');
+                        }
+                    }
+                });
+
+                if (searchCount) {
+                    searchCount.textContent = isSearching ? (`${matches} Found`) : (`${totalFirms} Total`);
+                }
+
+                updatePaginationVisibility();
+            });
+        }
+
+        // Pagination logic
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => {
+                const nextCount = visibleCount + 9;
+                
+                wrappers.forEach(wrapper => {
+                    const index = parseInt(wrapper.dataset.index);
+                    if (index < nextCount) {
+                        wrapper.classList.remove('hidden');
+                    }
+                });
+
+                visibleCount = nextCount;
+                updatePaginationVisibility();
+            });
+        }
+    });
+</script>

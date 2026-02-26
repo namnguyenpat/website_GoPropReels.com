@@ -1,0 +1,199 @@
+{
+  "id": "lark-funding-vbli0",
+  "firm_name": "Lark Funding",
+  "broker": "Lark Funding",
+  "title": "Lark Funding special",
+  "description": "Lark Funding, based in Canada and established June 2022, is a CFD firm offering Instant, 1 Step, 2 Steps and 3 Steps programs. Account sizes range from $5,000 to $1,000,000. Platforms supported include cTrader, DXTrade, Match Trader, MT4 and MT5. Tradable instruments include over 40 Forex pairs, over 100 crypto derivatives and major US, Australian, LSE and XETRA stocks. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "forex",
+  "discount_highlight": "special",
+  "coupon_code": "Auto-applied",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#BF5AF2",
+  "features": [
+    "Lark Funding - 3-Stage Evaluation - 3-Steps 200K",
+    "Lark Funding - 3-Stage Evaluation - 3-Steps 100K",
+    "Lark Funding - 3-Stage Evaluation - 3-Steps 50K",
+    "Lark Funding - 3-Stage Evaluation - 3-Steps 25K",
+    "Lark Funding - 3-Stage Evaluation - 3-Steps 10K"
+  ],
+  "affiliate_link": "https://dashboard.larkfunding.com/challenges?affiliateId=fund24",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "Instant": "1:50",
+      "1-Step": "1:30",
+      "3-Steps": "1:50"
+    },
+    "Metals": {
+      "Instant": "1:50",
+      "1-Step": "1:20",
+      "3-Steps": "1:20"
+    },
+    "Indices": {
+      "Instant": "1:10",
+      "1-Step": "1:10",
+      "3-Steps": "1:20"
+    },
+    "Crypto": {
+      "Instant": "1:2",
+      "1-Step": "1:2",
+      "3-Steps": "1:2"
+    },
+    "Stocks": {
+      "Instant": "1:5",
+      "1-Step": "1:5",
+      "3-Steps": "1:5"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Lark Funding - 3-Stage Evaluation - 3-Steps 200K",
+      "model": "3-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "712.50",
+      "original_price": "750.00"
+    },
+    {
+      "name": "Lark Funding - 3-Stage Evaluation - 3-Steps 100K",
+      "model": "3-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "351.50",
+      "original_price": "370.00"
+    },
+    {
+      "name": "Lark Funding - 3-Stage Evaluation - 3-Steps 50K",
+      "model": "3-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "266.00",
+      "original_price": "280.00"
+    },
+    {
+      "name": "Lark Funding - 3-Stage Evaluation - 3-Steps 25K",
+      "model": "3-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "166.25",
+      "original_price": "175.00"
+    },
+    {
+      "name": "Lark Funding - 3-Stage Evaluation - 3-Steps 10K",
+      "model": "3-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "99.75",
+      "original_price": "105.00"
+    },
+    {
+      "name": "Lark Funding - 1-Stage Evaluation - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "760.00",
+      "original_price": "800.00"
+    },
+    {
+      "name": "Lark Funding - 1-Stage Evaluation - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "475.00",
+      "original_price": "500.00"
+    },
+    {
+      "name": "Lark Funding - 1-Stage Evaluation - 1-Step 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "285.00",
+      "original_price": "300.00"
+    },
+    {
+      "name": "Lark Funding - 1-Stage Evaluation - 1-Step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "190.00",
+      "original_price": "200.00"
+    },
+    {
+      "name": "Lark Funding - Instant Funding - Instant 25K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "1068.75",
+      "original_price": "1125.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Gain Limit: Daily gains exceeding $10",
+    "000 (calculated 5 PM EST) reset Phase 1 (Challenge) or exclude payout/breach (Funded).",
+    "Position & Market Event Restrictions: Close Single Share Equity CFD positions before earnings (3:50 pm ET or day before pre-market).",
+    "Drawdown lock (Instant): 8% trailing Max Drawdown resets to initial balance after 8% profit. Withdrawal of all profits results in closure.",
+    "All-or-nothing trading: Prohibited."
+  ],
+  "platforms": [
+    "cTrader",
+    "DXTrade",
+    "Match Trader"
+  ],
+  "instruments": [
+    "FX",
+    "Metals",
+    "Indices",
+    "Crypto",
+    "Stocks",
+    "Other Commodities"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Crypto"
+  ],
+  "payout_methods": [
+    "Riseworks"
+  ],
+  "founded": "2022-06",
+  "payout_policy": {
+    "minimum_payout": "$100",
+    "processing_time": "Instant: On Demand (1st), then 30 days. 1-Step: Bi-weekly. 3-Step: Bi-weekly.",
+    "details": "Profit Split: Instant 90% default. 1-Step 80% default. 3-Step 80% default.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed between Lark funded accounts or from a Lark funded account to a single Lark evaluation account. Prohibited between multiple evaluation accounts.",
+    "expert_advisor": "Allowed (implied, no explicit ban mentioned).",
+    "inactivity_rule": "Traders must execute at least one trade every 30 days.",
+    "news_trading": "Not explicitly prohibited in 'News Trading' section, but Position & Market Event Restrictions apply for earnings.",
+    "weekend_holding": "Allowed (implied).",
+    "forbidden_strategies": [
+      "Gain Limit: Daily gains exceeding $10",
+      "000 (calculated 5 PM EST) reset Phase 1 (Challenge) or exclude payout/breach (Funded).",
+      "Position & Market Event Restrictions: Close Single Share Equity CFD positions before earnings (3:50 pm ET or day before pre-market).",
+      "Drawdown lock (Instant): 8% trailing Max Drawdown resets to initial balance after 8% profit. Withdrawal of all profits results in closure.",
+      "All-or-nothing trading: Prohibited."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2022-06-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/lark-funding.svg"
+  },
+  "seo_content": "<h3>Lark Funding Technical Infrastructure</h3><p>Lark Funding, based in Canada and established June 2022, is a CFD firm offering Instant, 1 Step, 2 Steps and 3 Steps programs. Account sizes range from $5,000 to $1,000,000. Platforms supported include cTrader, DXTrade, Match Trader, MT4 and MT5. Tradable instruments include over 40 Forex pairs, over 100 crypto derivatives and major US, Australian, LSE and XETRA stocks. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Lark Funding Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Lark Funding. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/lark-funding.svg",
+  "created_at": "2026-02-26T08:30:22.267Z"
+}

@@ -1,0 +1,226 @@
+{
+  "id": "city-traders-imperium-cffg8",
+  "firm_name": "City Traders Imperium",
+  "broker": "City Traders Imperium",
+  "title": "City Traders Imperium Check website",
+  "description": "City Traders Imperium, based in the United Arab Emirates, was established in July 2018. It is a CFD firm offering Instant, 1 Step, and 2 Steps programs. Initial funding amounts range from $1,000 to over $100,000. Platforms supported are MT5 and Match Trader. CTI is now both a prop firm and a broker (CTI Markets). Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "forex",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#5E5CE6",
+  "features": [
+    "City Traders Imperium - Instant Funding - Instant 40K",
+    "City Traders Imperium - Instant Funding - Instant 20K",
+    "City Traders Imperium - Instant Funding - Instant 10K",
+    "City Traders Imperium - 2-Step Challenge Funding - 2-Steps 100K",
+    "City Traders Imperium - 2-Step Challenge Funding - 2-Steps 50K"
+  ],
+  "affiliate_link": "https://app.citytradersimperium.com/user-auth/register?referral_code=cbf792&utm_source=client&utm_medium=referral&utm_id=cbf792",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "Instant": "1:30",
+      "1-Step": "1:30",
+      "2-Steps": "1:30"
+    },
+    "Metals": {
+      "Instant": "1:5",
+      "1-Step": "1:5",
+      "2-Steps": "1:5"
+    },
+    "Indices": {
+      "Instant": "1:10",
+      "1-Step": "1:10",
+      "2-Steps": "1:10"
+    },
+    "Energy": {
+      "Instant": "1:10",
+      "1-Step": "1:10",
+      "2-Steps": "1:10"
+    },
+    "Crypto": {
+      "Instant": "1:1",
+      "1-Step": "1:1",
+      "2-Steps": "1:1"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "City Traders Imperium - Instant Funding - Instant 40K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "40000",
+      "price": "741.30",
+      "original_price": "1059.00"
+    },
+    {
+      "name": "City Traders Imperium - Instant Funding - Instant 20K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "20000",
+      "price": "391.30",
+      "original_price": "559.00"
+    },
+    {
+      "name": "City Traders Imperium - Instant Funding - Instant 10K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "216.30",
+      "original_price": "309.00"
+    },
+    {
+      "name": "City Traders Imperium - 2-Step Challenge Funding - 2-Steps 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "482.30",
+      "original_price": "689.00"
+    },
+    {
+      "name": "City Traders Imperium - 2-Step Challenge Funding - 2-Steps 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "314.30",
+      "original_price": "449.00"
+    },
+    {
+      "name": "City Traders Imperium - 2-Step Challenge Funding - 2- Steps 25K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "174.30",
+      "original_price": "249.00"
+    },
+    {
+      "name": "City Traders Imperium - 2-Step Challenge Funding - 2-Steps 10K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "97.30",
+      "original_price": "139.00"
+    },
+    {
+      "name": "City Traders Imperium - 2-Step Challenge Funding - 2-Steps 5K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "48.30",
+      "original_price": "69.00"
+    },
+    {
+      "name": "City Traders Imperium - 2-Step Challenge Funding - 2-Steps 2.5K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "2500",
+      "price": "34.30",
+      "original_price": "49.00"
+    },
+    {
+      "name": "City Traders Imperium - 1-Step Evaluation - 1-Step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "76.30",
+      "original_price": "109.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Stop-Loss: Must be placed within 1 minute (soft breach). Profits without SL dont count.",
+    "Account Limits: 1-Step/2-Step max 2x$100k. Instant max 2x$80k.",
+    "Prohibited: Exploit Price Inefficiencies",
+    "Group Hedging",
+    "Account Sharing/Management",
+    "One-Sided Bets.",
+    "Gamble to Pass/Over-Leveraging: Risking entire drawdown limit in one go",
+    "exceeding 150% Margin level.",
+    "Forbidden Strategies: Bracketing",
+    "Martingale (except 1-Step)",
+    "Grid Trading."
+  ],
+  "platforms": [
+    "Match Trader",
+    "MT5"
+  ],
+  "instruments": [
+    "FX",
+    "Metals",
+    "Indices",
+    "Energy",
+    "Crypto",
+    "Other Commodities"
+  ],
+  "payment_methods": [
+    "Apple Pay",
+    "Credit/Debit Card",
+    "Crypto",
+    "CTI Wallet",
+    "Google Pay",
+    "Wire Transfer"
+  ],
+  "payout_methods": [
+    "Bank Transfer",
+    "Crypto"
+  ],
+  "founded": "2018-07",
+  "payout_policy": {
+    "minimum_payout": "$100 or 2% net profit (whichever higher).",
+    "processing_time": "1st payout on demand. Subsequent: Monthly (1-Step/2-Step) or Bi-weekly (Instant/2-Step after 10%).",
+    "details": "Profit Split: 1-Step/2-Step 80-100%. Instant 50-100%. Instant Pro 70-100%. Min trading days: 7 (Funded 1/2-Step), 5 (Instant).",
+    "Instant": "10",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed if CTI account is Master. Prohibited: Copying from other prop firms/personal accounts into CTI account. No third-party/outsourced trading.",
+    "expert_advisor": "3rd-party EA without source code ownership NOT allowed (except 1-Step Challenge). Trade Managers/Calculators allowed.",
+    "inactivity_rule": "30 Days. Trade once every 30 days.",
+    "news_trading": "Allowed without restrictions.",
+    "weekend_holding": "Allowed (Overnight/Weekend Holding/Trading).",
+    "forbidden_strategies": [
+      "Stop-Loss: Must be placed within 1 minute (soft breach). Profits without SL dont count.",
+      "Account Limits: 1-Step/2-Step max 2x$100k. Instant max 2x$80k.",
+      "Prohibited: Exploit Price Inefficiencies",
+      "Group Hedging",
+      "Account Sharing/Management",
+      "One-Sided Bets.",
+      "Gamble to Pass/Over-Leveraging: Risking entire drawdown limit in one go",
+      "exceeding 150% Margin level.",
+      "Forbidden Strategies: Bracketing",
+      "Martingale (except 1-Step)",
+      "Grid Trading."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-12-15",
+      "event": "Live Chat Is Here",
+      "type": "update"
+    },
+    {
+      "date": "2025-07-13",
+      "event": "City Traders Imperium Turns 7",
+      "type": "update"
+    },
+    {
+      "date": "2025-05-19",
+      "event": "THE WAIT IS OVER: MT5 IS BACK — UNDER CTI’S",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/city-traders-imperium.svg"
+  },
+  "seo_content": "<h3>City Traders Imperium Technical Infrastructure</h3><p>City Traders Imperium, based in the United Arab Emirates, was established in July 2018. It is a CFD firm offering Instant, 1 Step, and 2 Steps programs. Initial funding amounts range from $1,000 to over $100,000. Platforms supported are MT5 and Match Trader. CTI is now both a prop firm and a broker (CTI Markets). Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "City Traders Imperium Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of City Traders Imperium. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/city-traders-imperium.svg",
+  "created_at": "2026-02-26T08:30:22.229Z"
+}

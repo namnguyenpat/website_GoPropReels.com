@@ -1,0 +1,190 @@
+{
+  "id": "trade-the-pool-mrzol",
+  "firm_name": "Trade The Pool",
+  "broker": "Trade The Pool",
+  "title": "Trade The Pool Check website",
+  "description": "Trade The Pool, based in Israel and established in September 2022, is a stocks-only proprietary trading firm offering a 1 Step evaluation program. Account sizes range from $20,000 to $260,000. The firm supports the TraderEvolution platform and offers more than 12,000 tradable stocks, including penny stocks and ETFs. Its listed review score is 4.8/5 based on 4 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "forex",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#30D158",
+  "features": [
+    "Trade The Pool - Day Trade Plex - 1-Step - 200K",
+    "Trade The Pool - Day Trade Max - 1-Step - 200K",
+    "Trade The Pool - Swing Max - 1-Step - 40K",
+    "Trade The Pool - Day Trade Flex - 1-Step - 50K",
+    "Trade The Pool - Day Trade Flex - 1-Step - 25K"
+  ],
+  "affiliate_link": "https://tradethepool.com",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {},
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Trade The Pool - Day Trade Plex - 1-Step - 200K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "1327.50",
+      "original_price": "1475.00"
+    },
+    {
+      "name": "Trade The Pool - Day Trade Max - 1-Step - 200K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "990.00",
+      "original_price": "1100.00"
+    },
+    {
+      "name": "Trade The Pool - Swing Max - 1-Step - 40K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "40000",
+      "price": "720.00",
+      "original_price": "800.00"
+    },
+    {
+      "name": "Trade The Pool - Day Trade Flex - 1-Step - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "256.50",
+      "original_price": "285.00"
+    },
+    {
+      "name": "Trade The Pool - Day Trade Flex - 1-Step - 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "108.00",
+      "original_price": "120.00"
+    },
+    {
+      "name": "Trade The Pool - Day Trade Flex - 1-Step - 5K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "53.10",
+      "original_price": "59.00"
+    },
+    {
+      "name": "Trade The Pool - Swing Flex - 1-Step - 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "378.00",
+      "original_price": "420.00"
+    },
+    {
+      "name": "Trade The Pool - Swing Flex - 1-Step - 2K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "2000",
+      "price": "78.30",
+      "original_price": "87.00"
+    },
+    {
+      "name": "Trade The Pool - Swing Max - 1-Step - 2K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "2000",
+      "price": "62.10",
+      "original_price": "69.00"
+    },
+    {
+      "name": "Trade The Pool - Day Trade Max - 1-Step - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "207.00",
+      "original_price": "230.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Halt restrictions: No trading on halted symbols. Wait 1 min after halt lift.",
+    "Volatility restrictions: Volume of opening trades must not exceed 5% of previous 1-min candle volume.",
+    "Minimum positions: Day Trade Max (20)",
+    "Day Trade Flex (10)",
+    "Swing (5).",
+    "Trade Range: Must yield at least 10 cents per share profit (e.g. Buy $50.10",
+    "Sell $50.20).",
+    "Trade Duration: At least 30-second gap between every buy-sell or sell-buy order."
+  ],
+  "platforms": [
+    "TraderEvolution"
+  ],
+  "instruments": [
+    "Stocks",
+    "ETFs",
+    "Penny Stocks"
+  ],
+  "payment_methods": [
+    "Apple Pay",
+    "Credit/Debit Card",
+    "Crypto",
+    "Google Pay",
+    "PayPal"
+  ],
+  "payout_methods": [
+    "Bank Wire Transfer",
+    "Crypto",
+    "Riseworks"
+  ],
+  "founded": "2022-09",
+  "payout_policy": {
+    "minimum_payout": "$300 (standard), $150 (5k accounts).",
+    "processing_time": "Every 14 days.",
+    "details": "Requires min profit of 0.5% per day for 3 days on Flex programs and 20k Swing Max.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Only between two 50K or lower account sizes.",
+    "expert_advisor": "Not explicitly mentioned, implies manual trading focus given 'stocks only' and 'positions' rules.",
+    "inactivity_rule": "14-day inactivity rule applies to all FLEX phases (eval/funded) and MAX funded.",
+    "news_trading": "Allowed with no restriction. Note on after-market earnings reporting stocks not available for overnight.",
+    "weekend_holding": "Overnight/Weekend allowed for Swing. Day Trade programs liquidated 10 mins before market close.",
+    "forbidden_strategies": [
+      "Halt restrictions: No trading on halted symbols. Wait 1 min after halt lift.",
+      "Volatility restrictions: Volume of opening trades must not exceed 5% of previous 1-min candle volume.",
+      "Minimum positions: Day Trade Max (20)",
+      "Day Trade Flex (10)",
+      "Swing (5).",
+      "Trade Range: Must yield at least 10 cents per share profit (e.g. Buy $50.10",
+      "Sell $50.20).",
+      "Trade Duration: At least 30-second gap between every buy-sell or sell-buy order."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2026-01-26",
+      "event": "The earning challenges",
+      "type": "update"
+    },
+    {
+      "date": "2025-12-16",
+      "event": "Join now",
+      "type": "update",
+      "07": "00"
+    },
+    {
+      "date": "2025-06-09",
+      "event": "Save your spot for free",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/trade-the-pool.svg"
+  },
+  "seo_content": "<h3>Trade The Pool Technical Infrastructure</h3><p>Trade The Pool, based in Israel and established in September 2022, is a stocks-only proprietary trading firm offering a 1 Step evaluation program. Account sizes range from $20,000 to $260,000. The firm supports the TraderEvolution platform and offers more than 12,000 tradable stocks, including penny stocks and ETFs. Its listed review score is 4.8/5 based on 4 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Trade The Pool Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Trade The Pool. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/trade-the-pool.svg",
+  "created_at": "2026-02-26T08:30:22.290Z"
+}

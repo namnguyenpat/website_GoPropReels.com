@@ -1,0 +1,216 @@
+{
+  "id": "the-trading-pit-rmhke",
+  "firm_name": "The Trading Pit",
+  "broker": "The Trading Pit",
+  "title": "The Trading Pit Check website",
+  "description": "The Trading Pit, based in Liechtenstein and established October 2022, is a CFD firm offering 1 Step and 2 Steps programs. Account sizes range from $5,000 to $200,000. Platforms supported include MT5, cTrader, MT4, Quantower and Bookmap. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "forex",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#BF5AF2",
+  "features": [
+    "The Trading Pit - CFD Prime - 1-Phase Evaluation - 1-Step 200K",
+    "The Trading Pit - CFD Prime - 1-Phase Evaluation - 1-Step 100K",
+    "The Trading Pit - CFD Prime - 2-Phase Evaluation - 2-Step 100K",
+    "The Trading Pit - CFD Prime - 1-Phase Evaluation - 1-Step 50K",
+    "The Trading Pit - CFD Prime - 2-Phase Evaluation - 2-Step 50K"
+  ],
+  "affiliate_link": "https://affiliate.thetradingpit.com/visit/?bta=118&brand=thetradingpit",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "1-Step": "1:50",
+      "2-Steps": "1:50"
+    },
+    "Metals": {
+      "1-Step": "1:10",
+      "2-Steps": "1:10"
+    },
+    "Indices": {
+      "1-Step": "1:10",
+      "2-Steps": "1:10"
+    },
+    "Crypto": {
+      "1-Step": "1:2",
+      "2-Steps": "1:2"
+    },
+    "Stocks": {
+      "1-Step": "1:2",
+      "2-Steps": "1:2"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "The Trading Pit - CFD Prime - 1-Phase Evaluation - 1-Step 200K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "1025.10",
+      "original_price": "1139.00"
+    },
+    {
+      "name": "The Trading Pit - CFD Prime - 1-Phase Evaluation - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "512.10",
+      "original_price": "569.00"
+    },
+    {
+      "name": "The Trading Pit - CFD Prime - 2-Phase Evaluation - 2-Step 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "512.10",
+      "original_price": "569.00"
+    },
+    {
+      "name": "The Trading Pit - CFD Prime - 1-Phase Evaluation - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "314.10",
+      "original_price": "349.00"
+    },
+    {
+      "name": "The Trading Pit - CFD Prime - 2-Phase Evaluation - 2-Step 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "314.10",
+      "original_price": "349.00"
+    },
+    {
+      "name": "The Trading Pit - CFD Prime - 1-Phase Evaluation - 1-Step 20K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "20000",
+      "price": "179.10",
+      "original_price": "199.00"
+    },
+    {
+      "name": "The Trading Pit - CFD Prime - 2-Phase Evaluation - 2-Step 20K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "20000",
+      "price": "179.10",
+      "original_price": "199.00"
+    },
+    {
+      "name": "The Trading Pit - CFD Prime - 1-Phase Evaluation - 1-Step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "89.10",
+      "original_price": "99.00"
+    },
+    {
+      "name": "The Trading Pit - CFD Prime - 2-Phase Evaluation - 2-Step 10K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "89.10",
+      "original_price": "99.00"
+    },
+    {
+      "name": "The Trading Pit - CFD Prime - 1-Phase Evaluation - 1-Step 5K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "44.10",
+      "original_price": "49.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Micro-scalping: 40%+ profitable trades held 10-15 seconds or less prohibited.",
+    "Gap Trading: Opening trades within 2 hours of market close prohibited.",
+    "Grid strategy prohibited.",
+    "Martingale strategy prohibited.",
+    "Overleveraging/Overexposure prohibited.",
+    "Hyperactivity: Too many trades in short time prohibited.",
+    "One-sided Bets: Trades predominantly in one direction without analysis prohibited."
+  ],
+  "platforms": [
+    "cTrader",
+    "MT4",
+    "MT5"
+  ],
+  "instruments": [
+    "FX",
+    "Metals",
+    "Indices",
+    "Crypto",
+    "Stocks",
+    "Other Commodities"
+  ],
+  "payment_methods": [
+    "Apple Pay",
+    "Bank Transfer",
+    "Credit/Debit Card",
+    "Crypto",
+    "Giropay (DE)",
+    "Google Pay",
+    "Neteller",
+    "PayPal",
+    "Skrill"
+  ],
+  "payout_methods": [
+    "Bank Wire Transfer",
+    "Crypto"
+  ],
+  "founded": "2022-10",
+  "payout_policy": {
+    "minimum_payout": "$100.",
+    "processing_time": "Daily payouts (reviewed within 24 business hours). Previously every 14 days.",
+    "details": "CFD Prime: 80% profit split after 5 unique trading days. Min 3 profitable days for challenges.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed between trader's own TTP accounts. Copying between Challenge & Earning accounts allowed.",
+    "expert_advisor": "Allowed if no prohibited trading (HFT, latency/reverse/hedge/arbitrage, emulators).",
+    "inactivity_rule": "21 consecutive days.",
+    "news_trading": "Allowed for 5K-50K sizes. Prohibited 2 mins before/after high-impact news for 100K & 200K.",
+    "weekend_holding": "Weekend Crypto Trading available on cTrader.",
+    "forbidden_strategies": [
+      "Micro-scalping: 40%+ profitable trades held 10-15 seconds or less prohibited.",
+      "Gap Trading: Opening trades within 2 hours of market close prohibited.",
+      "Grid strategy prohibited.",
+      "Martingale strategy prohibited.",
+      "Overleveraging/Overexposure prohibited.",
+      "Hyperactivity: Too many trades in short time prohibited.",
+      "One-sided Bets: Trades predominantly in one direction without analysis prohibited."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-08-06",
+      "event": "Introducing Daily Payouts 🚀",
+      "type": "update"
+    },
+    {
+      "date": "2025-08-06",
+      "event": "Buy your Challenge",
+      "type": "update"
+    },
+    {
+      "date": "2024-11-22",
+      "event": "Enjoy the Updates",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/the-trading-pit.svg"
+  },
+  "seo_content": "<h3>The Trading Pit Technical Infrastructure</h3><p>The Trading Pit, based in Liechtenstein and established October 2022, is a CFD firm offering 1 Step and 2 Steps programs. Account sizes range from $5,000 to $200,000. Platforms supported include MT5, cTrader, MT4, Quantower and Bookmap. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "The Trading Pit Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of The Trading Pit. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/the-trading-pit.svg",
+  "created_at": "2026-02-26T08:30:22.282Z"
+}

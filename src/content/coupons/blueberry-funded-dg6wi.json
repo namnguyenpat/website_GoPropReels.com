@@ -1,0 +1,215 @@
+{
+  "id": "blueberry-funded-dg6wi",
+  "firm_name": "Blueberry Funded",
+  "broker": "Blueberry Funded",
+  "title": "Blueberry Funded 15% OFF",
+  "description": "Blueberry Funded, based in Australia, was established in April 2023. The firm is a CFD provider offering 1 Step and 2 Steps program types. Account sizes range from $25,000 to $100,000. Platforms supported include MT4 and MT5. Tradable instruments include Forex, Commodities and Indices, with leverage options up to 1:100 for majors, exotics, and cryptocurrencies. Blueberry Funded has a 4.5/5 review score based on 510 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "forex",
+  "discount_highlight": "15% OFF",
+  "coupon_code": "BERRY15",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#5E5CE6",
+  "features": [
+    "Blueberry Funded - 1 Step Evaluation - 1-Step 10K",
+    "Blueberry Funded - 1 Step Evaluation - 1-Step 100K",
+    "Blueberry Funded - 1 Step Evaluation - 1-Step 200K",
+    "Blueberry Funded - Rapid Challenge - 1-Step 10K",
+    "Blueberry Funded - 1 Step Evaluation - 1-Step 50K"
+  ],
+  "affiliate_link": "https://blueberryfunded.com/?utm_source=affiliate&ref=8387",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {
+    "Forex": {
+      "Instant": "1:30",
+      "1-Step": "1:30",
+      "2-Steps": "1:50"
+    },
+    "Metals": {
+      "Instant": "1:10",
+      "1-Step": "1:10",
+      "2-Steps": "1:10"
+    },
+    "Indices": {
+      "Instant": "1:10",
+      "1-Step": "1:10",
+      "2-Steps": "1:10"
+    },
+    "Crypto": {
+      "Instant": "1:2",
+      "1-Step": "1:2",
+      "2-Steps": "1:2"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Blueberry Funded - 1 Step Evaluation - 1-Step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "52.50",
+      "original_price": "75.00"
+    },
+    {
+      "name": "Blueberry Funded - 1 Step Evaluation - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "385.00",
+      "original_price": "550.00"
+    },
+    {
+      "name": "Blueberry Funded - 1 Step Evaluation - 1-Step 200K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "770.00",
+      "original_price": "1100.00"
+    },
+    {
+      "name": "Blueberry Funded - Rapid Challenge - 1-Step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "35.00",
+      "original_price": "50.00"
+    },
+    {
+      "name": "Blueberry Funded - 1 Step Evaluation - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "192.50",
+      "original_price": "275.00"
+    },
+    {
+      "name": "Blueberry Funded - Rapid Challenge - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "140.00",
+      "original_price": "200.00"
+    },
+    {
+      "name": "Blueberry Funded - Rapid Challenge - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "210.00",
+      "original_price": "300.00"
+    },
+    {
+      "name": "Blueberry Funded - Rapid Challenge - 1-Step 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "70.00",
+      "original_price": "100.00"
+    },
+    {
+      "name": "Blueberry Funded - 2 Step Evaluation - 2-Step 10K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "46.20",
+      "original_price": "66.00"
+    },
+    {
+      "name": "Blueberry Funded - 1 Step Evaluation - 1-Step 5K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "28.00",
+      "original_price": "40.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "One-sided Bets: Avoid trading predominantly in one direction without proper analysis",
+    "as excessive volume in a short period may be considered gambling and is prohibited. One-sided behavior also includes holding correlated exposures simultaneously or taking only buy/sell only positions for an entire pay cycle without any balanced short/long exposure or clear market rationale.",
+    "No Excessive Scalping: Defined as holding 50% or more of your trades for less than a minute.",
+    "All-In Trading Behavior: This refers to committing a large portion of account equity to a single trade or series of trades without proper risk management",
+    "such as trading without a stop-loss.",
+    "Reverse Hand Post Taking Losses: Entering the opposite direction of a losing trade shortly after closing it",
+    "aiming to recover losses",
+    "to avoid being flagged for this prohibited strategy",
+    "the minimum time to wait before entering a trade in the opposite direction is 5 minutes.",
+    "Position stacking: this is limited to 4 open positions per asset pair and 7 in total across all instruments",
+    "and any attempts to bypass this will be treated as a violation.",
+    "Martingale strategy is prohibited"
+  ],
+  "platforms": [
+    "DXTrade",
+    "MT4",
+    "MT5",
+    "TradeLocker"
+  ],
+  "instruments": [
+    "Forex",
+    "Metals",
+    "Indices",
+    "Crypto",
+    "Other Commodities"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Crypto",
+    "Gcash",
+    "IMPS",
+    "NGN Bank Transfer",
+    "UPI Payment"
+  ],
+  "payout_methods": [
+    "Broker Profit Transfer",
+    "Crypto",
+    "Riseworks"
+  ],
+  "founded": "2024-08",
+  "payout_policy": {
+    "minimum_payout": "14 days payout frequency with minimum of $100 profit balance.",
+    "processing_time": "14 days payout frequency.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed, personal accounts only. Blueberry Funded\\u2019s partnership with Prop Firm One enables you to extend your copy trading capabilities even further. PF1 allows traders to seamlessly copy trades across different proprietary firm accounts within a single platform, offering increased flexibility and a broader range of opportunities. This means that, in addition to Blueberry Funded\\u2019s internal copy trading feature, PF1 empowers users to manage trades across multiple firms, enhancing scalability and trading efficiency without breaching Blueberry Funded\\u2019s core rules. For more details on this enhanced functionality, visit PropFirmOne.com.",
+    "expert_advisor": "Allowed but must align with trading conditions and rules.",
+    "inactivity_rule": "You must place a trade within 30 days to keep your account active and avoid suspension.",
+    "news_trading": "Traders must not open or close trades 2 minutes before and 2 minutes after high-impact (red folder) news events on both evaluation and earning accounts. This restriction applies to trade execution and closure, even if a trade was placed before and the take-profit (TP) gets triggered during the restricted timeframe. Stop-Loss Exception: If a position was opened more than 6 hours before the news release and it incurs a stop-loss hit during the News Trading Window, it will be allowed.",
+    "weekend_holding": "Allowed.",
+    "forbidden_strategies": [
+      "One-sided Bets: Avoid trading predominantly in one direction without proper analysis",
+      "as excessive volume in a short period may be considered gambling and is prohibited. One-sided behavior also includes holding correlated exposures simultaneously or taking only buy/sell only positions for an entire pay cycle without any balanced short/long exposure or clear market rationale.",
+      "No Excessive Scalping: Defined as holding 50% or more of your trades for less than a minute.",
+      "All-In Trading Behavior: This refers to committing a large portion of account equity to a single trade or series of trades without proper risk management",
+      "such as trading without a stop-loss.",
+      "Reverse Hand Post Taking Losses: Entering the opposite direction of a losing trade shortly after closing it",
+      "aiming to recover losses",
+      "to avoid being flagged for this prohibited strategy",
+      "the minimum time to wait before entering a trade in the opposite direction is 5 minutes.",
+      "Position stacking: this is limited to 4 open positions per asset pair and 7 in total across all instruments",
+      "and any attempts to bypass this will be treated as a violation.",
+      "Martingale strategy is prohibited"
+    ],
+    "ip_vpn_policy": "VPNs and different IPs are allowed for travel, but only the account owner may trade (no account sharing).",
+    "lot_size_limits": "We've introduced a tiered lot size system based on your account balance. As your account grows, so does your maximum allowable lot size. This approach helps ensure your risk stays aligned with your capital. 1-Step, 2-Step & Rapid: [XAU/USD: $5K:0.1, $10K:0.2, $25K:0.5, $50K:1, $100K:2, $200K:4], [XAG/USD: $5K:0.2, $10K:0.4, $25K:1, $50K:2, $100K:4, $200K:8], [DJ30: $5K:0.05, $10K:0.1, $25K:0.25, $50K:0.5, $100K:1, $200K:2], [NAS100: $5K:0.1, $10K:0.2, $25K:0.5, $50K:1, $100K:2, $200K:4], [SP500: $5K:0.4, $10K:0.8, $25K:2, $50K:4, $100K:8, $200K:16], [GER40.p: $5K:0.25, $10K:0.5, $25K:1.25, $50K:2.5, $100K:5, $200K:10], [BTC/USD: $5K:0.05, $10K:0.1, $25K:0.25, $50K:0.5, $100K:1, $200K:2], [ETH/USD: $5K:2, $10K:4, $25K:10, $50K:20, $100K:40, $200K:80], [SOL/USD.p: $5K:2, $10K:4, $25K:10, $50K:20, $100K:40, $200K:80], [Forex: $5K:0.6, $10K:1.2, $25K:3, $50K:6, $100K:12, $200K:24], [Other Indices: $5K:0.3, $10K:0.6, $25K:1.5, $50K:3, $100K:6, $200K:12], [Other Crypto: $5K:5, $10K:10, $25K:25, $50K:50, $100K:100, $200K:200], [WTI/BRENT: $5K:4.5, $10K:9, $25K:22.5, $50K:45, $100K:90, $200K:180], [JP225: $5K:0.7, $10K:1.4, $25K:3.5, $50K:7, $100K:14, $200K:28]. Instant Funding: [XAU/USD: $1.25K:0.05, $2.5K:0.06, $5K:0.08, $10K:0.12, $25K:0.30, $50K:0.60, $100K:1.20], [DJ30: $1.25K:0.02, $50K:0.30, $100K:0.60], [Forex: $1.25K:0.30, $100K:7.20] (See full table in source)."
+  },
+  "timeline": [
+    {
+      "date": "2024-08-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/blueberry-funded.svg"
+  },
+  "seo_content": "<h3>Blueberry Funded Technical Infrastructure</h3><p>Blueberry Funded, based in Australia, was established in April 2023. The firm is a CFD provider offering 1 Step and 2 Steps program types. Account sizes range from $25,000 to $100,000. Platforms supported include MT4 and MT5. Tradable instruments include Forex, Commodities and Indices, with leverage options up to 1:100 for majors, exotics, and cryptocurrencies. Blueberry Funded has a 4.5/5 review score based on 510 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Blueberry Funded Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Blueberry Funded. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/blueberry-funded.svg",
+  "created_at": "2026-02-26T08:30:22.219Z"
+}

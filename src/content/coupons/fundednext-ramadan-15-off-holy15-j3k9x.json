@@ -1,0 +1,119 @@
+{
+    "id": "fundednext-ramadan-15-off-holy15-j3k9x",
+    "firm_name": "FundedNext",
+    "broker": "Institutional Liquidity Provider",
+    "title": "FundedNext Ramadan 2026: 15% OFF Stellar Challenges",
+    "description": "Celebrate Ramadan with exclusive savings on the world's most flexible prop firm. Use code HOLY15 for deep discounts on Stellar challenges and start your path to professional funding with 95% profit splits.",
+    "category": "forex",
+    "discount_highlight": "15% OFF",
+    "coupon_code": "HOLY15",
+    "expiration_date": "2026-03-03",
+    "theme_color": "#3B82F6",
+    "features": [
+        "95% Profit Split",
+        "15% Profit Share in Challenge",
+        "No Time Limits",
+        "News Trading Allowed",
+        "UAE Based Regulation"
+    ],
+    "affiliate_link": "https://fundednext.com/?fpr=ngpat",
+    "trust_score": "4.5",
+    "reviews_count": "57930",
+    "leverage_details": {
+        "Forex": {
+            "Instant": "1:30",
+            "1-Step": "1:30",
+            "2-Steps": "1:100"
+        },
+        "Metals/Indices": {
+            "Stellar": "1:15"
+        }
+    },
+    "commissions": {
+        "Forex": "$5/Lot (Stellar)",
+        "Indices": "Zero Commission"
+    },
+    "challenges": [
+        {
+            "name": "Stellar 1-Step (2k-25k)",
+            "model": "1-step",
+            "currency": "USD",
+            "account_size": "25000",
+            "price": "186.99",
+            "original_price": "219.99"
+        },
+        {
+            "name": "Stellar 2-Step (50k-200k)",
+            "model": "2-step",
+            "currency": "USD",
+            "account_size": "100000",
+            "price": "494.99",
+            "original_price": "549.99"
+        }
+    ],
+    "consistency_rules": {
+        "General": "None (No Consistency Rules)"
+    },
+    "forbidden_strategies": [
+        "No news trading during funded stage (40% profit split rule applies)",
+        "No switching between EA and manual trading",
+        "No identical trades across accounts"
+    ],
+    "platforms": [
+        "cTrader",
+        "Match Trader",
+        "MT4",
+        "MT5"
+    ],
+    "instruments": [
+        "Forex",
+        "Metals",
+        "Indices",
+        "Energy",
+        "Crypto"
+    ],
+    "payment_methods": [
+        "Apple Pay",
+        "Credit Card",
+        "Crypto",
+        "Google Pay",
+        "PayPal"
+    ],
+    "payout_methods": [
+        "Crypto",
+        "RiseWorks",
+        "TC Pay"
+    ],
+    "founded": "2022-03",
+    "payout_policy": {
+        "minimum_payout": "$20",
+        "processing_time": "7-14 days",
+        "details": "First payout available after 7 days for Stellar 1-Step. Profit split up to 95%. Bonus 15% share during evaluation stage included.",
+        "payout_cycles": []
+    },
+    "firm_rules": {
+        "copy_trading": "Allowed between own accounts.",
+        "expert_advisor": "Allowed (requires customization).",
+        "inactivity_rule": "30 days login requirement.",
+        "news_trading": "Allowed (Evaluation), Restricted (Funded).",
+        "weekend_holding": "Allowed."
+    },
+    "timeline": [
+        {
+            "date": "2024-08-28",
+            "event": "TradingView Available on Challenge accounts",
+            "type": "update"
+        }
+    ],
+    "video_source": {
+        "type": "image",
+        "src": "/images/logos/fundednext.svg"
+    },
+    "seo_content": "<h3>FundedNext Ramadan 2026 Cinematic Drop</h3><p>Secure your legacy with <strong>FundedNext</strong> this Ramadan. We've verified a dual-tier discount strategy for the award-winning Stellar Challenge lineup.</p><ul><li><strong>HOLY15:</strong> 15% OFF for smaller challenges (2k to 25k).</li><li><strong>HOLY10:</strong> 10% OFF for professional sizes (50k to 200k).</li></ul><p>With 95% profit splits and 15% bonus share for passing the evaluation, this is the most aggressive funding offer of the season.</p>",
+    "youtube_metadata": {
+        "title": "FundedNext Ramadan Deal: Technical Deep Dive",
+        "description": "Analyzing the Ramadan 2026 specs for FundedNext. Leverage, rules, and the new HOLY15 promo code."
+    },
+    "firm_logo": "/images/logos/fundednext.svg",
+    "created_at": "2026-02-26T15:45:00Z"
+}

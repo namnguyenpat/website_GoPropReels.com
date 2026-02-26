@@ -1,0 +1,175 @@
+{
+  "id": "tradeify-l0uxw",
+  "firm_name": "Tradeify",
+  "broker": "Tradeify",
+  "title": "Tradeify Check website",
+  "description": "Tradeify, based in the United States, was established in April 2024. The firm is a futures provider that offers 1 Step program types. Account sizes range from $10,000 to $150,000. Tradable instruments include Futures with 1:1 leverage for majors, exotics, and cryptocurrencies. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "forex",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#BF5AF2",
+  "features": [
+    "Tradeify - Lightning Funded Plan - Instant 100K",
+    "Tradeify - Lightning Funded Plan - Instant 50K",
+    "Tradeify - Growth Plan - 1-Step 150K",
+    "Tradeify - Lightning Funded Plan - Instant 25K",
+    "Tradeify - Select Flex - 1-Step 150K"
+  ],
+  "affiliate_link": "https://tradeify.co",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {},
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Tradeify - Lightning Funded Plan - Instant 100K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "440.30",
+      "original_price": "629.00"
+    },
+    {
+      "name": "Tradeify - Lightning Funded Plan - Instant 50K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "328.30",
+      "original_price": "469.00"
+    },
+    {
+      "name": "Tradeify - Growth Plan - 1-Step 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "251.30",
+      "original_price": "359.00"
+    },
+    {
+      "name": "Tradeify - Lightning Funded Plan - Instant 25K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "230.30",
+      "original_price": "329.00"
+    },
+    {
+      "name": "Tradeify - Select Flex - 1-Step 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "215.40",
+      "original_price": "359.00"
+    },
+    {
+      "name": "Tradeify - Select Daily - 1-Step 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "215.40",
+      "original_price": "359.00"
+    },
+    {
+      "name": "Tradeify - Select Daily - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "181.30",
+      "original_price": "259.00"
+    },
+    {
+      "name": "Tradeify - Select Flex - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "181.30",
+      "original_price": "259.00"
+    },
+    {
+      "name": "Tradeify - Select Daily - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "111.30",
+      "original_price": "159.00"
+    },
+    {
+      "name": "Tradeify - Growth Plan - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "97.30",
+      "original_price": "139.00"
+    }
+  ],
+  "consistency_rules": {
+    "profit": "20"
+  },
+  "forbidden_strategies": [
+    "Good Faith Policy: No exploiting price display/delays/technical errors.",
+    "Microscalping: 50%+ profit must come from trades > 10 seconds.",
+    "Hedging: 100% prohibited.",
+    "Micro/Mini simultaneous trading prohibited.",
+    "Purchase Restrictions: Max 15 evals/30 days",
+    "max 5 funded accounts."
+  ],
+  "platforms": [
+    "NinjaTrader",
+    "Quantower",
+    "TradingView",
+    "Tradovate"
+  ],
+  "instruments": [
+    "Futures"
+  ],
+  "payment_methods": [
+    "Credit Card",
+    "Crypto",
+    "PayPal"
+  ],
+  "payout_methods": [
+    "Plane",
+    "Riseworks"
+  ],
+  "founded": "2024-06",
+  "payout_policy": {
+    "minimum_payout": "Growth: $500-$1500 (by size). Lightning: $1000. Select Flex: $250.",
+    "processing_time": "24-48 hours (72 hours outside business hours).",
+    "details": "Growth: 90/10 split, 5 trading days min. Lightning: 90/10, no min days. Select Flex: 90/10, every 5 winning days. Tiered max payouts up to $25K (6th+).",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed with up to 5 accounts. Only personally owned accounts. Third-party copiers at own risk.",
+    "expert_advisor": "Bots/algorithms allowed with ownership proof. No HFT bots.",
+    "inactivity_rule": "1 trade per week (Mon-Fri) per account.",
+    "news_trading": "Allowed. NEVER use DLL as stop loss during volatility.",
+    "weekend_holding": "All positions auto-closed at market close.",
+    "forbidden_strategies": [
+      "Good Faith Policy: No exploiting price display/delays/technical errors.",
+      "Microscalping: 50%+ profit must come from trades > 10 seconds.",
+      "Hedging: 100% prohibited.",
+      "Micro/Mini simultaneous trading prohibited.",
+      "Purchase Restrictions: Max 15 evals/30 days",
+      "max 5 funded accounts."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2024-06-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/tradeify.svg"
+  },
+  "seo_content": "<h3>Tradeify Technical Infrastructure</h3><p>Tradeify, based in the United States, was established in April 2024. The firm is a futures provider that offers 1 Step program types. Account sizes range from $10,000 to $150,000. Tradable instruments include Futures with 1:1 leverage for majors, exotics, and cryptocurrencies. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Tradeify Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Tradeify. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/tradeify.svg",
+  "created_at": "2026-02-26T08:30:22.292Z"
+}

@@ -1,0 +1,242 @@
+{
+  "id": "finotive-funding-e6wx4",
+  "firm_name": "Finotive Funding",
+  "broker": "Finotive Funding",
+  "title": "Finotive Funding 25%",
+  "description": "Finotive Funding, based in Cyprus, was established in April 2021. It is a CFD firm offering three program types: Instant, 1 Step, and 2 Steps. The firm supports the MT5 and Match Trader platforms. Finotive Funding has a 4.2/5 review score based on 104 reviews. Overall, Finotive Funding is a Cyprus-based CFD provider offering tiered program structures and support for two trading platforms, MT5 and Match Trader. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "forex",
+  "discount_highlight": "25%",
+  "coupon_code": "FIRST25",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#BF5AF2",
+  "features": [
+    "Finotive Funding - 1 Phase Challenge - 1-Step 200K",
+    "Finotive Funding - 1 Phase Challenge - 1-Step 100K",
+    "Finotive Funding - 1 Phase Challenge - 1-Step 50K",
+    "Finotive Funding - 1 Phase Challenge - 1-Step 25K",
+    "Finotive Funding - 1 Phase Challenge - 1-Step 10K"
+  ],
+  "affiliate_link": "https://finotivefunding.com/JOSNGNW",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "Instant": "1:33",
+      "1-Step": "1:50",
+      "2-Steps": "1:100"
+    },
+    "Metals": {
+      "Instant": "1:5",
+      "1-Step": "1:10",
+      "2-Steps": "1:20"
+    },
+    "Indices": {
+      "Instant": "1:5",
+      "1-Step": "1:5",
+      "2-Steps": "1:10"
+    },
+    "Energy": {
+      "Instant": "1:5",
+      "1-Step": "1:10",
+      "2-Steps": "1:20"
+    },
+    "Crypto": {
+      "Instant": "1:1",
+      "1-Step": "1:2",
+      "2-Steps": "1:2"
+    },
+    "Stocks": {
+      "Instant": "1:2",
+      "1-Step": "1:4",
+      "2-Steps": "1:5"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Finotive Funding - 1 Phase Challenge - 1-Step 200K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "809.40",
+      "original_price": "1349.00"
+    },
+    {
+      "name": "Finotive Funding - 1 Phase Challenge - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "479.40",
+      "original_price": "799.00"
+    },
+    {
+      "name": "Finotive Funding - 1 Phase Challenge - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "299.40",
+      "original_price": "499.00"
+    },
+    {
+      "name": "Finotive Funding - 1 Phase Challenge - 1-Step 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "161.40",
+      "original_price": "269.00"
+    },
+    {
+      "name": "Finotive Funding - 1 Phase Challenge - 1-Step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "65.40",
+      "original_price": "109.00"
+    },
+    {
+      "name": "Finotive Funding - 1 Phase Challenge - 1-Step 5K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "41.40",
+      "original_price": "69.00"
+    },
+    {
+      "name": "Finotive Funding - 1 Phase Challenge - 1-Step 2.5K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "2500",
+      "price": "23.40",
+      "original_price": "39.00"
+    },
+    {
+      "name": "Finotive Funding - 2 Phase Challenge - 2-Step 2.5K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "2500",
+      "price": "17.40",
+      "original_price": "29.00"
+    },
+    {
+      "name": "Finotive Funding - Instant Standard - Instant 2.5K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "2500",
+      "price": "71.40",
+      "original_price": "119.00"
+    },
+    {
+      "name": "Finotive Funding - Instant Standard - Instant 5K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "137.40",
+      "original_price": "229.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "High-Frequency Trading (HFT)",
+    "arbitrage",
+    "straddling",
+    "latency abuse",
+    "or exploiting price feed delays are prohibited.",
+    "Notional Volume: Consistently breaching notional volume limits will be treated as a gambling violation. Repeated or severe violations will be classed as a hard breach and may lead to account closure or progression rejection and payout reductions.",
+    "High-frequency stacking (including correlated instruments): Piling multiple trades on the same pair or on correlated markets",
+    "Abnormal Stop-Loss Usage: Using ultra-tight stops just to mask oversized lots",
+    "which inflates notional volume and breaks realistic risk management",
+    "is prohibited.",
+    "Risk management: If over 50% of your trades show no interaction with stop losses or take profits",
+    "your account may be flagged for gambling activity.",
+    "Martingale or grid strategies are prohibited.",
+    "Continuous strategy (Challenge): You are not allowed to make significant changes to your trading strategy once you reach the funded stage."
+  ],
+  "platforms": [
+    "Match Trader",
+    "MT5"
+  ],
+  "instruments": [
+    "FX",
+    "Metals",
+    "Indices",
+    "Energy",
+    "Crypto",
+    "Stocks"
+  ],
+  "payment_methods": [
+    "Apple Pay",
+    "Credit/Debit Card",
+    "Crypto",
+    "Finotive Pay",
+    "Google Pay",
+    "PayPal"
+  ],
+  "payout_methods": [
+    "Bank Wire Transfer",
+    "Crypto",
+    "Finotive Pay",
+    "IBAN",
+    "Revolut",
+    "SEPA"
+  ],
+  "founded": "2021-04",
+  "payout_policy": {
+    "minimum_payout": "The minimum withdrawal amount is $10 (or equivalent).",
+    "processing_time": "First payout on demand. Then weekly on all programs (except Instant Funding Lite: biweekly).",
+    "details": "The first payout can be requested on demand. After the first payout, payouts can be requested weekly on all programs, except Instant Funding Lite, which allows requests biweekly. All payouts are processed through a Finotive Pay account.",
+    "Targets": "1",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Prohibited between multiple accounts. Hedging between multiple accounts is prohibited.",
+    "expert_advisor": "Not explicitly banned in general rules, but high-frequency trading (HFT), arbitrage, straddling, latency abuse, or exploiting price feed delays are prohibited.",
+    "inactivity_rule": "Accounts inactive for 30 consecutive days may be closed without refund.",
+    "news_trading": "Trades cannot be opened or closed within 2 minutes before or after a red folder news. Violations, including during auto-closure, disqualify evaluation or challenge accounts. Profits from restricted news events are not credited during the challenge or live phase. Instant funding & Mini accounts are exempt from this rule. News straddling: Opening both buy and sell positions around high-impact news creates unnatural trading conditions and leads to abnormal results that aren’t sustainable, this practice is prohibited.",
+    "weekend_holding": "(Implicitly allowed as no prohibition mentioned, confirm with specific program rules if needed)",
+    "forbidden_strategies": [
+      "High-Frequency Trading (HFT)",
+      "arbitrage",
+      "straddling",
+      "latency abuse",
+      "or exploiting price feed delays are prohibited.",
+      "Notional Volume: Consistently breaching notional volume limits will be treated as a gambling violation. Repeated or severe violations will be classed as a hard breach and may lead to account closure or progression rejection and payout reductions.",
+      "High-frequency stacking (including correlated instruments): Piling multiple trades on the same pair or on correlated markets",
+      "Abnormal Stop-Loss Usage: Using ultra-tight stops just to mask oversized lots",
+      "which inflates notional volume and breaks realistic risk management",
+      "is prohibited.",
+      "Risk management: If over 50% of your trades show no interaction with stop losses or take profits",
+      "your account may be flagged for gambling activity.",
+      "Martingale or grid strategies are prohibited.",
+      "Continuous strategy (Challenge): You are not allowed to make significant changes to your trading strategy once you reach the funded stage."
+    ],
+    "ip_vpn_policy": "Standard procedures; Maintain account integrity."
+  },
+  "timeline": [
+    {
+      "date": "2021-04-01",
+      "event": "Established",
+      "type": "update"
+    },
+    {
+      "date": "2026-01-10",
+      "event": "US Traders Back",
+      "type": "update"
+    },
+    {
+      "date": "2026-01-08",
+      "event": "Record Payouts",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/finotive-funding.svg"
+  },
+  "seo_content": "<h3>Finotive Funding Technical Infrastructure</h3><p>Finotive Funding, based in Cyprus, was established in April 2021. It is a CFD firm offering three program types: Instant, 1 Step, and 2 Steps. The firm supports the MT5 and Match Trader platforms. Finotive Funding has a 4.2/5 review score based on 104 reviews. Overall, Finotive Funding is a Cyprus-based CFD provider offering tiered program structures and support for two trading platforms, MT5 and Match Trader. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Finotive Funding Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Finotive Funding. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/finotive-funding.svg",
+  "created_at": "2026-02-26T08:30:22.240Z"
+}

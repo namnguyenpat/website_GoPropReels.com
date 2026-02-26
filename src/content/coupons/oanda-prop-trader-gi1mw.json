@@ -1,0 +1,173 @@
+{
+  "id": "oanda-prop-trader-gi1mw",
+  "firm_name": "OANDA Prop Trader",
+  "broker": "OANDA Prop Trader",
+  "title": "OANDA Prop Trader Check website",
+  "description": "OANDA Prop Trader, based in Malta, was established in January 2024. It is a CFD firm offering a 2 Steps program and lists MT5 as its supported trading platform. User feedback is summarized with a review score of 4.2 out of 5 from 51 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "forex",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#64D2FF",
+  "features": [
+    "OANDA Prop Trader - Black - 2-Steps 500K",
+    "OANDA Prop Trader - Platinum - 2-Steps 200K",
+    "OANDA Prop Trader - Gold - 2-Steps 100K",
+    "OANDA Prop Trader - Silver - 2-Steps 50K",
+    "OANDA Prop Trader - Standard - 2-Steps 10K"
+  ],
+  "affiliate_link": "https://proptrader.oanda.com",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "2-Steps": "1:100"
+    },
+    "Metals": {
+      "2-Steps": "1:50"
+    },
+    "Indices": {
+      "2-Steps": "1:50"
+    },
+    "Energy": {
+      "2-Steps": "1:50"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "OANDA Prop Trader - Black - 2-Steps 500K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "500000",
+      "price": "1680.00",
+      "original_price": "2400.00"
+    },
+    {
+      "name": "OANDA Prop Trader - Platinum - 2-Steps 200K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "840.00",
+      "original_price": "1200.00"
+    },
+    {
+      "name": "OANDA Prop Trader - Gold - 2-Steps 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "419.30",
+      "original_price": "599.00"
+    },
+    {
+      "name": "OANDA Prop Trader - Silver - 2-Steps 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "209.30",
+      "original_price": "299.00"
+    },
+    {
+      "name": "OANDA Prop Trader - Standard - 2-Steps 10K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "42.00",
+      "original_price": "60.00"
+    },
+    {
+      "name": "OANDA Prop Trader - Standard - 2-Steps 5K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "24.50",
+      "original_price": "35.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Price or latency arbitrage.",
+    "Copy trading between multiple accounts.",
+    "News Trading window violation (2 mins before/after)."
+  ],
+  "platforms": [
+    "MT5"
+  ],
+  "instruments": [
+    "FX",
+    "Metals",
+    "Indices",
+    "Energy"
+  ],
+  "payment_methods": [
+    "AlipayHK",
+    "Apple Pay",
+    "Astropay",
+    "blbAstopay",
+    "Credit/Debit Card",
+    "Crypto",
+    "Google Pay",
+    "OXXO",
+    "Pix",
+    "PSE",
+    "SPEI",
+    "Touch n Go eWallet",
+    "TrueMoney",
+    "UnionPay",
+    "Webpay",
+    "Wire Transfer"
+  ],
+  "payout_methods": [
+    "Bank Wire Transfer",
+    "Neteller",
+    "Skrill",
+    "Wise"
+  ],
+  "founded": "2024-01",
+  "payout_policy": {
+    "minimum_payout": "$50",
+    "processing_time": "Every 14 days",
+    "details": "Profit Split: 80%.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Not allowed between multiple accounts or within the OANDA Prop Trader program. Copying to non-OANDA accounts is permitted.",
+    "expert_advisor": "Traders may use EAs, scripts, and indicators. EAs engaging in price/latency arbitrage prohibited.",
+    "inactivity_rule": "30 calendar days hard breach.",
+    "news_trading": "No opening or closing of trades within a 4-minute window (2 mins before/after major news).",
+    "weekend_holding": "(Not explicitly mentioned as prohibited in main text, assuming standard allowed unless specified)",
+    "forbidden_strategies": [
+      "Price or latency arbitrage.",
+      "Copy trading between multiple accounts.",
+      "News Trading window violation (2 mins before/after)."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2025-11-09",
+      "event": "OANDA Prop Trader Logo",
+      "type": "update"
+    },
+    {
+      "date": "2025-09-21",
+      "event": "OANDA Prop Trader Challenges Exciting New Changes!",
+      "type": "update"
+    },
+    {
+      "date": "2025-09-04",
+      "event": "BUY your Challenge",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/oanda-prop-trader.svg"
+  },
+  "seo_content": "<h3>OANDA Prop Trader Technical Infrastructure</h3><p>OANDA Prop Trader, based in Malta, was established in January 2024. It is a CFD firm offering a 2 Steps program and lists MT5 as its supported trading platform. User feedback is summarized with a review score of 4.2 out of 5 from 51 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "OANDA Prop Trader Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of OANDA Prop Trader. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/oanda-prop-trader.svg",
+  "created_at": "2026-02-26T08:30:22.275Z"
+}

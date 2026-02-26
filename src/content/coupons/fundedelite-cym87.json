@@ -1,0 +1,220 @@
+{
+  "id": "fundedelite-cym87",
+  "firm_name": "FundedElite",
+  "broker": "FundedElite",
+  "title": "FundedElite 50%",
+  "description": "FundedElite, based in Italy and established in November 2023, is a CFD firm offering Instant, 1 Step and 2 Steps programs. It supports MT5 and TradeLocker and has a 4.3/5 review score from 66 reviews. The firm launched a Free Retry Model in 2023. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "forex",
+  "discount_highlight": "50%",
+  "coupon_code": "NEW50",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#64D2FF",
+  "features": [
+    "FundedElite - Standard Free Retry - 2-step 100K",
+    "FundedElite - Standard Free Retry - 2-step 25K",
+    "FundedElite - Lite challenge - 1-step 300K",
+    "FundedElite - Lite challenge - 1-step 100K",
+    "FundedElite - Lite challenge - 1-step 25K"
+  ],
+  "affiliate_link": "https://fundedelite.com/?aff=AFF6758755",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {
+    "FX": {
+      "Instant": "1:100",
+      "1-Step": "1:100",
+      "2-Steps": "1:100"
+    },
+    "Metals": {
+      "Instant": "1:10",
+      "1-Step": "1:10",
+      "2-Steps": "1:10"
+    },
+    "Indices": {
+      "Instant": "1:10",
+      "1-Step": "1:10",
+      "2-Steps": "1:10"
+    },
+    "Energy": {
+      "Instant": "1:10",
+      "1-Step": "1:10",
+      "2-Steps": "1:10"
+    },
+    "Crypto": {
+      "Instant": "1:2",
+      "1-Step": "1:2",
+      "2-Steps": "1:2"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "FundedElite - Standard Free Retry - 2-step 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "259.50",
+      "original_price": "519.00"
+    },
+    {
+      "name": "FundedElite - Standard Free Retry - 2-step 25K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "109.50",
+      "original_price": "219.00"
+    },
+    {
+      "name": "FundedElite - Lite challenge - 1-step 300K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "300000",
+      "price": "549.50",
+      "original_price": "1099.00"
+    },
+    {
+      "name": "FundedElite - Lite challenge - 1-step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "184.50",
+      "original_price": "369.00"
+    },
+    {
+      "name": "FundedElite - Lite challenge - 1-step 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "54.50",
+      "original_price": "109.00"
+    },
+    {
+      "name": "FundedElite - Lite challenge - 1-step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "24.50",
+      "original_price": "49.00"
+    },
+    {
+      "name": "FundedElite - Lite challenge - 2-step 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "99.50",
+      "original_price": "199.00"
+    },
+    {
+      "name": "FundedElite - Instant Funded - 100K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "744.50",
+      "original_price": "1489.00"
+    },
+    {
+      "name": "FundedElite - Flash Activation challenge - 200K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "200000",
+      "price": "5.00",
+      "original_price": "0.00"
+    },
+    {
+      "name": "FundedElite - Flash Activation challenge - 25K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "5.00",
+      "original_price": "0.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Grid Trading (if used for manipulation/risk-free profits)",
+    "Martingale (if over-leveraging)",
+    "IP sharing",
+    "Strategy Risk Limits",
+    "HFT and High-Frequency Scalping",
+    "Weekend Trading (without add-on)",
+    "Hedging",
+    "Account Rolling",
+    "Account Sharing/any passing service",
+    "Latency Arbitrage",
+    "Server Spamming.",
+    "Minimum Trade Duration: 3 minutes (30 seconds with scalping addon). Frequence short trades in evaluation may be excused; funded stage soft breach/reset.",
+    "Strategy Risk Limit (Funded): Cannot risk more than 50% of daily loss limit on a single instrument in the same day."
+  ],
+  "platforms": [
+    "MT5",
+    "TradeLocker"
+  ],
+  "instruments": [
+    "FX",
+    "Metals",
+    "Indices",
+    "Energy",
+    "Crypto"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Crypto",
+    "Revolut Pay"
+  ],
+  "payout_methods": [
+    "Crypto",
+    "Riseworks"
+  ],
+  "founded": "2023-11",
+  "payout_policy": {
+    "minimum_payout": "$30 standard. None for Flash Activation.",
+    "processing_time": "24-72 hours. Frequency: 21 days first payout, then 14 days (Standard). Instant: 21 days.",
+    "details": "Standard: 80% split. Instant: 70% first split, then adjustable. Second Chance: Max 50% split. Payouts via Rise and Crypto (max $500 crypto). Giveaway accounts capped at 2% payout.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed within your own accounts using your strategies, not with signal providers or copying other traders. Copy trading allowed between your own accounts and across different brokers or prop firms, provided that no hedging or offsetting positions are involved.",
+    "expert_advisor": "Allowed if they help with risk management or serve as a base for strategies. Fully automated/martingale/grid/public scalping bots prohibited.",
+    "inactivity_rule": "29 days inactivity period. Must place at least 1 trade every 29 days.",
+    "news_trading": "Allowed, especially for swing traders, but not for high-frequency trading (HFT) or hedging/arbitrage.",
+    "weekend_holding": "Allowed (positions can be held from Friday close to Monday open). Weekend trading permitted with Add-on.",
+    "forbidden_strategies": [
+      "Grid Trading (if used for manipulation/risk-free profits)",
+      "Martingale (if over-leveraging)",
+      "IP sharing",
+      "Strategy Risk Limits",
+      "HFT and High-Frequency Scalping",
+      "Weekend Trading (without add-on)",
+      "Hedging",
+      "Account Rolling",
+      "Account Sharing/any passing service",
+      "Latency Arbitrage",
+      "Server Spamming.",
+      "Minimum Trade Duration: 3 minutes (30 seconds with scalping addon). Frequence short trades in evaluation may be excused; funded stage soft breach/reset.",
+      "Strategy Risk Limit (Funded): Cannot risk more than 50% of daily loss limit on a single instrument in the same day."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2023-11-01",
+      "event": "Established",
+      "type": "update"
+    },
+    {
+      "date": "2023-01-01",
+      "event": "Free Retry Model",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/fundedelite.svg"
+  },
+  "seo_content": "<h3>FundedElite Technical Infrastructure</h3><p>FundedElite, based in Italy and established in November 2023, is a CFD firm offering Instant, 1 Step and 2 Steps programs. It supports MT5 and TradeLocker and has a 4.3/5 review score from 66 reviews. The firm launched a Free Retry Model in 2023. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "FundedElite Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of FundedElite. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/fundedelite.svg",
+  "created_at": "2026-02-26T08:30:22.251Z"
+}

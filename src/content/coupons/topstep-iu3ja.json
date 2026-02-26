@@ -1,0 +1,149 @@
+{
+  "id": "topstep-iu3ja",
+  "firm_name": "Topstep",
+  "broker": "Topstep",
+  "title": "Topstep Check website",
+  "description": "Topstep, based in the United States and established January 2012, is a futures firm offering a 1 Step program. Account sizes range from $50,000 to $150,000. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "futures",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#0A84FF",
+  "features": [
+    "Topstep - Standard - 1-Step 150K",
+    "Topstep - Standard - 1-Step 100K",
+    "Topstep - Standard - 1-Step 50K",
+    "Topstep - No Activation Fee - 1-Step 150K",
+    "Topstep - No Activation Fee - 1-Step 100K"
+  ],
+  "affiliate_link": "https://topstep.com",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {},
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Topstep - Standard - 1-Step 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "149.00"
+    },
+    {
+      "name": "Topstep - Standard - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "99.00"
+    },
+    {
+      "name": "Topstep - Standard - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "49.00"
+    },
+    {
+      "name": "Topstep - No Activation Fee - 1-Step 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "209.00"
+    },
+    {
+      "name": "Topstep - No Activation Fee - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "159.00"
+    },
+    {
+      "name": "Topstep - No Activation Fee - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "109.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Account Stacking",
+    "Intentional Account Depletion",
+    "Terms Violation",
+    "Use of Manipulative Tools (AI or Automation)",
+    "Abnormal Market Behavior",
+    "Trading Outside Market Range",
+    "News Event Exploitation",
+    "Price Limit Rule: Market participation not allowed when trading within 2% of a Price Limit."
+  ],
+  "platforms": [
+    "TopstepX",
+    "NinjaTrader",
+    "Quantower",
+    "T4",
+    "R Trader Pro",
+    "Atas Orderflow Trading",
+    "MotiveWave",
+    "VolFix",
+    "Bookmap",
+    "Investor/RT",
+    "Jigsaw",
+    "Daytradr",
+    "MultiCharts",
+    "Sierra Chart",
+    "Trade Navigator"
+  ],
+  "instruments": [
+    "Futures"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card"
+  ],
+  "payout_methods": [
+    "ACH",
+    "Bank Wire Transfer",
+    "Wise"
+  ],
+  "founded": "2012-01",
+  "payout_policy": {
+    "minimum_payout": "$125",
+    "processing_time": "1-10 business days depending on method.",
+    "details": "90% profit split. Payout cap: traders can only request 50% of account balance up to $5,000 (Standard) or $6,000 (Consistency).",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Trade copying can only be applied to accounts within the same trading environment (Combine to Express, etc.). Live Funded Accounts cannot utilize the Trade Copier.",
+    "expert_advisor": "Allowed, but traders are fully responsible for performance. TopstepX supports automation via API only.",
+    "inactivity_rule": "Express Funded Account must have at least one trade every 30 days.",
+    "news_trading": "Allowed with no restrictions during Evaluation and Funded stages.",
+    "weekend_holding": "Prohibited. All positions must be closed by 3:10 PM CT daily.",
+    "forbidden_strategies": [
+      "Account Stacking",
+      "Intentional Account Depletion",
+      "Terms Violation",
+      "Use of Manipulative Tools (AI or Automation)",
+      "Abnormal Market Behavior",
+      "Trading Outside Market Range",
+      "News Event Exploitation",
+      "Price Limit Rule: Market participation not allowed when trading within 2% of a Price Limit."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2012-01-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/topstep.svg"
+  },
+  "seo_content": "<h3>Topstep Technical Infrastructure</h3><p>Topstep, based in the United States and established January 2012, is a futures firm offering a 1 Step program. Account sizes range from $50,000 to $150,000. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Topstep Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Topstep. We analyze their futures environment and execution rules."
+  },
+  "firm_logo": "/images/logos/topstep.svg",
+  "created_at": "2026-02-26T08:30:22.288Z"
+}

@@ -1,0 +1,200 @@
+{
+  "id": "the-5-ers-urmf0",
+  "firm_name": "The 5%ers",
+  "broker": "The 5%ers",
+  "title": "The 5%ers Check website",
+  "description": "The 5%ers, based in Israel, was established in April 2016. The firm is a CFD provider offering Instant, 2 Steps, and Bootcamp program types. Account sizes range from $5,000 to $250,000. Platforms supported include MT5 and TradeLocker. Tradable instruments include Forex, Commodities and Indices, with leverage options up to 1:100 for majors, exotics, and cryptocurrencies. The 5%ers has a 4.8/5 review score based on 21,250 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "forex",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#64D2FF",
+  "features": [
+    "The 5%ers - Bootcamp Program - 3-Steps *250K",
+    "The 5%ers - High Stakes Challenge - 2-Steps 100K",
+    "The 5%ers - Hyper Growth Program - 1-Step 20K",
+    "The 5%ers - Bootcamp Program - 3-Steps *100K",
+    "The 5%ers - High Stakes Challenge - 2-Steps 50K"
+  ],
+  "affiliate_link": "https://www.the5ers.com/?afmc=fn",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {
+    "Forex": {
+      "1-Step": "1:30",
+      "2-Steps": "1:100",
+      "3-Steps": "1:30"
+    },
+    "Metals": {
+      "1-Step": "1:10",
+      "2-Steps": "1:15",
+      "3-Steps": "1:10"
+    },
+    "Indices": {
+      "2-Steps": "1:25"
+    },
+    "Crypto": {
+      "2-Steps": "1:2"
+    }
+  },
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "The 5%ers - Bootcamp Program - 3-Steps *250K",
+      "model": "3-step",
+      "currency": "USD",
+      "account_size": "250000",
+      "price": "213.75",
+      "original_price": "225.00"
+    },
+    {
+      "name": "The 5%ers - High Stakes Challenge - 2-Steps 100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "517.75",
+      "original_price": "545.00"
+    },
+    {
+      "name": "The 5%ers - Hyper Growth Program - 1-Step 20K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "20000",
+      "price": "807.50",
+      "original_price": "850.00"
+    },
+    {
+      "name": "The 5%ers - Bootcamp Program - 3-Steps *100K",
+      "model": "3-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "90.25",
+      "original_price": "95.00"
+    },
+    {
+      "name": "The 5%ers - High Stakes Challenge - 2-Steps 50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "293.55",
+      "original_price": "309.00"
+    },
+    {
+      "name": "The 5%ers - High Stakes Challenge - 2-Steps 25K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "185.25",
+      "original_price": "195.00"
+    },
+    {
+      "name": "The 5%ers - Hyper Growth Program - 1-Step 10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "427.50",
+      "original_price": "450.00"
+    },
+    {
+      "name": "The 5%ers - High Stakes Challenge - 2-Steps 10K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "74.10",
+      "original_price": "78.00"
+    },
+    {
+      "name": "The 5%ers - Hyper Growth Program - 1-Step 5K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "247.00",
+      "original_price": "260.00"
+    },
+    {
+      "name": "The 5%ers - High Stakes Challenge - 2-Steps 5K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "5000",
+      "price": "37.05",
+      "original_price": "39.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "One-sided bets: Taking consistent positions in a single direction without considering market conditions.",
+    "Exploitation of price discrepancies (arbitrage).",
+    "Trading bracket strategies by placing pending orders around high-impact news.",
+    "Exploiting system errors",
+    "such as price display inaccuracies or update delays."
+  ],
+  "platforms": [
+    "cTrader",
+    "MT5"
+  ],
+  "instruments": [
+    "Forex",
+    "Metals",
+    "Indices",
+    "Crypto",
+    "Other Commodities"
+  ],
+  "payment_methods": [
+    "Apple Pay",
+    "Bank Transfer",
+    "Credit/Debit Card",
+    "Crypto",
+    "Google Pay",
+    "PayPal"
+  ],
+  "payout_methods": [
+    "Bank Transfer",
+    "Crypto",
+    "Riseworks"
+  ],
+  "founded": "2016-01",
+  "payout_policy": {
+    "minimum_payout": "The minimum amount eligible for withdrawal is $150, after the profit split has been applied.",
+    "processing_time": "Traders have the possibility to withdraw their profits on a bi-weekly basis.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed for High Stakes and Hyper-Growth with limitations. Once a trader has more than $500K under management, taking the same trades across accounts is no longer possible. Copy trading from an external account is allowed only if the account belongs to the same trader. Third-party copy trading is not allowed. Copy trading is not allowed between two Bootcamp accounts. The5ers' partnership with Prop Firm One enables you to extend your copy trading capabilities even further. PF1 allows traders to seamlessly copy trades across different proprietary firm accounts within a single platform, offering increased flexibility and a broader range of opportunities. This means that, in addition to The5ers' internal copy trading feature, PF1 empowers users to manage trades across multiple firms, enhancing scalability and trading efficiency without breaching The5ers' core rules. For more details on this enhanced functionality, visit PropFirmOne.com.",
+    "expert_advisor": "Allowed as long as they comply with the terms and conditions: The EA must set a Stop Loss (SL) order on every position. The EA must not:Copy trades from other persons' signals. Perform tick scalping. Perform latency arbitrage trading. Perform reverse arbitrage trading. Perform hedge arbitrage trading. Use emulators. Any accounts found using EAs that violate these rules will be canceled, banned, and not refunded. This applies to all programs, including Bootcamp and Instant Funding (Hyper Growth)..",
+    "inactivity_rule": "Accounts without new orders for more than 30 consecutive calendar days will expire.",
+    "news_trading": "Hyper-Growth and Bootcamp: Allowed except for bracket strategies around news. High Stakes: Executing orders 2 minutes before until 2 minutes after high-impact news is prohibited.",
+    "weekend_holding": "Allowed.",
+    "forbidden_strategies": [
+      "One-sided bets: Taking consistent positions in a single direction without considering market conditions.",
+      "Exploitation of price discrepancies (arbitrage).",
+      "Trading bracket strategies by placing pending orders around high-impact news.",
+      "Exploiting system errors",
+      "such as price display inaccuracies or update delays."
+    ],
+    "ip_vpn_policy": "Standard procedures; Risk violations tracked in Bootcamp."
+  },
+  "timeline": [
+    {
+      "12": "00",
+      "date": "2025-12-14",
+      "event": "2026 Trading Prep LIVE Event - December 22, 2025 - 12:00 GMT",
+      "type": "update"
+    },
+    {
+      "date": "2025-05-16",
+      "event": "Save your spot",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/the-5-ers.svg"
+  },
+  "seo_content": "<h3>The 5%ers Technical Infrastructure</h3><p>The 5%ers, based in Israel, was established in April 2016. The firm is a CFD provider offering Instant, 2 Steps, and Bootcamp program types. Account sizes range from $5,000 to $250,000. Platforms supported include MT5 and TradeLocker. Tradable instruments include Forex, Commodities and Indices, with leverage options up to 1:100 for majors, exotics, and cryptocurrencies. The 5%ers has a 4.8/5 review score based on 21,250 reviews. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "The 5%ers Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of The 5%ers. We analyze their forex environment and execution rules."
+  },
+  "firm_logo": "/images/logos/the-5-ers.svg",
+  "created_at": "2026-02-26T08:30:22.279Z"
+}

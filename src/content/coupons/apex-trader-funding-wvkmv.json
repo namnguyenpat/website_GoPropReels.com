@@ -1,0 +1,178 @@
+{
+  "id": "apex-trader-funding-wvkmv",
+  "firm_name": "Apex Trader Funding",
+  "broker": "Apex Trader Funding",
+  "title": "Apex Trader Funding 80% OFF",
+  "description": "Apex Trader Funding, based in the United States, was established in January 2021. It is a futures firm offering 1 Step programs with account sizes from $25,000 to $300,000. Supported platforms include Tradovate, Rithmic, TradingView, Quantower, and NinjaTrader. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "futures",
+  "discount_highlight": "80% OFF",
+  "coupon_code": "Auto-applied",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#64D2FF",
+  "features": [
+    "Apex Trader Funding - Rithmic - 300K Full - 1-Step - 300K",
+    "Apex Trader Funding - Rithmic - 250K Full - 1-Step - 250K",
+    "Apex Trader Funding - Rithmic - 150K Full - 1-Step - 150K",
+    "Apex Trader Funding - Tradovate - 150K Full - 1-Step - 150K",
+    "Apex Trader Funding - Rithmic - 100K Static - 1-Step - 100K"
+  ],
+  "affiliate_link": "https://apextraderfunding.com",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {},
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Apex Trader Funding - Rithmic - 300K Full - 1-Step - 300K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "300000",
+      "price": "79.40",
+      "original_price": "397.00"
+    },
+    {
+      "name": "Apex Trader Funding - Rithmic - 250K Full - 1-Step - 250K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "250000",
+      "price": "79.40",
+      "original_price": "397.00"
+    },
+    {
+      "name": "Apex Trader Funding - Rithmic - 150K Full - 1-Step - 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "79.40",
+      "original_price": "397.00"
+    },
+    {
+      "name": "Apex Trader Funding - Tradovate - 150K Full - 1-Step - 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "79.40",
+      "original_price": "397.00"
+    },
+    {
+      "name": "Apex Trader Funding - Rithmic - 100K Static - 1-Step - 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "59.40",
+      "original_price": "297.00"
+    },
+    {
+      "name": "Apex Trader Funding - Rithmic - 100K Full - 1-Step - 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "59.40",
+      "original_price": "297.00"
+    },
+    {
+      "name": "Apex Trader Funding - Rithmic - 50K Full - 1-Step - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "39.40",
+      "original_price": "197.00"
+    },
+    {
+      "name": "Apex Trader Funding - Tradovate - 50K Full - 1-Step - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "39.40",
+      "original_price": "197.00"
+    },
+    {
+      "name": "Apex Trader Funding - Tradovate - 25K Full - 1-Step - 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "37.40",
+      "original_price": "187.00"
+    },
+    {
+      "name": "Apex Trader Funding - Rithmic - 25K Full - 1-Step - 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "37.40",
+      "original_price": "187.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Hedging: Holding long and short positions simultaneously on same/correlated instrument prohibited.",
+    "Using full threshold as stop-loss mechanism.",
+    "Contract Scaling: Must trade half of available contracts until meeting trailing threshold stop.",
+    "5:1 risk-to-reward ratio applies."
+  ],
+  "platforms": [
+    "ATAS Orderflow Trading",
+    "Bookmap",
+    "EdgeProX",
+    "Finamark",
+    "Jigsaw Daytradr",
+    "MotiveWave",
+    "NinjaTrader",
+    "Quantower",
+    "Rithmic",
+    "R Trader Pro",
+    "Sierra Chart",
+    "TradingView",
+    "Tradovate",
+    "VolFix",
+    "WealthCharts"
+  ],
+  "instruments": [
+    "Futures"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card"
+  ],
+  "payout_methods": [
+    "ACH",
+    "Plane"
+  ],
+  "founded": "2021-01",
+  "payout_policy": {
+    "minimum_payout": "$500 for any account size.",
+    "processing_time": "Not specified.",
+    "details": "100% of first $25K, then 90%. Requires 8 trading days (5 must have $50+ profit). Safety net applies for first 3 payouts (drawdown limit + $100).",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed across PA accounts under personal or business name.",
+    "expert_advisor": "Not allowed (for manual skill-based trading only).",
+    "inactivity_rule": "Not specified in scraped data.",
+    "news_trading": "Allowed (One-Direction rule: either long or short during news, not both).",
+    "weekend_holding": "Not allowed (must close by 4:10 PM EST).",
+    "forbidden_strategies": [
+      "Hedging: Holding long and short positions simultaneously on same/correlated instrument prohibited.",
+      "Using full threshold as stop-loss mechanism.",
+      "Contract Scaling: Must trade half of available contracts until meeting trailing threshold stop.",
+      "5:1 risk-to-reward ratio applies."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2021-01-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/apex-trader-funding.svg"
+  },
+  "seo_content": "<h3>Apex Trader Funding Technical Infrastructure</h3><p>Apex Trader Funding, based in the United States, was established in January 2021. It is a futures firm offering 1 Step programs with account sizes from $25,000 to $300,000. Supported platforms include Tradovate, Rithmic, TradingView, Quantower, and NinjaTrader. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Apex Trader Funding Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Apex Trader Funding. We analyze their futures environment and execution rules."
+  },
+  "firm_logo": "/images/logos/apex-trader-funding.svg",
+  "created_at": "2026-02-26T08:30:22.198Z"
+}

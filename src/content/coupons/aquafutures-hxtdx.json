@@ -1,0 +1,167 @@
+{
+  "id": "aquafutures-hxtdx",
+  "firm_name": "AquaFutures",
+  "broker": "AquaFutures",
+  "title": "AquaFutures Check website",
+  "description": "AquaFutures, based in the United Arab Emirates and established in November 2024, is a futures prop trading firm offering a 1 Step program. The firm is backed by the same owners as AquaFunded and supports the Volumetrica Trading platform. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "futures",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#FF2D55",
+  "features": [
+    "AquaFutures - Instant Funding - Instant 100K",
+    "AquaFutures - Instant Funding - Instant 50K",
+    "AquaFutures - Instant Pro - Instant 50K",
+    "AquaFutures - Instant Pro - Instant 25K",
+    "AquaFutures - Standard Evaluation - 1-Step 150K"
+  ],
+  "affiliate_link": "https://www.aquafunded.com/?afmc=3k9",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {},
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "AquaFutures - Instant Funding - Instant 100K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "306.00",
+      "original_price": "765.00"
+    },
+    {
+      "name": "AquaFutures - Instant Funding - Instant 50K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "246.00",
+      "original_price": "615.00"
+    },
+    {
+      "name": "AquaFutures - Instant Pro - Instant 50K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "228.80",
+      "original_price": "572.00"
+    },
+    {
+      "name": "AquaFutures - Instant Pro - Instant 25K",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "148.80",
+      "original_price": "372.00"
+    },
+    {
+      "name": "AquaFutures - Standard Evaluation - 1-Step 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "196.00",
+      "original_price": "490.00"
+    },
+    {
+      "name": "AquaFutures - Beginner Evaluation - 1-Step 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "114.00",
+      "original_price": "285.00"
+    },
+    {
+      "name": "AquaFutures - Standard Evaluation - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "84.00",
+      "original_price": "210.00"
+    },
+    {
+      "name": "AquaFutures - Beginner Evaluation - 1-Step 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "78.00",
+      "original_price": "195.00"
+    },
+    {
+      "name": "AquaFutures - Beginner Evaluation - 1-Step 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "40.00",
+      "original_price": "100.00"
+    },
+    {
+      "name": "AquaFutures - Beginner Evaluation - 1-Step 25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "26.00",
+      "original_price": "65.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Automated Scalping: > 200 trades per day prohibited.",
+    "Micro Scalping: Hold trades for very brief moments captured tiny price movements prohibited.",
+    "Market Manipulation.",
+    "2% Price Limit Rule (CME).",
+    "Biggest single trade loss cannot exceed biggest single trade win during funded stage (withdrawal cycle)."
+  ],
+  "platforms": [
+    "Volumetrica Trading"
+  ],
+  "instruments": [
+    "Futures"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Crypto"
+  ],
+  "payout_methods": [
+    "Crypto",
+    "Riseworks"
+  ],
+  "founded": "2024-11",
+  "payout_policy": {
+    "minimum_payout": "$250 ($500 for Standard).",
+    "processing_time": "On demand for Instant.",
+    "details": "100% split up to $15k lifetime total per user, then 90%. Beginner: every 7 days, 5 winning days. Standard: every 14 days, buffer zone applies ($26.3k-$155.1k). Withdrawals below buffer zone reset max loss to balance + $100.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed if accounts belong to you, but not across multiple evaluations.",
+    "expert_advisor": "Fully automated systems prohibited. Manual involvement required.",
+    "inactivity_rule": "Trade at least once every 7 days.",
+    "news_trading": "Not specified, but 2% Price Limit Rule applies (CME).",
+    "weekend_holding": "Not specified.",
+    "forbidden_strategies": [
+      "Automated Scalping: > 200 trades per day prohibited.",
+      "Micro Scalping: Hold trades for very brief moments captured tiny price movements prohibited.",
+      "Market Manipulation.",
+      "2% Price Limit Rule (CME).",
+      "Biggest single trade loss cannot exceed biggest single trade win during funded stage (withdrawal cycle)."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2024-11-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/aquafutures.svg"
+  },
+  "seo_content": "<h3>AquaFutures Technical Infrastructure</h3><p>AquaFutures, based in the United Arab Emirates and established in November 2024, is a futures prop trading firm offering a 1 Step program. The firm is backed by the same owners as AquaFunded and supports the Volumetrica Trading platform. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "AquaFutures Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of AquaFutures. We analyze their futures environment and execution rules."
+  },
+  "firm_logo": "/images/logos/aquafutures.svg",
+  "created_at": "2026-02-26T08:30:22.206Z"
+}

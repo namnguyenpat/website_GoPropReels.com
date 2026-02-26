@@ -1,0 +1,174 @@
+{
+  "id": "futureselite-yo7hq",
+  "firm_name": "FuturesElite",
+  "broker": "FuturesElite",
+  "title": "FuturesElite Check website",
+  "description": "FuturesElite, based in Italy and established in November 2024, is a futures prop trading firm offering Instant and 1 Step program types. Supported platforms include Quantower, Volumetrica Trading, ATAS Orderflow Trading, Deepmap, and Deepcharts. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "futures",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#5E5CE6",
+  "features": [
+    "FuturesElite - Instant - 150K Instant",
+    "FuturesElite - Instant Custom - 100K Instant",
+    "FuturesElite - Instant - 50K Instant",
+    "FuturesElite - 1-Step Custom - 150K",
+    "FuturesElite - Elite - 1-Step - 150K"
+  ],
+  "affiliate_link": "https://futureselite.com/?aff=AFF5294216",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {},
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "FuturesElite - Instant - 150K Instant",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "449.50",
+      "original_price": "899.00"
+    },
+    {
+      "name": "FuturesElite - Instant Custom - 100K Instant",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "349.50",
+      "original_price": "699.00"
+    },
+    {
+      "name": "FuturesElite - Instant - 50K Instant",
+      "model": "instant",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "249.50",
+      "original_price": "499.00"
+    },
+    {
+      "name": "FuturesElite - 1-Step Custom - 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "164.50",
+      "original_price": "329.00"
+    },
+    {
+      "name": "FuturesElite - Elite - 1-Step - 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "164.50",
+      "original_price": "329.00"
+    },
+    {
+      "name": "FuturesElite - Elite - 1-Step - 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "114.50",
+      "original_price": "229.00"
+    },
+    {
+      "name": "FuturesElite - Elite - 1-Step - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "64.50",
+      "original_price": "129.00"
+    },
+    {
+      "name": "FuturesElite - Prime - 1-Step - 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "54.50",
+      "original_price": "109.00"
+    },
+    {
+      "name": "FuturesElite - Prime - 1-Step - 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "39.50",
+      "original_price": "79.00"
+    },
+    {
+      "name": "FuturesElite - Prime - 1-Step - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "24.50",
+      "original_price": "49.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "Straddles/strangles to exploit news volatility prohibited.",
+    "Account Rolling: Aggressive purchasing of multiple challenges prohibited.",
+    "Hedging/Reverse Trading across different users/accounts prohibited.",
+    "Placing multiple limit orders at same price for manipulation prohibited.",
+    "2% Price Limit Rule (CME Group).",
+    "DCA allowed but not as primary strategy."
+  ],
+  "platforms": [
+    "ATAS Orderflow Trading",
+    "Deepcharts",
+    "Deepmap",
+    "Quantower",
+    "Volumetrica Trading"
+  ],
+  "instruments": [
+    "Futures"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Crypto",
+    "Revolut Pay"
+  ],
+  "payout_methods": [
+    "Crypto",
+    "Riseworks"
+  ],
+  "founded": "2024-11",
+  "payout_policy": {
+    "minimum_payout": "No minimum on RISE, $500 on Crypto.",
+    "processing_time": "Not specified.",
+    "details": "95% profit split (Instant/Prime/Elite). 100% split on first $10k (Live). Instant requires 7 winning days with min PnL milestones ($100-$350). Prime/Elite require 5 winning days with profit goals ($2k-$4.5k) and payout caps ($1.3k-$5k).",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Allowed between own accounts; prohibited from others.",
+    "expert_advisor": "Fully automated AI/bots not permitted.",
+    "inactivity_rule": "Standard: 29 days. Instant: 7 days.",
+    "news_trading": "Funded/Instant: positions must be closed 2 mins before/after Tier 1 news (total 6 min restriction). Customizable add-on available.",
+    "weekend_holding": "Not allowed. All trades must be closed by 4:59 PM EST daily.",
+    "forbidden_strategies": [
+      "Straddles/strangles to exploit news volatility prohibited.",
+      "Account Rolling: Aggressive purchasing of multiple challenges prohibited.",
+      "Hedging/Reverse Trading across different users/accounts prohibited.",
+      "Placing multiple limit orders at same price for manipulation prohibited.",
+      "2% Price Limit Rule (CME Group).",
+      "DCA allowed but not as primary strategy."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2024-11-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/futureselite.svg"
+  },
+  "seo_content": "<h3>FuturesElite Technical Infrastructure</h3><p>FuturesElite, based in Italy and established in November 2024, is a futures prop trading firm offering Instant and 1 Step program types. Supported platforms include Quantower, Volumetrica Trading, ATAS Orderflow Trading, Deepmap, and Deepcharts. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "FuturesElite Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of FuturesElite. We analyze their futures environment and execution rules."
+  },
+  "firm_logo": "/images/logos/futureselite.svg",
+  "created_at": "2026-02-26T08:30:22.258Z"
+}

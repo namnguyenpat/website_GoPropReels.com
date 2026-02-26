@@ -1,0 +1,158 @@
+{
+  "id": "alpha-futures-n0uky",
+  "firm_name": "Alpha Futures",
+  "broker": "Alpha Futures",
+  "title": "Alpha Futures Check website",
+  "description": "Alpha Futures, established in June 2024, is a futures firm offering 1 Step program types. The firm supports the Tradovate, TradingView, NinjaTrader, Quantower trading platforms. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "futures",
+  "discount_highlight": "Check website",
+  "coupon_code": "No Code",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#64D2FF",
+  "features": [
+    "Alpha Futures - Advanced Plan - 1-Step - 150K",
+    "Alpha Futures - Advanced Plan - 1-Step - 100K",
+    "Alpha Futures - Standard - 1-Step - 150K",
+    "Alpha Futures - Zero - 1-Step - 100K",
+    "Alpha Futures - Standard - 1-Step - 100K"
+  ],
+  "affiliate_link": "https://app.alphacapitalgroup.uk/signup/FGJKZ",
+  "trust_score": "4.5",
+  "reviews_count": "0",
+  "leverage_details": {},
+  "commissions": {},
+  "challenges": [
+    {
+      "name": "Alpha Futures - Advanced Plan - 1-Step - 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "356.15",
+      "original_price": "419.00"
+    },
+    {
+      "name": "Alpha Futures - Advanced Plan - 1-Step - 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "237.15",
+      "original_price": "279.00"
+    },
+    {
+      "name": "Alpha Futures - Standard - 1-Step - 150K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "150000",
+      "price": "203.15",
+      "original_price": "239.00"
+    },
+    {
+      "name": "Alpha Futures - Zero - 1-Step - 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "169.15",
+      "original_price": "199.00"
+    },
+    {
+      "name": "Alpha Futures - Standard - 1-Step - 100K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "135.15",
+      "original_price": "159.00"
+    },
+    {
+      "name": "Alpha Futures - Advanced Plan - 1-Step - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "118.15",
+      "original_price": "139.00"
+    },
+    {
+      "name": "Alpha Futures - Zero - 1-Step - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "84.15",
+      "original_price": "99.00"
+    },
+    {
+      "name": "Alpha Futures - Standard - 1-Step - 50K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "67.15",
+      "original_price": "79.00"
+    }
+  ],
+  "consistency_rules": {},
+  "forbidden_strategies": [
+    "All or nothing practices prohibited.",
+    "Trades < 2 minutes to make profits without plan prohibited.",
+    "Gambling/account rolling prohibited.",
+    "Tick/Micro Scalping (trades < 10 ticks and < 2 mins) prohibited.",
+    "Price Limit Trading: 2% of CME price limit prohibited.",
+    "Drawdown Adjustment Rule: Withdrawing all profits after trailing balance adjusted = closure."
+  ],
+  "platforms": [
+    "NinjaTrader",
+    "TradingView",
+    "Tradovate"
+  ],
+  "instruments": [
+    "Futures"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Crypto"
+  ],
+  "payout_methods": [
+    "ACH",
+    "Bank Wire Transfer",
+    "Riseworks",
+    "Swift",
+    "Wise"
+  ],
+  "founded": "2024-07",
+  "payout_policy": {
+    "minimum_payout": "$200 (Standard/Zero), $1000 (Advanced).",
+    "processing_time": "48 business hours or less.",
+    "details": "Standard: Every 14 days. Tiered split: 70% (1-2), 80% (3-4), 90% (5+). Max $15K. Zero: Weekly after 5 winning days ($200+ each). 90% split. Advanced: Weekly. 90% split. 50% until 30 days met.",
+    "payout_cycles": []
+  },
+  "firm_rules": {
+    "copy_trading": "Not specified.",
+    "expert_advisor": "AI, bots, automated trading prohibited across all account types.",
+    "inactivity_rule": "10 trading days.",
+    "news_trading": "Not specified.",
+    "weekend_holding": "Not specified.",
+    "forbidden_strategies": [
+      "All or nothing practices prohibited.",
+      "Trades < 2 minutes to make profits without plan prohibited.",
+      "Gambling/account rolling prohibited.",
+      "Tick/Micro Scalping (trades < 10 ticks and < 2 mins) prohibited.",
+      "Price Limit Trading: 2% of CME price limit prohibited.",
+      "Drawdown Adjustment Rule: Withdrawing all profits after trailing balance adjusted = closure."
+    ]
+  },
+  "timeline": [
+    {
+      "date": "2024-07-01",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/alpha-futures.svg"
+  },
+  "seo_content": "<h3>Alpha Futures Technical Infrastructure</h3><p>Alpha Futures, established in June 2024, is a futures firm offering 1 Step program types. The firm supports the Tradovate, TradingView, NinjaTrader, Quantower trading platforms. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "youtube_metadata": {
+    "title": "Alpha Futures Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Alpha Futures. We analyze their futures environment and execution rules."
+  },
+  "firm_logo": "/images/logos/alpha-futures.svg",
+  "created_at": "2026-02-26T08:30:22.196Z"
+}
