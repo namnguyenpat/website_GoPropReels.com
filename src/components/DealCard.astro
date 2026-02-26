@@ -30,7 +30,7 @@ const firmInitial = deal.firm_name.charAt(0);
 	class="group block rounded-2xl border border-white/10 bg-white/5 overflow-hidden transition hover:border-white/20 hover:bg-white/10"
 	aria-label={`View ${deal.firm_name} ${deal.discount_highlight} deal`}
 >
-	<div class="relative aspect-video overflow-hidden">
+	<div class="relative aspect-video overflow-hidden bg-[#0a0a0a]">
 		{deal.video_source?.type === 'youtube' && deal.video_source.id ? (
 			<iframe
 				class="h-full w-full pointer-events-none"
@@ -44,7 +44,7 @@ const firmInitial = deal.firm_name.charAt(0);
 			<img
 				src={deal.firm_logo || `/images/deals/${deal.id}.png`}
 				alt={imageAlt}
-				class="h-full w-full object-contain p-4 transition-transform group-hover:scale-110"
+				class="h-full w-full object-contain p-8 transition-transform group-hover:scale-110"
 				loading="lazy"
 				data-deal-id={deal.id}
 				onerror={`window.handleLogoError(this, "${deal.firm_name}");`}

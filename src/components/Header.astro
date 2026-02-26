@@ -39,10 +39,12 @@ import SearchModal from './SearchModal.astro';
 
                 <a
                     href="/coupons"
-                    class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+                    class="relative flex items-center gap-2 rounded-full bg-brand-accent px-5 py-2 text-sm font-black text-white shadow-[0_0_20px_rgba(255,45,85,0.4)] transition hover:scale-105 hover:shadow-[0_0_30px_rgba(255,45,85,0.6)] active:scale-95"
                 >
-                    <i class="fa-solid fa-tag text-brand-accent"></i>
+                    <i class="fa-solid fa-tag"></i>
                     <span>Coupons</span>
+                    <span class="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full bg-green-400 animate-ping"></span>
+                    <span class="absolute -top-1 -right-1 h-2.5 w-2.5 rounded-full bg-green-400"></span>
                 </a>
                 
                 <a
@@ -90,11 +92,11 @@ import SearchModal from './SearchModal.astro';
     {/* Mobile Menu Overlay (Slides down from below header) */}
     <div id="mobile-menu" class="fixed top-16 left-0 right-0 bottom-0 z-[1001] bg-[#020617] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col p-6 gap-4 border-t border-white/10 overflow-y-auto">
         
-        <a href="/coupons" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
-            <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+        <a href="/coupons" class="flex items-center gap-4 text-xl font-black text-white p-4 rounded-2xl bg-brand-accent/20 border-2 border-brand-accent/40 shadow-[0_0_20px_rgba(255,45,85,0.2)]">
+            <div class="w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center text-white">
                 <i class="fa-solid fa-tag"></i>
             </div>
-            Active Coupons
+            🔥 Active Coupons
         </a>
         <a href="/forex" class="flex items-center gap-4 text-xl font-bold text-white p-4 rounded-2xl bg-white/5 border border-white/10">
             <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
