@@ -130,5 +130,6 @@
     "description": "Complete technical breakdown of The Trading Pit Futures. We analyze their futures environment and execution rules."
   },
   "firm_logo": "/images/logos/the-trading-pit-futures.svg",
-  "created_at": "2026-02-27T05:47:53.280Z"
+  "hot": false,
+  "created_at": "2026-02-27T08:03:01.250Z"
 }

@@ -238,5 +238,6 @@
     "description": "Complete technical breakdown of Finotive Funding. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/finotive-funding.svg",
-  "created_at": "2026-02-27T05:47:53.239Z"
+  "hot": false,
+  "created_at": "2026-02-27T08:03:01.213Z"
 }

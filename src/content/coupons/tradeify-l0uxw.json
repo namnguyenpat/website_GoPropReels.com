@@ -171,5 +171,6 @@
     "description": "Complete technical breakdown of Tradeify. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/tradeify.svg",
-  "created_at": "2026-02-27T05:47:53.289Z"
+  "hot": false,
+  "created_at": "2026-02-27T08:03:01.261Z"
 }

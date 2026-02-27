@@ -214,5 +214,6 @@
     "description": "Complete technical breakdown of QT Funded. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/qt-funded.svg",
-  "created_at": "2026-02-27T05:47:53.276Z"
+  "hot": false,
+  "created_at": "2026-02-27T08:03:01.247Z"
 }

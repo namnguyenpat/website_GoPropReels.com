@@ -220,5 +220,6 @@
     "description": "Complete technical breakdown of Fintokei. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/fintokei.svg",
-  "created_at": "2026-02-27T05:47:53.240Z"
+  "hot": false,
+  "created_at": "2026-02-27T08:03:01.215Z"
 }

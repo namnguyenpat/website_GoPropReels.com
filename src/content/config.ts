@@ -58,6 +58,7 @@ const coupons = defineCollection({
             id: z.string().optional()
         }).optional(),
         firm_logo: z.string(),
+        hot: z.boolean().optional(),
         created_at: z.string()
     }),
 });

@@ -185,5 +185,6 @@
     "description": "Complete technical breakdown of BrightFunded. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/brightfunded.svg",
-  "created_at": "2026-02-27T05:47:53.227Z"
+  "hot": false,
+  "created_at": "2026-02-27T08:03:01.203Z"
 }

@@ -193,5 +193,6 @@
     "description": "Complete technical breakdown of Nordic Funder. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/nordic-funder.svg",
-  "created_at": "2026-02-27T05:47:53.273Z"
+  "hot": false,
+  "created_at": "2026-02-27T08:03:01.244Z"
 }

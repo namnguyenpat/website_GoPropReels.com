@@ -162,5 +162,6 @@
     "description": "Complete technical breakdown of Blue Guardian Futures. We analyze their futures environment and execution rules."
   },
   "firm_logo": "/images/logos/blue-guardian-futures.svg",
-  "created_at": "2026-02-27T05:47:53.220Z"
+  "hot": false,
+  "created_at": "2026-02-27T08:03:01.196Z"
 }

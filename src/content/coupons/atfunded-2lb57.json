@@ -224,5 +224,6 @@
     "description": "Complete technical breakdown of ATFunded. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/atfunded.svg",
-  "created_at": "2026-02-27T05:47:53.216Z"
+  "hot": false,
+  "created_at": "2026-02-27T08:03:01.192Z"
 }

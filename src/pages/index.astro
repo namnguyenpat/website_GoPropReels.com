@@ -19,6 +19,10 @@ const activeDeals = dealsData.filter(deal => {
     const expDate = new Date(deal.expiration_date);
     return expDate >= today;
 }).sort((a, b) => {
+    // Hot deals first
+    if (a.hot && !b.hot) return -1;
+    if (!a.hot && b.hot) return 1;
+    // Then by created_at descending
     const dateA = new Date(a.created_at || 0);
     const dateB = new Date(b.created_at || 0);
     return dateB.getTime() - dateA.getTime(); 

@@ -210,5 +210,6 @@
     "description": "Complete technical breakdown of Funded Trading Plus. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/funded-trading-plus.svg",
-  "created_at": "2026-02-27T05:47:53.248Z"
+  "hot": false,
+  "created_at": "2026-02-27T08:03:01.222Z"
 }

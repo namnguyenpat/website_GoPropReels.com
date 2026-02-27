@@ -134,5 +134,6 @@
     "description": "Complete technical breakdown of Take Profit Trader. We analyze their forex environment and execution rules."
   },
   "firm_logo": "/images/logos/take-profit-trader.svg",
-  "created_at": "2026-02-27T05:47:53.277Z"
+  "hot": false,
+  "created_at": "2026-02-27T08:03:01.248Z"
 }
