@@ -26,8 +26,9 @@ const { deal } = Astro.props;
 
 // Fetch ALL deals for this firm in this category
 const allCoupons = await getCollection('coupons');
+const now = Date.now();
 const firmDeals = allCoupons
-    .filter(c => c.data.id === deal.id && c.data.category.toLowerCase() === 'crypto')
+    .filter(c => c.data.firm_name === deal.firm_name && c.data.category.toLowerCase() === 'crypto' && new Date(c.data.expiry_date || '2099-12-31').getTime() > now)
     .map(c => c.data);
 
 // Try to fetch rich content from Markdown
