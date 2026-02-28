@@ -2,7 +2,7 @@
 title: "The Rise of Futures Prop Firms: Why Traders are Switching to Tradeify in 2026"
 description: "Analyzing the major shift in the prop trading industry as Futures firms like Tradeify gain dominance through transparency and high leverage."
 pubDate: 2026-02-25
-category: "News"
+category: "Coupon"
 tags: ["Futures", "Tradeify", "News"]
 tier: "Tier 1: High Impact"
 ---

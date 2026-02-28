@@ -2,7 +2,7 @@
 title: "AquaFunded: The 50% Welcome Premiere"
 description: "Why the WELCOME code is the only way to start your AquaFunded journey. 50% OFF + massive cash bonuses inside."
 pubDate: 2026-02-21
-category: "Review"
+category: "Coupon"
 tags: ["AquaFunded", "Welcome Bonus", "Review"]
 tier: "Tier 1: Newcomers Choice"
 ---

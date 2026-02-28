@@ -2,7 +2,7 @@
 title: "Funded Elite: The Legendary Italian Script"
 description: "Diving into Funded Elite's 50% discount blockbuster and their unique Free Retry safety program."
 pubDate: 2026-02-20
-category: "Review"
+category: "Coupon"
 tags: ["Funded Elite", "Italy", "Review"]
 tier: "Tier 1: High Trust"
 ---

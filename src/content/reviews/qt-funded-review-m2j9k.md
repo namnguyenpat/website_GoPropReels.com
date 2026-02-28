@@ -2,7 +2,7 @@
 title: "QT Funded: The QuantTekel Premiere"
 description: "Diving into the BOGO blockbuster from QT Funded. How to secure a 45% discount and a free funded account."
 pubDate: 2026-02-21
-category: "Review"
+category: "Coupon"
 tags: ["QT Funded", "QuantTekel", "Review"]
 tier: "Tier 1: Growth Hub"
 ---

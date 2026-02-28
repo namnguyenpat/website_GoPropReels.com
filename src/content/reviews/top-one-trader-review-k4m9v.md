@@ -2,7 +2,7 @@
 title: "Top One Trader: The 77% Blockbuster Valentine Sale"
 description: "Diving into the biggest Top One Trader deal yet. How to secure up to 77.2% in seasonal savings today."
 pubDate: 2026-02-21
-category: "Review"
+category: "Coupon"
 tags: ["Top One Trader", "Valentine Sale", "Review"]
 tier: "Tier 1: Massive Discount"
 ---

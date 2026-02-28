@@ -2,7 +2,7 @@
 title: "Hantec Trader: The Entry-Level Masterclass"
 description: "Why the Hantec SAVE20 deal is the perfect script for rising stars. Spotlight on small-cap funding with institutional security."
 pubDate: 2026-02-21
-category: "Review"
+category: "Coupon"
 tags: ["Hantec Trader", "Beginner Trading", "Review"]
 tier: "Tier 2: Tactical Entry"
 ---

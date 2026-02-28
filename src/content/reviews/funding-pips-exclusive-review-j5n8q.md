@@ -2,7 +2,7 @@
 title: "Funding Pips: The Elite Intelligence Masterpiece"
 description: "A deep dive into Funding Pips' institutional stability and our exclusive verified 10% discount for serious talent."
 pubDate: 2026-02-21
-category: "Review"
+category: "Coupon"
 tags: ["Funding Pips", "Intelligence", "Review"]
 tier: "Tier 1: The Foundation"
 ---

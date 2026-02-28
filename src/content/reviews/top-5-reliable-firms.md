@@ -2,7 +2,7 @@
 title: "Top 5 Most Reliable Prop Firms in Early 2026"
 description: "Rankings based on payout speed, challenge fees, and institutional-grade customer support."
 pubDate: 2026-02-21
-category: "News"
+category: "Coupon"
 tags: ["Rankings", "Top Firms", "2026"]
 tier: "Tier 1: Market Overview"
 ---

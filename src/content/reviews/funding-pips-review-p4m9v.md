@@ -2,7 +2,7 @@
 title: "FundingPips Unveiled: The Fastest Payouts in the Game"
 description: "Why FundingPips is the first choice for agile traders. Discover their new 20% discount and professional scaling plan."
 pubDate: 2026-02-20
-category: "Review"
+category: "Coupon"
 tags: ["FundingPips", "Forex", "Review"]
 tier: "Tier 1: High Velocity"
 ---

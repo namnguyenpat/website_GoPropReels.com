@@ -2,7 +2,7 @@
 title: "Funded Trading Plus: The Launch Premiere"
 description: "Reviewing the transparency and elite stability of Funded Trading Plus. Secure your 10% discount on the industry's most trusted set."
 pubDate: 2026-02-21
-category: "Review"
+category: "Coupon"
 tags: ["Funded Trading Plus", "UK", "Review"]
 tier: "Tier 1: Masterpiece"
 ---

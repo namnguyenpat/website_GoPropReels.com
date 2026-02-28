@@ -2,7 +2,7 @@
 title: "Earn2Trade: A Decade of Futures Excellence"
 description: "Spotlight on Earn2Trade's 10-year anniversary and their record-breaking 60% discount on futures funding."
 pubDate: 2026-02-14
-category: "Review"
+category: "Coupon"
 tags: ["Earn2Trade", "Futures", "Review"]
 tier: "Tier 1: The Legend"
 ---

@@ -2,7 +2,7 @@
 title: "Blueberry Funded: The Broker-Backed Revolution"
 description: "Experience the security of ASIC-backed prop trading. Why Blueberry Funded's 15% discount is the safe play for large capital."
 pubDate: 2026-02-20
-category: "Review"
+category: "Coupon"
 tags: ["Blueberry Funded", "Forex", "Review"]
 tier: "Tier 1: High Security"
 ---

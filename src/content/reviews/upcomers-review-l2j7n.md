@@ -2,7 +2,7 @@
 title: "Upcomers: The 99% Profit Split Revolution"
 description: "Discover the new high-allocation hero of prop trading. Save 75% on Upcomers and join the 99% profit elite."
 pubDate: 2026-02-21
-category: "Review"
+category: "Coupon"
 tags: ["Upcomers", "High Allocation", "Review"]
 tier: "Tier 1: High Payouts"
 ---

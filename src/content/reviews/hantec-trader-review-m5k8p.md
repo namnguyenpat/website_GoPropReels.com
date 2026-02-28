@@ -2,7 +2,7 @@
 title: "Hantec Trader: Instant Live Capital for the Big Screen"
 description: "Why Hantec Trader is the fastest way to get funded. Save 20% on the industry's most secure instant funding model."
 pubDate: 2026-02-20
-category: "Review"
+category: "Coupon"
 tags: ["Hantec Trader", "Instant Funding", "Review"]
 tier: "Tier 1: Broker Powered"
 ---

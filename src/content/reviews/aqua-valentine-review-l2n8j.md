@@ -2,7 +2,7 @@
 title: "AquaFunded: The Valentine Love Letter to Traders"
 description: "Discover the 45% discount and 150% refund blockbuster deal from AquaFunded this February."
 pubDate: 2026-02-21
-category: "Review"
+category: "Coupon"
 tags: ["AquaFunded", "Valentine", "Review"]
 tier: "Tier 1: High Reward"
 ---

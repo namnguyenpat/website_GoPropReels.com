@@ -2,7 +2,7 @@
 title: "2026 Payout Policy Updates: What Every Trader Must Know"
 description: "Major prop firms are updating their withdrawal policies. Stay updated to ensure your trading income remains uninterrupted."
 pubDate: 2026-02-23
-category: "News"
+category: "Coupon"
 tags: ["Policy", "Payouts", "News"]
 tier: "Tier 1: Crucial Update"
 ---

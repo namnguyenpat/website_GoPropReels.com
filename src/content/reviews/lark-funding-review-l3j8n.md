@@ -2,7 +2,7 @@
 title: "Lark Funding: The February Bonus Blockbuster"
 description: "Exploring the transparency of Canada's Lark Funding and their unique free $1,000 account February gift."
 pubDate: 2026-02-21
-category: "Review"
+category: "Coupon"
 tags: ["Lark Funding", "Canada", "Review"]
 tier: "Tier 1: Community Choice"
 ---
