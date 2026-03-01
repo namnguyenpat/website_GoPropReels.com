@@ -1,5 +1,5 @@
 ---
-id: "ftmo-ramadan25-8p7bz"ftmo-ramadan-epic-premiere-z1y5x"
+id: "ftmo-ramadan25-8p7bz"
 firm_name: "FTMO"
 coupon_code: "RAMADAN25"
 discount_highlight: "25%"
