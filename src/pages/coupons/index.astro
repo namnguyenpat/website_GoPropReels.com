@@ -13,7 +13,7 @@ const dealsData = allCoupons.map(c => c.data);
 const today = new Date();
 const activeDeals = dealsData.filter(deal => {
     if (!deal.expiration_date) return true;
-    const expDate = new Date(deal.expiration_date);
+    const expDate = new Date(deal.expiration_date + 'T23:59:59');
     return expDate >= today;
 }).sort((a, b) => {
     const dateA = new Date(a.created_at || 0);
