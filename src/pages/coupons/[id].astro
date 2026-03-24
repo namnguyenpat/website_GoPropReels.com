@@ -449,39 +449,7 @@ const canonical = `/coupons/${deal.id}`;
 			</div>
 		</section>
 
-        <section class="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <div class="flex items-center justify-between mb-6">
-                <h2 class="text-2xl font-bold">Popular Comparisons</h2>
-                <a href="/compare" class="text-sm text-brand-accent hover:underline">View All</a>
-            </div>
-            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {deals
-                    .filter(d => d.firm_name !== deal.firm_name) // Exclude current firm
-                    .sort(() => 0.5 - Math.random()) // Shuffle
-                    .slice(0, 3) // Take top 3
-                    .map(otherDeal => {
-                        // Ensure consistent slug order (alphabetical or specific logic) to match [...slug].astro
-                        // In [...slug].astro: firmA is from outer loop, firmB from inner loop (i < j)
-                        // So firmA index < firmB index in the original deals array? 
-                        // Actually [...slug].astro uses: firms = [...new Set(deals.map(d => d.firm_name))]
-                        // And loops i=0..len, j=i+1..len. So firmA is always earlier in the unique list than firmB.
-                        
-                        const allFirms = [...new Set(deals.map(d => d.firm_name))];
-                        const firmA = allFirms.indexOf(deal.firm_name) < allFirms.indexOf(otherDeal.firm_name) ? deal.firm_name : otherDeal.firm_name;
-                        const firmB = allFirms.indexOf(deal.firm_name) < allFirms.indexOf(otherDeal.firm_name) ? otherDeal.firm_name : deal.firm_name;
-                        
-                        const slug = `${firmA.toLowerCase().replace(/\s+/g, '-')}-vs-${firmB.toLowerCase().replace(/\s+/g, '-')}`;
-                        
-                        return (
-                            <a href={`/compare/${slug}`} class="flex items-center justify-between p-4 rounded-xl border border-white/10 bg-black/40 hover:bg-white/10 hover:border-brand-accent/50 transition-all group">
-                                <span class="font-semibold text-sm">{firmA} <span class="text-white/40 mx-1">vs</span> {firmB}</span>
-                                <i class="fa-solid fa-arrow-right text-xs text-white/20 group-hover:text-brand-accent transition-colors"></i>
-                            </a>
-                        );
-                    })
-                }
-            </div>
-        </section>
+
 
 		{similarDeals.length > 0 && (
 			<section class="rounded-3xl border border-white/10 bg-white/5 p-6">
