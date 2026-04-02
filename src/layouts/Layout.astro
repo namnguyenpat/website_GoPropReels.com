@@ -11,8 +11,8 @@ interface Props {
 const { title = 'GoPropReels - Prop Firm Discount Codes', description = 'Find verified prop firm coupon codes. Save on FTMO, The5ers & 50+ funded trading firms.', canonical, ogImage } =
 	Astro.props as Props;
 const siteUrl = 'https://gopropreels.com';
-const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
-const fullOgImage = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/og-image.jpg`;
+const fullCanonical = Astro.url.href || (canonical ? `${siteUrl}${canonical}` : siteUrl);
+const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`) : `${siteUrl}/og-default.png`;
 ---
 
 <!doctype html>
@@ -44,7 +44,7 @@ const fullOgImage = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/og-image.jpg`
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={fullOgImage} />
 		<meta property="og:site_name" content="GoPropReels" />
-		
+
 		{/* Twitter */}
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:url" content={fullCanonical} />

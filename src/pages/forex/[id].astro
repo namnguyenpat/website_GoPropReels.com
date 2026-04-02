@@ -10,13 +10,20 @@ export async function getStaticPaths() {
 	const coupons = await getCollection('coupons');
     // Filter for forex firms
     const forexCoupons = coupons.filter(c => c.data.category.toLowerCase() === 'forex');
-    // Get unique firm IDs
-    const uniqueFirms = [...new Set(forexCoupons.map(c => c.data.id))];
-    
-	return uniqueFirms.map((id) => {
-        const deal = forexCoupons.find(c => c.data.id === id).data;
+    // Get unique firm IDs (by canonical_slug, fallback to id)
+    const seen = new Set();
+    const uniqueFirms = forexCoupons.filter(c => {
+        const key = c.data.canonical_slug || c.data.id;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+    });
+
+	return uniqueFirms.map((c) => {
+        const deal = c.data;
+        const slug = deal.canonical_slug || deal.id;
         return {
-            params: { id: id },
+            params: { id: slug },
             props: { deal: deal },
         };
     });
@@ -32,7 +39,7 @@ const firmDeals = allCoupons
     .map(c => c.data);
 
 // Try to fetch rich content from Markdown
-const blogPost = await getEntry('reviews', deal.id);
+const blogPost = await getEntry('reviews', deal.canonical_slug || deal.id);
 const { Content } = blogPost ? await blogPost.render() : { Content: null };
 
 const pageTitle = `${deal.firm_name} Review & Coupons (Forex) | GoPropReels`;
@@ -40,6 +47,33 @@ const pageDescription = `Explore ${deal.firm_name} prop firm details, ratings, a
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
+    <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": deal.firm_name,
+        "url": `https://gopropreels.com/forex/${deal.canonical_slug || deal.id}`,
+        "aggregateRating": deal.trust_score ? {
+            "@type": "AggregateRating",
+            "ratingValue": deal.trust_score,
+            "bestRating": "5",
+            "reviewCount": deal.reviews_count || 1
+        } : undefined,
+        "offers": (deal.challenges || []).slice(0,3).map(c => ({
+            "@type": "Offer",
+            "price": c.price,
+            "priceCurrency": c.currency || "USD",
+            "name": c.name
+        }))
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gopropreels.com" },
+            { "@type": "ListItem", "position": 2, "name": "Forex Firms", "item": "https://gopropreels.com/forex" },
+            { "@type": "ListItem", "position": 3, "name": deal.firm_name, "item": `https://gopropreels.com/forex/${deal.canonical_slug || deal.id}` }
+        ]
+    })} />
     <Header />
     
     <main class="relative mx-auto flex max-w-5xl flex-col gap-12 px-4 py-16 text-white">

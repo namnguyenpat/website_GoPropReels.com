@@ -20,6 +20,7 @@ const coupons = defineCollection({
     type: 'data',
     schema: z.object({
         id: z.string(),
+        canonical_slug: z.string().optional(),
         firm_name: z.string(),
         category: z.string(),
         discount_highlight: z.string(),
@@ -66,14 +67,18 @@ const coupons = defineCollection({
 const reviews = defineCollection({
     type: 'content',
     schema: z.object({
+        firm_name: z.string().optional(),
+        slug: z.string().optional(),
         title: z.string(),
-        description: z.string(),
-        pubDate: z.coerce.date(),
+        published_date: z.string().optional(),
+        rating: z.number().optional(),
+        description: z.string().optional(),
+        pubDate: z.coerce.date().optional(),
         updatedDate: z.coerce.date().optional(),
         heroImage: z.string().optional(),
         tags: z.array(z.string()).optional(),
         tier: z.string().optional(),
-        category: z.string().optional(), // Flexible for reviews
+        category: z.string().optional(),
     }),
 });
 

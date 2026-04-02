@@ -30,6 +30,8 @@ User-agent: Anthropic-ai
 Allow: /
 User-agent: Claude-Web
 Allow: /
+User-agent: ClaudeBot
+Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
@@ -53,5 +55,6 @@ User-agent: *
 Allow: /
 Disallow: /_astro/
 
+Sitemap: https://gopropreels.com/sitemap-index.xml
 Sitemap: https://gopropreels.com/sitemap.xml
 
