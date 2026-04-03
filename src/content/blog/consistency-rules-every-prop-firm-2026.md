@@ -144,3 +144,8 @@ Always run the math before requesting a payout.
 The consistency rule is not the enemy — it is the industry's way of distinguishing traders from gamblers. If your strategy genuinely produces reliable, repeatable results, you will clear this rule without even thinking about it.
 
 If you are struggling to stay consistent, the rule is telling you something important. Listen to it.
+
+
+---
+
+*Explore more on [GoPropReels](/) — browse [forex prop firms](/forex), [futures firms](/futures), and [all coupon codes](/coupons). Top picks: [FTMO](/forex/ftmo-1vldc) ([ftmo.com](https://ftmo.com)), [Apex Trader Funding](/futures/apex-trader-funding-wvkmv) ([apextraderfunding.com](https://apextraderfunding.com)), [FundedNext](/forex/fundednext-6gkdu) ([fundednext.com](https://fundednext.com)), [Topstep](/futures/topstep-iu3ja) ([topstep.com](https://topstep.com)).*
