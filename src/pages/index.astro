@@ -12,22 +12,22 @@ import { getCollection } from 'astro:content';
 const allCoupons = await getCollection('coupons');
 const dealsData = allCoupons.map(c => c.data);
 
-// Filter out expired deals
+// Show ALL deals — active first, then expired (never hide expired)
 const today = new Date();
-const activeDeals = dealsData.filter(deal => {
-    if (!deal.expiration_date) return true;
-    const expDate = new Date(deal.expiration_date + 'T23:59:59');
-    return expDate >= today;
-}).sort((a, b) => {
+const activeDeals = dealsData.sort((a, b) => {
+    // Active deals first
+    const aExpired = a.expiration_date ? new Date(a.expiration_date + 'T23:59:59') < today : false;
+    const bExpired = b.expiration_date ? new Date(b.expiration_date + 'T23:59:59') < today : false;
+    if (aExpired !== bExpired) return aExpired ? 1 : -1;
     // Then by created_at descending
     const dateA = new Date(a.created_at || 0);
     const dateB = new Date(b.created_at || 0);
-    return dateB.getTime() - dateA.getTime(); 
+    return dateB.getTime() - dateA.getTime();
 });
 
 // Calculate stats from real data
-const liveDealsCount = activeDeals.length;
-const codesVerifiedToday = activeDeals.length; // Each deal has one verified code
+const liveDealsCount = dealsData.filter(d => !d.expiration_date || new Date(d.expiration_date + 'T23:59:59') >= today).length;
+const codesVerifiedToday = liveDealsCount;
 const heroStats = [
 	{ label: 'Live coupons', value: `${liveDealsCount}+` },
 	{ label: 'Verified today', value: `${codesVerifiedToday}` },
