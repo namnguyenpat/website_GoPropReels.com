@@ -252,14 +252,14 @@
   ],
   "video_source": {
     "type": "image",
-    "src": "/images/logos/maven.svg"
+    "src": "/images/logos/maven.png"
   },
   "seo_content": "<h3>Maven: Saint Lucia-Based CFD Prop Firm Since 2022</h3><p>Maven is a CFD prop trading firm based in Saint Lucia, established in November 2022. The firm holds a 4.3 out of 5 review score from 637 trader reviews and offers one of the widest account size ranges in the sector, from $2,000 to $200,000, making it accessible to entry-level traders. Programs include 1-Step, 2-Step, and Instant evaluations, with a unique Maven Mini sprint format and a recent Instant Funding option launched in 2025.</p><p>Account sizes span $2,000 to $200,000. The 1-Step Challenge is priced at: 100K at $364.80 (standard $380), 50K at $163.20 (standard $170), 20K at $65.28 (standard $68), 10K at $35.52 (standard $37), and 5K at $18.24 (standard $19). The 2-Step Challenge at 100K is $440, 50K at $211.20, and smaller sizes accordingly. Maven Mini provides a 24-hour sprint program with a one-time payout and immediate withdrawal.</p><p>Two platforms are supported: MT5 and Match Trader. Tradable instruments include FX, Metals, Indices, Energy, Crypto, and Other Commodities. Leverage is 1:75 on FX across all programs, 1:20 on Metals, Indices, and Energy, and 1:2 on Crypto. Expert Advisors are not permitted under any circumstances; Maven is strictly for manual traders and manual copy trading. Weekend holding and crypto weekend trading are allowed.</p><p>Funded traders receive an 80% profit split with withdrawal every 10 business days. Withdrawals are capped at $10,000 per 30-day cycle regardless of the number of accounts held. Once total funded profits exceed $5,000, no single trade or trading day can account for more than 50% of total profit. The Maven Mini program offers immediate withdrawal with a 24-hour trading window. Payout methods include Bank Transfer, Crypto, and Riseworks.</p><p>Maven attracts traders who prefer manual trading without EA complications and want a low account-size entry point starting from just $2,000. The IP region must match between challenge, live, and purchase phases. News trading is restricted within 2 minutes before and after red-folder events, except on Instant Funding and Mini accounts. The firm accepts payments via Credit/Debit Card, Crypto, and Korapay, supporting South African ZAR payments.</p>",
   "youtube_metadata": {
     "title": "Maven Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of Maven. We analyze their forex environment and execution rules."
   },
-  "firm_logo": "/images/logos/maven.svg",
+  "firm_logo": "/images/logos/maven.png",
   "hot": false,
   "created_at": "2026-02-27T08:03:01.241Z"
 }

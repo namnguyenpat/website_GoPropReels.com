@@ -218,14 +218,14 @@
   ],
   "video_source": {
     "type": "image",
-    "src": "/images/logos/atfunded.svg"
+    "src": "/images/logos/atfunded.jpg"
   },
   "seo_content": "<h3>ATFunded Technical Infrastructure</h3><p>ATFunded, established in January 2025, is a CFD proprietary trading firm offering two evaluation formats: the 2-Phase Evaluation (2-step) and the ATF Pro (1-step). The firm exclusively supports the MT5 trading platform and provides access to FX, Metals, Indices, Energy, Crypto, and Other Commodities. ATFunded accepts payment through an exceptionally broad range of methods including Blik, Przelewy24, Neteller, Skrill, Pix, MBWay, Multibanco, Mybank, PagoEfectivo, Rapid Transfer, MACH, Epay, Credit/Debit Card, Crypto, and VISA.</p><p>The 2-Phase Evaluation covers six account sizes: $5,000 at $29.75 (original $35.00), $10,000 at $58.65 (original $69.00), $25,000 at $114.75 (original $135.00), $50,000 at $212.50 (original $250.00), $100,000 at $391.00 (original $460.00), and $200,000 at $782.00 (original $920.00). The ATF Pro 1-step is available in four sizes: $10,000 at $21.25 (original $25.00), $50,000 at $41.65 (original $49.00), $100,000 at $84.15 (original $99.00), and $150,000 at $126.65 (original $149.00). ATF Pro requires an Activation Fee after passing Phase 1: $149.00 for most sizes and $25.00 for the $10,000 account.</p><p>Leverage on 2-step accounts is 1:30 for FX, 1:20 for Metals and Indices, 1:10 for Energy, and 1:2 for Crypto. All trading is conducted on MT5. Weekend and overnight holding is permitted, though crypto week trading is not allowed. News trading is prohibited within 5 minutes before and after high-impact news events, and violations result in profit removal from the affected trades. Copy trading between ATFunded accounts or the trader’s own accounts is allowed; copying from third-party signal providers is forbidden.</p><p>The 2-Phase Evaluation offers an 80% profit split with no cap, and the initial challenge fee is fully refunded upon the trader’s third payout. ATF Pro starts at a 50% split for the first two payouts before increasing to 80%, with the first two payouts capped at $5,000 each. Minimum withdrawal is $100 for 2-Phase and $125 for Pro. Payouts are processed every 14 days. Payout methods include Bank Wire Transfer, Broker Profit Transfer, and Crypto. Account inactivity for 30 consecutive days results in a breach.</p><p>ATFunded prohibits tick scalping, latency arbitrage, reverse arbitrage, hedge arbitrage, the use of emulators, and HFT expert advisors. Gambling-style trading is banned under a stated Gambling Policy. Traders are limited to a maximum of 4 open trades per pair simultaneously, and at least 50% of all trades must be held for more than 1 minute. Maximum lot sizes on Pro accounts are enforced by account size: 1 lot FX / 0.5 lot other for $10K, scaling to 15 lots FX / 7.5 lots other for $150K. EAs are permitted provided they comply with all prohibited strategy rules.</p>",
   "youtube_metadata": {
     "title": "ATFunded Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of ATFunded. We analyze their forex environment and execution rules."
   },
-  "firm_logo": "/images/logos/atfunded.svg",
+  "firm_logo": "/images/logos/atfunded.jpg",
   "hot": false,
   "created_at": "2026-02-27T08:03:01.192Z"
 }
