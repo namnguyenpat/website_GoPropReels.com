@@ -8,24 +8,12 @@ import { getCollection, getEntry } from 'astro:content';
 
 export async function getStaticPaths() {
 	const coupons = await getCollection('coupons');
-    // Filter for forex firms
     const forexCoupons = coupons.filter(c => c.data.category.toLowerCase() === 'forex');
-    // Get unique firm IDs (dedup by canonical_slug, but keep original id for URL)
-    const seen = new Set();
-    const uniqueFirms = forexCoupons.filter(c => {
-        const key = c.data.canonical_slug || c.data.id;
-        if (seen.has(key)) return false;
-        seen.add(key);
-        return true;
-    });
 
-	return uniqueFirms.map((c) => {
-        const deal = c.data;
-        return {
-            params: { id: deal.id },
-            props: { deal: deal },
-        };
-    });
+	return forexCoupons.map((c) => ({
+        params: { id: c.data.id },
+        props: { deal: c.data },
+    }));
 }
 
 const { deal } = Astro.props;
