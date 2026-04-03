@@ -1,6 +1,7 @@
 {
   "id": "darwinex-zero-55tch",
   "canonical_slug": "darwinex-zero",
+  "review_slug": "darwinex-zero-review",
   "firm_name": "Darwinex Zero",
   "broker": "Darwinex Zero",
   "title": "Darwinex Zero Check website",
@@ -126,7 +127,7 @@
     "type": "image",
     "src": "/images/logos/darwinex-zero.svg"
   },
-  "seo_content": "<h3>Darwinex Zero Technical Infrastructure</h3><p>Darwinex Zero, based in the United Kingdom, was established in March 2012. It is a CFD firm offering Instant and 1 Step program types and supports MT5 and MT4. Darwinex Zero describes a staged model beginning with a Calibration phase in which traders use virtual funds to generate signals that are compiled into a DARWIN index. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "seo_content": "<h3>Darwinex Zero: UK-Based CFD Prop Firm Since 2012</h3><p>Darwinex Zero is a CFD prop trading firm based in the United Kingdom, established in March 2012. Originally a regulated broker and fintech platform, Darwinex created Darwinex Zero as its prop trading arm. The firm operates an unconventional model distinct from standard challenge-based firms: traders complete a Calibration phase using virtual funds to generate trading signals that are compiled into a DARWIN index, which institutional investors may then allocate capital to.</p><p>The evaluation structure centers on a single $100,000 account size with pricing determined by the profit target the trader chooses. A higher profit target means lower upfront cost: 5% target costs $1,095, 10% target costs $595, 15% target costs $395, and 20% target costs $295. The Instant Funding option — bypassing the calibration phase — is priced at $1,995 for a $100,000 allocation. All programs result in a Permanent Allocation once the chosen target is achieved.</p><p>Both MT4 and MT5 are supported. Tradable instruments include FX, Metals, Indices, Energy, Stocks, and Other Commodities. Leverage is 1:30 for FX, 1:20 for Metals and Indices, and 1:5 for Stocks across both Instant and 1-Step models. Copy trading and Expert Advisors are both permitted, and news trading is allowed without restriction. The calibration phase has a 90-day time limit, which can be extended with active trading.</p><p>Payouts are distributed every 3 months with a 15% profit split — notably lower than most prop firms but tied to the institutional investor model. The payout method is Bank Wire Transfer only. Payments are accepted via Credit Card and PayPal. The minimum payout amount is not specified in the firm data.</p><p>Darwinex Zero appeals to traders who want a unique model connecting them to institutional investor capital through DARWIN index creation. The combination of flexible challenge pricing (the higher your targets, the cheaper your challenge), unlimited EAs and copy trading, and no restrictions on news trading makes it attractive to systematic and algorithmic traders. The 3-month payout cycle and lower profit split are tradeoffs for this institutional access model.</p>",
   "youtube_metadata": {
     "title": "Darwinex Zero Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of Darwinex Zero. We analyze their forex environment and execution rules."

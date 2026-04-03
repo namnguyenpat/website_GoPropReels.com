@@ -56,5 +56,4 @@ Allow: /
 Disallow: /_astro/
 
 Sitemap: https://gopropreels.com/sitemap-index.xml
-Sitemap: https://gopropreels.com/sitemap.xml
 

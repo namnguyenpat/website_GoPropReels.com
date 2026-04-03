@@ -1,6 +1,7 @@
 {
   "id": "my-funded-futures-nupeu",
   "canonical_slug": "my-funded-futures",
+  "review_slug": "my-funded-futures-review",
   "firm_name": "My Funded Futures",
   "broker": "My Funded Futures",
   "title": "My Funded Futures Check website",
@@ -144,7 +145,7 @@
     "type": "image",
     "src": "/images/logos/my-funded-futures.svg"
   },
-  "seo_content": "<h3>My Funded Futures Technical Infrastructure</h3><p>My Funded Futures is a futures firm based in the United States, established in November 2023. It offers a 1 Step evaluation program. Account sizes range from $25,000 to $150,000. Supported platforms include Tradovate, TradingView, Quantower, Volumetrica Trading, Volsys, Volbook, ATAS Orderflow Trading and NinjaTrader. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "seo_content": "<h3>My Funded Futures: US Futures Prop Firm Since 2023</h3><p>My Funded Futures is a futures prop trading firm based in the United States, established in November 2023. The firm offers a flexible 1-step evaluation structure with three distinct plan types — Rapid, Pro, and Flex — each with different payout models, minimum thresholds, and risk parameters, giving futures traders a range of options depending on their preferred trading style.</p><p>Account sizes range from $25,000 to $150,000 across all plans. Sample pricing: Rapid 150K at $277.60 (standard $347), Pro 150K at $238.50 (standard $477), Rapid 100K at $213.60, Pro 100K at $172 (standard $344), Rapid 50K at $125.60, Pro 50K at $113.50, Flex 50K at $107 (flat), and Flex 25K at $84 (flat). The Flex plan has no discount from standard pricing and provides a lower-barrier entry point.</p><p>Platform support is extensive: ATAS Orderflow Trading, NinjaTrader, Quantower, TradingView, Tradovate, Volbook, Volsys, and Volumetrica Trading. Trading is limited to Futures instruments. Pro and Rapid accounts prohibit trading within 2 minutes before and after T1 news events; the Flex plan has no news trading restrictions. All accounts auto-close at 4:10 PM EST; weekend holding is not permitted.</p><p>Payout splits and requirements differ by plan: Pro offers 80% every 14 days with a $1,000 minimum; Rapid offers 90% daily after the buffer is cleared with a $500 minimum; Flex offers 80/20 every 5 winning days with a $250 minimum. Payouts are processed instantly or within 6-12 business hours for manual review. Riseworks is the sole payout method. Payments are accepted via Credit/Debit Card and Crypto.</p><p>My Funded Futures is popular among futures traders who want tiered flexibility — the Rapid plan rewards consistent daily traders with daily payouts, while the Pro plan suits structured traders comfortable with bi-weekly cycles. Automated strategies and EAs are permitted provided they do not exploit simulator fills. Copy trading is allowed for own strategies. Traders must maintain at least one trade per 7-day cycle to keep accounts active.</p>",
   "youtube_metadata": {
     "title": "My Funded Futures Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of My Funded Futures. We analyze their futures environment and execution rules."

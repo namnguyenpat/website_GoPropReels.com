@@ -1,6 +1,7 @@
 {
   "id": "the-trading-pit-rmhke",
   "canonical_slug": "the-trading-pit",
+  "review_slug": "the-trading-pit-review",
   "firm_name": "The Trading Pit",
   "broker": "The Trading Pit",
   "title": "The Trading Pit Check website",
@@ -207,7 +208,7 @@
     "type": "image",
     "src": "/images/logos/the-trading-pit.svg"
   },
-  "seo_content": "<h3>The Trading Pit Technical Infrastructure</h3><p>The Trading Pit, based in Liechtenstein and established October 2022, is a CFD firm offering 1 Step and 2 Steps programs. Account sizes range from $5,000 to $200,000. Platforms supported include MT5, cTrader, MT4, Quantower and Bookmap. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "seo_content": "<h3>The Trading Pit: Liechtenstein-Based CFD Prop Firm Since 2022</h3><p>The Trading Pit is a CFD prop trading firm based in Liechtenstein, established in October 2022. The firm is notable for its European registration and offers the CFD Prime program in both 1-Phase (1-step) and 2-Phase (2-step) evaluation formats. In August 2025, The Trading Pit introduced daily payouts, making it one of the few CFD prop firms to offer this frequency. It also supports crypto weekend trading via cTrader.</p><p>Account sizes range from $5,000 to $200,000 across both evaluation models, with identical pricing for the same account size whether 1-Phase or 2-Phase. Pricing with the current discount: 200K 1-Phase at $1,025.10 (standard $1,139), 100K at $512.10, 50K at $314.10, 20K at $179.10, 10K at $89.10, and 5K at $44.10. Both 1-Phase and 2-Phase 100K are priced identically at $512.10.</p><p>Three platforms are supported: cTrader, MT4, and MT5. Tradable instruments span FX, Metals, Indices, Crypto, Stocks, and Other Commodities — one of the broadest instrument sets in the sector. Leverage is 1:50 for FX on both 1-step and 2-step; Metals and Indices at 1:10; Crypto and Stocks at 1:2. For smaller accounts ($5,000 to $50,000), news trading is permitted freely. For $100,000 and $200,000 accounts, news trading is restricted within 2 minutes before and after high-impact news. The inactivity limit is 21 consecutive days.</p><p>Funded traders receive an 80% profit split after completing a minimum of 5 unique trading days. Payouts are processed daily (reviewed within 24 business hours) with a minimum of $100. Payout methods are Bank Wire Transfer and Crypto. The firm accepts a wide range of payment methods including Apple Pay, Google Pay, PayPal, Skrill, Neteller, Giropay (Germany), Bank Transfer, Credit/Debit Card, and Crypto.</p><p>The Trading Pit is chosen by traders who value a European-registered firm, daily payout availability, crypto weekend trading on cTrader, and a broad instrument range including stocks. EAs are permitted provided they avoid prohibited strategies (HFT, latency/reverse/hedge arbitrage, emulators). Copy trading is allowed between a trader's own TTP accounts, including between Challenge and Earning accounts.</p>",
   "youtube_metadata": {
     "title": "The Trading Pit Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of The Trading Pit. We analyze their forex environment and execution rules."

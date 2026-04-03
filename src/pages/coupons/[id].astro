@@ -9,7 +9,26 @@ import { getCollection, getEntry } from 'astro:content';
 
 export async function getStaticPaths() {
 	const coupons = await getCollection('coupons');
-	return coupons.map((entry) => ({
+	// Sort: active (non-expired) coupons first, then by newest expiration_date,
+	// so the first entry seen for each slug is always the "best" one.
+	const now = new Date();
+	const sorted = [...coupons].sort((a, b) => {
+		const aExpired = a.data.expiration_date ? new Date(a.data.expiration_date) < now : false;
+		const bExpired = b.data.expiration_date ? new Date(b.data.expiration_date) < now : false;
+		if (aExpired !== bExpired) return aExpired ? 1 : -1; // active first
+		const aDate = a.data.expiration_date ? new Date(a.data.expiration_date).getTime() : 0;
+		const bDate = b.data.expiration_date ? new Date(b.data.expiration_date).getTime() : 0;
+		return bDate - aDate;
+	});
+	// Dedup by canonical_slug (or id), keeping only the best per slug.
+	const seen = new Set();
+	const unique = sorted.filter((entry) => {
+		const key = entry.data.canonical_slug || entry.data.id;
+		if (seen.has(key)) return false;
+		seen.add(key);
+		return true;
+	});
+	return unique.map((entry) => ({
 		params: { id: entry.data.canonical_slug || entry.data.id },
 		props: { deal: entry.data },
 	}));
@@ -57,64 +76,20 @@ const canonical = `/coupons/${deal.canonical_slug || deal.id}`;
         "image": `https://gopropreels.com/images/deals/${deal.id}.png`,
 		"offers": {
 			"@type": "Offer",
-			"price": 0,
-			"priceCurrency": "USD",
+			"price": (deal.challenges && deal.challenges.length > 0) ? deal.challenges[0].price : 0,
+			"priceCurrency": (deal.challenges && deal.challenges.length > 0) ? (deal.challenges[0].currency || "USD") : "USD",
 			"availability": isExpired ? "https://schema.org/Discontinued" : "https://schema.org/InStock",
 			"url": `https://gopropreels.com${canonical}`,
-            "priceValidUntil": deal.expiration_date || "2026-12-31",
-            "hasMerchantReturnPolicy": {
-                "@type": "MerchantReturnPolicy",
-                "applicableCountry": "US",
-                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                "merchantReturnDays": 30,
-                "returnMethod": "https://schema.org/ReturnByMail",
-                "returnFees": "https://schema.org/FreeReturn"
-            },
-            "shippingDetails": {
-                "@type": "OfferShippingDetails",
-                "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": 0,
-                    "currency": "USD"
-                },
-                "shippingDestination": {
-                    "@type": "DefinedRegion",
-                    "addressCountry": "US"
-                },
-                "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 0,
-                        "unitCode": "DAY"
-                    },
-                    "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 0,
-                        "unitCode": "DAY"
-                    }
-                }
-            }
+            "priceValidUntil": deal.expiration_date || "2026-12-31"
 		},
-		"aggregateRating": {
-			"@type": "AggregateRating",
-			"ratingValue": 5,
-			"reviewCount": 1
-		},
-        "review": {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": 5,
-              "bestRating": 5
-            },
-            "author": {
-              "@type": "Person",
-              "name": "GoPropReels Editor"
-            }
-        },
+		...(deal.trust_score > 0 && deal.reviews_count > 0 ? {
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": deal.trust_score,
+				"bestRating": "5",
+				"reviewCount": deal.reviews_count
+			}
+		} : {}),
 		"category": deal.category,
 		"brand": {
 			"@type": "Brand",
@@ -127,12 +102,14 @@ const canonical = `/coupons/${deal.canonical_slug || deal.id}`;
 		"@type": "Organization",
 		"name": deal.firm_name,
 		"url": `https://gopropreels.com/coupons/${deal.canonical_slug || deal.id}`,
-		"aggregateRating": deal.trust_score ? {
-			"@type": "AggregateRating",
-			"ratingValue": deal.trust_score,
-			"bestRating": "5",
-			"reviewCount": deal.reviews_count || 1
-		} : undefined,
+		...(deal.trust_score && parseFloat(deal.trust_score) > 0 && deal.reviews_count && parseInt(deal.reviews_count) > 0 ? {
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": parseFloat(deal.trust_score),
+				"reviewCount": parseInt(deal.reviews_count),
+				"bestRating": 5
+			}
+		} : {}),
 		"offers": (deal.challenges || []).slice(0,3).map(c => ({
 			"@type": "Offer",
 			"price": c.price,

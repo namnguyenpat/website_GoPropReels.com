@@ -1,6 +1,7 @@
 {
   "id": "breakout-1a1v5",
   "canonical_slug": "breakout",
+  "review_slug": "breakout-review",
   "firm_name": "Breakout",
   "broker": "Breakout",
   "title": "Breakout Check website",
@@ -107,15 +108,7 @@
     }
   ],
   "consistency_rules": {},
-  "forbidden_strategies": [
-    "No anti-gambling rule",
-    "No profit cap",
-    "No consistency rule",
-    "No reverse trading restriction",
-    "No news trading restriction",
-    "No one-sided betting rule",
-    "No negative margin/equity rule"
-  ],
+  "forbidden_strategies": [],
   "platforms": [
     "Breakout Terminal"
   ],
@@ -144,15 +137,7 @@
     "inactivity_rule": "Not specified.",
     "news_trading": "No news trading restriction.",
     "weekend_holding": "Allowed (implied).",
-    "forbidden_strategies": [
-      "No anti-gambling rule",
-      "No profit cap",
-      "No consistency rule",
-      "No reverse trading restriction",
-      "No news trading restriction",
-      "No one-sided betting rule",
-      "No negative margin/equity rule"
-    ]
+    "forbidden_strategies": []
   },
   "timeline": [
     {
@@ -165,7 +150,7 @@
     "type": "image",
     "src": "/images/logos/breakout.svg"
   },
-  "seo_content": "<h3>Breakout Technical Infrastructure</h3><p>Breakout, based in VG and established in November 2023, is a crypto-only firm that focuses exclusively on cryptocurrency markets and lists two program types labeled </p>",
+  "seo_content": "<h3>Breakout Technical Infrastructure</h3><p>Breakout, based in the British Virgin Islands and established in November 2023, is a crypto-exclusive prop trading firm that focuses entirely on cryptocurrency markets. The firm offers two evaluation paths: the 1-Step Classic and the 2-Step Evaluation, covering five account sizes from $5,000 to $100,000. Breakout is one of the few prop firms dedicated exclusively to digital assets, making it a specialist option for traders who focus on cryptocurrency pairs.</p><p>The 1-Step Classic program ranges from $58.80 for a $5,000 account (original $60.00) to $979.02 for a $100,000 account (original $999.00). The 2-Step Evaluation is priced lower across all sizes, from $49.00 for a $5,000 account (original $50.00) to $734.02 for a $100,000 account (original $749.00). Intermediate account sizes at $10,000, $25,000, and $50,000 are available on both programs. Payments are accepted via Credit/Debit Card, Crypto, and PayPal.</p><p>All trading is conducted through the proprietary Breakout Terminal platform, which is purpose-built for cryptocurrency markets. Tradable instruments include Major Crypto Pairs and Minor Crypto Pairs. Breakout does not restrict news trading and places no overnight or weekend holding prohibitions, which aligns with the 24/7 nature of cryptocurrency markets. There is no consistency rule, no profit cap during the challenge, and the firm does not publish a list of prohibited trading strategies.</p><p>Breakout operates a daily payout system via USDC ERC-20 with a minimum withdrawal of $50. Payouts are available on demand with no waiting period specified. The firm states zero lifetime payout denials as a stated policy. There is no profit cap on funded accounts, allowing traders to retain all gains above the minimum withdrawal threshold. All withdrawals are processed exclusively in crypto via USDC ERC-20.</p><p>Breakout's straightforward structure and unrestricted trading approach appeal to crypto-native traders. The firm does not explicitly detail copy trading or EA policies. With no daily drawdown ceiling, no news restrictions, and no consistency requirements, Breakout positions itself as a permissive environment for cryptocurrency prop traders. Its British Virgin Islands base and November 2023 launch make it a focused and relatively recent specialist player in the crypto prop space.</p>",
   "youtube_metadata": {
     "title": "Breakout Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of Breakout. We analyze their forex environment and execution rules."

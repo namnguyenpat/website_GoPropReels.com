@@ -1,6 +1,7 @@
 {
   "id": "axi-select-h9zuu",
   "canonical_slug": "axi-select",
+  "review_slug": "axi-select-review",
   "firm_name": "Axi Select",
   "broker": "Axi Select",
   "title": "Axi Select Check website",
@@ -10,7 +11,14 @@
   "coupon_code": "No Code",
   "expiration_date": "2026-12-31",
   "theme_color": "#BF5AF2",
-  "features": [],
+  "features": [
+    "Axi Select - Free Program - Seed Stage",
+    "Axi Select - Free Program - Incubation Stage",
+    "Axi Select - Free Program - Accelerator Stage",
+    "Axi Select - Free Program - Pro Stage",
+    "Axi Select - Free Program - Pro 500 Stage",
+    "Axi Select - Free Program - Pro M Stage"
+  ],
   "affiliate_link": "https://records.axiaffiliates.com/visit/?bta=42219&brand=axitrader",
   "trust_score": "4.5",
   "reviews_count": "0",
@@ -32,7 +40,56 @@
     }
   },
   "commissions": {},
-  "challenges": [],
+  "challenges": [
+    {
+      "name": "Axi Select - Free Program - Seed Stage",
+      "model": "free-entry",
+      "currency": "USD",
+      "account_size": "0",
+      "price": "0.00",
+      "profit_split": "0"
+    },
+    {
+      "name": "Axi Select - Free Program - Incubation Stage",
+      "model": "free-entry",
+      "currency": "USD",
+      "account_size": "0",
+      "price": "0.00",
+      "profit_split": "40"
+    },
+    {
+      "name": "Axi Select - Free Program - Accelerator Stage",
+      "model": "free-entry",
+      "currency": "USD",
+      "account_size": "0",
+      "price": "0.00",
+      "profit_split": "50"
+    },
+    {
+      "name": "Axi Select - Free Program - Pro Stage",
+      "model": "free-entry",
+      "currency": "USD",
+      "account_size": "0",
+      "price": "0.00",
+      "profit_split": "60"
+    },
+    {
+      "name": "Axi Select - Free Program - Pro 500 Stage",
+      "model": "free-entry",
+      "currency": "USD",
+      "account_size": "0",
+      "price": "0.00",
+      "profit_split": "70"
+    },
+    {
+      "name": "Axi Select - Free Program - Pro M Stage",
+      "model": "free-entry",
+      "currency": "USD",
+      "account_size": "0",
+      "price": "0.00",
+      "profit_split": "80"
+    }
+  ],
   "consistency_rules": {},
   "forbidden_strategies": [],
   "platforms": [
@@ -98,7 +155,7 @@
     "type": "image",
     "src": "/images/logos/axi-select.svg"
   },
-  "seo_content": "<h3>Axi Select Technical Infrastructure</h3><p>Axi Select, based in Australia, was established in October 2007. It operates as a CFD firm and offers a single program type described as </p>",
+  "seo_content": "<h3>Axi Select Technical Infrastructure</h3><p>Axi Select, based in Australia, was established in October 2007. It operates as a CFD prop trading firm offering a fully free-to-enter funded program structured around a progressive stage system: Seed, Incubation, Accelerator, Pro, Pro 500, and Pro M. Unlike fee-based evaluation programs, Axi Select charges no upfront fee to enter, making it accessible to traders worldwide who are willing to prove their skills through consistent performance over time.</p><p>The Axi Select program is a single continuous track with no fixed account size tiers or separate challenge packages requiring payment. Traders begin at the Seed stage with no profit split, progress through Incubation (40% split) and Acceleration (50% split), and advance to Pro levels offering 60% through 80% profit split at the Pro M stage. This stage-based structure incentivizes long-term consistent trading rather than one-off evaluation fees. Since entry is free, there are no distinct pricing tiers to compare.</p><p>Axi Select supports MT4 and MT5 trading platforms with leverage of up to 1:100 across all instrument classes including FX, Metals, Indices, Energy, Stocks, and Other Commodities. The firm applies no daily drawdown limits and explicitly permits news trading, overnight holding, and weekend holding. Expert Advisors are also permitted. These unrestrictive conditions distinguish Axi Select from evaluation-based firms that impose tighter rules during funded phases.</p><p>Payouts are processed automatically on the 1st of each month or upon successful stage progression. The profit split scales from 0% at the Seed stage up to 80% at the Pro M stage. No minimum payout threshold is specified. Supported payout methods include Astropay, Bank Transfer, Credit/Debit Card, Crypto, Fasapay, Neteller, PayPal, PIX, Przelewy24, and Skrill, providing broad accessibility for global withdrawals.</p><p>Axi Select's most distinctive feature is its completely free entry model — there is no challenge fee, no reset cost, and no recurring subscription. Payment methods for account deposits include Astropay, Bank Transfer, Boleto, Credit/Debit Card, Crypto, Fasapay, Neteller, PayPal, Pix, Przelewy24, and Skrill. Copy trading status is not explicitly stated, but trading conditions are described as unrestrictive. The firm's October 2007 establishment gives it one of the longest operating histories among Australian-based prop trading providers.</p>",
   "youtube_metadata": {
     "title": "Axi Select Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of Axi Select. We analyze their forex environment and execution rules."

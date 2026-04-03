@@ -6,13 +6,14 @@ interface Props {
 	description?: string;
 	canonical?: string;
 	ogImage?: string;
+	schema?: object;
 }
 
-const { title = 'GoPropReels - Prop Firm Discount Codes', description = 'Find verified prop firm coupon codes. Save on FTMO, The5ers & 50+ funded trading firms.', canonical, ogImage } =
+const { title = 'GoPropReels - Prop Firm Discount Codes', description = 'Find verified prop firm coupon codes. Save on FTMO, The5ers & 50+ funded trading firms.', canonical, ogImage, schema } =
 	Astro.props as Props;
 const siteUrl = 'https://gopropreels.com';
 const fullCanonical = Astro.url.href || (canonical ? `${siteUrl}${canonical}` : siteUrl);
-const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`) : `${siteUrl}/og-default.png`;
+const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`) : `${siteUrl}/og-default.jpeg`;
 ---
 
 <!doctype html>
@@ -52,12 +53,17 @@ const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteUrl
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={fullOgImage} />
 
+		{schema && (
+			<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+		)}
+
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "Organization",
 			"name": "GoPropReels",
 			"url": "https://gopropreels.com",
 			"logo": "https://gopropreels.com/favicon-192x192.png",
+			"description": "GoPropReels is a real-time prop firm coupon aggregator covering 57+ funded trading firms across Forex, Futures, and Crypto categories. Verified discount codes and challenge deals updated daily.",
 			"sameAs": [
 				"https://t.me/GoPropReels_com"
 			]

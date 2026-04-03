@@ -1,6 +1,7 @@
 {
   "id": "topstep-iu3ja",
   "canonical_slug": "topstep",
+  "review_slug": "topstep-review",
   "firm_name": "Topstep",
   "broker": "Topstep",
   "title": "Topstep Check website",
@@ -140,7 +141,7 @@
     "type": "image",
     "src": "/images/logos/topstep.svg"
   },
-  "seo_content": "<h3>Topstep Technical Infrastructure</h3><p>Topstep, based in the United States and established January 2012, is a futures firm offering a 1 Step program. Account sizes range from $50,000 to $150,000. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "seo_content": "<h3>Topstep: Pioneer US Futures Prop Firm Since 2012</h3><p>Topstep is one of the original and most recognized futures prop trading firms, based in the United States and established in January 2012. With over a decade of operation, Topstep helped define the modern prop firm model. The firm focuses exclusively on the futures market and operates a single 1-step evaluation program called the Trading Combine.</p><p>Topstep offers three account sizes: $50,000, $100,000, and $150,000. Standard subscription pricing starts at $49/month for the 50K, $99/month for the 100K, and $149/month for the 150K. A No Activation Fee option is also available at higher monthly rates: $109 (50K), $159 (100K), and $209 (150K). Traders advance to an Express Funded Account upon passing the Combine.</p><p>The platform ecosystem is broad: TopstepX (proprietary), NinjaTrader, Quantower, T4, R Trader Pro, ATAS Orderflow Trading, MotiveWave, VolFix, Bookmap, Investor/RT, Jigsaw Daytradr, MultiCharts, Sierra Chart, and Trade Navigator. Trading is restricted to Futures instruments only. News trading is permitted without restrictions during both evaluation and funded stages, which is a notable advantage for active macro traders.</p><p>Funded traders receive a 90% profit split with a payout cap of 50% of account balance per request (up to $5,000 on Standard or $6,000 on Consistency). The minimum payout is $125 with processing times of 1-10 business days. Payout methods include ACH, Bank Wire Transfer, and Wise. All positions must be closed by 3:10 PM CT daily; weekend holding is not permitted.</p><p>Topstep is chosen by futures traders who value a proven track record, a wide platform selection, and unrestricted news trading on both evaluation and funded accounts. EAs are allowed, though traders bear full responsibility for their performance; automation via API is supported exclusively within TopstepX. Trade copying is limited to accounts within the same trading environment and is not available on live Funded Accounts.</p>",
   "youtube_metadata": {
     "title": "Topstep Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of Topstep. We analyze their futures environment and execution rules."

@@ -1,6 +1,7 @@
 {
   "id": "fxify-1m9vc",
   "canonical_slug": "fxify",
+  "review_slug": "fxify-review",
   "firm_name": "FXIFY",
   "broker": "FXIFY",
   "title": "FXIFY Check website",
@@ -211,7 +212,7 @@
     "type": "image",
     "src": "/images/logos/fxify.svg"
   },
-  "seo_content": "<h3>FXIFY Technical Infrastructure</h3><p>FXIFY, based in the United Kingdom, was established in April 2023. It is a CFD firm offering Instant, 1 Step, 2 Steps and 3 Steps evaluation programs. Account sizes range from $15,000 to $400,000. Platforms supported include MT5, DXTrade, TradingView and MT4. FXIFY checks CID (computer ID) to prevent account management. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "seo_content": "<h3>FXIFY: UK-Based CFD Prop Firm Since 2023</h3><p>FXIFY is a CFD prop trading firm based in the United Kingdom, established in April 2023. Despite being a relatively newer firm, FXIFY has quickly grown its presence by offering four evaluation types — Instant, 1-Phase, 2-Phase (Trailing), and 3-Phase — across a wide range of account sizes from $15,000 to $400,000. FXIFY uses Computer ID (CID) verification to prevent account management by third parties.</p><p>Account sizes run from $15,000 to $400,000. Sample pricing on the 2-Step Trailing and 1-Phase models: 400K at $2,360 (standard $2,950), 200K at $839.20 (standard $1,049), 100K at $439.20 (standard $549), 50K at $303.20 (standard $379), 1-Phase 25K at $159.20 (standard $199), 1-Phase 15K at $95.20 (standard $119). The 2-step Trailing drawdown model provides a different risk structure compared to the static drawdown offered by the 1-Phase program.</p><p>Four platforms are supported: DXTrade, MT4, MT5, and TradingView. Tradable instruments include FX, Metals, Indices, Stocks, and Other Commodities. Note that Crypto is no longer available on Forex-based accounts effective December 1, 2025. Leverage for FX is 1:50 on Instant and 1:30 on 1/2/3-Phase; Metals are 1:20 on Instant and 1:30 on challenge models; Indices are 1:15 on Instant and 1:10 on challenge models; Stocks are 1:2 across all programs.</p><p>The minimum payout is $50, processed within 3 business days. Standard and Classic programs offer the first payout on demand, then bi-weekly. The Lightning program starts payouts at 7 days, then bi-weekly. Instant accounts pay bi-weekly (Standard) or every 10 days (Lite). Payout methods include Bank Transfer, Crypto, and Riseworks. Payments are accepted via Apple Pay, Google Pay, PayPal, Credit/Debit Card, and Crypto.</p><p>FXIFY is chosen by traders who want a UK-based firm with multiple evaluation structures, TradingView support, and a competitive minimum payout threshold. EAs are allowed on non-Instant and non-Lightning programs. Weekend holding is permitted on Standard, Classic, and 3-Phase programs. Instant and Lightning accounts have stricter rules: no EAs, no copy trading, positions closed before Friday market close, and news trading restricted 5 minutes before and after major events. Inactivity limit is 60 days.</p>",
   "youtube_metadata": {
     "title": "FXIFY Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of FXIFY. We analyze their forex environment and execution rules."

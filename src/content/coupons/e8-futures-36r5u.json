@@ -1,6 +1,7 @@
 {
   "id": "e8-futures-36r5u",
   "canonical_slug": "e8-futures",
+  "review_slug": "e8-futures-review",
   "firm_name": "E8 Futures",
   "broker": "E8 Futures",
   "title": "E8 Futures Check website",
@@ -96,7 +97,7 @@
     "type": "image",
     "src": "/images/logos/e8-futures.svg"
   },
-  "seo_content": "<h3>E8 Futures Technical Infrastructure</h3><p>E8 Futures, based in the United States and established in December 2024, is a futures prop trading firm associated with E8 Markets. It offers a 2-Step program and supports the Match-Trader and cTrader platforms through its integrated E8X dashboard. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "seo_content": "<h3>E8 Futures Technical Infrastructure</h3><p>E8 Futures, based in the United States and established in December 2024, is a futures proprietary trading firm operating under the E8 Markets umbrella. The firm offers a single evaluation format — the E8 Signature 1-Step — across three account sizes, managed through the proprietary E8 Markets X platform. As a recent addition to the E8 ecosystem launched in late 2024, E8 Futures extends the brand's CFD-oriented infrastructure into the regulated futures space.</p><p>Three account sizes are available under the E8 Signature 1-Step program: $50,000 at $84.50 (original $130.00), $100,000 at $169.00 (original $260.00), and $150,000 at $253.50 (original $390.00). An activation fee and subscription are required for Signature accounts. Payments are accepted via Credit/Debit Card and Crypto. Level 2 market data is not available through the E8 Markets X platform for futures accounts.</p><p>All trading is conducted exclusively on the E8 Markets X platform. Instruments are limited to futures. No leverage specifications are published for futures contracts. Copy trading is permitted for both the evaluation and funded stages. EAs using the trader's own code are allowed, subject to the general prohibited activities outlined in the firm's terms and conditions. Overnight and weekend holding are not permitted on E8 Futures accounts.</p><p>Payouts require the trader to complete 5 winning days with a daily PnL of at least 0.3% of the account balance. Payout caps apply progressively: the first and second payouts are capped at 2.5% of the account balance, the third at 4.5%, and the fourth at 5.5%. From the fifth payout onward, the cap is lifted to $25,000 per cycle, or the account may be transferred to E8 Pro. A buffer equivalent to the end-of-day trailing drawdown of 4% must be maintained before any payout can be processed. Minimum payout is $312.50. Payouts are processed through Plane and Riseworks.</p><p>On funded (simulated) accounts, all positions must be closed at least 2 minutes before and 2 minutes after Tier 1 news events. News trading during evaluations carries no restriction. Traders are required to place at least one trade every 7 days to maintain active account status. The firm's prohibited trading strategies are governed by its full terms and conditions, with specific restrictions referenced within the E8X dashboard rather than published as a standalone list.</p>",
   "youtube_metadata": {
     "title": "E8 Futures Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of E8 Futures. We analyze their futures environment and execution rules."

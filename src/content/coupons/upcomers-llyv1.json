@@ -1,6 +1,7 @@
 {
   "id": "upcomers-llyv1",
   "canonical_slug": "upcomers",
+  "review_slug": "upcomers-review-l2j7n",
   "firm_name": "Upcomers",
   "broker": "Upcomers",
   "title": "Upcomers 75% OFF",
@@ -23,11 +24,13 @@
   "leverage_details": {},
   "commissions": {},
   "challenges": [
-    "{\r\n            name: Upcomers Challenge - 2.5M",
-    "model: 2-step",
-    "currency: USD",
-    "account_size: 2500000",
-    "price: 0 // Placeholder as its not in the image\r\n        }"
+    {
+      "name": "Upcomers Challenge - 2.5M",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "2500000",
+      "price": "0.00"
+    }
   ],
   "consistency_rules": {},
   "forbidden_strategies": [

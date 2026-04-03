@@ -27,6 +27,31 @@ const relatedPosts = allNews
 ---
 
 <Layout title={post.data.title} description={post.data.description} ogImage={post.data.heroImage}>
+    <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": post.data.title,
+        "description": post.data.description,
+        "datePublished": post.data.pubDate.toISOString(),
+        "dateModified": (post.data.updatedDate || post.data.pubDate).toISOString(),
+        "author": {
+            "@type": "Organization",
+            "name": "GoPropReels"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "GoPropReels",
+            "url": "https://gopropreels.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://gopropreels.com/og-default.jpeg"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://gopropreels.com/news/${post.slug}`
+        }
+    })} />
     <Header />
 	<main class="min-h-screen pb-24">
         <div class="relative bg-brand-surface border-b border-white/5 py-20 px-4 mb-12 overflow-hidden">

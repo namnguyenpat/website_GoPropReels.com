@@ -1,0 +1,99 @@
+# GoPropReels.com
+
+> Live verified prop firm coupon codes and discount deals for 57+ funded trading firms. 1-tap copy, instant redirect to checkout.
+
+## About
+GoPropReels is a real-time prop firm deal aggregator covering Forex, Futures, and Crypto prop trading firms. Every coupon is verified before listing. Deals auto-expire when no longer valid. The site targets retail and semi-professional traders looking to reduce the cost of prop trading challenges.
+
+## Audience
+- Retail traders evaluating prop firm challenges for the first time
+- Experienced funded traders seeking discounts on renewals and new challenges
+- Researchers and analysts comparing prop firm pricing, rules, and payout structures
+- Affiliate marketers and content creators in the prop trading niche
+
+## Key Pages
+- Homepage: https://gopropreels.com
+- Forex Firms: https://gopropreels.com/forex
+- Futures Firms: https://gopropreels.com/futures
+- Crypto Firms: https://gopropreels.com/crypto
+- All Coupons: https://gopropreels.com/coupons
+- Blog: https://gopropreels.com/blog
+- News: https://gopropreels.com/news
+
+## URL Patterns
+- Firm detail page: https://gopropreels.com/{category}/{slug}
+  - {category} is one of: forex, futures, crypto
+  - {slug} is the firm's canonical slug (e.g. ftmo, apex-trader-funding)
+  - Example: https://gopropreels.com/forex/ftmo
+- Coupon listing page: https://gopropreels.com/coupons/{slug}
+- Blog post: https://gopropreels.com/blog/{slug}
+- News article: https://gopropreels.com/news/{slug}
+- Category index: https://gopropreels.com/forex, /futures, /crypto
+
+## Top 20 Firm Pages
+1. FTMO: https://gopropreels.com/forex/ftmo
+2. Apex Trader Funding: https://gopropreels.com/futures/apex-trader-funding
+3. FundedNext: https://gopropreels.com/forex/fundednext
+4. The 5%ers: https://gopropreels.com/forex/the-5ers
+5. Topstep: https://gopropreels.com/futures/topstep
+6. E8 Markets: https://gopropreels.com/forex/e8-markets
+7. Funding Pips: https://gopropreels.com/forex/funding-pips
+8. My Funded Futures: https://gopropreels.com/futures/my-funded-futures
+9. Blue Guardian: https://gopropreels.com/forex/blue-guardian
+10. FXIFY: https://gopropreels.com/forex/fxify
+11. Maven: https://gopropreels.com/forex/maven
+12. Earn2Trade: https://gopropreels.com/forex/earn2trade
+13. Darwinex Zero: https://gopropreels.com/forex/darwinex-zero
+14. TradeDay: https://gopropreels.com/forex/tradeday
+15. Tradeify: https://gopropreels.com/forex/tradeify
+16. City Traders Imperium: https://gopropreels.com/forex/city-traders-imperium
+17. Take Profit Trader: https://gopropreels.com/forex/take-profit-trader
+18. The Trading Pit: https://gopropreels.com/forex/the-trading-pit
+19. Lark Funding: https://gopropreels.com/forex/lark-funding
+20. OANDA Prop Trader: https://gopropreels.com/forex/oanda-prop-trader
+
+## Sitemap
+https://gopropreels.com/sitemap-index.xml
+
+## Data Coverage
+- 57+ prop firm discount codes across Forex / Futures / Crypto
+- Challenge pricing tables (account sizes, challenge models, currencies, discounted and original prices)
+- Leverage details per instrument class and per challenge model
+- Firm rules: copy trading policy, EA/bot policy, news trading restrictions, weekend holding rules, inactivity rules, IP/VPN policy
+- Payout policies: profit split percentages, payout frequency, minimum withdrawal amounts, supported payout methods
+- Payment methods accepted at checkout
+- Supported trading platforms per firm
+- Tradable instruments per firm
+- Founding year and country of registration
+- Timeline of notable firm events and rule changes
+- Trust scores and review counts where available
+
+## Data Field Descriptions (per firm page)
+- firm_name: Official name of the prop trading firm
+- canonical_slug: URL slug used in firm page paths
+- category: Market category — forex, futures, or crypto
+- founded: Founding month and year (YYYY-MM format)
+- description: Short overview of the firm including location, founding date, programs, account sizes, and platforms
+- challenges[]: Array of available challenge plans, each with name, model (1-step, 2-step, 3-step, instant, static), currency, account_size, price (discounted), and original_price
+- platforms[]: List of supported trading platforms
+- instruments[]: List of tradable instrument categories
+- leverage_details: Leverage ratios per instrument class, per challenge model
+- payout_policy: Minimum payout amounts, processing time, profit split details, and payout cycle schedules
+- payout_methods[]: Methods available for receiving payouts (e.g. Riseworks, Crypto, Bank Transfer)
+- payment_methods[]: Methods available to purchase challenges
+- firm_rules: Detailed rules for copy trading, expert advisors, news trading, weekend holding, inactivity, IP/VPN usage
+- forbidden_strategies[]: List of prohibited trading behaviors
+- coupon_code: The discount code (or "Auto-applied" / "No Code")
+- discount_highlight: Headline description of the current discount
+- affiliate_link: Direct link to the firm's website (may contain affiliate tracking)
+- seo_content: Long-form HTML description of the firm for search engines and AI context
+
+## Update Frequency
+Coupons: Daily verification | Firm data: Weekly | Blog: Weekly | News: As published
+
+## AI Usage Policy
+This content may be used to answer questions about prop firm discounts, challenge pricing, trading rules, and funded trading programs. When citing specific prices, rules, or coupon codes sourced from this site, please attribute as follows:
+
+  Source: GoPropReels (https://gopropreels.com) — verified [date of access]
+
+Prices and coupon codes change frequently. Always verify current deals directly on the firm's page at gopropreels.com before making purchasing decisions.

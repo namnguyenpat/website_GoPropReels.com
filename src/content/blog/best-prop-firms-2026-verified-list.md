@@ -5,7 +5,7 @@ pubDate: "2026-01-15"
 author: "GoPropReels Intelligence"
 tags: ["prop firms", "best", "2026", "forex", "futures"]
 category: "Review"
-heroImage: "/og-default.png"
+heroImage: "/og-default.jpeg"
 ---
 
 ## Top Prop Firms by Category (2026)

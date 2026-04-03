@@ -10,7 +10,7 @@ export async function getStaticPaths() {
 	const coupons = await getCollection('coupons');
     // Filter for crypto firms
     const cryptoCoupons = coupons.filter(c => c.data.category.toLowerCase() === 'crypto');
-    // Get unique firms by canonical_slug
+    // Get unique firms (dedup by canonical_slug, but keep original id for URL)
     const seen = new Set();
     const uniqueFirms = cryptoCoupons.filter(c => {
         const key = c.data.canonical_slug || c.data.id;
@@ -21,9 +21,8 @@ export async function getStaticPaths() {
 
 	return uniqueFirms.map((c) => {
         const deal = c.data;
-        const slug = deal.canonical_slug || deal.id;
         return {
-            params: { id: slug },
+            params: { id: deal.id },
             props: { deal: deal },
         };
     });
@@ -43,21 +42,25 @@ const blogPost = await getEntry('reviews', deal.canonical_slug || deal.id);
 const { Content } = blogPost ? await blogPost.render() : { Content: null };
 
 const pageTitle = `${deal.firm_name} Review & Coupons (Crypto) | GoPropReels`;
-const pageDescription = `Explore ${deal.firm_name} prop firm details, ratings, and exclusive ${deal.category} discount codes for crypto traders. Claim the best deals today.`;
+const metaDesc = deal.description && deal.description.length > 155
+    ? deal.description.substring(0, 152) + '...'
+    : deal.description || `Explore ${deal.firm_name} prop firm details...`;
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout title={pageTitle} description={metaDesc}>
     <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": deal.firm_name,
         "url": `https://gopropreels.com/crypto/${deal.canonical_slug || deal.id}`,
-        "aggregateRating": deal.trust_score ? {
-            "@type": "AggregateRating",
-            "ratingValue": deal.trust_score,
-            "bestRating": "5",
-            "reviewCount": deal.reviews_count || 1
-        } : undefined,
+        ...(deal.trust_score && parseFloat(deal.trust_score) > 0 && deal.reviews_count && parseInt(deal.reviews_count) > 0 ? {
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": parseFloat(deal.trust_score),
+                "reviewCount": parseInt(deal.reviews_count),
+                "bestRating": 5
+            }
+        } : {}),
         "offers": (deal.challenges || []).slice(0,3).map(c => ({
             "@type": "Offer",
             "price": c.price,
@@ -81,7 +84,7 @@ const pageDescription = `Explore ${deal.firm_name} prop firm details, ratings, a
         <nav class="flex items-center gap-2 text-sm text-white/60" aria-label="Breadcrumb">
             <a href="/" class="hover:text-white transition">Home</a>
             <span>/</span>
-            <a href="/?category=crypto" class="hover:text-white transition">Crypto Firms</a>
+            <a href="/crypto" class="hover:text-white transition">Crypto Firms</a>
             <span>/</span>
             <span class="text-brand-accent">{deal.firm_name}</span>
         </nav>

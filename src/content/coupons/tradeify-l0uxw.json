@@ -1,6 +1,7 @@
 {
   "id": "tradeify-l0uxw",
   "canonical_slug": "tradeify",
+  "review_slug": "tradeify-review",
   "firm_name": "Tradeify",
   "broker": "Tradeify",
   "title": "Tradeify Check website",
@@ -166,7 +167,7 @@
     "type": "image",
     "src": "/images/logos/tradeify.svg"
   },
-  "seo_content": "<h3>Tradeify Technical Infrastructure</h3><p>Tradeify, based in the United States, was established in April 2024. The firm is a futures provider that offers 1 Step program types. Account sizes range from $10,000 to $150,000. Tradable instruments include Futures with 1:1 leverage for majors, exotics, and cryptocurrencies. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "seo_content": "<h3>Tradeify: US Futures Prop Firm Since 2024</h3><p>Tradeify is a futures prop trading firm based in the United States, established in April 2024. Despite being one of the newer entrants in the futures prop space, Tradeify has attracted traders with a diverse lineup of evaluation and instant-funded programs: Growth (1-step), Select Daily and Select Flex (1-step with different payout structures), and Lightning Funded Plan (instant funded). All programs trade exclusively Futures instruments.</p><p>Account sizes range from $10,000 to $150,000 across evaluation programs; Instant accounts are available in $25,000, $50,000, and $100,000 sizes. Sample pricing: Lightning Instant 100K at $440.30 (standard $629), Lightning 50K at $328.30 (standard $469), Lightning 25K at $230.30 (standard $329), Growth 1-Step 150K at $251.30 (standard $359), Select Flex/Daily 150K at $215.40 (standard $359), Select 100K at $181.30 (standard $259), Select/Growth 50K from $97.30.</p><p>Four platforms are supported: Tradovate, TradingView, NinjaTrader, and Quantower. Tradable instruments are Futures only. A 20% consistency rule applies, meaning no single day can account for more than 20% of total profits. Microscalping rules require at least 50% of profits to come from trades lasting more than 10 seconds. Hedging is 100% prohibited. All positions auto-close at market close; weekend holding is not permitted.</p><p>Payout splits are 90/10 across all plans. Growth requires a minimum of 5 trading days and pays $500 to $1,500 minimum depending on account size. The Lightning plan has no minimum day requirement and a $1,000 minimum payout. Select Flex pays every 5 winning days with a $250 minimum. Processing time is 24-48 hours, or 72 hours outside business hours. Payout methods are Plane and Riseworks; payments via Credit Card, Crypto, and PayPal.</p><p>Tradeify is attractive to futures traders who want instant-funded options alongside evaluation accounts, with 90% payouts across all plans and a fast 24-48 hour processing window. Up to 5 own accounts may engage in copy trading; algorithmic bots are allowed with ownership proof but HFT bots are prohibited. Traders must execute at least 1 trade per week to keep accounts active. Max 15 evaluations per 30 days and max 5 funded accounts apply.</p>",
   "youtube_metadata": {
     "title": "Tradeify Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of Tradeify. We analyze their forex environment and execution rules."

@@ -1,6 +1,7 @@
 {
   "id": "tradeday-l0uu2",
   "canonical_slug": "tradeday",
+  "review_slug": "tradeday-review",
   "firm_name": "TradeDay",
   "broker": "TradeDay",
   "title": "TradeDay Check website",
@@ -154,7 +155,7 @@
     "type": "image",
     "src": "/images/logos/tradeday.svg"
   },
-  "seo_content": "<h3>TradeDay Technical Infrastructure</h3><p>TradeDay is based in the United States and was established in January 2020. The firm operates in futures markets and offers a 1 Step program. Supported trading platforms include Tradovate, TradingView, Quantower, and NinjaTrader. Verified by our [Intelligence Hub](/) for prop trading excellence.</p>",
+  "seo_content": "<h3>TradeDay: US Futures Prop Firm Since 2020</h3><p>TradeDay is a futures prop trading firm based in the United States, established in January 2020. The firm offers three distinct 1-step evaluation types for each account size: EOD (End of Day drawdown), Intraday (tighter intraday drawdown), and Static (fixed drawdown). This variety allows traders to select an evaluation model that matches their specific risk tolerance and trading style.</p><p>Account sizes range from $50,000 to $150,000. With the current 40% discount, EOD pricing is: 150K at $225 (standard $375), 100K at $165 (standard $275), 50K at $105 (standard $175). Intraday options are more affordable: 150K at $180 (standard $300), 100K at $120 (standard $200), 50K at $75 (standard $125). Static pricing sits between the two: 150K at $210, 100K at $150, 50K at $99.</p><p>Supported platforms include TradeDayX (proprietary), Tradovate, TradingView, NinjaTrader, Quantower, and Jigsaw Daytradr. Trading is limited to Futures instruments. News trading is restricted within 2 minutes before and after data releases — no positions or orders may be placed during this window. Microtrading during the first 5 days of evaluation is not allowed. All positions must be closed by market close daily; gap trading and hedging across accounts are prohibited.</p><p>The payout structure is tiered by profit level: 80% on the first $50K, 90% up to $100K, and 95% beyond $100K. The minimum payout is $250 with no frequency restrictions — traders can request payouts whenever they choose. Buffer zone funds (at the trailing max drawdown level) are available at a 50% split. Payouts are processed via Riseworks. Payments are accepted via Credit/Debit Card and PayPal. Accounts inactive for 45 days are automatically closed.</p><p>TradeDay is favored by futures traders who want multiple drawdown model options, a tiered profit split that improves as profits grow, and the flexibility to request payouts on their own schedule. The proprietary TradeDayX platform offers an integrated trading environment. EAs are allowed, but third-party algorithmic bots are forbidden, and high-frequency scalping (over 200 trades per day) is prohibited. Copy trading from personal accounts elsewhere into TradeDay is permitted.</p>",
   "youtube_metadata": {
     "title": "TradeDay Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of TradeDay. We analyze their forex environment and execution rules."
