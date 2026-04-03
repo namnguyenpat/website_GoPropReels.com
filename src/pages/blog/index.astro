@@ -7,9 +7,19 @@ import { getCollection } from 'astro:content';
 let knowledgePosts = [];
 try {
     const allReviews = await getCollection('reviews');
-    knowledgePosts = allReviews
-        .filter(p => p.data.category === 'Knowledge')
-        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+    const reviewPosts = allReviews
+        .filter(p => p.data.category === 'Knowledge');
+
+    const allBlog = await getCollection('blog');
+    const blogPosts = allBlog
+        .filter(p => p.data.category === 'Knowledge');
+
+    knowledgePosts = [...reviewPosts, ...blogPosts]
+        .sort((a, b) => {
+            const aDate = a.data.pubDate ? a.data.pubDate.valueOf() : 0;
+            const bDate = b.data.pubDate ? b.data.pubDate.valueOf() : 0;
+            return bDate - aDate;
+        });
 } catch (e) {
     // Collection may not exist
 }
