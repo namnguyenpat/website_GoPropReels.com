@@ -191,14 +191,14 @@
   ],
   "video_source": {
     "type": "image",
-    "src": "/images/logos/alpha-capital-group.svg"
+    "src": "/images/logos/alpha-capital.svg"
   },
   "seo_content": "<h3>Alpha Capital Technical Infrastructure</h3><p>Alpha Capital, based in the United Kingdom, was established in November 2021. It operates as a CFD proprietary trading firm offering multiple evaluation structures including 1-Step, 2-Step, and 3-Step programs. The firm holds a review score of 4.4 out of 5 based on 811 reviews, reflecting its standing as an established mid-tier prop firm in the UK market. Its program lineup spans two primary challenge variants: Alpha Pro 10% and Alpha Swing, each targeting different trader styles and risk tolerances.</p><p>The Alpha Pro 10% program covers six account sizes from $5,000 to $200,000. Challenge prices range from $35.00 for the 5K account to $697.90 for the 200K account (original $997.00), with intermediate sizes at $40.00 (10K), $137.90 (25K), $207.90 (50K), and $347.90 (100K). The Alpha Swing program is available in four sizes: $5K at $59.50 (original $70.00), $10K at $40.00, $100K at $490.45 (original $577.00), and $200K at $932.45 (original $1,097.00). Payments are accepted via Apple Pay, Credit/Debit Card, Crypto, Google Pay, and PayPal.</p><p>Alpha Capital supports four trading platforms: MT5, cTrader, DXTrade, and TradeLocker. Tradable instruments include Forex, Metals, Indices, and Energy. Leverage varies by program type: FX is 1:100 on 2-Step accounts (1:30 on 1-Step, 1:50 on 3-Step); Metals reach 1:30 on 2-Step (1:9 on 1-Step and 3-Step); Indices are 1:20 on 2-Step (1:10 on all others); Energy is capped at 1:10 across all program types. News trading is permitted without restriction during evaluations, restricted to a 2-minute window on funded Alpha Pro 8/10% accounts, and restricted to a 5-minute window on Alpha One, Pro 6%, and Three funded accounts. Weekend holding is allowed only on Swing accounts.</p><p>Payouts are processed every 14 days under the standard bi-weekly option, with an on-demand 2% withdrawal option also available. The minimum payout is $100 in gross profits. Supported payout methods are Bank Transfer, Riseworks, and Wise. Copy trading is permitted for personal accounts only using MT5, with proof of ownership required. The maximum allocation per trading strategy on a Qualified Analyst Account is $300,000.</p><p>Alpha Capital prohibits all-or-nothing trading practices and order block spamming. Funded traders must maintain an average trade duration exceeding 2 minutes, with at least 50% of profits generated from trades lasting more than 2 minutes. Risk per trade or sequence of trades closed simultaneously is capped at 2% of the account balance. The maximum lot size for funded Swing accounts ranges from 1.25 lots ($5K) to 40 lots ($200K), while Alpha Pro accounts allow up to 2.5 lots ($5K) to 80 lots ($200K). All accounts are deactivated after 30 consecutive days of inactivity.</p>",
   "youtube_metadata": {
     "title": "Alpha Capital Full Report: Leverage, Rules & Payouts",
     "description": "Complete technical breakdown of Alpha Capital. We analyze their forex environment and execution rules."
   },
-  "firm_logo": "/images/logos/alpha-capital-group.svg",
+  "firm_logo": "/images/logos/alpha-capital.svg",
   "hot": false,
   "created_at": "2026-02-27T08:03:01.181Z"
 }
