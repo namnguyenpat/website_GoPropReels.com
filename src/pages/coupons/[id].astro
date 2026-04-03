@@ -9,27 +9,8 @@ import { getCollection, getEntry } from 'astro:content';
 
 export async function getStaticPaths() {
 	const coupons = await getCollection('coupons');
-	// Sort: active (non-expired) coupons first, then by newest expiration_date,
-	// so the first entry seen for each slug is always the "best" one.
-	const now = new Date();
-	const sorted = [...coupons].sort((a, b) => {
-		const aExpired = a.data.expiration_date ? new Date(a.data.expiration_date) < now : false;
-		const bExpired = b.data.expiration_date ? new Date(b.data.expiration_date) < now : false;
-		if (aExpired !== bExpired) return aExpired ? 1 : -1; // active first
-		const aDate = a.data.expiration_date ? new Date(a.data.expiration_date).getTime() : 0;
-		const bDate = b.data.expiration_date ? new Date(b.data.expiration_date).getTime() : 0;
-		return bDate - aDate;
-	});
-	// Dedup by canonical_slug (or id), keeping only the best per slug.
-	const seen = new Set();
-	const unique = sorted.filter((entry) => {
-		const key = entry.data.canonical_slug || entry.data.id;
-		if (seen.has(key)) return false;
-		seen.add(key);
-		return true;
-	});
-	return unique.map((entry) => ({
-		params: { id: entry.data.canonical_slug || entry.data.id },
+	return coupons.map((entry) => ({
+		params: { id: entry.data.id },
 		props: { deal: entry.data },
 	}));
 }
