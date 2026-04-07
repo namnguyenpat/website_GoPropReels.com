@@ -26,9 +26,12 @@ const firmInitial = deal.firm_name.charAt(0);
 ---
 
 <a
-	href={`/coupons/${deal.id}`}
+	href={deal.affiliate_link || `/coupons/${deal.id}`}
+	target="_blank"
+	rel="noopener noreferrer nofollow"
 	class="group block rounded-2xl border border-white/10 bg-white/5 overflow-hidden transition hover:border-white/20 hover:bg-white/10"
-	aria-label={`View ${deal.firm_name} ${deal.discount_highlight} deal`}
+	aria-label={`Visit ${deal.firm_name} official site`}
+	onclick="event.stopPropagation()"
 >
 	<div class="relative aspect-video overflow-hidden bg-[#0a0a0a]">
 		{deal.video_source?.type === 'youtube' && deal.video_source.id ? (
@@ -59,18 +62,10 @@ const firmInitial = deal.firm_name.charAt(0);
 		)}
 		<div class="absolute inset-0" style={`background: radial-gradient(circle at center, ${accentColor}20, transparent);`}></div>
 		<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-		<div class="absolute left-3 top-3">
-			<span 
-				class="inline-block max-w-[120px] truncate rounded-full bg-white/20 px-3 py-1 text-[10px] font-black uppercase text-white backdrop-blur transition-all group-hover:max-w-[200px]"
-				style={`background:${accentColor}CC;`}
-			>
-				{deal.discount_highlight}
-			</span>
-		</div>
 	</div>
 	<div class="p-4">
 		<div class="flex items-center gap-2 mb-2">
-			<div 
+			<div
 				class="flex h-8 w-8 items-center justify-center rounded-lg text-xs font-black text-black"
 				style={`background:${accentColor}`}
 			>
@@ -86,9 +81,8 @@ const firmInitial = deal.firm_name.charAt(0);
 		)}
 		<div class="flex items-center justify-between">
 			<span class="text-sm font-semibold" style={`color:${accentColor}`}>
-				Get Code
+				Get Deal →
 			</span>
-			<span class="text-xs text-white/60">View →</span>
 		</div>
 	</div>
 </a>
