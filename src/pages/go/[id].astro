@@ -10,28 +10,84 @@ export async function getStaticPaths() {
 }
 
 const { deal } = Astro.props;
+const url = deal.affiliate_link;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to {deal.firm_name}...</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-    <meta http-equiv="refresh" content={`0;url=${deal.affiliate_link}`} />
-    
-    <script define:vars={{ link: deal.affiliate_link }}>
-        window.location.href = link;
-    </script>
-</head>
-<body class="bg-slate-900 text-white flex items-center justify-center min-h-screen">
-    <div class="text-center p-8">
-        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-        <p class="text-lg mb-4">Redirecting you to <strong>{deal.firm_name}</strong>...</p>
-        <p class="text-sm text-slate-400">
-            If you are not redirected automatically, <a href={deal.affiliate_link} class="text-blue-400 hover:underline">click here</a>.
-        </p>
+    <title>Opening {deal.firm_name}...</title>
+    <style>
+      body {
+        margin: 0; padding: 0;
+        background-color: #030305;
+        color: white;
+        font-family: system-ui, -apple-system, sans-serif;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        min-height: 100vh; gap: 16px;
+      }
+      .ring {
+        position: relative;
+        width: 80px; height: 80px;
+      }
+      .ring svg {
+        width: 80px; height: 80px;
+        transform: rotate(-90deg);
+      }
+      .ring-bg { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 5; }
+      .ring-fg {
+        fill: none; stroke: #f59e0b; stroke-width: 5;
+        stroke-linecap: round;
+        stroke-dasharray: 220;
+        stroke-dashoffset: 0;
+        transition: stroke-dashoffset 0.9s linear;
+      }
+      .ring-num {
+        position: absolute; inset: 0;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 26px; font-weight: 900; color: #f59e0b;
+      }
+      p { font-size: 11px; font-family: monospace; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.45; margin: 0; }
+      .done-check { font-size: 32px; }
+    </style>
+  </head>
+  <body>
+    <div class="ring">
+      <svg viewBox="0 0 80 80">
+        <circle class="ring-bg" cx="40" cy="40" r="35"/>
+        <circle class="ring-fg" id="arc" cx="40" cy="40" r="35"/>
+      </svg>
+      <div class="ring-num" id="num">5</div>
     </div>
-</body>
+    <p id="msg">Opening {deal.firm_name} in a new tab...</p>
+
+    <script is:inline define:vars={{ url }}>
+      const TOTAL = 5;
+      const CIRC = 2 * Math.PI * 35;
+      let count = TOTAL;
+      const arc = document.getElementById('arc');
+      const num = document.getElementById('num');
+      const msg = document.getElementById('msg');
+      arc.style.strokeDasharray = CIRC;
+      arc.style.strokeDashoffset = 0;
+
+      function tick() {
+        count--;
+        arc.style.strokeDashoffset = CIRC * (1 - count / TOTAL);
+        if (count > 0) {
+          num.textContent = count;
+          setTimeout(tick, 1000);
+        } else {
+          window.open(url, '_blank');
+          num.innerHTML = '<span class="done-check">✓</span>';
+          msg.textContent = 'Deal opened! Check your new tab.';
+        }
+      }
+      setTimeout(tick, 1000);
+    </script>
+  </body>
 </html>
