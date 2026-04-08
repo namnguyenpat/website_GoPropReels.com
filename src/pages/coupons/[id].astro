@@ -10,8 +10,8 @@ import { getCollection, getEntry } from 'astro:content';
 export async function getStaticPaths() {
 	const coupons = await getCollection('coupons');
 	return coupons.map((entry) => ({
-		params: { id: entry.data.canonical_slug || entry.data.id },
-		props: { deal: entry.data },
+		params: { id: entry.id },
+		props: { deal: { ...entry.data, slug: entry.id } },
 	}));
 }
 
@@ -23,7 +23,7 @@ const { Content } = blogPost ? await blogPost.render() : { Content: null };
 
 // Auto-generate related deals for internal linking
 const allCoupons = await getCollection('coupons');
-const deals = allCoupons.map(c => c.data);
+const deals = allCoupons.map(c => ({ ...c.data, slug: c.id }));
 const similarDeals = getRelatedDeals(deal, deals, { sameCategory: true, maxResults: 3 });
 // Auto-generate breadcrumbs
 const breadcrumbs = generateBreadcrumbs(deal);
@@ -44,7 +44,7 @@ const pageDescription = isExpired
     : `Claim ${deal.discount_highlight} at ${deal.firm_name}. Copy code ${deal.coupon_code} and head straight to checkout.`;
 
 const accentColor = deal.theme_color || '#FF2D55';
-const canonical = `/coupons/${deal.canonical_slug || deal.id}`;
+const canonical = `/coupons/${deal.slug || deal.id}`;
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonical={canonical}>
@@ -82,7 +82,7 @@ const canonical = `/coupons/${deal.canonical_slug || deal.id}`;
 		"@context": "https://schema.org",
 		"@type": "Organization",
 		"name": deal.firm_name,
-		"url": `https://gopropreels.com/coupons/${deal.canonical_slug || deal.id}`,
+		"url": `https://gopropreels.com/coupons/${deal.slug || deal.id}`,
 		...(deal.trust_score && parseFloat(deal.trust_score) > 0 && deal.reviews_count && parseInt(deal.reviews_count) > 0 ? {
 			"aggregateRating": {
 				"@type": "AggregateRating",
@@ -104,7 +104,7 @@ const canonical = `/coupons/${deal.canonical_slug || deal.id}`;
 		"itemListElement": [
 			{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gopropreels.com" },
 			{ "@type": "ListItem", "position": 2, "name": "Coupons", "item": "https://gopropreels.com/coupons" },
-			{ "@type": "ListItem", "position": 3, "name": deal.firm_name, "item": `https://gopropreels.com/coupons/${deal.canonical_slug || deal.id}` }
+			{ "@type": "ListItem", "position": 3, "name": deal.firm_name, "item": `https://gopropreels.com/coupons/${deal.slug || deal.id}` }
 		]
 	})} />
 
@@ -449,7 +449,7 @@ const canonical = `/coupons/${deal.canonical_slug || deal.id}`;
 					))}
 				</div>
 				<div class="mt-6 text-center">
-					<a href={`/#feed?category=${deal.category}`} class="text-sm text-brand-accent hover:underline">
+					<a href={`/${deal.category.toLowerCase()}/`} class="text-sm text-brand-accent hover:underline">
 						View all {deal.category} deals →
 					</a>
 				</div>

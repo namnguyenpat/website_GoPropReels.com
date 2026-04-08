@@ -33,7 +33,7 @@ const initiallyHidden = rest['data-initially-hidden'] === 'true';
 const imageAlt = generateImageAltText(deal, 'card');
 
 const firmInitial = deal.firm_name.charAt(0);
-const dealSlug = deal.canonical_slug || deal.id;
+const dealSlug = deal.slug || deal.canonical_slug || deal.id;
 
 // Expiry check
 const today = new Date();
@@ -134,12 +134,17 @@ const hasCoupon = deal.coupon_code && deal.coupon_code !== 'No Code' && deal.cou
             </h3>
             {deal.features && deal.features.length > 0 && (
                 <ul class="space-y-1 w-full px-1">
-                    {deal.features.slice(0, 2).map((f: string) => (
+                    {deal.features.slice(0, 2).map((f: string) => {
+                        // Strip firm name prefix if feature starts with it (e.g. "FTMO - 100K" → "100K")
+                        const prefix = deal.firm_name + ' - ';
+                        const label = f.startsWith(prefix) ? f.slice(prefix.length) : f;
+                        return (
                         <li class="flex items-center gap-2 text-[11px] text-white/70">
                             <span class="h-1.5 w-1.5 rounded-full shrink-0" style={`background:${accentColor};`}></span>
-                            <span class="line-clamp-1 text-left">{f}</span>
+                            <span class="line-clamp-1 text-left">{label}</span>
                         </li>
-                    ))}
+                        );
+                    })}
                 </ul>
             )}
         </div>

@@ -10,7 +10,7 @@ import { getCollection } from 'astro:content';
 
 // Fetch all coupons from the collection
 const allCoupons = await getCollection('coupons');
-const dealsData = allCoupons.map(c => c.data);
+const dealsData = allCoupons.map(c => ({ ...c.data, slug: c.id }));
 
 // Show ALL deals — active first, then expired (never hide expired)
 const today = new Date();
@@ -208,14 +208,6 @@ const latestNews = (await getCollection('reviews', ({ data }) => data.category =
 						<h2 class="text-3xl font-bold text-white">For You Feed</h2>
 						<p class="text-white/60 text-sm">Browse verified funding deals.</p>
 					</div>
-					<a
-						href="http://t.me/GoPropReels_com"
-						target="_blank"
-						rel="noopener"
-						class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70 hover:bg-white/10 hover:text-white transition"
-					>
-						Notify me about new drops
-					</a>
 				</div>
 
 				{/* Search Bar */}
@@ -342,17 +334,30 @@ const latestNews = (await getCollection('reviews', ({ data }) => data.category =
 						</a>
 					</div>
 					<div class="grid gap-6 md:grid-cols-3">
-						{latestPosts.map(post => (
-							<a href={post.data.category === 'News' ? `/news/${post.slug}/` : `/blog/${post.slug}/`} class="group block rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-brand-accent/50 transition">
-								<div class="aspect-video overflow-hidden">
-									<img src={post.data.heroImage || '/og-image.jpg'} alt={post.data.title} class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
-								</div>
-								<div class="p-5">
-									<h3 class="font-bold text-white text-lg mb-2 line-clamp-2 group-hover:text-brand-accent transition">{post.data.title}</h3>
-									<p class="text-sm text-white/60 line-clamp-2">{post.data.description}</p>
-								</div>
-							</a>
-						))}
+						{latestPosts.map(post => {
+							const categoryIcon = post.data.category === 'News' ? 'fa-newspaper' : post.data.category === 'Knowledge' ? 'fa-graduation-cap' : 'fa-file-lines';
+							const categoryColor = post.data.category === 'News' ? '#3B82F6' : post.data.category === 'Knowledge' ? '#8B5CF6' : '#10B981';
+							return (
+								<a href={post.data.category === 'News' ? `/news/${post.slug}/` : `/blog/${post.slug}/`} class="group block rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:border-brand-accent/50 transition">
+									{post.data.heroImage ? (
+										<div class="aspect-video overflow-hidden">
+											<img src={post.data.heroImage} alt={post.data.title} class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+										</div>
+									) : (
+										<div class="aspect-video flex flex-col items-center justify-center gap-3" style={`background: linear-gradient(135deg, ${categoryColor}20, ${categoryColor}05);`}>
+											<div class="flex h-14 w-14 items-center justify-center rounded-2xl border" style={`background: ${categoryColor}20; border-color: ${categoryColor}40;`}>
+												<i class={`fa-solid ${categoryIcon} text-2xl`} style={`color: ${categoryColor};`}></i>
+											</div>
+											<span class="text-[10px] font-black uppercase tracking-widest" style={`color: ${categoryColor};`}>{post.data.category}</span>
+										</div>
+									)}
+									<div class="p-5">
+										<h3 class="font-bold text-white text-lg mb-2 line-clamp-2 group-hover:text-brand-accent transition">{post.data.title}</h3>
+										<p class="text-sm text-white/60 line-clamp-2">{post.data.description}</p>
+									</div>
+								</a>
+							);
+						})}
 					</div>
 					<div class="flex justify-center pt-10">
 						<a href="/blog" class="inline-flex items-center gap-2 rounded-full border border-brand-accent/30 bg-brand-accent/10 px-10 py-4 text-base font-bold text-white transition hover:bg-brand-accent/20 hover:border-brand-accent shadow-xl shadow-brand-accent/10 group">
