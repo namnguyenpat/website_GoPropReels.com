@@ -5,9 +5,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('reviews', ({ data }) => {
-        return data.category === 'Knowledge';
-    });
+	const posts = await getCollection('reviews');
 	return posts.map((post) => ({
 		params: { slug: post.slug },
 		props: post,
@@ -19,10 +17,10 @@ const post = Astro.props;
 const { Content } = await post.render();
 
 // Get related posts
-const allPosts = await getCollection('reviews', ({ data }) => data.category === 'Knowledge');
+const allPosts = await getCollection('reviews');
 const relatedPosts = allPosts
-    .filter(p => p.slug !== post.slug)
-    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .filter(p => p.slug !== post.slug && p.data.pubDate)
+    .sort((a, b) => (b.data.pubDate?.valueOf() ?? 0) - (a.data.pubDate?.valueOf() ?? 0))
     .slice(0, 3);
 ---
 
@@ -43,6 +41,7 @@ const relatedPosts = allPosts
                 </h1>
                 
                 <div class="flex items-center justify-center gap-6 text-sm text-white/60">
+                    {post.data.pubDate && (
                     <time datetime={post.data.pubDate.toISOString()} class="flex items-center gap-2">
                         <i class="fa-regular fa-calendar"></i>
                         {post.data.pubDate.toLocaleDateString('en-us', {
@@ -51,6 +50,7 @@ const relatedPosts = allPosts
                             day: 'numeric',
                         })}
                     </time>
+                    )}
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@ const relatedPosts = allPosts
                                 {related.data.title}
                             </h4>
                             <time class="text-xs text-white/50 block">
-                                {related.data.pubDate.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' })}
+                                {related.data.pubDate?.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' })}
                             </time>
                         </a>
                     ))}

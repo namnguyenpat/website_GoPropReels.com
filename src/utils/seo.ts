@@ -10,6 +10,7 @@ interface Deal {
 	discount_highlight: string;
 	coupon_code: string;
 	features?: string[];
+	slug?: string;
 	canonical_slug?: string;
 }
 
@@ -85,7 +86,7 @@ export function generateBreadcrumbs(deal: Deal): Array<{ label: string; url: str
 		{ label: 'Home', url: '/' },
 		{ label: 'Coupons', url: '/coupons' },
 		{ label: deal.category.charAt(0).toUpperCase() + deal.category.slice(1), url: `/${deal.category}` },
-		{ label: deal.firm_name, url: `/coupons/${deal.canonical_slug || deal.id}` },
+		{ label: deal.firm_name, url: `/coupons/${deal.slug || deal.canonical_slug || deal.id}` },
 	];
 }
 

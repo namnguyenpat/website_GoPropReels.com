@@ -11,8 +11,8 @@ export async function getStaticPaths() {
     const futuresCoupons = coupons.filter(c => c.data.category.toLowerCase() === 'futures');
 
 	return futuresCoupons.map((c) => ({
-        params: { id: c.data.canonical_slug || c.data.id },
-        props: { deal: c.data },
+        params: { id: c.id },
+        props: { deal: { ...c.data, slug: c.id } },
     }));
 }
 
@@ -23,7 +23,7 @@ const allCoupons = await getCollection('coupons');
 const now = Date.now();
 const firmDeals = allCoupons
     .filter(c => c.data.firm_name === deal.firm_name && c.data.category.toLowerCase() === 'futures' && new Date(c.data.expiry_date || '2099-12-31').getTime() > now)
-    .map(c => c.data);
+    .map(c => ({ ...c.data, slug: c.id }));
 
 // Try to fetch rich content from Markdown
 // Priority: review_slug (explicit) → canonical_slug → id
