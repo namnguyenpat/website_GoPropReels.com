@@ -11,7 +11,7 @@ export async function getStaticPaths() {
     const forexCoupons = coupons.filter(c => c.data.category.toLowerCase() === 'forex');
 
 	return forexCoupons.map((c) => ({
-        params: { id: c.data.id },
+        params: { id: c.data.canonical_slug || c.data.id },
         props: { deal: c.data },
     }));
 }

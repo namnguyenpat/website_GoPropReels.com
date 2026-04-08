@@ -34,10 +34,10 @@ const pageDescription = "Stay updated with the latest news, updates, and announc
             </div>
         </div>
 
-        <div class="max-w-6xl mx-auto px-4 mt-16">
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {newsPosts.map(post => (
-                    <a href={`/news/${post.slug}`} class="group flex flex-col bg-white/5 rounded-3xl overflow-hidden border border-white/10 hover:border-brand-accent/30 transition-all duration-300 hover:-translate-y-2">
+        <div class="max-w-6xl mx-auto px-4 mt-16" id="news-feed">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" id="news-grid">
+                {newsPosts.map((post, index) => (
+                    <a href={`/news/${post.slug}`} data-index={index} class="group flex flex-col bg-white/5 rounded-3xl overflow-hidden border border-white/10 hover:border-brand-accent/30 transition-all duration-300 hover:-translate-y-2">
                         <div class="p-8 flex flex-col h-full">
                             <div class="flex items-center gap-3 text-xs text-brand-accent mb-4 font-bold uppercase tracking-widest">
                                 <i class="fa-solid fa-circle text-[6px]"></i>
@@ -60,6 +60,8 @@ const pageDescription = "Stay updated with the latest news, updates, and announc
                 ))}
             </div>
 
+            <div id="pagination-container" class="mt-12 flex justify-center gap-2 flex-wrap"></div>
+
             {newsPosts.length === 0 && (
                 <div class="text-center py-24 bg-white/5 rounded-3xl border border-dashed border-white/10">
                     <p class="text-white/40">No news articles published yet. Check back soon!</p>
@@ -69,4 +71,41 @@ const pageDescription = "Stay updated with the latest news, updates, and announc
     </main>
 
     <Footer />
+
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            const allCards = Array.from(document.querySelectorAll('#news-grid [data-index]'));
+            const paginationContainer = document.getElementById('pagination-container');
+            let currentPage = 1;
+            const itemsPerPage = 12;
+
+            function updateDisplay() {
+                const totalPages = Math.ceil(allCards.length / itemsPerPage);
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                allCards.forEach(card => card.classList.add('hidden'));
+                allCards.slice(startIndex, endIndex).forEach(card => card.classList.remove('hidden'));
+                renderPagination(totalPages);
+            }
+
+            function renderPagination(totalPages) {
+                if (!paginationContainer) return;
+                paginationContainer.innerHTML = '';
+                if (totalPages <= 1) return;
+                for (let i = 1; i <= totalPages; i++) {
+                    const btn = document.createElement('button');
+                    btn.textContent = i;
+                    btn.className = `w-10 h-10 rounded-full border transition-all font-bold text-xs ${currentPage === i ? 'bg-brand-accent border-brand-accent text-black' : 'bg-white/5 border-white/10 text-white hover:bg-white/10'}`;
+                    btn.addEventListener('click', () => {
+                        currentPage = i;
+                        updateDisplay();
+                        document.getElementById('news-feed')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    });
+                    paginationContainer.appendChild(btn);
+                }
+            }
+
+            updateDisplay();
+        });
+    </script>
 </Layout>

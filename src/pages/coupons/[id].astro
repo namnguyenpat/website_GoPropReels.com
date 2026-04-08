@@ -10,7 +10,7 @@ import { getCollection, getEntry } from 'astro:content';
 export async function getStaticPaths() {
 	const coupons = await getCollection('coupons');
 	return coupons.map((entry) => ({
-		params: { id: entry.data.id },
+		params: { id: entry.data.canonical_slug || entry.data.id },
 		props: { deal: entry.data },
 	}));
 }

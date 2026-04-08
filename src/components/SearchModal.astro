@@ -13,7 +13,7 @@ const searchIndex = [
         type: 'fund',
         title: deal.firm_name,
         description: deal.discount_highlight,
-        url: `/coupons/${deal.id}`,
+        url: `/coupons/${deal.canonical_slug || deal.id}`,
         image: null, 
         icon: 'fa-building-columns',
         date: new Date(deal.created_at || 0).valueOf() // Add date for sorting

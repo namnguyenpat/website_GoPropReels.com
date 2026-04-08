@@ -1,0 +1,181 @@
+{
+  "id": "firm-slug-xxxxx",
+  "canonical_slug": "firm-slug",
+  "review_slug": "firm-slug-review",
+  "firm_name": "Firm Name",
+  "broker": "Firm Name",
+  "title": "Firm Name XX% OFF",
+  "description": "Firm Name, based in [Country], was established in [Month YYYY]. It is a [forex/futures] firm offering [1-Step/2-Step] programs with account sizes from $[X] to $[Y]. Supported platforms include [Platform1], [Platform2]. Verified by our [Intelligence Hub](/) for prop trading excellence.",
+  "category": "forex",
+  "discount_highlight": "XX% OFF",
+  "coupon_code": "COUPONCODE",
+  "expiration_date": "2026-12-31",
+  "theme_color": "#hexcolor",
+  "features": [
+    "Account size $10,000 — Entry-level evaluation",
+    "Account size $25,000 — Popular mid-tier",
+    "Account size $50,000 — Professional",
+    "Account size $100,000 — Elite",
+    "Account size $200,000 — Institutional"
+  ],
+  "affiliate_link": "https://official-site.com/?ref=yourref",
+  "trust_score": "4.5",
+  "reviews_count": "1000",
+  "leverage_details": {
+    "forex": "1:100",
+    "indices": "1:50",
+    "commodities": "1:30",
+    "crypto": "1:2"
+  },
+  "commissions": {
+    "forex": "$3.5 per lot round-turn",
+    "indices": "$0.50 per lot round-turn"
+  },
+  "challenges": [
+    {
+      "name": "Firm Name — 1-Step — $10K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "10000",
+      "price": "49.00",
+      "original_price": "99.00"
+    },
+    {
+      "name": "Firm Name — 1-Step — $25K",
+      "model": "1-step",
+      "currency": "USD",
+      "account_size": "25000",
+      "price": "99.00",
+      "original_price": "199.00"
+    },
+    {
+      "name": "Firm Name — 2-Step — $50K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "50000",
+      "price": "199.00",
+      "original_price": "399.00"
+    },
+    {
+      "name": "Firm Name — 2-Step — $100K",
+      "model": "2-step",
+      "currency": "USD",
+      "account_size": "100000",
+      "price": "299.00",
+      "original_price": "599.00"
+    }
+  ],
+  "consistency_rules": {
+    "max_daily_profit_pct": "30",
+    "note": "No single day can exceed 30% of total profit target [VERIFY]"
+  },
+  "forbidden_strategies": [
+    "Hedging: Holding opposing positions simultaneously on same instrument [VERIFY]",
+    "Copy trading from external signal services [VERIFY]",
+    "High-frequency trading / latency arbitrage [VERIFY]",
+    "News trading within 2 minutes of high-impact events [VERIFY]"
+  ],
+  "platforms": [
+    "MetaTrader 4",
+    "MetaTrader 5"
+  ],
+  "instruments": [
+    "Forex",
+    "Indices",
+    "Commodities",
+    "Crypto"
+  ],
+  "payment_methods": [
+    "Credit/Debit Card",
+    "Cryptocurrency",
+    "PayPal"
+  ],
+  "payout_methods": [
+    "Bank Wire",
+    "Cryptocurrency",
+    "Deel",
+    "Rise"
+  ],
+  "founded": "YYYY-MM",
+  "payout_policy": {
+    "minimum_payout": "$[X] minimum withdrawal [VERIFY]",
+    "processing_time": "[X] business days [VERIFY]",
+    "details": "[X]% profit split. [Describe payout structure — e.g., first payout after 14 days, then biweekly]. [VERIFY]",
+    "payout_cycles": [
+      "First payout: [X] days after funded [VERIFY]",
+      "Subsequent: [biweekly/monthly] [VERIFY]"
+    ]
+  },
+  "firm_rules": {
+    "copy_trading": "[Allowed/Prohibited] — [detail] [VERIFY]",
+    "expert_advisor": "[Allowed/Prohibited] — [detail] [VERIFY]",
+    "inactivity_rule": "[X days without trade = account disabled] [VERIFY]",
+    "news_trading": "[Allowed/Prohibited within X minutes of high-impact news] [VERIFY]",
+    "weekend_holding": "[Allowed/Prohibited] [VERIFY]",
+    "forbidden_strategies": [
+      "Hedging [VERIFY]",
+      "Latency arbitrage [VERIFY]",
+      "Copy trading external signals [VERIFY]"
+    ]
+  },
+  "timeline": [
+    {
+      "date": "YYYY-MM-DD",
+      "event": "Established",
+      "type": "update"
+    }
+  ],
+  "video_source": {
+    "type": "image",
+    "src": "/images/logos/firm-slug.svg"
+  },
+  "seo_content": "<h3>Firm Name: [Country] [Forex/Futures] Prop Firm Since [Year]</h3><p>[1–2 paragraphs. Overview: what the firm is, when founded, key differentiator, main evaluation model. VERIFY all facts from official site.]</p><p>[2nd paragraph: account sizes, pricing during promotions, evaluation rules summary. VERIFY.]</p><p>[3rd paragraph: platforms, instruments, trading rules overview. VERIFY.]</p><p>[4th paragraph: payout structure, profit split, withdrawal conditions. VERIFY.]</p><p>[5th paragraph: who this firm is best for — specific trader profile. Keep factual, not promotional.]</p>",
+  "youtube_metadata": {
+    "title": "Firm Name Full Report: Leverage, Rules & Payouts",
+    "description": "Complete technical breakdown of Firm Name. We analyze their [forex/futures] environment and execution rules."
+  },
+  "firm_logo": "/images/logos/firm-slug.svg",
+  "hot": false,
+  "created_at": "2026-04-07T00:00:00.000Z"
+}
+
+/*
+╔══════════════════════════════════════════════════════════════════════╗
+║  TEMPLATE INSTRUCTIONS — DELETE THIS BLOCK BEFORE PUBLISHING       ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                      ║
+║  FILE NAMING                                                         ║
+║  firm-slug-xxxxx.json — slug lowercase-hyphenated + 5-char suffix   ║
+║  e.g. ftmo-ab3k9.json / funding-pips-m7p2x.json                     ║
+║  Suffix must be random alphanumeric, lowercase, exactly 5 chars      ║
+║                                                                      ║
+║  CANONICAL SLUG vs ID                                                ║
+║  id            = "firm-slug-xxxxx" (includes 5-char suffix)          ║
+║  canonical_slug = "firm-slug" (no suffix — used for dedup)           ║
+║  review_slug   = "firm-slug-review" (matches review .md filename)    ║
+║                                                                      ║
+║  AFFILIATE LINK — REQUIRED BEFORE PUBLISHING                         ║
+║  Verify the tracking URL is live and correctly attributes clicks.    ║
+║  /go/[id] pages are generated from affiliate_link automatically.     ║
+║                                                                      ║
+║  category — MUST be exactly one of:                                  ║
+║    "forex" | "futures" | "crypto" | "stocks"                         ║
+║                                                                      ║
+║  trust_score — from Trustpilot or G2 (verified). Leave "" if none.  ║
+║  reviews_count — from same source as trust_score.                   ║
+║                                                                      ║
+║  challenges array                                                    ║
+║  One entry per account tier. model = "1-step" | "2-step" | "3-step" ║
+║  price = discounted price (with coupon). original_price = full.      ║
+║  ALL prices MUST be verified live on the official site.              ║
+║                                                                      ║
+║  ⚠️  FACTUAL ACCURACY                                                ║
+║  NEVER invent rules, prices, platform names, or payout details.      ║
+║  Tag every unverified value with [VERIFY].                           ║
+║  Remove [VERIFY] tags only after confirming from the official site.  ║
+║                                                                      ║
+║  firm_logo & video_source.src                                        ║
+║  SVG preferred. Save to public/images/logos/[firm-slug].svg          ║
+║  PNG fallback: public/images/logos/[firm-slug].png                   ║
+╚══════════════════════════════════════════════════════════════════════╝
+*/

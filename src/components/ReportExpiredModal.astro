@@ -167,7 +167,7 @@ const { deals } = Astro.props;
 
 			// Option 1: Send to email via mailto (simple, no backend needed)
 			const emailBody = `Expired Code Report%0D%0A%0D%0ADeal: ${data.deal}%0D%0ACode: ${data.code}%0D%0AMessage: ${data.message || 'N/A'}%0D%0ATimestamp: ${data.timestamp}`;
-			window.location.href = `mailto:hello@gopropreels.com?subject=Expired Code Report - ${data.code}&body=${emailBody}`;
+			window.location.href = `mailto:czkteampro@gmail.com?subject=Expired Code Report - ${data.code}&body=${emailBody}`;
 
 			// Option 2: Could send to API/webhook here if you have backend
 			// await fetch('/api/report-expired', { method: 'POST', body: JSON.stringify(data) });
