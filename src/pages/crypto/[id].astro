@@ -10,10 +10,19 @@ export async function getStaticPaths() {
 	const coupons = await getCollection('coupons');
     const cryptoCoupons = coupons.filter(c => c.data.category.toLowerCase() === 'crypto');
 
-	return cryptoCoupons.map((c) => ({
-        params: { id: c.id },
-        props: { deal: { ...c.data, slug: c.id } },
-    }));
+	// Deduplicate by canonical_slug — one firm page per slug
+	const seen = new Set<string>();
+	return cryptoCoupons
+		.filter(c => {
+			const slug = c.data.canonical_slug || c.id;
+			if (seen.has(slug)) return false;
+			seen.add(slug);
+			return true;
+		})
+		.map((c) => ({
+			params: { id: c.data.canonical_slug || c.id },
+			props: { deal: { ...c.data, slug: c.data.canonical_slug || c.id } },
+		}));
 }
 
 const { deal } = Astro.props;
