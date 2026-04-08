@@ -127,33 +127,33 @@ const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteUrl
 			<i class="fa-solid fa-arrow-up text-lg"></i>
 		</button>
 
-		<div id="countdown-overlay" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/95 backdrop-blur-md">
-			<span id="countdown-number" class="text-[10rem] font-black leading-none text-white" style="transition: transform 0.2s ease, opacity 0.2s ease;"></span>
-		</div>
-
-		<div id="code-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm">
-			<div class="relative w-full max-w-md transform rounded-3xl border border-white/10 bg-[#1C1C1E] p-8 shadow-2xl transition-all scale-95" id="code-modal-content">
+		<div id="code-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-md p-4">
+			<div class="relative w-full max-w-sm rounded-[2rem] border border-white/10 bg-[#111] p-8 shadow-2xl transition-all scale-95" id="code-modal-content">
 				<button id="close-modal" class="absolute right-4 top-4 h-8 w-8 rounded-full bg-white/5 text-white/50 hover:bg-white/10 hover:text-white transition flex items-center justify-center">
 					<i class="fa-solid fa-xmark"></i>
 				</button>
 				<div class="text-center">
-					<div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-brand-accent/10 text-brand-accent shadow-glow">
-						<i class="fa-solid fa-check text-3xl"></i>
+					<div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-[1.2rem] bg-green-500/20 text-green-400">
+						<i class="fa-solid fa-check text-2xl"></i>
 					</div>
-					<h3 class="mb-2 text-2xl font-bold text-white">Code Copied!</h3>
-					<p class="mb-6 text-white/60">Paste this code at checkout to claim your deal.</p>
-					
-					<div class="group relative mb-6 cursor-pointer rounded-xl bg-black/50 p-4 border border-white/10 hover:border-brand-accent/50 transition" id="modal-copy-area">
-						<code id="modal-code-display" class="text-3xl font-mono font-bold text-brand-accent tracking-wider">CODE123</code>
-						<div class="absolute inset-0 flex items-center justify-center bg-black/80 opacity-0 group-hover:opacity-100 transition rounded-xl">
-							<span class="text-xs font-bold text-white uppercase tracking-wider">Click to Copy Again</span>
-						</div>
+					<p class="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-400 mb-2">Deal Activated!</p>
+					<h3 id="modal-firm-name" class="text-xl font-black text-white mb-1"></h3>
+					<p id="modal-discount" class="text-sm text-white/50 mb-6"></p>
+					<div id="modal-copy-area" class="relative mb-6 cursor-pointer rounded-xl bg-black/60 border border-white/10 p-5 hover:border-white/30 transition">
+						<p class="text-[9px] font-black uppercase tracking-[0.3em] text-white/30 mb-2">Click to copy code</p>
+						<code id="modal-code-display" class="text-2xl font-black tracking-[0.2em] text-white">CODE</code>
 					</div>
-
-					<a id="modal-action-btn" href="#" target="_blank" class="flex w-full items-center justify-center gap-2 rounded-xl bg-brand-accent py-4 font-bold text-black hover:bg-white hover:scale-[1.02] transition shadow-lg shadow-brand-accent/20">
-						<span>Continue to Site</span>
-						<i class="fa-solid fa-arrow-right"></i>
-					</a>
+					<div class="mb-3 flex items-center gap-3 text-left">
+						<div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 text-xs font-black">2</div>
+						<span class="text-xs font-bold uppercase tracking-widest text-white/50">Opening deal in new tab...</span>
+					</div>
+					<div class="h-1.5 w-full rounded-full bg-white/10 overflow-hidden mb-6">
+						<div id="modal-progress-bar" class="h-full rounded-full bg-blue-500" style="width:0%"></div>
+					</div>
+					<div class="flex items-center justify-center gap-4 text-[9px] font-black uppercase tracking-widest text-white/20">
+						<span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt"></i> Exclusive</span>
+						<span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved"></i> Verified Tool</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -166,7 +166,7 @@ const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteUrl
 			const modalCodeDisplay = document.getElementById('modal-code-display');
 			const modalActionBtn = document.getElementById('modal-action-btn');
 			const modalCopyArea = document.getElementById('modal-copy-area');
-			
+
 			if (scrollTopBtn) {
 				window.addEventListener('scroll', () => {
 					if (window.scrollY > 500) {
@@ -182,23 +182,41 @@ const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteUrl
 			}
 
 			// Global Modal Logic
-			if (modal && modalContent && closeModalBtn && modalCodeDisplay && modalActionBtn) {
+			if (modal && modalContent && closeModalBtn && modalCodeDisplay) {
+				let progressTimeout = null;
+
 				const hideModal = () => {
 					modal.classList.add('opacity-0', 'pointer-events-none');
 					modalContent.classList.add('scale-95');
+					if (progressTimeout) { clearTimeout(progressTimeout); progressTimeout = null; }
 				};
 
-				const showModal = (code, link) => {
+				const showModal = (code, link, firmName, discount) => {
+					const firmNameEl = document.getElementById('modal-firm-name');
+					const discountEl = document.getElementById('modal-discount');
+					const progressBar = document.getElementById('modal-progress-bar');
+
+					if (firmNameEl) firmNameEl.textContent = firmName || '';
+					if (discountEl) discountEl.textContent = discount || '';
 					modalCodeDisplay.textContent = code;
-					if (link) {
-						modalActionBtn.href = link;
-						modalActionBtn.style.display = 'flex';
-					} else {
-						modalActionBtn.style.display = 'none';
+
+					if (progressBar) {
+						progressBar.style.transition = 'none';
+						progressBar.style.width = '0%';
 					}
-					
+
 					modal.classList.remove('opacity-0', 'pointer-events-none');
 					modalContent.classList.remove('scale-95');
+
+					if (progressBar && link) {
+						requestAnimationFrame(() => {
+							progressBar.style.transition = 'width 3s linear';
+							progressBar.style.width = '100%';
+						});
+						progressTimeout = setTimeout(() => {
+							window.open(link, '_blank');
+						}, 3000);
+					}
 				};
 
 				closeModalBtn.addEventListener('click', hideModal);
@@ -206,56 +224,17 @@ const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteUrl
 					if (e.target === modal) hideModal();
 				});
 
-				// Re-copy on click
 				modalCopyArea?.addEventListener('click', () => {
 					const code = modalCodeDisplay.textContent;
 					navigator.clipboard.writeText(code);
-					
-					// Visual feedback
 					modalCopyArea.style.borderColor = '#fff';
-					setTimeout(() => {
-						modalCopyArea.style.borderColor = '';
-					}, 200);
+					setTimeout(() => { modalCopyArea.style.borderColor = ''; }, 200);
 				});
 
-				// Listen for copy events from cards/pages
 				document.addEventListener('open-code-modal', (e) => {
-					const { code, link } = e.detail;
-
-					// Copy immediately
+					const { code, link, firmName, discount } = e.detail;
 					navigator.clipboard.writeText(code).catch(() => {});
-
-					// Countdown 1 → 2 → 3 then open modal
-					const overlay = document.getElementById('countdown-overlay');
-					const numEl = document.getElementById('countdown-number');
-					if (!overlay || !numEl) { showModal(code, link); return; }
-
-					overlay.classList.remove('hidden');
-					overlay.classList.add('flex');
-
-					let count = 1;
-					const showNum = (n) => {
-						numEl.style.opacity = '0';
-						numEl.style.transform = 'scale(0.4)';
-						numEl.textContent = String(n);
-						requestAnimationFrame(() => requestAnimationFrame(() => {
-							numEl.style.opacity = '1';
-							numEl.style.transform = 'scale(1)';
-						}));
-					};
-
-					showNum(count);
-					const interval = setInterval(() => {
-						count++;
-						if (count > 3) {
-							clearInterval(interval);
-							overlay.classList.add('hidden');
-							overlay.classList.remove('flex');
-							showModal(code, link);
-							return;
-						}
-						showNum(count);
-					}, 650);
+					showModal(code, link, firmName, discount);
 				});
 			}
 

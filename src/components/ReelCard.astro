@@ -154,7 +154,9 @@ const hasCoupon = deal.coupon_code && deal.coupon_code !== 'No Code' && deal.cou
                         data-copy-code={deal.coupon_code}
                         data-affiliate={deal.affiliate_link}
                         data-deal-id={deal.id}
-                        onclick={`event.stopPropagation(); (function(btn){ var code=btn.dataset.copyCode; var aff=btn.dataset.affiliate; var event=new CustomEvent('open-code-modal',{detail:{code:code,link:'/go/'+btn.dataset.dealId}}); document.dispatchEvent(event); })(this);`}
+                        data-firm-name={deal.firm_name}
+                        data-discount={deal.discount_highlight}
+                        onclick={`event.stopPropagation(); (function(btn){ var code=btn.dataset.copyCode; var ev=new CustomEvent('open-code-modal',{detail:{code:code,link:'/go/'+btn.dataset.dealId,firmName:btn.dataset.firmName,discount:btn.dataset.discount}}); document.dispatchEvent(ev); })(this);`}
                         aria-label={`Get coupon code for ${deal.firm_name}`}
                     >
                         <i class="fa-solid fa-tag mr-1.5"></i>

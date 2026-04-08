@@ -221,6 +221,8 @@ const canonical = `/coupons/${deal.canonical_slug || deal.id}`;
                                     class="group/voucher relative flex w-full items-center justify-center gap-4 overflow-hidden rounded-2xl bg-gradient-to-br from-brand-accent via-brand-accent to-orange-400 px-6 py-6 text-xl font-black text-white shadow-[0_0_40px_rgba(255,45,85,0.3)] transition-all hover:scale-[1.03] hover:shadow-[0_0_60px_rgba(255,45,85,0.5)] active:scale-[0.97]"
                                     data-copy-code={deal.coupon_code}
                                     data-link={`/go/${deal.id}`}
+                                    data-firm-name={deal.firm_name}
+                                    data-discount={deal.discount_highlight}
                                 >
                                     <span class="relative z-10 tracking-tight transition-transform group-hover/voucher:translate-x-[-4px]">
                                         GET THIS {deal.discount_highlight} DEAL
@@ -496,6 +498,8 @@ const canonical = `/coupons/${deal.canonical_slug || deal.id}`;
 			copyButton?.addEventListener('click', () => {
 				const code = copyButton.dataset.copyCode;
 				const link = copyButton.dataset.link;
+				const firmName = copyButton.dataset.firmName;
+				const discount = copyButton.dataset.discount;
 				if (!code) return;
 
 				// Reveal code in Quick Facts
@@ -504,7 +508,7 @@ const canonical = `/coupons/${deal.canonical_slug || deal.id}`;
 
 				// Show global modal
 				const event = new CustomEvent('open-code-modal', {
-					detail: { code, link }
+					detail: { code, link, firmName, discount }
 				});
 				document.dispatchEvent(event);
 			});
