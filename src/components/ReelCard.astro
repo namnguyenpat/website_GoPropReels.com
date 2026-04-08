@@ -94,9 +94,8 @@ const hasCoupon = deal.coupon_code && deal.coupon_code !== 'No Code' && deal.cou
             </button>
         </div>
 
-        {/* Center: Logo + Name + Discount + Features */}
-        <div class="flex flex-col items-center justify-center text-center flex-1 gap-2">
-            {/* Logo */}
+        {/* TOP: Logo */}
+        <div class="flex flex-col items-center pt-2 pb-1">
             <div class="relative">
                 <div class="absolute -inset-3 bg-[var(--accent)] opacity-20 blur-xl rounded-full"></div>
                 <div
@@ -115,23 +114,27 @@ const hasCoupon = deal.coupon_code && deal.coupon_code !== 'No Code' && deal.cou
                     )}
                 </div>
             </div>
+        </div>
 
-            <h3 class="text-lg font-black text-white leading-none uppercase tracking-tighter">
-                {deal.firm_name}
-            </h3>
-
+        {/* MIDDLE: Discount badge — grows to fill space, centered */}
+        <div class="flex flex-col items-center justify-center text-center flex-1 gap-2 px-1">
             {/* DISCOUNT BADGE */}
             <div
-                class="rounded-2xl px-4 py-2.5 text-center w-full"
+                class="rounded-2xl px-4 py-3 text-center w-full"
                 style={`background: ${accentColor}20; border: 1.5px solid ${accentColor}50;`}
             >
-                <p class="text-2xl font-black text-white leading-none">{deal.discount_highlight}</p>
+                <p class="text-2xl font-black text-white leading-tight">{deal.discount_highlight}</p>
                 {deal.description && (
                     <p class="text-[10px] text-white/60 mt-1 line-clamp-1">{deal.description.split('.')[0]}</p>
                 )}
             </div>
+        </div>
 
-            {/* Features: top 2 */}
+        {/* BOTTOM INFO: Name + Features */}
+        <div class="flex flex-col gap-2 pb-1">
+            <h3 class="text-base font-black text-white leading-none uppercase tracking-tighter text-center">
+                {deal.firm_name}
+            </h3>
             {deal.features && deal.features.length > 0 && (
                 <ul class="space-y-1 w-full px-1">
                     {deal.features.slice(0, 2).map((f: string) => (
