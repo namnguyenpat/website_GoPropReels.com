@@ -127,6 +127,10 @@ const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteUrl
 			<i class="fa-solid fa-arrow-up text-lg"></i>
 		</button>
 
+		<div id="countdown-overlay" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/95 backdrop-blur-md">
+			<span id="countdown-number" class="text-[10rem] font-black leading-none text-white" style="transition: transform 0.2s ease, opacity 0.2s ease;"></span>
+		</div>
+
 		<div id="code-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm">
 			<div class="relative w-full max-w-md transform rounded-3xl border border-white/10 bg-[#1C1C1E] p-8 shadow-2xl transition-all scale-95" id="code-modal-content">
 				<button id="close-modal" class="absolute right-4 top-4 h-8 w-8 rounded-full bg-white/5 text-white/50 hover:bg-white/10 hover:text-white transition flex items-center justify-center">
@@ -217,7 +221,41 @@ const fullOgImage = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteUrl
 				// Listen for copy events from cards/pages
 				document.addEventListener('open-code-modal', (e) => {
 					const { code, link } = e.detail;
-					showModal(code, link);
+
+					// Copy immediately
+					navigator.clipboard.writeText(code).catch(() => {});
+
+					// Countdown 1 → 2 → 3 then open modal
+					const overlay = document.getElementById('countdown-overlay');
+					const numEl = document.getElementById('countdown-number');
+					if (!overlay || !numEl) { showModal(code, link); return; }
+
+					overlay.classList.remove('hidden');
+					overlay.classList.add('flex');
+
+					let count = 1;
+					const showNum = (n) => {
+						numEl.style.opacity = '0';
+						numEl.style.transform = 'scale(0.4)';
+						numEl.textContent = String(n);
+						requestAnimationFrame(() => requestAnimationFrame(() => {
+							numEl.style.opacity = '1';
+							numEl.style.transform = 'scale(1)';
+						}));
+					};
+
+					showNum(count);
+					const interval = setInterval(() => {
+						count++;
+						if (count > 3) {
+							clearInterval(interval);
+							overlay.classList.add('hidden');
+							overlay.classList.remove('flex');
+							showModal(code, link);
+							return;
+						}
+						showNum(count);
+					}, 650);
 				});
 			}
 
